@@ -1,0 +1,68 @@
+# Reading D:/MentorGraphics/tcl/vsim/pref.tcl 
+# //  ModelSim SE 10.1b Apr 26 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {bfa_gate_vtf.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module bfa_gate
+# 
+# Top level modules:
+# 	bfa_gate
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module bfa_gate_vtf
+# 
+# Top level modules:
+# 	bfa_gate_vtf
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.bfa_gate_vtf glbl 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Error: (vopt-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: bfa_gate_vtf.v(1): Library xilinxcorelib_ver not found.
+# ** Warning: bfa_gate_vtf.v(1): (vopt-2669) Unable to find library 'xilinxcorelib_ver'.
+# 
+# ** Error: (vopt-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: bfa_gate_vtf.v(1): Library unisims_ver not found.
+# ** Warning: bfa_gate_vtf.v(1): (vopt-2669) Unable to find library 'unisims_ver'.
+# 
+# ** Error: (vopt-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: bfa_gate_vtf.v(1): Library unimacro_ver not found.
+# ** Warning: bfa_gate_vtf.v(1): (vopt-2669) Unable to find library 'unimacro_ver'.
+# 
+# ** Error: (vopt-19) Failed to access library 'secureip' at "secureip".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: bfa_gate_vtf.v(1): Library secureip not found.
+# ** Warning: bfa_gate_vtf.v(1): (vopt-2669) Unable to find library 'secureip'.
+# 
+# Optimization failed
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./bfa_gate_vtf.fdo PAUSED at line 29
+vsim -voptargs=+acc work.bfa_gate_vtf
+# vsim -voptargs=+acc work.bfa_gate_vtf 
+# Loading work.bfa_gate_vtf(fast)
+# Loading work.bfa_gate(fast)
+add wave -position insertpoint sim:/bfa_gate_vtf/*
+run
+run
+run

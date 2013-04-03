@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/bfa_gate/bfa_gate.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/bfa_gate/bfa_gate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-2 "bfa_gate.ngc" bfa_gate.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o bfa_gate_map.ncd bfa_gate.ngd bfa_gate.pcf 
+par -w -intstyle ise -ol high -mt off bfa_gate_map.ncd bfa_gate.ncd bfa_gate.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml bfa_gate.twx bfa_gate.ncd -o bfa_gate.twr bfa_gate.pcf 

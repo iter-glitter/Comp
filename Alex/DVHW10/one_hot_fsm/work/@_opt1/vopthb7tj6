@@ -1,0 +1,76 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW10\one_hot_fsm
+T_opt
+VYj>m5j]Zj6:88<@Li><Do1
+Z1 04 15 4 work one_hot_fsm_vtf fast 0
+Z2 04 4 4 work glbl fast 0
+=1-b8975a0ddffd-5148f479-275-1a78
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+Z4 OE;O;10.1b;51
+Z5 dD:\Users\Hendren\My Documents\School\EE480\DVHW10\one_hot_fsm
+T_opt1
+V:a9URbF<:B5oB37abjQOg0
+R1
+R2
+=1-b8975a0ddffd-5148f520-23-17c0
+R3
+n@_opt1
+R4
+vglbl
+!s100 US6of7W;COLU=>D@U>:[Y0
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+R5
+w1325912016
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+Z6 OE;L;10.1b;51
+r1
+31
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s85 0
+!s108 1363735839.801000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+vone_hot_fsm
+!s100 @TGF7gVR6K;O]:31W7;2[1
+IWA5<OGn:Hf?_^VX^[dTPW2
+V9YbN1JAazXmG:LZL1Ic:K2
+R5
+w1363733350
+8one_hot_fsm.v
+Fone_hot_fsm.v
+L0 21
+R6
+r1
+31
+!s90 -reportprogress|300|one_hot_fsm.v|
+R7
+!s108 1363735839.582000
+!s107 one_hot_fsm.v|
+!i10b 1
+!s85 0
+vone_hot_fsm_vtf
+IUb?1n0WBjbN90iBVe:PWY0
+V<f=Q9INW0K_66jaH16lHW1
+R5
+w1363735828
+8one_hot_fsm_vtf.v
+Fone_hot_fsm_vtf.v
+L0 25
+R6
+r1
+31
+!s90 -reportprogress|300|one_hot_fsm_vtf.v|
+R7
+!s100 4^gCelB=gaf=f_4TS??GJ0
+!s108 1363735839.707000
+!s107 one_hot_fsm_vtf.v|
+!i10b 1
+!s85 0

@@ -1,0 +1,121 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW6
+T_opt
+V:2h1?TQKZ@bnIjHW@[JcD3
+04 28 4 work ld_st_rg_struct_generate_vtf fast 0
+04 4 4 work glbl fast 0
+=1-b8975a0ddffd-511de963-6f-1bfc
+o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+OE;O;10.1b;51
+vdff_syn_low_clr_set
+If<F69Y1LgbQfN1K[EdjdD2
+Vc]A<=Snb`aNn`zFz>K2WT1
+Z1 dD:\Users\Hendren\My Documents\School\EE480\DVHW6
+w1360911416
+8dff_syn_low_clr_set.v
+Fdff_syn_low_clr_set.v
+L0 24
+Z2 OE;L;10.1b;51
+r1
+31
+Z3 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 H>=_j??Knn<ZIY7TOf1W<2
+!s90 -reportprogress|300|dff_syn_low_clr_set.v|
+!s108 1360914786.439000
+!s107 dff_syn_low_clr_set.v|
+!i10b 1
+!s85 0
+vglbl
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+R1
+Z4 w1325908416
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R2
+r1
+31
+R3
+!s100 US6of7W;COLU=>D@U>:[Y0
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!i10b 1
+!s85 0
+!s108 1360914786.908000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+vld_st_rg_sl_struct
+IHVJeON[lbWKVR8bhdCTHH2
+Vnk9hn7=l7f6968d7k:Z9j2
+R1
+w1360912461
+8ld_st_rg_sl_struct.v
+Fld_st_rg_sl_struct.v
+L0 21
+R2
+r1
+31
+R3
+!s100 W4NfQLAmSld0bjFzXTB`:3
+!s90 -reportprogress|300|ld_st_rg_sl_struct.v|
+!s108 1360914786.572000
+!s107 ld_st_rg_sl_struct.v|
+!i10b 1
+!s85 0
+vld_st_rg_struct_generate
+IH@JLVf^i]Q[zLFSJ1=D9V0
+Vg_3^YR24<omfX0k>SD@Y30
+R1
+w1360911400
+8ld_st_rg_struct_generate.v
+Fld_st_rg_struct_generate.v
+L0 21
+R2
+r1
+31
+R3
+!s100 [Q=>AP:JYHC8Djdfh?^:=2
+!s90 -reportprogress|300|ld_st_rg_struct_generate.v|
+!s108 1360914786.680000
+!s107 ld_st_rg_struct_generate.v|
+!i10b 1
+!s85 0
+vld_st_rg_struct_generate_vtf
+I4gf:U5FZkhBz]dgGCNXN[0
+VBI;HfWcLgnnMmcj6f[b@31
+R1
+w1360914778
+8ld_st_rg_struct_generate_vtf.v
+Fld_st_rg_struct_generate_vtf.v
+L0 25
+R2
+r1
+31
+R3
+!s90 -reportprogress|300|ld_st_rg_struct_generate_vtf.v|
+!s100 D03@c=[n1B4<=@2A8`^1I2
+!s108 1360914786.792000
+!s107 ld_st_rg_struct_generate_vtf.v|
+!i10b 1
+!s85 0
+vmux_2_1_rtl
+IVek1>?518<TGNEFcfJFNa1
+VYKzTc1hT1RgnA_H]PZeJc3
+R1
+w1359082798
+8mux_2-1_rtl.v
+Fmux_2-1_rtl.v
+L0 21
+R2
+r1
+31
+R3
+!s100 Dl@AR2D[_K4zab75jZj9U1
+!s90 -reportprogress|300|mux_2-1_rtl.v|
+!s108 1360914786.308000
+!s107 mux_2-1_rtl.v|
+!i10b 1
+!s85 0

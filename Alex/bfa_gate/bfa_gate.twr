@@ -1,0 +1,57 @@
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml bfa_gate.twx bfa_gate.ncd -o bfa_gate.twr bfa_gate.pcf
+
+Design file:              bfa_gate.ncd
+Physical constraint file: bfa_gate.pcf
+Device,package,speed:     xc6slx16,csg324,C,-2 (PRODUCTION 1.21 2012-01-07)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+ci             |cout           |    8.260|
+ci             |sout           |    8.604|
+i0             |cout           |    8.516|
+i0             |sout           |    8.860|
+i1             |cout           |    8.121|
+i1             |sout           |    8.465|
+---------------+---------------+---------+
+
+
+Analysis completed Fri Feb 01 00:22:40 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 233 MB
+
+
+

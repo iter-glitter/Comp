@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="alu_bitslice_2.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ALU_param_bitslice.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ALU_param_bitslice.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ALU_param_bitslice.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ALU_param_bitslice.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ALU_param_bitslice.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="ALU_param_bitslice.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="ALU_param_bitslice.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="ALU_param_bitslice.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="ALU_param_bitslice.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU_param_bitslice.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALU_param_bitslice.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ALU_param_bitslice.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="ALU_param_bitslice.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="ALU_param_bitslice.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="ALU_param_bitslice.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ALU_param_bitslice.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="ALU_param_bitslice_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ALU_param_bitslice_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="ALU_param_bitslice_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="ALU_param_bitslice_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="ALU_param_bitslice_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="ALU_param_bitslice_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="ALU_param_bitslice_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ALU_param_bitslice_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ALU_param_bitslice_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="alu_bitslice.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="alu_bitslice.cmd_log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="alu_bitslice.fdo"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="alu_bitslice.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="alu_bitslice.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="alu_bitslice.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="alu_bitslice.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="alu_bitslice.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="alu_bitslice.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="alu_bitslice.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="alu_bitslice.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="alu_bitslice.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="alu_bitslice.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="alu_bitslice.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="alu_bitslice.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="alu_bitslice.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="alu_bitslice.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="alu_bitslice.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="alu_bitslice.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="alu_bitslice.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="alu_bitslice_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="alu_bitslice_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="alu_bitslice_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="alu_bitslice_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="alu_bitslice_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="alu_bitslice_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alu_bitslice_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alu_bitslice_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="alu_bitslice_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="alu_bitslice_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alu_bitslice_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="alu_bitslice_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="alu_bitslice_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="alu_bitslice_usage.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="alu_bitslice_vtf.fdo"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alu_bitslice_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bfa_gate.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bfa_gate.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="bfa_gate.xst"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
+    <file xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/alu_bitslice_synthesis.nlf"/>
+    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="netgen/synthesis/alu_bitslice_synthesis.v"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1360113662" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1360113662">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360713018" xil_pn:in_ck="-8345149612441616513" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1360713018">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="alu_bitslice.v"/>
+      <outfile xil_pn:name="alu_bitslice_vtf.v"/>
+      <outfile xil_pn:name="bfa_gate.v"/>
+      <outfile xil_pn:name="mux_2-1_rtl.v"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1360711086" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8560000506127080778" xil_pn:start_ts="1360711086">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360711086" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5253228499954984564" xil_pn:start_ts="1360711086">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360113662" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="6323985517897132916" xil_pn:start_ts="1360113662">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360713018" xil_pn:in_ck="-8345149612441616513" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1360713018">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="alu_bitslice.v"/>
+      <outfile xil_pn:name="alu_bitslice_vtf.v"/>
+      <outfile xil_pn:name="bfa_gate.v"/>
+      <outfile xil_pn:name="mux_2-1_rtl.v"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1360720802" xil_pn:in_ck="-8345149612441616513" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1360720800">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="alu_bitslice_vtf.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
+    </transform>
+    <transform xil_pn:end_ts="1360291156" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1360291156">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360291156" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-699260791897125659" xil_pn:start_ts="1360291156">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360291156" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="6323985517897132916" xil_pn:start_ts="1360291156">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360291156" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1360291156">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360291156" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-8698822243451723801" xil_pn:start_ts="1360291156">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360291156" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015859450356" xil_pn:start_ts="1360291156">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360291156" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-5349404846380892802" xil_pn:start_ts="1360291156">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360710743" xil_pn:in_ck="1262097858333135196" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-1194350607580799549" xil_pn:start_ts="1360710732">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="alu_bitslice.lso"/>
+      <outfile xil_pn:name="alu_bitslice.ngc"/>
+      <outfile xil_pn:name="alu_bitslice.ngr"/>
+      <outfile xil_pn:name="alu_bitslice.prj"/>
+      <outfile xil_pn:name="alu_bitslice.stx"/>
+      <outfile xil_pn:name="alu_bitslice.syr"/>
+      <outfile xil_pn:name="alu_bitslice.xst"/>
+      <outfile xil_pn:name="alu_bitslice_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1360109523" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8036703852942999534" xil_pn:start_ts="1360109523">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360710750" xil_pn:in_ck="4736870094485862172" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="921505722357199509" xil_pn:start_ts="1360710743">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="alu_bitslice.bld"/>
+      <outfile xil_pn:name="alu_bitslice.ngd"/>
+      <outfile xil_pn:name="alu_bitslice_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1360710766" xil_pn:in_ck="911540999272667422" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-2415728198128772097" xil_pn:start_ts="1360710750">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="alu_bitslice.pcf"/>
+      <outfile xil_pn:name="alu_bitslice_map.map"/>
+      <outfile xil_pn:name="alu_bitslice_map.mrp"/>
+      <outfile xil_pn:name="alu_bitslice_map.ncd"/>
+      <outfile xil_pn:name="alu_bitslice_map.ngm"/>
+      <outfile xil_pn:name="alu_bitslice_map.xrpt"/>
+      <outfile xil_pn:name="alu_bitslice_summary.xml"/>
+      <outfile xil_pn:name="alu_bitslice_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1360710784" xil_pn:in_ck="5205289522351159376" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1360710766">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="alu_bitslice.ncd"/>
+      <outfile xil_pn:name="alu_bitslice.pad"/>
+      <outfile xil_pn:name="alu_bitslice.par"/>
+      <outfile xil_pn:name="alu_bitslice.ptwx"/>
+      <outfile xil_pn:name="alu_bitslice.unroutes"/>
+      <outfile xil_pn:name="alu_bitslice.xpi"/>
+      <outfile xil_pn:name="alu_bitslice_pad.csv"/>
+      <outfile xil_pn:name="alu_bitslice_pad.txt"/>
+      <outfile xil_pn:name="alu_bitslice_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1360710784" xil_pn:in_ck="7792891577256480790" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1360710779">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="alu_bitslice.twr"/>
+      <outfile xil_pn:name="alu_bitslice.twx"/>
+    </transform>
+    <transform xil_pn:end_ts="1360290942" xil_pn:in_ck="4736870094485862172" xil_pn:name="TRAN_postSynthesisSimModel" xil_pn:prop_ck="-2573727553403990588" xil_pn:start_ts="1360290939">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="netgen"/>
+      <outfile xil_pn:name="netgen/synthesis/alu_bitslice_synthesis.nlf"/>
+      <outfile xil_pn:name="netgen/synthesis/alu_bitslice_synthesis.v"/>
+    </transform>
+  </transforms>
+
+</generated_project>

@@ -1,0 +1,112 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW4
+T_opt
+V=iS?1:X_=3BlU8mae65:S0
+Z1 04 22 4 work ld_st_rg_sl_struct_vtf fast 0
+Z2 04 4 4 work glbl fast 0
+=1-b8975a0ddffd-511dc616-3a5-147c
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+Z4 OE;O;10.1b;51
+Z5 dD:\Users\Hendren\My Documents\School\EE480\DVHW4
+T_opt1
+V>59`UoDQOXcGk5jmD3hC80
+R1
+R2
+=1-b8975a0ddffd-511dc687-ce-1378
+R3
+n@_opt1
+R4
+vdff_syn_low_clr_set
+If<F69Y1LgbQfN1K[EdjdD2
+Vc]A<=Snb`aNn`zFz>K2WT1
+R5
+w1360897332
+8dff_syn_low_clr_set.v
+Fdff_syn_low_clr_set.v
+L0 24
+Z6 OE;L;10.1b;51
+r1
+31
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 H>=_j??Knn<ZIY7TOf1W<2
+!s90 -reportprogress|300|dff_syn_low_clr_set.v|
+!s108 1360905862.619000
+!s107 dff_syn_low_clr_set.v|
+!i10b 1
+!s85 0
+vglbl
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+R5
+Z8 w1325908416
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R6
+r1
+31
+R7
+!s100 US6of7W;COLU=>D@U>:[Y0
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!i10b 1
+!s85 0
+!s108 1360905862.952000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+vld_st_rg_sl_struct
+IHVJeON[lbWKVR8bhdCTHH2
+Vnk9hn7=l7f6968d7k:Z9j2
+R5
+w1360898825
+8ld_st_rg_sl_struct.v
+Fld_st_rg_sl_struct.v
+L0 21
+R6
+r1
+31
+R7
+!s100 W4NfQLAmSld0bjFzXTB`:3
+!s90 -reportprogress|300|ld_st_rg_sl_struct.v|
+!s108 1360905862.726000
+!s107 ld_st_rg_sl_struct.v|
+!i10b 1
+!s85 0
+vld_st_rg_sl_struct_vtf
+I_djhLgeZQVa2J^]L<^TXY2
+V0nc@Gm8iXi`;zGTIR6@aL0
+R5
+w1360905855
+8ld_st_rg_sl_struct_vtf.v
+Fld_st_rg_sl_struct_vtf.v
+L0 25
+R6
+r1
+31
+R7
+!s90 -reportprogress|300|ld_st_rg_sl_struct_vtf.v|
+!s100 aAM`Z[F?cHgH_;PNagXeQ2
+!s108 1360905862.827000
+!s107 ld_st_rg_sl_struct_vtf.v|
+!i10b 1
+!s85 0
+vmux_2_1_rtl
+IVek1>?518<TGNEFcfJFNa1
+VYKzTc1hT1RgnA_H]PZeJc3
+R5
+w1359082798
+8mux_2-1_rtl.v
+Fmux_2-1_rtl.v
+L0 21
+R6
+r1
+31
+R7
+!s100 Dl@AR2D[_K4zab75jZj9U1
+!s90 -reportprogress|300|mux_2-1_rtl.v|
+!s108 1360905862.514000
+!s107 mux_2-1_rtl.v|
+!i10b 1
+!s85 0

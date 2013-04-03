@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW1/mux_4_1_behavioral.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW1/mux_4_1_behavioral.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "mux_4_1_behavioral.ngc" mux_4_1_behavioral.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mux_4_1_behavioral_map.ncd mux_4_1_behavioral.ngd mux_4_1_behavioral.pcf 
+par -w -intstyle ise -ol high -mt off mux_4_1_behavioral_map.ncd mux_4_1_behavioral.ncd mux_4_1_behavioral.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mux_4_1_behavioral.twx mux_4_1_behavioral.ncd -o mux_4_1_behavioral.twr mux_4_1_behavioral.pcf 

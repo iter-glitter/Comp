@@ -1,0 +1,67 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW7\ld_st_shift_nbit
+T_opt
+VHiYWWnLo[6;9HWdVi3?SO2
+04 20 4 work ld_st_shift_nbit_vtf fast 0
+04 4 4 work glbl fast 0
+=1-b8975a0ddffd-5122f53c-170-b8c
+o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+OE;O;10.1b;51
+vglbl
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+Z1 dD:\Users\Hendren\My Documents\School\EE480\DVHW7\ld_st_shift_nbit
+w1325908416
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+Z2 OE;L;10.1b;51
+r1
+31
+Z3 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 US6of7W;COLU=>D@U>:[Y0
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!i10b 1
+!s85 0
+!s108 1361245500.161000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+vld_st_shift_nbit
+IWV8@aaA7L9gzXTKXmlcP60
+V:1F1ZSoA[6eIenGEk?[Bj2
+R1
+w1361245441
+8ld_st_shift_nbit.v
+Fld_st_shift_nbit.v
+L0 19
+R2
+r1
+31
+R3
+!s90 -reportprogress|300|ld_st_shift_nbit.v|
+!s100 a^Ai;[2nAK]:WniQKB6T12
+!s108 1361245499.891000
+!s107 ld_st_shift_nbit.v|
+!i10b 1
+!s85 0
+vld_st_shift_nbit_vtf
+Ih4o:gBd_k1RZNXQYMT3B43
+VQ3JWg6D<CP^hk6k8@0W]b0
+R1
+w1361243156
+8ld_st_shift_nbit_vtf.v
+Fld_st_shift_nbit_vtf.v
+L0 25
+R2
+r1
+31
+R3
+!s100 >^n_NJ4:kfEAHlz_JIaoe0
+!s90 -reportprogress|300|ld_st_shift_nbit_vtf.v|
+!s108 1361245499.994000
+!s107 ld_st_shift_nbit_vtf.v|
+!i10b 1
+!s85 0

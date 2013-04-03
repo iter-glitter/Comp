@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/ld_st_reg/ld_st_reg/ls_reg.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/ld_st_reg/ld_st_reg/ls_reg.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/ld_st_reg/ld_st_reg/ls_reg.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/ld_st_reg/ld_st_reg/ls_reg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "ls_reg.ngc" ls_reg.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ls_reg_map.ncd ls_reg.ngd ls_reg.pcf 
+par -w -intstyle ise -ol high -mt off ls_reg_map.ncd ls_reg.ncd ls_reg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ls_reg.twx ls_reg.ncd -o ls_reg.twr ls_reg.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/ld_st_reg/ld_st_reg/ls_reg.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/ld_st_reg/ld_st_reg/ls_reg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "ls_reg.ngc" ls_reg.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ls_reg_map.ncd ls_reg.ngd ls_reg.pcf 
+par -w -intstyle ise -ol high -mt off ls_reg_map.ncd ls_reg.ncd ls_reg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml ls_reg.twx ls_reg.ncd -o ls_reg.twr ls_reg.pcf 

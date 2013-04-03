@@ -1,0 +1,167 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW11\MHVPIS
+T_opt
+V7A1nJM=eAYKELLlkI4]N_3
+Z1 04 10 4 work mhvpis_vtf fast 0
+Z2 04 4 4 work glbl fast 0
+=1-b8975a0ddffd-515278e2-1e8-1148
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+Z4 OE;O;10.1b;51
+Z5 dD:\Users\Hendren\My Documents\School\EE480\DVHW11\MHVPIS
+T_opt1
+VdUMNOCCoQ_XJF2;a^?TE61
+R1
+R2
+=1-b8975a0ddffd-51529456-85-1744
+R3
+n@_opt1
+R4
+R5
+T_opt2
+VZ>D;K`X]kGOXVASXk0aWH3
+R1
+R2
+=1-b8975a0ddffd-5152c087-398-1be8
+R3
+n@_opt2
+R4
+T_opt3
+Vh[Q:7Ak=cV<i@?[g;493M0
+R1
+R2
+=1-b8975a0ddffd-5152bf44-34b-14d4
+R3
+n@_opt3
+R4
+R5
+vdff_syn_low_clr_set
+I0ATkSUeH3?kQgOg5;H;O63
+VlTQJ2K=O5X@345TeN3HK_0
+R5
+w1364365676
+8dff_syn_low_clr_set.v
+Fdff_syn_low_clr_set.v
+L0 14
+Z6 OE;L;10.1b;51
+r1
+31
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 IMQ1F[9gZgClZIWn<Y:FI2
+!s90 -reportprogress|300|dff_syn_low_clr_set.v|
+!s108 1364367041.410000
+!s107 dff_syn_low_clr_set.v|
+!i10b 1
+!s85 0
+vglbl
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+R5
+w1325912016
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R6
+r1
+31
+R7
+!s100 US6of7W;COLU=>D@U>:[Y0
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!i10b 1
+!s85 0
+!s108 1364377735.687000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+vld_st_reg
+IEmD8e4P@GGAYzJjdQ9FJ41
+VNUOl@hO^:gOYLI2@IQ`5;2
+R5
+w1364377336
+8ld_st_reg.v
+Fld_st_reg.v
+L0 18
+R6
+r1
+31
+R7
+!s100 96lBNjc;7hTD[AQRedWf43
+!s90 -reportprogress|300|ld_st_reg.v|
+!s108 1364377735.372000
+!s107 ld_st_reg.v|
+!i10b 1
+!s85 0
+vMHVPIS
+I<hem`:jQX2CZ<I=nPJaAd1
+V9VJD>XfcVM984N`5QfiM^2
+R5
+w1364377727
+8MHVPIS.v
+FMHVPIS.v
+L0 19
+R6
+r1
+31
+R7
+n@m@h@v@p@i@s
+!s90 -reportprogress|300|MHVPIS.v|
+!s100 loWFO4aUn`aHk=iU0n01`1
+!s108 1364377735.472000
+!s107 MHVPIS.v|
+!i10b 1
+!s85 0
+vmhvpis_vtf
+I6Omoan?a;0RQZPc@4JSd03
+Vg`]kgF@4H;c;0ULJ7^:;h2
+R5
+w1364376558
+8mhvpis_vtf.v
+Fmhvpis_vtf.v
+L0 25
+R6
+r1
+31
+R7
+!s100 aGXcc6T^3XoM6`8J=kPcU0
+!s90 -reportprogress|300|mhvpis_vtf.v|
+!s108 1364377735.563000
+!s107 mhvpis_vtf.v|
+!i10b 1
+!s85 0
+vmux_4_1_behavioral
+Ic@L_ZUB?Tzkidcf4W8]ie2
+V7HVO8igXFZmcRnCT;@Loc2
+R5
+w1364369091
+8mux_4_1_behavioral.v
+Fmux_4_1_behavioral.v
+L0 14
+R6
+r1
+31
+R7
+!s100 @HSLe_Sgd=1[`^9Vh3d;11
+!s90 -reportprogress|300|mux_4_1_behavioral.v|
+!s108 1364377735.254000
+!s107 mux_4_1_behavioral.v|
+!i10b 1
+!s85 0
+vpri_encoder_4_2
+I7IofeF`mL1QUJc_81R7@n2
+V[LN=T1ICeoldomEEN]ieU1
+R5
+w1364376396
+8pri_encoder_4_2.v
+Fpri_encoder_4_2.v
+L0 10
+R6
+r1
+31
+R7
+!s100 =hK[dZonZUf<VF@4dN7ZS0
+!s90 -reportprogress|300|pri_encoder_4_2.v|
+!s108 1364377735.144000
+!s107 pri_encoder_4_2.v|
+!i10b 1
+!s85 0

@@ -1,0 +1,4 @@
+verilog work "pri_encoder_4_2.v"
+verilog work "mux_4_1_behavioral.v"
+verilog work "ld_st_reg.v"
+verilog work "MHVPIS.v"

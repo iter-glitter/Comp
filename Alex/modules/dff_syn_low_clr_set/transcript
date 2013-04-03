@@ -1,0 +1,147 @@
+# Reading D:/MentorGraphics/tcl/vsim/pref.tcl 
+# //  ModelSim SE 10.1b Apr 26 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {dff_syn_low_clor_set_vtf.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module dff_syn_low_clr_set
+# 
+# Top level modules:
+# 	dff_syn_low_clr_set
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module dff_syn_low_clor_set_vtf
+# 
+# Top level modules:
+# 	dff_syn_low_clor_set_vtf
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.dff_syn_low_clor_set_vtf glbl 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading work.dff_syn_low_clor_set_vtf(fast)
+# Loading work.dff_syn_low_clr_set(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 6572
+# 
+#           Attempting to use alternate WLF file "./wlftc3gycx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftc3gycx
+# 
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#                    0clk=0 clr=1 set=1 d=0 q=x q_cmp=x q_tc=x q_cmp_tc=x error=x
+#                   10clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=x
+#                   11clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                   20clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                   30clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                   40clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                   50clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                   60clk=0 clr=0 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                   70clk=1 clr=0 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                   80clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                   90clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  100clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  110clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  120clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  130clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  140clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  150clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  160clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  170clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  180clk=0 clr=1 set=0 d=1 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  190clk=1 clr=1 set=0 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  200clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  210clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  220clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  230clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  240clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  250clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  260clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  270clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  280clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  290clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  300clk=0 clr=0 set=0 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  310clk=1 clr=0 set=0 d=1 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  320clk=0 clr=1 set=1 d=1 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  330clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  340clk=0 clr=1 set=1 d=0 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  350clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  360clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  370clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  380clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  390clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  400clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  410clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  420clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  430clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  440clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  450clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  460clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  470clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  480clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  490clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  500clk=0 clr=1 set=1 d=1 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  510clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  520clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  530clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  540clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  550clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  560clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  570clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  580clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  590clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  600clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  610clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  620clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  630clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  640clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  650clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  660clk=0 clr=1 set=1 d=0 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  670clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  680clk=0 clr=1 set=0 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  690clk=1 clr=1 set=0 d=0 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  700clk=0 clr=1 set=1 d=0 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  710clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  720clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  730clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  740clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  750clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  760clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  770clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  780clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  790clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  800clk=0 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  810clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  820clk=0 clr=1 set=1 d=1 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0
+#                  830clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  840clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  850clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  860clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  870clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  880clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  890clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  900clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  910clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  920clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  930clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  940clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  950clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  960clk=0 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  970clk=1 clr=1 set=1 d=1 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  980clk=0 clr=1 set=1 d=0 q=1 q_cmp=0 q_tc=1 q_cmp_tc=0 error=0
+#                  990clk=1 clr=1 set=1 d=0 q=0 q_cmp=1 q_tc=0 q_cmp_tc=1 error=0

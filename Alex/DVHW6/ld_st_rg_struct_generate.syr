@@ -1,0 +1,389 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Reading design: ld_st_rg_struct_generate.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ld_st_rg_struct_generate.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ld_st_rg_struct_generate"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-fgg484
+
+---- Source Options
+Top Module Name                    : ld_st_rg_struct_generate
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\DVHW6\mux_2-1_rtl.v" into library work
+Parsing module <mux_2_1_rtl>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\DVHW6\dff_syn_low_clr_set.v" into library work
+Parsing module <dff_syn_low_clr_set>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\DVHW6\ld_st_rg_sl_struct.v" into library work
+Parsing module <ld_st_rg_sl_struct>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\DVHW6\ld_st_rg_struct_generate.v" into library work
+Parsing module <ld_st_rg_struct_generate>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ld_st_rg_struct_generate>.
+WARNING:HDLCompiler:1016 - "D:\Users\Hendren\My Documents\School\EE480\DVHW6\ld_st_rg_sl_struct.v" Line 28: Port q_cmp is not connected to this instance
+
+Elaborating module <ld_st_rg_sl_struct>.
+
+Elaborating module <dff_syn_low_clr_set>.
+
+Elaborating module <mux_2_1_rtl>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ld_st_rg_struct_generate>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/dvhw6/ld_st_rg_struct_generate.v".
+        n = 4
+    Summary:
+	no macro.
+Unit <ld_st_rg_struct_generate> synthesized.
+
+Synthesizing Unit <ld_st_rg_sl_struct>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/dvhw6/ld_st_rg_sl_struct.v".
+INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/dvhw6/ld_st_rg_sl_struct.v" line 28: Output port <q_cmp> of the instance <DFF0> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <ld_st_rg_sl_struct> synthesized.
+
+Synthesizing Unit <dff_syn_low_clr_set>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/dvhw6/dff_syn_low_clr_set.v".
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dff_syn_low_clr_set> synthesized.
+
+Synthesizing Unit <mux_2_1_rtl>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/dvhw6/mux_2-1_rtl.v".
+    Summary:
+	no macro.
+Unit <mux_2_1_rtl> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ 1-bit register                                        : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ld_st_rg_struct_generate> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ld_st_rg_struct_generate, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ld_st_rg_struct_generate.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5
+#      INV                         : 1
+#      LUT4                        : 4
+# FlipFlops/Latches                : 4
+#      FDR                         : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 7
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               4  out of  54576     0%  
+ Number of Slice LUTs:                    5  out of  27288     0%  
+    Number used as Logic:                 5  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      9
+   Number with an unused Flip Flop:       5  out of      9    55%  
+   Number with an unused LUT:             4  out of      9    44%  
+   Number of fully used LUT-FF pairs:     0  out of      9     0%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    316     3%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.371ns (Maximum Frequency: 729.262MHz)
+   Minimum input arrival time before clock: 3.119ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.371ns (frequency: 729.262MHz)
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Delay:               1.371ns (Levels of Logic = 1)
+  Source:            submit[0].ld_st_sl/DFF0/q (FF)
+  Destination:       submit[0].ld_st_sl/DFF0/q (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: submit[0].ld_st_sl/DFF0/q to submit[0].ld_st_sl/DFF0/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.617  submit[0].ld_st_sl/DFF0/q (submit[0].ld_st_sl/DFF0/q)
+     LUT4:I3->O            1   0.205   0.000  submit[0].ld_st_sl/DFF0/q_glue_set (submit[0].ld_st_sl/DFF0/q_glue_set)
+     FDR:D                     0.102          submit[0].ld_st_sl/DFF0/q
+    ----------------------------------------
+    Total                      1.371ns (0.754ns logic, 0.617ns route)
+                                       (55.0% logic, 45.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16 / 8
+-------------------------------------------------------------------------
+Offset:              3.119ns (Levels of Logic = 2)
+  Source:            clr (PAD)
+  Destination:       submit[0].ld_st_sl/DFF0/q (FF)
+  Destination Clock: clk rising
+
+  Data Path: clr to submit[0].ld_st_sl/DFF0/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  clr_IBUF (clr_IBUF)
+     INV:I->O              4   0.206   0.683  submit[0].ld_st_sl/DFF0/clr_inv1_INV_0 (submit[0].ld_st_sl/DFF0/clr_inv)
+     FDR:R                     0.430          submit[0].ld_st_sl/DFF0/q
+    ----------------------------------------
+    Total                      3.119ns (1.858ns logic, 1.261ns route)
+                                       (59.6% logic, 40.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            submit[3].ld_st_sl/DFF0/q (FF)
+  Destination:       sl_out<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: submit[3].ld_st_sl/DFF0/q to sl_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  submit[3].ld_st_sl/DFF0/q (submit[3].ld_st_sl/DFF0/q)
+     OBUF:I->O                 2.571          sl_out_3_OBUF (sl_out<3>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.371|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.28 secs
+ 
+--> 
+
+Total memory usage is 256220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="dec_param_enab.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="dec_param_enab.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="dec_param_enab.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="dec_param_enab.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="dec_param_enab.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="dec_param_enab.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="dec_param_enab.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="dec_param_enab.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="dec_param_enab.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="dec_param_enab.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="dec_param_enab.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="dec_param_enab.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="dec_param_enab.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="dec_param_enab.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="dec_param_enab.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="dec_param_enab.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="dec_param_enab.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="dec_param_enab.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="dec_param_enab.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="dec_param_enab.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="dec_param_enab_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="dec_param_enab_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="dec_param_enab_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="dec_param_enab_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="dec_param_enab_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="dec_param_enab_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="dec_param_enab_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="dec_param_enab_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="dec_param_enab_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="dec_param_enab_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="dec_param_enab_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="dec_param_enab_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="dec_param_enab_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="dec_param_enab_usage.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="dec_param_enab_vtf.fdo"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="dec_param_enab_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1359753821" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1359753821">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359759610" xil_pn:in_ck="-3897296187216593543" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1359759610">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="dec_param_enab.v"/>
+      <outfile xil_pn:name="dec_param_enab_vtf.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1359753821" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3104153230393572169" xil_pn:start_ts="1359753821">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359753821" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6094528014853679733" xil_pn:start_ts="1359753821">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359753821" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="1909085337389176148" xil_pn:start_ts="1359753821">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359759610" xil_pn:in_ck="-3897296187216593543" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1359759610">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="dec_param_enab.v"/>
+      <outfile xil_pn:name="dec_param_enab_vtf.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1359759610" xil_pn:in_ck="-3897296187216593543" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1359759610">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="dec_param_enab_vtf.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
+    </transform>
+    <transform xil_pn:end_ts="1359752782" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1359752782">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359752782" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7103940338228809190" xil_pn:start_ts="1359752782">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359752782" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="1909085337389176148" xil_pn:start_ts="1359752782">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359752782" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1359752782">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359752782" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="2444722386179795304" xil_pn:start_ts="1359752782">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359752782" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015859450356" xil_pn:start_ts="1359752782">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359752782" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-606354575499767330" xil_pn:start_ts="1359752782">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359759218" xil_pn:in_ck="-3922874721796130379" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="1135933642307063331" xil_pn:start_ts="1359759212">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="dec_param_enab.lso"/>
+      <outfile xil_pn:name="dec_param_enab.ngc"/>
+      <outfile xil_pn:name="dec_param_enab.ngr"/>
+      <outfile xil_pn:name="dec_param_enab.prj"/>
+      <outfile xil_pn:name="dec_param_enab.stx"/>
+      <outfile xil_pn:name="dec_param_enab.syr"/>
+      <outfile xil_pn:name="dec_param_enab.xst"/>
+      <outfile xil_pn:name="dec_param_enab_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1359752788" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3251041646791172589" xil_pn:start_ts="1359752788">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359759222" xil_pn:in_ck="7634053064629986967" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-995521069281611" xil_pn:start_ts="1359759218">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="dec_param_enab.bld"/>
+      <outfile xil_pn:name="dec_param_enab.ngd"/>
+      <outfile xil_pn:name="dec_param_enab_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1359759234" xil_pn:in_ck="7634053064629986968" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-7060404927121445762" xil_pn:start_ts="1359759222">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="dec_param_enab.pcf"/>
+      <outfile xil_pn:name="dec_param_enab_map.map"/>
+      <outfile xil_pn:name="dec_param_enab_map.mrp"/>
+      <outfile xil_pn:name="dec_param_enab_map.ncd"/>
+      <outfile xil_pn:name="dec_param_enab_map.ngm"/>
+      <outfile xil_pn:name="dec_param_enab_map.xrpt"/>
+      <outfile xil_pn:name="dec_param_enab_summary.xml"/>
+      <outfile xil_pn:name="dec_param_enab_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1359759250" xil_pn:in_ck="-1445754396721348175" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1359759234">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="dec_param_enab.ncd"/>
+      <outfile xil_pn:name="dec_param_enab.pad"/>
+      <outfile xil_pn:name="dec_param_enab.par"/>
+      <outfile xil_pn:name="dec_param_enab.ptwx"/>
+      <outfile xil_pn:name="dec_param_enab.unroutes"/>
+      <outfile xil_pn:name="dec_param_enab.xpi"/>
+      <outfile xil_pn:name="dec_param_enab_pad.csv"/>
+      <outfile xil_pn:name="dec_param_enab_pad.txt"/>
+      <outfile xil_pn:name="dec_param_enab_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1359759250" xil_pn:in_ck="7634053064629986836" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1359759245">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="dec_param_enab.twr"/>
+      <outfile xil_pn:name="dec_param_enab.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>

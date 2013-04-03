@@ -1,0 +1,32 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "DFlop_clk_SR.ngc" DFlop_clk_SR.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DFlop_clk_SR_map.ncd DFlop_clk_SR.ngd DFlop_clk_SR.pcf 
+par -w -intstyle ise -ol high -mt off DFlop_clk_SR_map.ncd DFlop_clk_SR.ncd DFlop_clk_SR.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DFlop_clk_SR.twx DFlop_clk_SR.ncd -o DFlop_clk_SR.twr DFlop_clk_SR.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "DFlop_clk_SR.ngc" DFlop_clk_SR.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DFlop_clk_SR_map.ncd DFlop_clk_SR.ngd DFlop_clk_SR.pcf 
+par -w -intstyle ise -ol high -mt off DFlop_clk_SR_map.ncd DFlop_clk_SR.ncd DFlop_clk_SR.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DFlop_clk_SR.twx DFlop_clk_SR.ncd -o DFlop_clk_SR.twr DFlop_clk_SR.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "DFlop_clk_SR.ngc" DFlop_clk_SR.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DFlop_clk_SR_map.ncd DFlop_clk_SR.ngd DFlop_clk_SR.pcf 
+par -w -intstyle ise -ol high -mt off DFlop_clk_SR_map.ncd DFlop_clk_SR.ncd DFlop_clk_SR.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DFlop_clk_SR.twx DFlop_clk_SR.ncd -o DFlop_clk_SR.twr DFlop_clk_SR.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "DFlop_clk_SR.ngc" DFlop_clk_SR.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DFlop_clk_SR_map.ncd DFlop_clk_SR.ngd DFlop_clk_SR.pcf 
+par -w -intstyle ise -ol high -mt off DFlop_clk_SR_map.ncd DFlop_clk_SR.ncd DFlop_clk_SR.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DFlop_clk_SR.twx DFlop_clk_SR.ncd -o DFlop_clk_SR.twr DFlop_clk_SR.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "DFlop_clk_SR.ngc" DFlop_clk_SR.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DFlop_clk_SR_map.ncd DFlop_clk_SR.ngd DFlop_clk_SR.pcf 
+par -w -intstyle ise -ol high -mt off DFlop_clk_SR_map.ncd DFlop_clk_SR.ncd DFlop_clk_SR.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DFlop_clk_SR.twx DFlop_clk_SR.ncd -o DFlop_clk_SR.twr DFlop_clk_SR.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/DFlop_clk_set_clr/DFlop_clk_SR.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "DFlop_clk_SR.ngc" DFlop_clk_SR.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DFlop_clk_SR_map.ncd DFlop_clk_SR.ngd DFlop_clk_SR.pcf 
+par -w -intstyle ise -ol high -mt off DFlop_clk_SR_map.ncd DFlop_clk_SR.ncd DFlop_clk_SR.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DFlop_clk_SR.twx DFlop_clk_SR.ncd -o DFlop_clk_SR.twr DFlop_clk_SR.pcf 

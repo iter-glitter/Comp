@@ -1,0 +1,67 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\modules\ld_st_reg\ld_st_reg
+T_opt
+Vm8knj;P<fRLZZzM30<6Cl1
+04 10 4 work ls_reg_vtf fast 0
+04 4 4 work glbl fast 0
+=1-b8975a0ddffd-51524ebe-43-1684
+o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+OE;O;10.1b;51
+vglbl
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+Z1 dD:\Users\Hendren\My Documents\School\EE480\modules\ld_st_reg\ld_st_reg
+w1325912016
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+Z2 OE;L;10.1b;51
+r1
+31
+Z3 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 US6of7W;COLU=>D@U>:[Y0
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!i10b 1
+!s85 0
+!s108 1364348605.851000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+vls_reg
+InkaQ5Y]Q3JKmgRHX[fn_Q1
+VmV4cM<b=LUCA8oQj89kJ_3
+R1
+w1364346945
+8ld_st_reg.v
+Fld_st_reg.v
+L0 18
+R2
+r1
+31
+R3
+!s100 XonNRNaZB;?9?TWJB8SmA2
+!s90 -reportprogress|300|ld_st_reg.v|
+!s108 1364348605.581000
+!s107 ld_st_reg.v|
+!i10b 1
+!s85 0
+vls_reg_vtf
+I?15^6LR0dRPk019]T]<<J1
+V<7NBRSjRE7i]<LZHGKfYD2
+R1
+w1364348598
+8ls_reg_vtf.v
+Fls_reg_vtf.v
+L0 25
+R2
+r1
+31
+R3
+!s90 -reportprogress|300|ls_reg_vtf.v|
+!s100 =dn<cM<3S]>oENgbF`CzH3
+!s108 1364348605.737000
+!s107 ls_reg_vtf.v|
+!i10b 1
+!s85 0

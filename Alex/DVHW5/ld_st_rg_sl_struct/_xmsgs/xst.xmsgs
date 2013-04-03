@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="0" delta="new" >Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\DVHW5\ld_st_rg_sl_struct\ld_st_rg_sl_struct.v" Line 28: Port <arg fmt="%s" index="1">q_cmp</arg> is not connected to this instance
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/dvhw5/ld_st_rg_sl_struct/ld_st_rg_sl_struct.v</arg>&quot; line <arg fmt="%s" index="2">28</arg>: Output port &lt;<arg fmt="%s" index="3">q_cmp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">DFF0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+</messages>
+

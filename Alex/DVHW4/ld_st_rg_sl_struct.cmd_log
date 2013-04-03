@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW4/ld_st_rg_sl_struct.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW4/ld_st_rg_sl_struct.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_rg_sl_struct.ngc" ld_st_rg_sl_struct.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_rg_sl_struct_map.ncd ld_st_rg_sl_struct.ngd ld_st_rg_sl_struct.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_rg_sl_struct_map.ncd ld_st_rg_sl_struct.ncd ld_st_rg_sl_struct.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_rg_sl_struct.twx ld_st_rg_sl_struct.ncd -o ld_st_rg_sl_struct.twr ld_st_rg_sl_struct.pcf 

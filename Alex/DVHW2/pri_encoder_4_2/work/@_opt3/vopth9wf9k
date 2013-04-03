@@ -1,0 +1,90 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW2\pri_encoder_4_2
+T_opt
+VI]MoKmTW5Ke_8mC0Z=g9R0
+Z1 04 19 4 work pri_encoder_4_1_vtf fast 0
+=2-b8975a0ddffd-510c5d1d-2bb-1dbc
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z3 OE;O;10.1b;51
+Z4 dD:\Users\Hendren\My Documents\School\EE480\DVHW2\pri_encoder_4_2
+T_opt1
+VAV::9[6hlH@=bbzG1M;Fn1
+R1
+=2-b8975a0ddffd-510c569c-1e5-1cc0
+R2
+n@_opt1
+R3
+R4
+T_opt2
+V6Zz`F2d7LcSnnD87n8Xi83
+R1
+=2-b8975a0ddffd-510c5c03-142-2374
+R2
+n@_opt2
+R3
+R4
+T_opt3
+VzDU=RdVIIioj<i22ne5X<1
+R1
+=2-b8975a0ddffd-510c5e56-4b-6b4
+R2
+n@_opt3
+R3
+vglbl
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+R4
+w1325908416
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+Z5 OE;L;10.1b;51
+r1
+31
+Z6 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 US6of7W;COLU=>D@U>:[Y0
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!i10b 1
+!s85 0
+!s108 1359765070.038000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+vpri_encoder_4_1
+ImaEcT3gTHCkJOnLIG4z`l3
+VVf5@H9:S^BZf[jK]@RDSR2
+R4
+w1359765061
+8pri_encoder_4_1.v
+Fpri_encoder_4_1.v
+L0 21
+R5
+r1
+31
+R6
+!s90 -reportprogress|300|pri_encoder_4_1.v|
+!s100 HCI8;2TMIO8>Ndo1O_azF2
+!s108 1359765069.821000
+!s107 pri_encoder_4_1.v|
+!i10b 1
+!s85 0
+vpri_encoder_4_1_vtf
+IMez;W?B@F:F@1Nzz@=Lj81
+VWM4CfknRi2^=__8eZQ[SR1
+R4
+w1359763644
+8pri_encoder4x2.v
+Fpri_encoder4x2.v
+L0 25
+R5
+r1
+31
+R6
+!s100 H?E7@Z6]`GWB>oiV[=P9;0
+!s90 -reportprogress|300|pri_encoder4x2.v|
+!s108 1359765069.932000
+!s107 pri_encoder4x2.v|
+!i10b 1
+!s85 0

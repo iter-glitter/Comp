@@ -1,0 +1,25 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/pri_encoder_4_2/pri_encoder_4_1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/pri_encoder_4_2/pri_encoder_4_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "pri_encoder_4_1.ngc" pri_encoder_4_1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pri_encoder_4_1_map.ncd pri_encoder_4_1.ngd pri_encoder_4_1.pcf 
+par -w -intstyle ise -ol high -mt off pri_encoder_4_1_map.ncd pri_encoder_4_1.ncd pri_encoder_4_1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pri_encoder_4_1.twx pri_encoder_4_1.ncd -o pri_encoder_4_1.twr pri_encoder_4_1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/pri_encoder_4_2/pri_encoder_4_1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/pri_encoder_4_2/pri_encoder_4_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "pri_encoder_4_1.ngc" pri_encoder_4_1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pri_encoder_4_1_map.ncd pri_encoder_4_1.ngd pri_encoder_4_1.pcf 
+par -w -intstyle ise -ol high -mt off pri_encoder_4_1_map.ncd pri_encoder_4_1.ncd pri_encoder_4_1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pri_encoder_4_1.twx pri_encoder_4_1.ncd -o pri_encoder_4_1.twr pri_encoder_4_1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/pri_encoder_4_2/pri_encoder_4_1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/pri_encoder_4_2/pri_encoder_4_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "pri_encoder_4_1.ngc" pri_encoder_4_1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pri_encoder_4_1_map.ncd pri_encoder_4_1.ngd pri_encoder_4_1.pcf 
+par -w -intstyle ise -ol high -mt off pri_encoder_4_1_map.ncd pri_encoder_4_1.ncd pri_encoder_4_1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pri_encoder_4_1.twx pri_encoder_4_1.ncd -o pri_encoder_4_1.twr pri_encoder_4_1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/pri_encoder_4_2/pri_encoder_4_1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/pri_encoder_4_2/pri_encoder_4_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "pri_encoder_4_1.ngc" pri_encoder_4_1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pri_encoder_4_1_map.ncd pri_encoder_4_1.ngd pri_encoder_4_1.pcf 
+par -w -intstyle ise -ol high -mt off pri_encoder_4_1_map.ncd pri_encoder_4_1.ncd pri_encoder_4_1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pri_encoder_4_1.twx pri_encoder_4_1.ncd -o pri_encoder_4_1.twr pri_encoder_4_1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/pri_encoder_4_2/pri_encoder_4_1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/pri_encoder_4_2/pri_encoder_4_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "pri_encoder_4_1.ngc" pri_encoder_4_1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o pri_encoder_4_1_map.ncd pri_encoder_4_1.ngd pri_encoder_4_1.pcf 
+par -w -intstyle ise -ol high -mt off pri_encoder_4_1_map.ncd pri_encoder_4_1.ncd pri_encoder_4_1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml pri_encoder_4_1.twx pri_encoder_4_1.ncd -o pri_encoder_4_1.twr pri_encoder_4_1.pcf 

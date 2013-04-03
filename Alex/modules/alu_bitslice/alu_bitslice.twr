@@ -1,0 +1,62 @@
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr
+alu_bitslice.pcf
+
+Design file:              alu_bitslice.ncd
+Physical constraint file: alu_bitslice.pcf
+Device,package,speed:     xc6slx45,fgg484,C,-3 (PRODUCTION 1.21 2012-01-07)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+a              |c_out          |    6.142|
+a              |f_out          |    6.339|
+b              |c_out          |    6.210|
+b              |f_out          |    6.656|
+c<0>           |c_out          |    5.972|
+c<0>           |f_out          |    6.536|
+c<1>           |f_out          |    6.171|
+c<2>           |f_out          |    6.240|
+c_in           |c_out          |    6.551|
+c_in           |f_out          |    6.408|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Feb 12 18:13:03 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 276 MB
+
+
+

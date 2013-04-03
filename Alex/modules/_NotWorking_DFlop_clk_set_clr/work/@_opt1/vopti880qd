@@ -1,0 +1,11 @@
+library verilog;
+use verilog.vl_types.all;
+entity DFlop_clk_SR is
+    port(
+        D               : in     vl_logic;
+        clk             : in     vl_logic;
+        reset           : in     vl_logic;
+        set             : in     vl_logic;
+        Q               : out    vl_logic
+    );
+end DFlop_clk_SR;

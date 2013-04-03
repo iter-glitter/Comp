@@ -1,0 +1,43 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "dec_param_enab.ngc" dec_param_enab.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dec_param_enab_map.ncd dec_param_enab.ngd dec_param_enab.pcf 
+par -w -intstyle ise -ol high -mt off dec_param_enab_map.ncd dec_param_enab.ncd dec_param_enab.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml dec_param_enab.twx dec_param_enab.ncd -o dec_param_enab.twr dec_param_enab.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "dec_param_enab.ngc" dec_param_enab.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dec_param_enab_map.ncd dec_param_enab.ngd dec_param_enab.pcf 
+par -w -intstyle ise -ol high -mt off dec_param_enab_map.ncd dec_param_enab.ncd dec_param_enab.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml dec_param_enab.twx dec_param_enab.ncd -o dec_param_enab.twr dec_param_enab.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "dec_param_enab.ngc" dec_param_enab.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dec_param_enab_map.ncd dec_param_enab.ngd dec_param_enab.pcf 
+par -w -intstyle ise -ol high -mt off dec_param_enab_map.ncd dec_param_enab.ncd dec_param_enab.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml dec_param_enab.twx dec_param_enab.ncd -o dec_param_enab.twr dec_param_enab.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "dec_param_enab.ngc" dec_param_enab.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dec_param_enab_map.ncd dec_param_enab.ngd dec_param_enab.pcf 
+par -w -intstyle ise -ol high -mt off dec_param_enab_map.ncd dec_param_enab.ncd dec_param_enab.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml dec_param_enab.twx dec_param_enab.ncd -o dec_param_enab.twr dec_param_enab.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "dec_param_enab.ngc" dec_param_enab.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dec_param_enab_map.ncd dec_param_enab.ngd dec_param_enab.pcf 
+par -w -intstyle ise -ol high -mt off dec_param_enab_map.ncd dec_param_enab.ncd dec_param_enab.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml dec_param_enab.twx dec_param_enab.ncd -o dec_param_enab.twr dec_param_enab.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "dec_param_enab.ngc" dec_param_enab.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dec_param_enab_map.ncd dec_param_enab.ngd dec_param_enab.pcf 
+par -w -intstyle ise -ol high -mt off dec_param_enab_map.ncd dec_param_enab.ncd dec_param_enab.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml dec_param_enab.twx dec_param_enab.ncd -o dec_param_enab.twr dec_param_enab.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "dec_param_enab.ngc" dec_param_enab.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dec_param_enab_map.ncd dec_param_enab.ngd dec_param_enab.pcf 
+par -w -intstyle ise -ol high -mt off dec_param_enab_map.ncd dec_param_enab.ncd dec_param_enab.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml dec_param_enab.twx dec_param_enab.ncd -o dec_param_enab.twr dec_param_enab.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW2/dec_param_enab/dec_param_enab.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "dec_param_enab.ngc" dec_param_enab.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dec_param_enab_map.ncd dec_param_enab.ngd dec_param_enab.pcf 
+par -w -intstyle ise -ol high -mt off dec_param_enab_map.ncd dec_param_enab.ncd dec_param_enab.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml dec_param_enab.twx dec_param_enab.ncd -o dec_param_enab.twr dec_param_enab.pcf 

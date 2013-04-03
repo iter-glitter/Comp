@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="0" delta="new" >Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="296" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\DVHW2\pri_encoder_4_2\pri_encoder_4_1.v" Line 34: case condition never applies due to comparison with x or z
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="296" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\DVHW2\pri_encoder_4_2\pri_encoder_4_1.v" Line 35: case condition never applies due to comparison with x or z
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="296" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\DVHW2\pri_encoder_4_2\pri_encoder_4_1.v" Line 36: case condition never applies due to comparison with x or z
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">dis</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

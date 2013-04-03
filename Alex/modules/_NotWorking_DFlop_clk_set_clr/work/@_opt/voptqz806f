@@ -1,0 +1,87 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\modules\DFlop_clk_set_clr
+T_opt
+VIb>4[^41n^;^DhSj011^T1
+Z1 04 16 4 work DFlop_clk_SR_vtf fast 0
+Z2 04 4 4 work glbl fast 0
+=1-b8975a0ddffd-511b3e7c-35d-199c
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+Z4 OE;O;10.1b;51
+T_opt1
+VQ@[CjmhX`Al8^67VLXK8]2
+R1
+R2
+=1-b8975a0ddffd-511b37d7-285-1598
+R3
+n@_opt1
+R4
+Z5 dD:\Users\Hendren\My Documents\School\EE480\modules\DFlop_clk_set_clr
+T_opt2
+V`7_Y<eLbUDFY4DQW_[6L@2
+R1
+R2
+=1-b8975a0ddffd-511b3b64-3b4-1260
+R3
+n@_opt2
+R4
+R5
+vDFlop_clk_SR
+IDMiP<g0]@i=akKJQhgI=L1
+VRBXb:AZBRmCBL?4TV512K3
+R5
+w1360739299
+8DFlop_clk_SR.v
+FDFlop_clk_SR.v
+L0 21
+Z6 OE;L;10.1b;51
+r1
+31
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@d@flop_clk_@s@r
+!s100 ;d<d<G5?8?Wd1V9di_AiE2
+!s90 -reportprogress|300|DFlop_clk_SR.v|
+!s108 1360739964.429000
+!s107 DFlop_clk_SR.v|
+!i10b 1
+!s85 0
+vDFlop_clk_SR_vtf
+IIjf>;FYII=dZaFjTGPg5:3
+V0EPMF^;PFE>nbI[`2dm>]1
+R5
+w1360739956
+8DFlop_clk_SR_vtf.v
+FDFlop_clk_SR_vtf.v
+L0 25
+R6
+r1
+31
+R7
+n@d@flop_clk_@s@r_vtf
+!s90 -reportprogress|300|DFlop_clk_SR_vtf.v|
+!s100 ^@iAF6WB:^cah?ObBR^W^0
+!s108 1360739964.538000
+!s107 DFlop_clk_SR_vtf.v|
+!i10b 1
+!s85 0
+vglbl
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+R5
+Z8 w1325908416
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R6
+r1
+31
+R7
+!s100 US6of7W;COLU=>D@U>:[Y0
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!i10b 1
+!s85 0
+!s108 1360739964.655000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|

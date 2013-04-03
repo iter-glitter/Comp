@@ -1,0 +1,95 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW7/ld_st_shift_nbit/ld_st_shift_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_shift_nbit.ngc" ld_st_shift_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ngd ld_st_shift_nbit.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_shift_nbit_map.ncd ld_st_shift_nbit.ncd ld_st_shift_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_shift_nbit.twx ld_st_shift_nbit.ncd -o ld_st_shift_nbit.twr ld_st_shift_nbit.pcf 

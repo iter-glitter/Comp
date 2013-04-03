@@ -1,0 +1,51 @@
+# Reading D:/MentorGraphics/tcl/vsim/pref.tcl 
+# //  ModelSim SE 10.1b Apr 26 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {ls_reg_vtf.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module ls_reg
+# 
+# Top level modules:
+# 	ls_reg
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module ls_reg_vtf
+# 
+# Top level modules:
+# 	ls_reg_vtf
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.ls_reg_vtf glbl 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading work.ls_reg_vtf(fast)
+# Loading work.ls_reg(fast)
+# Loading work.glbl(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+restart
+# Loading work.ls_reg_vtf(fast)
+# Loading work.ls_reg(fast)
+# Loading work.glbl(fast)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

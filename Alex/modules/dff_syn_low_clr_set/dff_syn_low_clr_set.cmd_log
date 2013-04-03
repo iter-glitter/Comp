@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "dff_syn_low_clr_set.ngc" dff_syn_low_clr_set.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dff_syn_low_clr_set_map.ncd dff_syn_low_clr_set.ngd dff_syn_low_clr_set.pcf 
+par -w -intstyle ise -ol high -mt off dff_syn_low_clr_set_map.ncd dff_syn_low_clr_set.ncd dff_syn_low_clr_set.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml dff_syn_low_clr_set.twx dff_syn_low_clr_set.ncd -o dff_syn_low_clr_set.twr dff_syn_low_clr_set.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "dff_syn_low_clr_set.ngc" dff_syn_low_clr_set.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dff_syn_low_clr_set_map.ncd dff_syn_low_clr_set.ngd dff_syn_low_clr_set.pcf 
+par -w -intstyle ise -ol high -mt off dff_syn_low_clr_set_map.ncd dff_syn_low_clr_set.ncd dff_syn_low_clr_set.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml dff_syn_low_clr_set.twx dff_syn_low_clr_set.ncd -o dff_syn_low_clr_set.twr dff_syn_low_clr_set.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/modules/dff_syn_low_clr_set/dff_syn_low_clr_set.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "dff_syn_low_clr_set.ngc" dff_syn_low_clr_set.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o dff_syn_low_clr_set_map.ncd dff_syn_low_clr_set.ngd dff_syn_low_clr_set.pcf 
+par -w -intstyle ise -ol high -mt off dff_syn_low_clr_set_map.ncd dff_syn_low_clr_set.ncd dff_syn_low_clr_set.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml dff_syn_low_clr_set.twx dff_syn_low_clr_set.ncd -o dff_syn_low_clr_set.twr dff_syn_low_clr_set.pcf 

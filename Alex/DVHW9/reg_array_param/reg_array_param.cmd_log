@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "reg_array_param.ngc" reg_array_param.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o reg_array_param_map.ncd reg_array_param.ngd reg_array_param.pcf 
+par -w -intstyle ise -ol high -mt off reg_array_param_map.ncd reg_array_param.ncd reg_array_param.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reg_array_param.twx reg_array_param.ncd -o reg_array_param.twr reg_array_param.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "reg_array_param.ngc" reg_array_param.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o reg_array_param_map.ncd reg_array_param.ngd reg_array_param.pcf 
+par -w -intstyle ise -ol high -mt off reg_array_param_map.ncd reg_array_param.ncd reg_array_param.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reg_array_param.twx reg_array_param.ncd -o reg_array_param.twr reg_array_param.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW9/reg_array_param/reg_array_param.syr" 

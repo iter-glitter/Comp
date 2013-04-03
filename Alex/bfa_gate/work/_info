@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\bfa_gate
+T_opt
+Z1 V9DOFz=AklR3Qgh;8DOm1I0
+Z2 04 12 4 work bfa_gate_vtf fast 0
+Z3 =2-b8975a0ddffd-510b5348-d8-11d8
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 n@_opt
+Z6 OE;O;10.1b;51
+Z7 dD:\Users\Hendren\My Documents\School\EE480\bfa_gate
+T_opt1
+Z8 VSMUKJaIXcaklS:9m:aXIP1
+R2
+Z9 =1-b8975a0ddffd-510b535b-3b9-145c
+Z10 o-quiet -auto_acc_if_foreign -work work +acc
+Z11 n@_opt1
+R6
+R7
+vbfa_gate
+Z12 !s100 1X1U?lNFheHLV@Z7A<1:B2
+Z13 ISAFk^QWoUmgDSBLZ>:Ald1
+Z14 V0D:0JOj;N`oROzaHH?m142
+R7
+Z15 w1359696117
+Z16 8bfa_gate.v
+Z17 Fbfa_gate.v
+L0 23
+Z18 OE;L;10.1b;51
+r1
+31
+Z19 !s90 -reportprogress|300|bfa_gate.v|
+Z20 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z21 !s108 1359697073.380000
+Z22 !s107 bfa_gate.v|
+!i10b 1
+!s85 0
+vbfa_gate_vtf
+Z23 !s100 hXPlRiTQ>g9J7ZoTBU:dS1
+Z24 IN?e19j7Tzz7i>M`0>>k@J2
+Z25 V16ZSD;YY4o;:=LWi[B3F;2
+R7
+Z26 w1359696236
+Z27 8bfa_gate_vtf.v
+Z28 Fbfa_gate_vtf.v
+L0 25
+R18
+r1
+31
+Z29 !s90 -reportprogress|300|bfa_gate_vtf.v|
+R20
+!i10b 1
+!s85 0
+Z30 !s108 1359697073.494000
+Z31 !s107 bfa_gate_vtf.v|
+vglbl
+!i10b 1
+Z32 !s100 US6of7W;COLU=>D@U>:[Y0
+Z33 IlN77838lTSOK8o;l=MSIc0
+Z34 VM[9mS]S:KA1i4VeCMX35[3
+R7
+Z35 w1325908416
+Z36 8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+Z37 FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R18
+r1
+!s85 0
+31
+!s108 1359697073.601000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+Z38 !s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+R20

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="one_hot_fsm.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="one_hot_fsm.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="one_hot_fsm.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="one_hot_fsm.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="one_hot_fsm.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="one_hot_fsm.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="one_hot_fsm.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="one_hot_fsm.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="one_hot_fsm.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="one_hot_fsm.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="one_hot_fsm.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="one_hot_fsm.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="one_hot_fsm.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="one_hot_fsm.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="one_hot_fsm.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="one_hot_fsm.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="one_hot_fsm.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="one_hot_fsm.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="one_hot_fsm.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="one_hot_fsm.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="one_hot_fsm_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="one_hot_fsm_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="one_hot_fsm_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="one_hot_fsm_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="one_hot_fsm_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="one_hot_fsm_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="one_hot_fsm_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="one_hot_fsm_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="one_hot_fsm_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="one_hot_fsm_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="one_hot_fsm_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="one_hot_fsm_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="one_hot_fsm_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="one_hot_fsm_usage.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="one_hot_fsm_vtf.fdo"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="one_hot_fsm_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1363735209" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1363735209">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363735884" xil_pn:in_ck="7478452918995221401" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1363735884">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="one_hot_fsm.v"/>
+      <outfile xil_pn:name="one_hot_fsm_vtf.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1363735209" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8242215047202599159" xil_pn:start_ts="1363735209">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363735209" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-222669495947815243" xil_pn:start_ts="1363735209">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363735209" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="3551780831995689524" xil_pn:start_ts="1363735209">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363735884" xil_pn:in_ck="7478452918995221401" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1363735884">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="one_hot_fsm.v"/>
+      <outfile xil_pn:name="one_hot_fsm_vtf.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1363735884" xil_pn:in_ck="7478452918995221401" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1363735884">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="one_hot_fsm_vtf.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
+    </transform>
+    <transform xil_pn:end_ts="1363732931" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1363732931">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363732931" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5396988356312677094" xil_pn:start_ts="1363732931">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363732931" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3551780831995689524" xil_pn:start_ts="1363732931">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363732931" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1363732931">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363732931" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="8508530871182456232" xil_pn:start_ts="1363732931">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363732931" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015859450356" xil_pn:start_ts="1363732931">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363732931" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-2391880716530781442" xil_pn:start_ts="1363732931">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363733770" xil_pn:in_ck="6387176858522490549" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="5657011958569101252" xil_pn:start_ts="1363733764">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="one_hot_fsm.lso"/>
+      <outfile xil_pn:name="one_hot_fsm.ngc"/>
+      <outfile xil_pn:name="one_hot_fsm.ngr"/>
+      <outfile xil_pn:name="one_hot_fsm.prj"/>
+      <outfile xil_pn:name="one_hot_fsm.stx"/>
+      <outfile xil_pn:name="one_hot_fsm.syr"/>
+      <outfile xil_pn:name="one_hot_fsm.xst"/>
+      <outfile xil_pn:name="one_hot_fsm_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1363732942" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5811946492763354541" xil_pn:start_ts="1363732942">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1363733775" xil_pn:in_ck="1213083142491243415" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3842042083790461493" xil_pn:start_ts="1363733770">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="one_hot_fsm.bld"/>
+      <outfile xil_pn:name="one_hot_fsm.ngd"/>
+      <outfile xil_pn:name="one_hot_fsm_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1363733789" xil_pn:in_ck="1213083142491243416" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-7060404927121445762" xil_pn:start_ts="1363733775">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="one_hot_fsm.pcf"/>
+      <outfile xil_pn:name="one_hot_fsm_map.map"/>
+      <outfile xil_pn:name="one_hot_fsm_map.mrp"/>
+      <outfile xil_pn:name="one_hot_fsm_map.ncd"/>
+      <outfile xil_pn:name="one_hot_fsm_map.ngm"/>
+      <outfile xil_pn:name="one_hot_fsm_map.xrpt"/>
+      <outfile xil_pn:name="one_hot_fsm_summary.xml"/>
+      <outfile xil_pn:name="one_hot_fsm_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1363733805" xil_pn:in_ck="-3903392015834849615" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1363733789">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="one_hot_fsm.ncd"/>
+      <outfile xil_pn:name="one_hot_fsm.pad"/>
+      <outfile xil_pn:name="one_hot_fsm.par"/>
+      <outfile xil_pn:name="one_hot_fsm.ptwx"/>
+      <outfile xil_pn:name="one_hot_fsm.unroutes"/>
+      <outfile xil_pn:name="one_hot_fsm.xpi"/>
+      <outfile xil_pn:name="one_hot_fsm_pad.csv"/>
+      <outfile xil_pn:name="one_hot_fsm_pad.txt"/>
+      <outfile xil_pn:name="one_hot_fsm_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1363733805" xil_pn:in_ck="1213083142491243284" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1363733800">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="one_hot_fsm.twr"/>
+      <outfile xil_pn:name="one_hot_fsm.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>

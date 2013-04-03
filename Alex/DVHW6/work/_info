@@ -1,0 +1,122 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW6
+T_opt
+Z1 V:2h1?TQKZ@bnIjHW@[JcD3
+Z2 04 28 4 work ld_st_rg_struct_generate_vtf fast 0
+Z3 04 4 4 work glbl fast 0
+Z4 =1-b8975a0ddffd-511de963-6f-1bfc
+Z5 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+Z6 n@_opt
+Z7 OE;O;10.1b;51
+Z8 dD:\Users\Hendren\My Documents\School\EE480\DVHW6
+vdff_syn_low_clr_set
+Z9 !s100 H>=_j??Knn<ZIY7TOf1W<2
+Z10 If<F69Y1LgbQfN1K[EdjdD2
+Z11 Vc]A<=Snb`aNn`zFz>K2WT1
+R8
+Z12 w1360911416
+Z13 8dff_syn_low_clr_set.v
+Z14 Fdff_syn_low_clr_set.v
+L0 24
+Z15 OE;L;10.1b;51
+r1
+31
+Z16 !s90 -reportprogress|300|dff_syn_low_clr_set.v|
+Z17 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z18 !s108 1361241958.140000
+Z19 !s107 dff_syn_low_clr_set.v|
+!i10b 1
+!s85 0
+vglbl
+!i10b 1
+Z20 !s100 US6of7W;COLU=>D@U>:[Y0
+Z21 IlN77838lTSOK8o;l=MSIc0
+Z22 VM[9mS]S:KA1i4VeCMX35[3
+R8
+Z23 w1325908416
+Z24 8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+Z25 FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R15
+r1
+!s85 0
+31
+!s108 1361241958.634000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+Z26 !s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+R17
+vld_st_rg_sl_struct
+Z27 !s100 W4NfQLAmSld0bjFzXTB`:3
+Z28 IHVJeON[lbWKVR8bhdCTHH2
+Z29 Vnk9hn7=l7f6968d7k:Z9j2
+R8
+Z30 w1360912461
+Z31 8ld_st_rg_sl_struct.v
+Z32 Fld_st_rg_sl_struct.v
+L0 21
+R15
+r1
+31
+Z33 !s90 -reportprogress|300|ld_st_rg_sl_struct.v|
+R17
+Z34 !s108 1361241958.321000
+Z35 !s107 ld_st_rg_sl_struct.v|
+!i10b 1
+!s85 0
+vld_st_rg_struct_generate
+Z36 !s100 [Q=>AP:JYHC8Djdfh?^:=2
+Z37 IH@JLVf^i]Q[zLFSJ1=D9V0
+Z38 Vg_3^YR24<omfX0k>SD@Y30
+R8
+Z39 w1360911400
+Z40 8ld_st_rg_struct_generate.v
+Z41 Fld_st_rg_struct_generate.v
+L0 21
+R15
+r1
+31
+Z42 !s90 -reportprogress|300|ld_st_rg_struct_generate.v|
+R17
+Z43 !s108 1361241958.421000
+Z44 !s107 ld_st_rg_struct_generate.v|
+!i10b 1
+!s85 0
+vld_st_rg_struct_generate_vtf
+Z45 !s100 D03@c=[n1B4<=@2A8`^1I2
+Z46 I4gf:U5FZkhBz]dgGCNXN[0
+Z47 VBI;HfWcLgnnMmcj6f[b@31
+R8
+Z48 w1360914778
+Z49 8ld_st_rg_struct_generate_vtf.v
+Z50 Fld_st_rg_struct_generate_vtf.v
+L0 25
+R15
+r1
+31
+Z51 !s90 -reportprogress|300|ld_st_rg_struct_generate_vtf.v|
+R17
+!i10b 1
+!s85 0
+Z52 !s108 1361241958.530000
+Z53 !s107 ld_st_rg_struct_generate_vtf.v|
+vmux_2_1_rtl
+Z54 !s100 Dl@AR2D[_K4zab75jZj9U1
+Z55 IVek1>?518<TGNEFcfJFNa1
+Z56 VYKzTc1hT1RgnA_H]PZeJc3
+R8
+Z57 w1359082798
+Z58 8mux_2-1_rtl.v
+Z59 Fmux_2-1_rtl.v
+L0 21
+R15
+r1
+31
+Z60 !s90 -reportprogress|300|mux_2-1_rtl.v|
+R17
+Z61 !s108 1361241958.031000
+Z62 !s107 mux_2-1_rtl.v|
+!i10b 1
+!s85 0

@@ -1,0 +1,60 @@
+# Reading D:/MentorGraphics/tcl/vsim/pref.tcl 
+# //  ModelSim SE 10.1b Apr 26 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {pri_encoder_4_1.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module pri_encoder_4_1
+# 
+# Top level modules:
+# 	pri_encoder_4_1
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.pri_encoder_4_1 glbl 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Error: (vopt-19) Failed to access library 'xilinxcorelib_ver' at "xilinxcorelib_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vopt-19) Failed to access library 'unisims_ver' at "unisims_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vopt-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vopt-19) Failed to access library 'secureip' at "secureip".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v(66): Vopt Compiler exiting
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./pri_encoder_4_1.fdo PAUSED at line 28
+vsim -voptargs=+acc work.pri_encoder_4_1_vtf
+# vsim -voptargs=+acc work.pri_encoder_4_1_vtf 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading work.pri_encoder_4_1_vtf(fast)
+# Loading work.pri_encoder_4_1(fast)
+add wave -position insertpoint sim:/pri_encoder_4_1_vtf/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 7184
+# 
+#           Attempting to use alternate WLF file "./wlftia9xvt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftia9xvt
+# 
+run

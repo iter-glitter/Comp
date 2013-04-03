@@ -1,0 +1,83 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim alu_bitslice.ngc alu_bitslice_synthesis.v 
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW3/alu_bitslice_2/alu_bitslice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "alu_bitslice.ngc" alu_bitslice.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_bitslice_map.ncd alu_bitslice.ngd alu_bitslice.pcf 
+par -w -intstyle ise -ol high -mt off alu_bitslice_map.ncd alu_bitslice.ncd alu_bitslice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_bitslice.twx alu_bitslice.ncd -o alu_bitslice.twr alu_bitslice.pcf 

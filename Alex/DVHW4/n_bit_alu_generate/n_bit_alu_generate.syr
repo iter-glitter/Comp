@@ -1,0 +1,339 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: n_bit_alu_generate.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "n_bit_alu_generate.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "n_bit_alu_generate"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-fgg484
+
+---- Source Options
+Top Module Name                    : n_bit_alu_generate
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\DVHW4\n_bit_alu_generate\mux_4_1_behavioral.v" into library work
+Parsing module <mux_4_1_behavioral>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\DVHW4\n_bit_alu_generate\mux_2-1_rtl.v" into library work
+Parsing module <mux_2_1_rtl>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\DVHW4\n_bit_alu_generate\bfa_gate.v" into library work
+Parsing module <bfa_gate>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\DVHW4\n_bit_alu_generate\alu_bitslice.v" into library work
+Parsing module <alu_bitslice>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\DVHW4\n_bit_alu_generate\n_bit_alu_generate.v" into library work
+Parsing module <n_bit_alu_generate>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <n_bit_alu_generate>.
+
+Elaborating module <alu_bitslice>.
+
+Elaborating module <mux_2_1_rtl>.
+
+Elaborating module <bfa_gate>.
+
+Elaborating module <mux_4_1_behavioral>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <n_bit_alu_generate>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/dvhw4/n_bit_alu_generate/n_bit_alu_generate.v".
+        n = 4
+    Summary:
+Unit <n_bit_alu_generate> synthesized.
+
+Synthesizing Unit <alu_bitslice>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/dvhw4/n_bit_alu_generate/alu_bitslice.v".
+    Summary:
+	no macro.
+Unit <alu_bitslice> synthesized.
+
+Synthesizing Unit <mux_2_1_rtl>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/dvhw4/n_bit_alu_generate/mux_2-1_rtl.v".
+    Summary:
+	no macro.
+Unit <mux_2_1_rtl> synthesized.
+
+Synthesizing Unit <bfa_gate>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/dvhw4/n_bit_alu_generate/bfa_gate.v".
+    Summary:
+Unit <bfa_gate> synthesized.
+
+Synthesizing Unit <mux_4_1_behavioral>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/dvhw4/n_bit_alu_generate/mux_4_1_behavioral.v".
+    Found 1-bit 4-to-1 multiplexer for signal <out> created at line 35.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_4_1_behavioral> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 4
+ 1-bit 4-to-1 multiplexer                              : 4
+# Xors                                                 : 9
+ 1-bit xor2                                            : 9
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multiplexers                                         : 4
+ 1-bit 4-to-1 multiplexer                              : 4
+# Xors                                                 : 9
+ 1-bit xor2                                            : 9
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <n_bit_alu_generate> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block n_bit_alu_generate, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : n_bit_alu_generate.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 11
+#      LUT4                        : 1
+#      LUT6                        : 9
+#      MUXF7                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 12
+#      OBUF                        : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                   10  out of  27288     0%  
+    Number used as Logic:                10  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     10
+   Number with an unused Flip Flop:      10  out of     10   100%  
+   Number with an unused LUT:             0  out of     10     0%  
+   Number of fully used LUT-FF pairs:     0  out of     10     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    316     5%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 7.677ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 71 / 6
+-------------------------------------------------------------------------
+Delay:               7.677ns (Levels of Logic = 5)
+  Source:            c<0> (PAD)
+  Destination:       f_out<3> (PAD)
+
+  Data Path: c<0> to f_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   1.201  c_0_IBUF (c_0_IBUF)
+     LUT6:I1->O            4   0.203   0.912  submit[1].ALU_slice/BFA/cout1 (w_c<2>)
+     LUT4:I1->O            1   0.205   0.580  submit[2].ALU_slice/BFA/cout1 (w_c<3>)
+     LUT6:I5->O            1   0.205   0.579  submit[3].ALU_slice/MUX_4x1/Mmux_out11 (f_out_3_OBUF)
+     OBUF:I->O                 2.571          f_out_3_OBUF (f_out<3>)
+    ----------------------------------------
+    Total                      7.677ns (4.406ns logic, 3.271ns route)
+                                       (57.4% logic, 42.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.17 secs
+ 
+--> 
+
+Total memory usage is 256220 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

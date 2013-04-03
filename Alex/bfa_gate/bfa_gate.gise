@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="bfa_gate.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="bfa_gate.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="bfa_gate.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="bfa_gate.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="bfa_gate.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="bfa_gate.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="bfa_gate.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="bfa_gate.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="bfa_gate.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="bfa_gate.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="bfa_gate.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bfa_gate.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="bfa_gate.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="bfa_gate.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="bfa_gate.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="bfa_gate.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="bfa_gate.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="bfa_gate.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="bfa_gate.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="bfa_gate.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="bfa_gate_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="bfa_gate_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="bfa_gate_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="bfa_gate_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="bfa_gate_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="bfa_gate_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="bfa_gate_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="bfa_gate_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="bfa_gate_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="bfa_gate_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="bfa_gate_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="bfa_gate_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="bfa_gate_usage.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="bfa_gate_vtf.fdo"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="bfa_gate_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1359696246" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1359696246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696246" xil_pn:in_ck="8028547548673950569" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1359696246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="bfa_gate.v"/>
+      <outfile xil_pn:name="bfa_gate_vtf.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696246" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="830652174354429711" xil_pn:start_ts="1359696246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696246" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3908284006476123341" xil_pn:start_ts="1359696246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696246" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="3838983898717682988" xil_pn:start_ts="1359696246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696246" xil_pn:in_ck="8028547548673950569" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1359696246">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="bfa_gate.v"/>
+      <outfile xil_pn:name="bfa_gate_vtf.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1359697068" xil_pn:in_ck="8028547548673950569" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-4634674057625140691" xil_pn:start_ts="1359697067">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="bfa_gate_vtf.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696125" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1359696125">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696125" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7770799108333735358" xil_pn:start_ts="1359696125">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696125" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3838983898717682988" xil_pn:start_ts="1359696125">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696125" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1359696125">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696125" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-783902875413614656" xil_pn:start_ts="1359696125">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696125" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1359696125">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696125" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="5782202013794507318" xil_pn:start_ts="1359696125">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696132" xil_pn:in_ck="4696039979137933" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-618166954735593221" xil_pn:start_ts="1359696125">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="bfa_gate.lso"/>
+      <outfile xil_pn:name="bfa_gate.ngc"/>
+      <outfile xil_pn:name="bfa_gate.ngr"/>
+      <outfile xil_pn:name="bfa_gate.prj"/>
+      <outfile xil_pn:name="bfa_gate.stx"/>
+      <outfile xil_pn:name="bfa_gate.syr"/>
+      <outfile xil_pn:name="bfa_gate.xst"/>
+      <outfile xil_pn:name="bfa_gate_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696132" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4784893453020049515" xil_pn:start_ts="1359696132">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696137" xil_pn:in_ck="5113987537281203823" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="1394620149802775501" xil_pn:start_ts="1359696132">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="bfa_gate.bld"/>
+      <outfile xil_pn:name="bfa_gate.ngd"/>
+      <outfile xil_pn:name="bfa_gate_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696148" xil_pn:in_ck="5113987537281203824" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-3180699873896808002" xil_pn:start_ts="1359696137">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="bfa_gate.pcf"/>
+      <outfile xil_pn:name="bfa_gate_map.map"/>
+      <outfile xil_pn:name="bfa_gate_map.mrp"/>
+      <outfile xil_pn:name="bfa_gate_map.ncd"/>
+      <outfile xil_pn:name="bfa_gate_map.ngm"/>
+      <outfile xil_pn:name="bfa_gate_map.xrpt"/>
+      <outfile xil_pn:name="bfa_gate_summary.xml"/>
+      <outfile xil_pn:name="bfa_gate_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696161" xil_pn:in_ck="-6175143561099852407" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1359696148">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="bfa_gate.ncd"/>
+      <outfile xil_pn:name="bfa_gate.pad"/>
+      <outfile xil_pn:name="bfa_gate.par"/>
+      <outfile xil_pn:name="bfa_gate.ptwx"/>
+      <outfile xil_pn:name="bfa_gate.unroutes"/>
+      <outfile xil_pn:name="bfa_gate.xpi"/>
+      <outfile xil_pn:name="bfa_gate_pad.csv"/>
+      <outfile xil_pn:name="bfa_gate_pad.txt"/>
+      <outfile xil_pn:name="bfa_gate_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1359696161" xil_pn:in_ck="5113987537281203692" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1359696157">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="bfa_gate.twr"/>
+      <outfile xil_pn:name="bfa_gate.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>

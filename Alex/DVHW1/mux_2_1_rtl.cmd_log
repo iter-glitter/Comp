@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW1/mux_2_1_rtl.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW1/mux_2_1_rtl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "mux_2_1_rtl.ngc" mux_2_1_rtl.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mux_2_1_rtl_map.ncd mux_2_1_rtl.ngd mux_2_1_rtl.pcf 
+par -w -intstyle ise -ol high -mt off mux_2_1_rtl_map.ncd mux_2_1_rtl.ncd mux_2_1_rtl.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mux_2_1_rtl.twx mux_2_1_rtl.ncd -o mux_2_1_rtl.twr mux_2_1_rtl.pcf 

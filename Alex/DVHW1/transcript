@@ -1,0 +1,47 @@
+# Reading D:/MentorGraphics/tcl/vsim/pref.tcl 
+# //  ModelSim SE 10.1b Apr 26 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {mux_4_1_behavioral_vtf.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module mux_4_1_behavioral
+# 
+# Top level modules:
+# 	mux_4_1_behavioral
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module mux_4_1_behavioral_vtf
+# ** Error: mux_4_1_behavioral_vtf.v(48): (vlog-2730) Undefined variable: 'y_tc'.
+# 
+# ** Error: D:/MentorGraphics/win32/vlog failed.
+# Error in macro ./mux_4_1_behavioral_vtf.fdo line 24
+# D:/MentorGraphics/win32/vlog failed.
+#     while executing
+# "vlog  "mux_4_1_behavioral_vtf.v""
+vsim -do {do {mux_4_1_behavioral_vtf.fdo}} -gui work.mux_4_1_behavioral
+# vsim -do {do {mux_4_1_behavioral_vtf.fdo}} -gui work.mux_4_1_behavioral 
+# Loading work.mux_4_1_behavioral(fast)
+# do {mux_4_1_behavioral_vtf.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module mux_4_1_behavioral
+# 
+# Top level modules:
+# 	mux_4_1_behavioral
+# Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
+# -- Compiling module mux_4_1_behavioral_vtf
+# ** Error: mux_4_1_behavioral_vtf.v(48): (vlog-2730) Undefined variable: 'y_tc'.
+# 
+# ** Error: D:/MentorGraphics/win32/vlog failed.
+# Error in macro ./mux_4_1_behavioral_vtf.fdo line 24
+# D:/MentorGraphics/win32/vlog failed.
+#     while executing
+# "vlog  "mux_4_1_behavioral_vtf.v""

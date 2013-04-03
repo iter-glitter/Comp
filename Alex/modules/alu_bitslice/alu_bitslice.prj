@@ -1,0 +1,4 @@
+verilog work "mux_4_1_behavioral.v"
+verilog work "mux_2-1_rtl.v"
+verilog work "bfa_gate.v"
+verilog work "alu_bitslice.v"

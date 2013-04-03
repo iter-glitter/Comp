@@ -1,0 +1,188 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "MHVPIS.ngc" MHVPIS.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MHVPIS_map.ncd MHVPIS.ngd MHVPIS.pcf 
+par -w -intstyle ise -ol high -mt off MHVPIS_map.ncd MHVPIS.ncd MHVPIS.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MHVPIS.twx MHVPIS.ncd -o MHVPIS.twr MHVPIS.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW11/MHVPIS/MHVPIS.syr" 

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="DVHW1.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bfa_gate.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="bfa_gate.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="bfa_gate.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="mux_2_1_rtl.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="mux_2_1_rtl.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="mux_2_1_rtl.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="mux_2_1_rtl.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="mux_2_1_rtl.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="mux_2_1_rtl.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="mux_2_1_rtl.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="mux_2_1_rtl.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="mux_2_1_rtl.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mux_2_1_rtl.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="mux_2_1_rtl.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="mux_2_1_rtl.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="mux_2_1_rtl.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="mux_2_1_rtl.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="mux_2_1_rtl.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="mux_2_1_rtl.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="mux_2_1_rtl_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="mux_2_1_rtl_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="mux_2_1_rtl_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="mux_2_1_rtl_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="mux_2_1_rtl_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="mux_2_1_rtl_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="mux_2_1_rtl_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="mux_2_1_rtl_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mux_2_1_rtl_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="mux_4_1_behavioral.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="mux_4_1_behavioral.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="mux_4_1_behavioral.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="mux_4_1_behavioral.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="mux_4_1_behavioral.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="mux_4_1_behavioral.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="mux_4_1_behavioral.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="mux_4_1_behavioral.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="mux_4_1_behavioral.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="mux_4_1_behavioral.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mux_4_1_behavioral.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="mux_4_1_behavioral.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="mux_4_1_behavioral.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="mux_4_1_behavioral.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="mux_4_1_behavioral.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="mux_4_1_behavioral.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="mux_4_1_behavioral.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="mux_4_1_behavioral.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="mux_4_1_behavioral.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="mux_4_1_behavioral_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="mux_4_1_behavioral_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="mux_4_1_behavioral_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="mux_4_1_behavioral_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="mux_4_1_behavioral_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mux_4_1_behavioral_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mux_4_1_behavioral_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="mux_4_1_behavioral_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="mux_4_1_behavioral_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mux_4_1_behavioral_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="mux_4_1_behavioral_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="mux_4_1_behavioral_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="mux_4_1_behavioral_usage.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="mux_4_1_behavioral_vtf.fdo"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mux_4_1_behavioral_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1359499196" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1359499196">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499196" xil_pn:in_ck="7798629628732492948" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1359499196">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="bfa_gate.v"/>
+      <outfile xil_pn:name="mux_2-1_rtl.v"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.v"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_vtf.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499196" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3709960627556143903" xil_pn:start_ts="1359499196">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499196" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4521817067196631261" xil_pn:start_ts="1359499196">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499663" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8577218087093924035" xil_pn:start_ts="1359499663">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499196" xil_pn:in_ck="7798629628732492948" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1359499196">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="bfa_gate.v"/>
+      <outfile xil_pn:name="mux_2-1_rtl.v"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.v"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_vtf.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499976" xil_pn:in_ck="7798629628732492948" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1359499976">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_vtf.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499348" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1359499348">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499591" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2935269425651239090" xil_pn:start_ts="1359499591">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499591" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8577218087093924035" xil_pn:start_ts="1359499591">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499591" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1359499591">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499591" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-3415318679995087920" xil_pn:start_ts="1359499591">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499591" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015859450356" xil_pn:start_ts="1359499591">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499591" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-6376271315692715833" xil_pn:start_ts="1359499591">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499597" xil_pn:in_ck="8005851432877179368" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-6742158598527532948" xil_pn:start_ts="1359499591">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.lso"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.ngc"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.ngr"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.prj"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.stx"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.syr"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.xst"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499597" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="536398596179496059" xil_pn:start_ts="1359499597">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499601" xil_pn:in_ck="5075101744877375921" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2631237988821805474" xil_pn:start_ts="1359499597">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.bld"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.ngd"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499613" xil_pn:in_ck="-2153257928086835085" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-2415728198128772097" xil_pn:start_ts="1359499601">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.pcf"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_map.map"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_map.mrp"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_map.ncd"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_map.ngm"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_map.xrpt"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_summary.xml"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499628" xil_pn:in_ck="-5458412363450706203" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1359499613">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.ncd"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.pad"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.par"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.ptwx"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.unroutes"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.xpi"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_pad.csv"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_pad.txt"/>
+      <outfile xil_pn:name="mux_4_1_behavioral_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1359499628" xil_pn:in_ck="-7240472929707666325" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1359499623">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.twr"/>
+      <outfile xil_pn:name="mux_4_1_behavioral.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>

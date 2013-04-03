@@ -1,0 +1,82 @@
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml ALU_param_bitslice.twx ALU_param_bitslice.ncd -o
+ALU_param_bitslice.twr ALU_param_bitslice.pcf
+
+Design file:              ALU_param_bitslice.ncd
+Physical constraint file: ALU_param_bitslice.pcf
+Device,package,speed:     xc6slx45,fgg484,C,-3 (PRODUCTION 1.21 2012-01-07)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock c<1>
+------------+------------+------------+------------+------------+--------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                    | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)   | Phase  |
+------------+------------+------------+------------+------------+--------------------+--------+
+a<0>        |    1.109(F)|      SLOW  |   -0.268(F)|      SLOW  |c[2]_PWR_2_o_Mux_2_o|   0.000|
+b<0>        |    1.063(F)|      SLOW  |   -0.226(F)|      SLOW  |c[2]_PWR_2_o_Mux_2_o|   0.000|
+c<0>        |    0.715(F)|      SLOW  |    0.107(F)|      SLOW  |c[2]_PWR_2_o_Mux_2_o|   0.000|
+------------+------------+------------+------------+------------+--------------------+--------+
+
+Setup/Hold to clock c<2>
+------------+------------+------------+------------+------------+--------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                    | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)   | Phase  |
+------------+------------+------------+------------+------------+--------------------+--------+
+a<0>        |    0.913(F)|      SLOW  |   -0.060(F)|      SLOW  |c[2]_PWR_2_o_Mux_2_o|   0.000|
+b<0>        |    0.867(F)|      SLOW  |   -0.018(F)|      SLOW  |c[2]_PWR_2_o_Mux_2_o|   0.000|
+c<0>        |    0.519(F)|      SLOW  |    0.315(F)|      SLOW  |c[2]_PWR_2_o_Mux_2_o|   0.000|
+------------+------------+------------+------------+------------+--------------------+--------+
+
+Clock c<1> to Pad
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                    | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)   | Phase  |
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+fout<0>     |         6.012(F)|      SLOW  |         3.313(F)|      FAST  |c[2]_PWR_2_o_Mux_2_o|   0.000|
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+
+Clock c<2> to Pad
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                    | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)   | Phase  |
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+fout<0>     |         6.220(F)|      SLOW  |         3.458(F)|      FAST  |c[2]_PWR_2_o_Mux_2_o|   0.000|
+------------+-----------------+------------+-----------------+------------+--------------------+--------+
+
+
+Analysis completed Tue Feb 05 19:07:39 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 276 MB
+
+
+

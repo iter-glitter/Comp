@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW6/ld_st_rg_struct_generate.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW6/ld_st_rg_struct_generate.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW6/ld_st_rg_struct_generate.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW6/ld_st_rg_struct_generate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_rg_struct_generate.ngc" ld_st_rg_struct_generate.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ld_st_rg_struct_generate_map.ncd ld_st_rg_struct_generate.ngd ld_st_rg_struct_generate.pcf 
+par -w -intstyle ise -ol high -mt off ld_st_rg_struct_generate_map.ncd ld_st_rg_struct_generate.ncd ld_st_rg_struct_generate.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ld_st_rg_struct_generate.twx ld_st_rg_struct_generate.ncd -o ld_st_rg_struct_generate.twr ld_st_rg_struct_generate.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW6/ld_st_rg_struct_generate.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW6/ld_st_rg_struct_generate.syr" 

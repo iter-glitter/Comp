@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="DFlop_clk_set_clr.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="DFlop_clk_SR.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="DFlop_clk_SR.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="DFlop_clk_SR.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="DFlop_clk_SR.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="DFlop_clk_SR.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="DFlop_clk_SR.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="DFlop_clk_SR.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="DFlop_clk_SR.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="DFlop_clk_SR.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="DFlop_clk_SR.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="DFlop_clk_SR.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="DFlop_clk_SR.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="DFlop_clk_SR.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="DFlop_clk_SR.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="DFlop_clk_SR.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="DFlop_clk_SR.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="DFlop_clk_SR.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="DFlop_clk_SR.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="DFlop_clk_SR.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="DFlop_clk_SR_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="DFlop_clk_SR_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="DFlop_clk_SR_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="DFlop_clk_SR_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="DFlop_clk_SR_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="DFlop_clk_SR_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DFlop_clk_SR_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DFlop_clk_SR_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="DFlop_clk_SR_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="DFlop_clk_SR_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DFlop_clk_SR_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="DFlop_clk_SR_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="DFlop_clk_SR_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="DFlop_clk_SR_usage.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="DFlop_clk_SR_vtf.fdo"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="DFlop_clk_SR_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="work"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1360735224" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1360735224">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360769367" xil_pn:in_ck="-8909218024694130693" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1360769367">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="DFlop_clk_SR.v"/>
+      <outfile xil_pn:name="DFlop_clk_SR_vtf.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1360735224" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3111809705651982968" xil_pn:start_ts="1360735224">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360735224" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="664594255993362998" xil_pn:start_ts="1360735224">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360735224" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="1775038671202436342" xil_pn:start_ts="1360735224">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360769367" xil_pn:in_ck="-8909218024694130693" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1360769367">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="DFlop_clk_SR.v"/>
+      <outfile xil_pn:name="DFlop_clk_SR_vtf.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1360769368" xil_pn:in_ck="-8909218024694130693" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-948329089435096302" xil_pn:start_ts="1360769367">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="DFlop_clk_SR_vtf.fdo"/>
+      <outfile xil_pn:name="vsim.wlf"/>
+      <outfile xil_pn:name="work"/>
+    </transform>
+    <transform xil_pn:end_ts="1360734566" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1360734566">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360734566" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="9195224431669390247" xil_pn:start_ts="1360734566">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360734566" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="1775038671202436342" xil_pn:start_ts="1360734566">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360734566" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1360734566">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360734566" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="1195662980114792105" xil_pn:start_ts="1360734566">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360734566" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015859450356" xil_pn:start_ts="1360734566">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360734566" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="8548392380633962240" xil_pn:start_ts="1360734566">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360741870" xil_pn:in_ck="-8686029048872419274" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="2956142932531967749" xil_pn:start_ts="1360741863">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="DFlop_clk_SR.lso"/>
+      <outfile xil_pn:name="DFlop_clk_SR.ngc"/>
+      <outfile xil_pn:name="DFlop_clk_SR.ngr"/>
+      <outfile xil_pn:name="DFlop_clk_SR.prj"/>
+      <outfile xil_pn:name="DFlop_clk_SR.stx"/>
+      <outfile xil_pn:name="DFlop_clk_SR.syr"/>
+      <outfile xil_pn:name="DFlop_clk_SR.xst"/>
+      <outfile xil_pn:name="DFlop_clk_SR_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1360734571" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8885724512676571092" xil_pn:start_ts="1360734571">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1360741874" xil_pn:in_ck="4094075590935384408" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1290382836834280809" xil_pn:start_ts="1360741870">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="DFlop_clk_SR.bld"/>
+      <outfile xil_pn:name="DFlop_clk_SR.ngd"/>
+      <outfile xil_pn:name="DFlop_clk_SR_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1360741885" xil_pn:in_ck="4094075590935384409" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-2415728198128772097" xil_pn:start_ts="1360741874">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="DFlop_clk_SR.pcf"/>
+      <outfile xil_pn:name="DFlop_clk_SR_map.map"/>
+      <outfile xil_pn:name="DFlop_clk_SR_map.mrp"/>
+      <outfile xil_pn:name="DFlop_clk_SR_map.ncd"/>
+      <outfile xil_pn:name="DFlop_clk_SR_map.ngm"/>
+      <outfile xil_pn:name="DFlop_clk_SR_map.xrpt"/>
+      <outfile xil_pn:name="DFlop_clk_SR_summary.xml"/>
+      <outfile xil_pn:name="DFlop_clk_SR_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1360741901" xil_pn:in_ck="-6608296880016399118" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1360741885">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="DFlop_clk_SR.ncd"/>
+      <outfile xil_pn:name="DFlop_clk_SR.pad"/>
+      <outfile xil_pn:name="DFlop_clk_SR.par"/>
+      <outfile xil_pn:name="DFlop_clk_SR.ptwx"/>
+      <outfile xil_pn:name="DFlop_clk_SR.unroutes"/>
+      <outfile xil_pn:name="DFlop_clk_SR.xpi"/>
+      <outfile xil_pn:name="DFlop_clk_SR_pad.csv"/>
+      <outfile xil_pn:name="DFlop_clk_SR_pad.txt"/>
+      <outfile xil_pn:name="DFlop_clk_SR_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1360741901" xil_pn:in_ck="4094075590935384277" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1360741896">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="DFlop_clk_SR.twr"/>
+      <outfile xil_pn:name="DFlop_clk_SR.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+    </transform>
+  </transforms>
+
+</generated_project>

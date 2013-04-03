@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/DVHW5/ld_st_rg_sl_struct/ld_st_rg_sl_struct_vtf.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/DVHW5/ld_st_rg_sl_struct/ld_st_rg_sl_struct_vtf.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 "ld_st_rg_sl_struct_vtf.ngc" ld_st_rg_sl_struct_vtf.ngd  

@@ -1,0 +1,30 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW1
+T_opt
+VB<Te?6c2an3G9SNJ7czUH2
+04 18 4 work mux_4_1_behavioral fast 0
+=1-b8975a0ddffd-51084fe4-364-1a58
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OE;O;10.1b;51
+vmux_4_1_behavioral
+IkZK]5Rgm8dTmcMUU^jo3]1
+VHiOW6@C>;c:RZPXzg[K^R3
+Z1 dD:\Users\Hendren\My Documents\School\EE480\DVHW1
+w1359086085
+8mux_4_1_behavioral.v
+Fmux_4_1_behavioral.v
+L0 27
+OE;L;10.1b;51
+r1
+31
+o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 l8^?n67<PPca6Yfn84k9k3
+!s85 0
+!s108 1359499201.893000
+!s107 mux_4_1_behavioral.v|
+!s90 -reportprogress|300|mux_4_1_behavioral.v|

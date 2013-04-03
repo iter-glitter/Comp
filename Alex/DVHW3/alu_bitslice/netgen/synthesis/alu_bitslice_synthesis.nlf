@@ -1,0 +1,20 @@
+Release 13.4 - netgen O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis
+-ofmt verilog -sim alu_bitslice.ngc alu_bitslice_synthesis.v  
+
+Reading design 'alu_bitslice.ngc' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog netlist file 'D:\Users\Hendren\My
+Documents\School\EE480\DVHW3\alu_bitslice_2\netgen\synthesis\alu_bitslice_synthe
+sis.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM simulation library for
+   correct compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 152976 kilobytes

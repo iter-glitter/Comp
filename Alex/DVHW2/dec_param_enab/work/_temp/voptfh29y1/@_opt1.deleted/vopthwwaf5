@@ -1,0 +1,74 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW2\dec_param_enab
+T_opt
+VH_bIh;BkDCm]M6PZlDVe=1
+Z1 04 18 4 work dec_param_enab_vtf fast 0
+=2-b8975a0ddffd-510c327d-20f-1bd0
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z2 OE;O;10.1b;51
+Z3 dD:\Users\Hendren\My Documents\School\EE480\DVHW2\dec_param_enab
+T_opt1
+VSiUJkiHAnkKRG_WMf=Nhj1
+R1
+=2-b8975a0ddffd-510c330d-3d3-1d20
+o-quiet -auto_acc_if_foreign -work work
+n@_opt1
+R2
+vdec_param_enab
+!s100 ifnQ4eYnmlz4hjmWfQZ^_0
+I8PM5mEY?kdenMcT_Ob8EQ3
+Ve>@7hNa3lnU5U64gaE_?M2
+R3
+w1359753434
+8dec_param_enab.v
+Fdec_param_enab.v
+L0 21
+Z4 OE;L;10.1b;51
+r1
+31
+!s90 -reportprogress|300|dec_param_enab.v|
+Z5 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s108 1359753996.011000
+!s107 dec_param_enab.v|
+!i10b 1
+!s85 0
+vdec_param_enab_vtf
+!s100 [`AcfZ?86IaeJ06QTB3EW3
+I4S3@:cBm1LCVW>k?ji_K42
+VKj_XgWdP8oM]<Fd>iiJIQ3
+R3
+w1359753415
+8dec_param_enab_vtf.v
+Fdec_param_enab_vtf.v
+L0 25
+R4
+r1
+31
+!s90 -reportprogress|300|dec_param_enab_vtf.v|
+R5
+!s108 1359753996.113000
+!s107 dec_param_enab_vtf.v|
+!i10b 1
+!s85 0
+vglbl
+!s100 US6of7W;COLU=>D@U>:[Y0
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+R3
+w1325908416
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R4
+r1
+31
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+R5
+!i10b 1
+!s85 0
+!s108 1359753996.238000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|

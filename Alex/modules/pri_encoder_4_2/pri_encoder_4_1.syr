@@ -1,0 +1,350 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: pri_encoder_4_1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pri_encoder_4_1.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pri_encoder_4_1"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-fgg484
+
+---- Source Options
+Top Module Name                    : pri_encoder_4_1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\DVHW2\pri_encoder_4_2\pri_encoder_4_1.v" into library work
+Parsing module <pri_encoder_4_1>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <pri_encoder_4_1>.
+WARNING:HDLCompiler:296 - "D:\Users\Hendren\My Documents\School\EE480\DVHW2\pri_encoder_4_2\pri_encoder_4_1.v" Line 34: case condition never applies due to comparison with x or z
+WARNING:HDLCompiler:296 - "D:\Users\Hendren\My Documents\School\EE480\DVHW2\pri_encoder_4_2\pri_encoder_4_1.v" Line 35: case condition never applies due to comparison with x or z
+WARNING:HDLCompiler:296 - "D:\Users\Hendren\My Documents\School\EE480\DVHW2\pri_encoder_4_2\pri_encoder_4_1.v" Line 36: case condition never applies due to comparison with x or z
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <pri_encoder_4_1>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/dvhw2/pri_encoder_4_2/pri_encoder_4_1.v".
+    Found 1-bit tristate buffer for signal <out<1>> created at line 29
+    Found 1-bit tristate buffer for signal <out<0>> created at line 29
+WARNING:Xst:737 - Found 1-bit latch for signal <dis>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 Latch(s).
+	inferred   2 Tristate(s).
+Unit <pri_encoder_4_1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <pri_encoder_4_1> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pri_encoder_4_1, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : pri_encoder_4_1.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4
+#      GND                         : 1
+#      LUT3                        : 2
+#      LUT4                        : 1
+# FlipFlops/Latches                : 1
+#      LD                          : 1
+# IO Buffers                       : 7
+#      IBUF                        : 4
+#      OBUF                        : 1
+#      OBUFT                       : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                    3  out of  27288     0%  
+    Number used as Logic:                 3  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      3
+   Number with an unused Flip Flop:       3  out of      3   100%  
+   Number with an unused LUT:             0  out of      3     0%  
+   Number of fully used LUT-FF pairs:     0  out of      3     0%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    316     2%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------+------------------------+-------+
+Clock Signal                                               | Clock buffer(FF name)  | Load  |
+-----------------------------------------------------------+------------------------+-------+
+i[3]_PWR_1_o_Select_9_o<3>1(i[3]_PWR_1_o_Select_9_o<3>11:O)| NONE(*)(dis)           | 1     |
+-----------------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 2.593ns
+   Maximum output required time after clock: 4.174ns
+   Maximum combinational path delay: 6.194ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'i[3]_PWR_1_o_Select_9_o<3>1'
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Offset:              2.593ns (Levels of Logic = 2)
+  Source:            i<2> (PAD)
+  Destination:       dis (LATCH)
+  Destination Clock: i[3]_PWR_1_o_Select_9_o<3>1 falling
+
+  Data Path: i<2> to dis
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.328   0.994  i_2_IBUF (i_2_IBUF)
+     LUT4:I1->O            1   0.235   0.000  i[3]_PWR_1_o_Select_9_o<3>1 (i[3]_PWR_1_o_Select_9_o)
+     LD:D                      0.036          dis
+    ----------------------------------------
+    Total                      2.593ns (1.599ns logic, 0.994ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'i[3]_PWR_1_o_Select_9_o<3>1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.174ns (Levels of Logic = 1)
+  Source:            dis (LATCH)
+  Destination:       dis (PAD)
+  Source Clock:      i[3]_PWR_1_o_Select_9_o<3>1 falling
+
+  Data Path: dis to dis
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.581   0.681  dis (dis_OBUF)
+     OBUF:I->O                 2.912          dis_OBUF (dis)
+    ----------------------------------------
+    Total                      4.174ns (3.493ns logic, 0.681ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 6 / 2
+-------------------------------------------------------------------------
+Delay:               6.194ns (Levels of Logic = 3)
+  Source:            i<2> (PAD)
+  Destination:       out<1> (PAD)
+
+  Data Path: i<2> to out<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.328   0.994  i_2_IBUF (i_2_IBUF)
+     LUT3:I0->O            2   0.235   0.725  _n0013_inv1 (_n0013_inv)
+     OBUFT:T->O                2.912          out_1_OBUFT (out<1>)
+    ----------------------------------------
+    Total                      6.194ns (4.475ns logic, 1.719ns route)
+                                       (72.2% logic, 27.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.28 secs
+ 
+--> 
+
+Total memory usage is 255772 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

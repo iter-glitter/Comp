@@ -1,0 +1,108 @@
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+D:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml n_bit_alu_generate.twx n_bit_alu_generate.ncd -o
+n_bit_alu_generate.twr n_bit_alu_generate.pcf
+
+Design file:              n_bit_alu_generate.ncd
+Physical constraint file: n_bit_alu_generate.pcf
+Device,package,speed:     xc6slx45,fgg484,C,-3 (PRODUCTION 1.21 2012-01-07)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+a<0>           |V              |    7.031|
+a<0>           |c_out          |    6.577|
+a<0>           |f_out<0>       |    5.991|
+a<0>           |f_out<1>       |    7.213|
+a<0>           |f_out<2>       |    6.525|
+a<0>           |f_out<3>       |    7.778|
+a<1>           |V              |    7.259|
+a<1>           |c_out          |    6.805|
+a<1>           |f_out<1>       |    7.130|
+a<1>           |f_out<2>       |    6.753|
+a<1>           |f_out<3>       |    8.006|
+a<2>           |V              |    6.439|
+a<2>           |c_out          |    6.528|
+a<2>           |f_out<2>       |    6.387|
+a<2>           |f_out<3>       |    7.239|
+a<3>           |V              |    6.322|
+a<3>           |c_out          |    6.312|
+a<3>           |f_out<3>       |    7.090|
+b<0>           |V              |    7.497|
+b<0>           |c_out          |    7.043|
+b<0>           |f_out<0>       |    6.639|
+b<0>           |f_out<1>       |    7.536|
+b<0>           |f_out<2>       |    6.991|
+b<0>           |f_out<3>       |    8.244|
+b<1>           |V              |    7.531|
+b<1>           |c_out          |    7.077|
+b<1>           |f_out<1>       |    7.433|
+b<1>           |f_out<2>       |    7.025|
+b<1>           |f_out<3>       |    8.278|
+b<2>           |V              |    6.505|
+b<2>           |c_out          |    6.222|
+b<2>           |f_out<2>       |    6.392|
+b<2>           |f_out<3>       |    7.615|
+b<3>           |V              |    6.546|
+b<3>           |c_out          |    6.057|
+b<3>           |f_out<3>       |    7.056|
+c<0>           |V              |    7.475|
+c<0>           |c_out          |    7.021|
+c<0>           |f_out<0>       |    5.874|
+c<0>           |f_out<1>       |    7.328|
+c<0>           |f_out<2>       |    6.969|
+c<0>           |f_out<3>       |    8.222|
+c<1>           |f_out<0>       |    6.116|
+c<1>           |f_out<1>       |    7.276|
+c<1>           |f_out<2>       |    6.458|
+c<1>           |f_out<3>       |    7.122|
+c<2>           |f_out<0>       |    6.387|
+c<2>           |f_out<1>       |    6.181|
+c<2>           |f_out<2>       |    6.760|
+c<2>           |f_out<3>       |    6.762|
+c_in           |V              |    7.286|
+c_in           |c_out          |    6.832|
+c_in           |f_out<0>       |    6.275|
+c_in           |f_out<1>       |    7.431|
+c_in           |f_out<2>       |    6.780|
+c_in           |f_out<3>       |    8.033|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Feb 12 22:49:25 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 276 MB
+
+
+
