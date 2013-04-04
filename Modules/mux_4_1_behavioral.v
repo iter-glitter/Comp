@@ -3,6 +3,7 @@
 // Alex Hendren
 // Sean McFeely
 // EE480 - Heath - Spring 2013
+// Accumulator Based Processor
 //
 // 4x1 MUX operation -
 // A high when i1 and i2 low

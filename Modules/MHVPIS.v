@@ -1,18 +1,20 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// 
-// Alex Hendren & Sean McFeely
-// EE480 DVHW11
+// Alex Hendren
+// Sean McFeely
+// EE480 - Spring 2013 - Heath
+// Accumulator Based Processor
+//
 // Maskable Hardware Vectorized Priority Interrupt System
 //
 // 4 different interrupts handled using priority assignment.
 // 
-// 	PRIORITY | Interrupt Service Routine
+// 		PRIORITY  | Interrupt Service Routine
 //		------------------------------------
 //			  0   | Zero ALU output	
 //			  1   | Overflow (ALU) Output
 //			  2   | Illegal OPcode
-//			  3	| INPUT/OUTPUT Interrupt
+//			  3	  | INPUT/OUTPUT Interrupt
 //
 //
 //////////////////////////////////////////////////////////////////////////////////

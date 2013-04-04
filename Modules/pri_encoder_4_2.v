@@ -3,6 +3,7 @@
 // Alex Hendren
 // Sean McFeely
 // EE480 - Spring 2013 - Heath
+// Accumulator Based Processor
 //
 // Priority Encoder 4 x 2 
 //

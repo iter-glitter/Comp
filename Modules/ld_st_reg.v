@@ -1,18 +1,17 @@
 `timescale 1ns / 1ps
 ///////////////////////////////////////////////////////////////////////////////////////
-//Alex Hendren
-//Sean McFeely
-//EE480 - Heath
-//DVHW 11 - Interrupt System (ld_st reg)
-//Parameterized load store register built on DVHW6. 
+// Alex Hendren
+// Sean McFeely
+// EE480 - Heath
+// Accumulator Based Processor
 //
+//Parameterized load store register
 //
-//
-//   set  clr  funct
-//    0    0    clear register to zero
-//		1	  0	 clear register to zero
-//    0    1    store
-//    1    1    load from input
+// set  clr  funct
+//	0	0    clear register to zero
+//	1	0	 clear register to zero
+//	0	1    store
+//	1	1    load from input
 //
 ///////////////////////////////////////////////////////////////////////////////////////
 module ld_st_reg(in, set, clr, clk, out);
@@ -25,18 +24,19 @@ module ld_st_reg(in, set, clr, clk, out);
     
     always@(posedge clk)
     begin
-        if(clr == 0)            //clear to 0s
+        if(clr == 0) //clear to 0s
         begin
             out <= 0;
         end
-		  else if( (set==0) && (clr==0) ) begin //clear to 0s
-				out <= 0;
-		  end
-        else if(set == 1)       //load
+		else if( (set==0) && (clr==0) ) //clear to 0s
+		begin 
+			out <= 0;
+		end
+        else if(set == 1) //load
         begin
             out <= in;
         end
-        else             			//store
+        else  //store
         begin
             out <= out;
         end
