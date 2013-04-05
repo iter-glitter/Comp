@@ -1,0 +1,76 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\Project\Modules\Ram\Ram
+T_opt
+VBFlb=kbhP5f]`iUXB2TM21
+Z1 04 7 4 work ram_vtf fast 0
+Z2 04 4 4 work glbl fast 0
+=1-b8975a0ddffd-515e194e-2e8-7b0
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+Z4 OE;O;10.1b;51
+T_opt1
+VbgP=X`UhaC7m7lz<<5b620
+R1
+R2
+=1-b8975a0ddffd-515e1881-b9-1864
+R3
+n@_opt1
+R4
+Z5 dD:\Users\Hendren\My Documents\School\EE480\Project\Modules\Ram\Ram
+vglbl
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+R5
+w1325912016
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+Z6 OE;L;10.1b;51
+r1
+31
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 US6of7W;COLU=>D@U>:[Y0
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!i10b 1
+!s85 0
+!s108 1365121358.525000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+vram
+IS;mNHBhUj>n?AUcj9O9kE1
+VXj2;MW^3ESl9fKET8o2H^3
+R5
+w1365120607
+8Ram.v
+FRam.v
+L0 30
+R6
+r1
+31
+R7
+!s100 eVSf8ZMbiz3UL66hIdg8E2
+!s90 -reportprogress|300|Ram.v|
+!s108 1365121358.276000
+!s107 Ram.v|
+!i10b 1
+!s85 0
+vram_vtf
+I@?9ab>?>=1DOBWYncGZKV0
+VQBm5Ec^YTZc_H3RkU6@>91
+R5
+w1365121351
+8ram_vtf.v
+Fram_vtf.v
+L0 25
+R6
+r1
+31
+R7
+!s90 -reportprogress|300|ram_vtf.v|
+!s100 Mi;_Y968KOZA:gN2ICz]k1
+!s108 1365121358.401000
+!s107 ram_vtf.v|
+!i10b 1
+!s85 0
