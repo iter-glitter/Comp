@@ -9,3 +9,19 @@ map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off cache_map.ncd cache.ncd cache.pcf 
 trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml cache.twx cache.ncd -o cache.twr cache.pcf 
 xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/Cache/cache/cache.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/Cache/cache/cache.syr" 
+xst -intstyle ise -ifn "C:/Users/jahend6/Documents/School/EE480/Modules/Cache/cache/cache.xst" -ofn "C:/Users/jahend6/Documents/School/EE480/Modules/Cache/cache/cache.syr" 
+xst -intstyle ise -ifn "C:/Users/jahend6/Documents/School/EE480/Modules/Cache/cache/cache.xst" -ofn "C:/Users/jahend6/Documents/School/EE480/Modules/Cache/cache/cache.syr" 
+xst -intstyle ise -ifn "C:/Users/jahend6/Documents/School/EE480/Modules/Cache/cache/cache.xst" -ofn "C:/Users/jahend6/Documents/School/EE480/Modules/Cache/cache/cache.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 cache.ngc cache.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cache_map.ncd cache.ngd cache.pcf 
+par -w -intstyle ise -ol high -mt off cache_map.ncd cache.ncd cache.pcf 
+xst -intstyle ise -ifn "C:/Users/jahend6/Documents/School/EE480/Modules/Cache/cache/cache.xst" -ofn "C:/Users/jahend6/Documents/School/EE480/Modules/Cache/cache/cache.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 cache.ngc cache.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cache_map.ncd cache.ngd cache.pcf 
+par -w -intstyle ise -ol high -mt off cache_map.ncd cache.ncd cache.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml cache.twx cache.ncd -o cache.twr cache.pcf 
+xst -intstyle ise -ifn "C:/Users/jahend6/Documents/School/EE480/Modules/Cache/cache/cache.xst" -ofn "C:/Users/jahend6/Documents/School/EE480/Modules/Cache/cache/cache.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 cache.ngc cache.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cache_map.ncd cache.ngd cache.pcf 
+par -w -intstyle ise -ol high -mt off cache_map.ncd cache.ncd cache.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml cache.twx cache.ncd -o cache.twr cache.pcf 
