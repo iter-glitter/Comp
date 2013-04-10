@@ -10,40 +10,36 @@ Target Device  : xc6slx45
 Target Package : fgg484
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Wed Apr 10 00:02:14 2013
+Mapped Date    : Wed Apr 10 17:22:51 2013
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                    44 out of  54,576    1%
-    Number used as Flip Flops:                  44
+  Number of Slice Registers:                    55 out of  54,576    1%
+    Number used as Flip Flops:                  55
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         39 out of  27,288    1%
-    Number used as logic:                       38 out of  27,288    1%
-      Number using O6 output only:              27
-      Number using O5 output only:               2
-      Number using O5 and O6:                    9
+  Number of Slice LUTs:                         71 out of  27,288    1%
+    Number used as logic:                       71 out of  27,288    1%
+      Number using O6 output only:              54
+      Number using O5 output only:               0
+      Number using O5 and O6:                   17
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   6,408    0%
-    Number used exclusively as route-thrus:      1
-      Number with same-slice register load:      0
-      Number with same-slice carry load:         1
-      Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    15 out of   6,822    1%
-  Nummber of MUXCYs used:                        4 out of  13,644    1%
-  Number of LUT Flip Flop pairs used:           40
-    Number with an unused Flip Flop:             2 out of      40    5%
-    Number with an unused LUT:                   1 out of      40    2%
-    Number of fully used LUT-FF pairs:          37 out of      40   92%
-    Number of unique control sets:               6
+  Number of occupied Slices:                    23 out of   6,822    1%
+  Nummber of MUXCYs used:                        0 out of  13,644    0%
+  Number of LUT Flip Flop pairs used:           71
+    Number with an unused Flip Flop:            18 out of      71   25%
+    Number with an unused LUT:                   0 out of      71    0%
+    Number of fully used LUT-FF pairs:          53 out of      71   74%
+    Number of unique control sets:               5
     Number of slice register sites lost
-      to control set restrictions:              12 out of  54,576    1%
+      to control set restrictions:               9 out of  54,576    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -52,8 +48,7 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       200 out of     316   63%
-    IOB Flip Flops:                              1
+  Number of bonded IOBs:                       197 out of     316   62%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of     116    0%
@@ -66,9 +61,7 @@ Specific Feature Utilization:
   Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
-  Number of OLOGIC2/OSERDES2s:                   1 out of     376    1%
-    Number used as OLOGIC2s:                     1
-    Number used as OSERDES2s:                    0
+  Number of OLOGIC2/OSERDES2s:                   0 out of     376    0%
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     256    0%
   Number of BUFPLLs:                             0 out of       8    0%
@@ -82,11 +75,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.60
+Average Fanout of Non-Clock Nets:                3.82
 
-Peak Memory Usage:  452 MB
-Total REAL time to MAP completion:  41 secs 
-Total CPU time to MAP completion:   37 secs 
+Peak Memory Usage:  453 MB
+Total REAL time to MAP completion:  1 mins 30 secs 
+Total CPU time to MAP completion:   1 mins 17 secs 
 
 Table of Contents
 -----------------
@@ -112,6 +105,15 @@ Section 2 - Warnings
 
 Section 3 - Informational
 -------------------------
+INFO:LIT:243 - Logical network cache_addr<7> has no load.
+INFO:LIT:395 - The above info message is repeated 18 more times for the
+   following (max. 5 shown):
+   cache_addr<6>,
+   cache_addr<5>,
+   cache_addr<4>,
+   cache_addr<3>,
+   cache_addr<2>
+   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -126,7 +128,7 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   2 block(s) optimized away
+   1 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -134,10 +136,6 @@ Section 5 - Removed Logic
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
-VCC 		XST_VCC
-
-To enable printing of redundant blocks removed and signals merged, set the
-detailed map report option and rerun map.
 
 Section 6 - IOB Properties
 --------------------------
@@ -178,29 +176,18 @@ Section 6 - IOB Properties
 | addr3<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | addr3<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | addr3<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_addr<0>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_addr<1>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_addr<2>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_addr<3>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_addr<4>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_addr<5>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_addr<6>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_addr<7>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_clr                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
-| cache_data<0>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_data<1>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_data<2>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_data<3>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_data<4>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_data<5>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_data<6>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_data<7>                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_enab                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| addr<0>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| addr<1>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| addr<2>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| addr<3>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| addr<4>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| addr<5>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| addr<6>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| addr<7>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | cache_hit<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | cache_hit<1>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | cache_lru<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | cache_lru<1>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| cache_rw                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | clr                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | data0<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
@@ -235,6 +222,14 @@ Section 6 - IOB Properties
 | data3<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | data3<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | data3<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| data<0>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| data<1>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| data<2>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| data<3>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| data<4>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| data<5>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| data<6>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| data<7>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | data_out<0>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | data_out<1>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | data_out<2>                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |

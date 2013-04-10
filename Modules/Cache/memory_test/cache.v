@@ -70,6 +70,8 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit, addr0,
 	output reg [1:0] curr_LRU;		//Index of current least recently used address
 	output reg [1:0] cache_hit; 	//Index of cache hit
 	reg [7:0] target_addr; 			//Target memory address to be saved on miss
+	reg [7:0] target_data;			//Target data to be saved on a miss (write)
+	reg 		 target_rw;				//Tartget Read or Write Value to save on miss
 	integer i;
 	output reg [3:0] state; //Current State Register
 	
@@ -137,23 +139,43 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit, addr0,
 					else begin
 						hit <= 1'b0;
 						target_addr <= Addr;
+						target_data <= data_in;
 					end
 				end
 				if(hit==1'b1) begin						//HIT  - T0
 					state <= 0; end 
 				else begin
-					state <= 1; end						//MISS - T1
+					if(rw==1'b0) begin //read miss
+						state <= 1; 						//MISS - T1
+						target_rw <= 1'b0; end
+					else if (rw==1'b1) begin //write miss
+						state <= 1;
+						target_rw <= 1'b1; end
+				end
 			end //End Hit test
 			1:	state <= 2;
 			2: state <= 3;
-			3: state <= 4;
-			4: state <= 5;
+			3: begin
+				if(target_rw==1'b0)
+					state <= 3;
+				else if(target_rw==1'b1)
+					state <= 5;
+			end
+			4: state <= 7;
 			5: state <= 6;
 			6: state <= 7;
 			7: state <= 8;
 			8: state <= 9;
 			9: state <= 10;
-			10: state <= 0;
+			10: state <= 11;
+			11: begin
+				if(target_rw==1'b0)
+					state <= 12;
+				else if(target_rw==1'b1)
+					state <= 13;
+			end
+			12: state <= 0;
+			13: state <= 0;
 			default: state <= 0;
 			endcase
 		
@@ -207,17 +229,27 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit, addr0,
 				ram_addr <= cache_addr[curr_LRU];
 				ram_data_in <= cache_data[curr_LRU];
 			end
-			3: //Miss - Prepare to Read from RAM
+			3: //Miss READ- Prepare to Read from RAM
 			begin
 				ram_rw <= 1'b0;
-				ram_addr <= Addr;
+				ram_addr <= target_addr;
 			end
-			4: //Miss - Fill Cache with target address
+			4: //Miss READ - Fill Cache with target address
 			begin
 				cache_data[curr_LRU] <= ram_data_out;
 				cache_addr[curr_LRU] <= target_addr;
 			end
-			5: //Miss - Update Cache Access Records
+			5: //Miss WRITE - Write Target to RAM
+			begin
+				ram_addr <= target_addr;
+				ram_data_in <= target_data;
+			end
+			6: //Miss WRITE - Fill CURR LRU
+			begin
+				cache_data[curr_LRU] <= target_data;
+				cache_addr[curr_LRU] <= target_addr;
+			end
+			7: //Miss - Update Cache Access Records
 			begin
 				for(i=0; i<n; i=i+1) begin:Update_Access_Miss
 					if(i!=curr_LRU) begin 
@@ -227,25 +259,29 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit, addr0,
 					end
 				end
 			end
-			6: //Miss - Do Nothing (Eat Up Clock Cycles For Delay)
-			begin 
-				ram_enab <= 1'b0;
-			end
-			7: //Miss - Do Nothing (Eat Up Clock Cycles For Delay)
-			begin
-				ram_enab <= 1'b0;
-			end
 			8: //Miss - Do Nothing (Eat Up Clock Cycles For Delay)
-			begin
+			begin 
 				ram_enab <= 1'b0;
 			end
 			9: //Miss - Do Nothing (Eat Up Clock Cycles For Delay)
 			begin
 				ram_enab <= 1'b0;
 			end
-			10: //Miss - Output Targeted Memory Data
+			10: //Miss - Do Nothing (Eat Up Clock Cycles For Delay)
+			begin
+				ram_enab <= 1'b0;
+			end
+			11: //Miss - Do Nothing (Eat Up Clock Cycles For Delay)
+			begin
+				ram_enab <= 1'b0;
+			end
+			12: //Miss READ - Output Targeted Memory Data
 			begin
 				data_out <= cache_data[n-1];
+			end
+			13: //Miss WRITE - Do Nothing
+			begin
+				ram_enab <= 1'b0;
 			end
 			endcase
 		end

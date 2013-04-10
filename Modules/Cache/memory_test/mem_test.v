@@ -8,7 +8,7 @@
 // Memory structure test
 //
 //////////////////////////////////////////////////////////////////////////////////
-module mem_test(clk, clr, rw, enab, state, data_out, hit, addr0, 
+module mem_test(clk, clr, rw, enab, addr, data, state, data_out, hit, addr0, 
 					addr1, addr2, addr3, data0, data1, data2, data3,
 					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, cache_addr, cache_data, i_out, cache_clr, cache_enab, cache_rw, cache_lru, cache_hit);
 	reg [7:0] test_addr[7:0];
@@ -35,6 +35,7 @@ module mem_test(clk, clr, rw, enab, state, data_out, hit, addr0,
 	end
 	
 	input clk, clr, rw, enab;
+	input [7:0] addr, data;
 	output hit;
 	output [7:0] data_out;
 	output [7:0] addr0, addr1, addr2, addr3;
@@ -84,11 +85,11 @@ module mem_test(clk, clr, rw, enab, state, data_out, hit, addr0,
 	/*module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit, addr0, 
 					addr1, addr2, addr3, data0, data1, data2, data3,
 					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7);*/
-	cache memory(clk, cache_clr, cache_enab, cache_rw, cache_addr, cache_data, 
+	cache memory(clk, clr, enab, rw, addr, data, 
 					c_data_out, c_hit, c_addr0, c_addr1, c_addr2, c_addr3, c_data0, c_data1,
 					 c_data2, c_data3, c_ram0, c_ram1, c_ram2, c_ram3, c_ram4, c_ram5, c_ram6, c_ram7, state_wire, lru_wire, hit_wire);
 	
-	initial begin
+	/*initial begin
 		i = 0;
 	end
 	
@@ -120,6 +121,6 @@ module mem_test(clk, clr, rw, enab, state, data_out, hit, addr0,
 	always @ (negedge clk) begin
 		i <= i + 1;
 		if(i==8) begin i<=0; end
-	end
+	end*/
 
 endmodule

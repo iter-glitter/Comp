@@ -29,6 +29,8 @@ module mem_test_vtf;
 	reg clr;
 	reg rw;
 	reg enab;
+	reg [7:0] addr;
+	reg [7:0] data;
 	
 	reg [20:0] cnt;
 
@@ -106,7 +108,7 @@ module mem_test_vtf;
 
 		// Wait 100 ns for global reset to finish
 		#100;
-      #5 clk = ~clk;
+      #3 clk = ~clk;
 		// Add stimulus here
 
 	end
@@ -114,12 +116,36 @@ module mem_test_vtf;
 	always @ (posedge clk) begin
 		cnt = cnt + 1;
 	end
-	
-	always @ (negedge clk) begin
-		clr <= cnt[20];
-		enab <= cnt[19];
-		rw <= cnt[10];
-	end
-      
+//	
+//	always @ (negedge clk) begin
+//		clr <= cnt[20];
+//		enab <= cnt[19];
+//		rw <= cnt[10];
+//	end
+   always begin
+		#120
+			clr <= 0;
+		
+		#140
+			clr <= 1;
+			enab <= 1;
+		
+		#145
+			rw <= 1;
+		
+		#150
+			addr <= 8'b00000000;
+			data <= 8'b10000000;
+		
+		#2500
+			addr <= 8'b00000010;
+			data <= 8'b11000000;
+		
+		#3500
+			addr <= 8'b00000011;
+			data <= 8'b11100000;
+		
+		
+	end   
 endmodule
 
