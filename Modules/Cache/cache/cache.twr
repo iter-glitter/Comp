@@ -2,7 +2,7 @@
 Release 13.4 Trace  (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+D:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
 -n 3 -fastpaths -xml cache.twx cache.ncd -o cache.twr cache.pcf
 
 Design file:              cache.ncd
@@ -115,14 +115,14 @@ clk            |    2.701|         |    2.196|    2.610|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Apr 05 14:09:17 2013 
+Analysis completed Tue Apr 09 18:30:07 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 262 MB
+Peak Memory Usage: 278 MB
 
 
 

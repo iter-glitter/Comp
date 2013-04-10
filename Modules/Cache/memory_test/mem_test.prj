@@ -1,0 +1,3 @@
+verilog work "Ram.v"
+verilog work "cache.v"
+verilog work "mem_test.v"
