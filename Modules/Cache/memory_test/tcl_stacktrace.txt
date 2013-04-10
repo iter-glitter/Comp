@@ -1,0 +1,65 @@
+Tue Apr 09 10:06:06 PM Eastern Daylight Time 2013
+Trace back: internal error: no Archetype information for widget
+    (method "::itk::Archetype::configure" )
+    invoked from within
+"configure -cursor {}"
+    ("eval" body line 1)
+    invoked from within
+"eval configure $option $args"
+    (method "::itk::Archetype::config" body line 2)
+    invoked from within
+"config -cursor {}"
+    (method "::vsimwidgets::Srcedit::BusyPost" body line 7)
+    invoked from within
+"BusyPost"
+    (method "::vsimwidgets::Srcedit::ExecBusyCmd" body line 26)
+    invoked from within
+"$_srcedit ExecBusyCmd $timeout $msg"
+    (method "::vsimwidgets::Srcedit::ResultsWidget::_update" body line 53)
+    invoked from within
+"::.main_pane.source.interior.cs.body.editor.cs.panedWindow.f1.frame.paned.f0.frame.sw.tf.extra.drivers _update -data {{sim:/mem_test_vtf/#ALWAYS#102 s..."
+    ("eval" body line 1)
+    invoked from within
+"eval $o _update $args"
+    (procedure "::vsimwidgets::Srcedit::ResultsWidget::Update" body line 10)
+    invoked from within
+"vsimwidgets::Srcedit::ResultsWidget::Update  -data $DriverList -signal $sig -from $d_or_r"
+    ("drivers" arm line 8)
+    invoked from within
+"switch $d_or_r {
+      readers - drivers - drivers_causality {
+         ####################################
+         # AVOID USE OF SEPARATE DIALOG
+ ..."
+    (procedure "::vsimwidgets::Srcedit::MultipleDriverDialog" body line 5)
+    invoked from within
+"MultipleDriverDialog $sig $DriverList $drivers_or_readers"
+    (procedure "::vsimwidgets::Srcedit::HandleDrivers" body line 57)
+    invoked from within
+"vsimwidgets::Srcedit::HandleDrivers [lindex $sigList 0] $d_or_r"
+    (procedure "_showDFReadersDrivers" line 39)
+    invoked from within
+"_showDFReadersDrivers drivers .main_pane.wave.interior.cs.body.pw.wf 1"
+    ("eval" body line 1)
+    invoked from within
+"eval _showDFReadersDrivers "drivers" $winname $classic $args"
+    (procedure "Wave::ShowDFDrivers" line 2)
+    invoked from within
+"Wave::ShowDFDrivers $top 1"
+    ("dataflow" arm line 2)
+    invoked from within
+"switch $m {
+               "dataflow" {
+                  Wave::ShowDFDrivers $top 1
+               }
+               "schematic" {
+                  W..."
+    (procedure "Wave::1Up" line 25)
+    invoked from within
+"Wave::1Up $widget $x $y"
+    (procedure "Wave::SelectUp" line 4)
+    invoked from within
+"Wave::SelectUp	 .main_pane.wave.interior.cs.body.pw.wf.grid.row0,wave.data 804 8 -359 200 "
+    (command bound to event)
+  <2: ::tkerror {internal error: no Archetype information for widget}
+  <1: ::bgerror {internal error: no Archetype information for widget}

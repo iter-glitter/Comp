@@ -1,0 +1,670 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: mem_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mem_test.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mem_test"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-fgg484
+
+---- Source Options
+Top Module Name                    : mem_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test\Ram.v" into library work
+Parsing module <ram>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test\cache.v" into library work
+Parsing module <cache>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test\mem_test.v" into library work
+Parsing module <mem_test>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mem_test>.
+
+Elaborating module <cache>.
+
+Elaborating module <ram>.
+WARNING:HDLCompiler:413 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test\cache.v" Line 134: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test\cache.v" Line 120: Assignment to target_addr ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test\cache.v" Line 186: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test\cache.v" Line 187: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test\cache.v" Line 224: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test\cache.v" Line 88: Net <ram_clr> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mem_test>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/project/modules/cache/memory_test/mem_test.v".
+WARNING:Xst:2999 - Signal 'test_addr', unconnected in block 'mem_test', is tied to its initial value.
+    Found 8x8-bit single-port Read Only RAM <Mram_test_addr> for signal <test_addr>.
+    Found 1-bit register for signal <cache_enab>.
+    Found 1-bit register for signal <cache_rw>.
+    Found 8-bit register for signal <cache_addr>.
+    Found 8-bit register for signal <cache_data>.
+    Found 32-bit register for signal <i_out>.
+    Found 1-bit register for signal <cache_clr>.
+    Found 32-bit adder for signal <i[31]_GND_1_o_add_44_OUT> created at line 121.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  51 D-type flip-flop(s).
+Unit <mem_test> synthesized.
+
+Synthesizing Unit <cache>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/project/modules/cache/memory_test/cache.v".
+        d_width = 8
+        a_width = 8
+        n = 4
+WARNING:Xst:653 - Signal <ram_clr> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 2-bit register for signal <cache_hit>.
+    Found 1-bit register for signal <hit>.
+    Found 32-bit register for signal <n0199[31:0]>.
+    Found 32-bit register for signal <n0200[31:0]>.
+    Found 8-bit register for signal <n0201[7:0]>.
+    Found 8-bit register for signal <data_out>.
+    Found 1-bit register for signal <ram_enab>.
+    Found 1-bit register for signal <ram_rw>.
+    Found 8-bit register for signal <ram_addr>.
+    Found 8-bit register for signal <ram_data_in>.
+    Found 2-bit register for signal <curr_LRU>.
+    Found 4-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 22                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | clr_GND_2_o_equal_18_o (positive)              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit subtractor for signal <GND_2_o_GND_2_o_sub_121_OUT<1:0>> created at line 224.
+    Found 2-bit subtractor for signal <GND_2_o_GND_2_o_sub_124_OUT<1:0>> created at line 224.
+    Found 2-bit subtractor for signal <GND_2_o_GND_2_o_sub_127_OUT<1:0>> created at line 224.
+    Found 2-bit subtractor for signal <GND_2_o_GND_2_o_sub_130_OUT<1:0>> created at line 224.
+    Found 2-bit 4-to-1 multiplexer for signal <cache_hit[1]_cache_access[3][1]_wide_mux_58_OUT> created at line 182.
+    Found 8-bit 4-to-1 multiplexer for signal <cache_hit[1]_cache_data[3][7]_wide_mux_95_OUT> created at line 193.
+    Found 8-bit 4-to-1 multiplexer for signal <curr_LRU[1]_cache_addr[3][7]_wide_mux_107_OUT> created at line 207.
+    Found 8-bit 4-to-1 multiplexer for signal <curr_LRU[1]_cache_data[3][7]_wide_mux_108_OUT> created at line 208.
+    Found 8-bit comparator equal for signal <Addr[7]_cache_addr[0][7]_equal_21_o> created at line 133
+    Found 8-bit comparator not equal for signal <Addr[7]_cache_addr[1][7]_equal_24_o> created at line 133
+    Found 8-bit comparator equal for signal <Addr[7]_cache_addr[2][7]_equal_27_o> created at line 133
+    Found 8-bit comparator equal for signal <Addr[7]_cache_addr[3][7]_equal_30_o> created at line 133
+    Found 2-bit comparator greater for signal <cache_hit[1]_cache_access[0][1]_LessThan_60_o> created at line 182
+    Found 2-bit comparator greater for signal <cache_hit[1]_cache_access[1][1]_LessThan_68_o> created at line 182
+    Found 2-bit comparator greater for signal <cache_hit[1]_cache_access[2][1]_LessThan_76_o> created at line 182
+    Found 2-bit comparator greater for signal <cache_hit[1]_cache_access[3][1]_LessThan_84_o> created at line 182
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 103 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred  87 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <cache> synthesized.
+
+Synthesizing Unit <ram>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/project/modules/cache/memory_test/ram.v".
+        d_width = 8
+        a_width = 8
+    Found 1-bit tristate buffer for signal <data_out<7>> created at line 75
+    Found 1-bit tristate buffer for signal <data_out<6>> created at line 75
+    Found 1-bit tristate buffer for signal <data_out<5>> created at line 75
+    Found 1-bit tristate buffer for signal <data_out<4>> created at line 75
+    Found 1-bit tristate buffer for signal <data_out<3>> created at line 75
+    Found 1-bit tristate buffer for signal <data_out<2>> created at line 75
+    Found 1-bit tristate buffer for signal <data_out<1>> created at line 75
+    Found 1-bit tristate buffer for signal <data_out<0>> created at line 75
+    WARNING:Xst:2404 -  FFs/Latches <clr_clk_DFF_2058<0:0>> (without init value) have a constant value of 0 in block <ram>.
+    WARNING:Xst:2404 -  FFs/Latches <memory<0><2047:0>> (without init value) have a constant value of 0 in block <ram>.
+    WARNING:Xst:2404 -  FFs/Latches <clr_clk_DFF_2059<0:0>> (without init value) have a constant value of 0 in block <ram>.
+    WARNING:Xst:2404 -  FFs/Latches <clr_clk_DFF_2063<0:0>> (without init value) have a constant value of 0 in block <ram>.
+    WARNING:Xst:2404 -  FFs/Latches <clr_clk_DFF_2064<0:0>> (without init value) have a constant value of 0 in block <ram>.
+    WARNING:Xst:2404 -  FFs/Latches <clr_clk_DFF_2057<0:0>> (without init value) have a constant value of 0 in block <ram>.
+    WARNING:Xst:2404 -  FFs/Latches <clr_clk_DFF_2060<0:0>> (without init value) have a constant value of 0 in block <ram>.
+    WARNING:Xst:2404 -  FFs/Latches <clr_clk_DFF_2061<0:0>> (without init value) have a constant value of 0 in block <ram>.
+    WARNING:Xst:2404 -  FFs/Latches <clr_clk_DFF_2062<0:0>> (without init value) have a constant value of 0 in block <ram>.
+    WARNING:Xst:2404 -  FFs/Latches <data_out<7:0>> (without init value) have a constant value of 0 in block <ram>.
+    Summary:
+	inferred   8 Tristate(s).
+Unit <ram> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x8-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 5
+ 2-bit subtractor                                      : 4
+ 32-bit adder                                          : 1
+# Registers                                            : 17
+ 1-bit register                                        : 6
+ 2-bit register                                        : 2
+ 32-bit register                                       : 3
+ 8-bit register                                        : 6
+# Comparators                                          : 8
+ 2-bit comparator greater                              : 4
+ 8-bit comparator equal                                : 3
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 87
+ 1-bit 2-to-1 multiplexer                              : 32
+ 2-bit 2-to-1 multiplexer                              : 19
+ 2-bit 4-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 13
+ 8-bit 2-to-1 multiplexer                              : 19
+ 8-bit 4-to-1 multiplexer                              : 3
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <mem_test>.
+The following registers are absorbed into counter <i>: 1 register on signal <i>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_test_addr> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <i_out<2:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <mem_test> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 8x8-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 4
+ 2-bit subtractor                                      : 4
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 122
+ Flip-Flops                                            : 122
+# Comparators                                          : 8
+ 2-bit comparator greater                              : 4
+ 8-bit comparator equal                                : 3
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 87
+ 1-bit 2-to-1 multiplexer                              : 32
+ 2-bit 2-to-1 multiplexer                              : 19
+ 2-bit 4-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 13
+ 8-bit 2-to-1 multiplexer                              : 19
+ 8-bit 4-to-1 multiplexer                              : 3
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <cache_addr_0> in Unit <mem_test> is equivalent to the following FF/Latch, which will be removed : <cache_data_0> 
+INFO:Xst:2261 - The FF/Latch <cache_addr_1> in Unit <mem_test> is equivalent to the following FF/Latch, which will be removed : <cache_data_1> 
+INFO:Xst:2261 - The FF/Latch <cache_addr_2> in Unit <mem_test> is equivalent to the following FF/Latch, which will be removed : <cache_data_2> 
+INFO:Xst:2261 - The FF/Latch <cache_addr_3> in Unit <mem_test> is equivalent to the following FF/Latch, which will be removed : <cache_data_3> 
+INFO:Xst:2261 - The FF/Latch <cache_addr_4> in Unit <mem_test> is equivalent to the following FF/Latch, which will be removed : <cache_data_4> 
+INFO:Xst:2261 - The FF/Latch <cache_addr_5> in Unit <mem_test> is equivalent to the following FF/Latch, which will be removed : <cache_data_5> 
+INFO:Xst:2261 - The FF/Latch <cache_addr_6> in Unit <mem_test> is equivalent to the following FF/Latch, which will be removed : <cache_data_6> 
+INFO:Xst:2261 - The FF/Latch <cache_addr_7> in Unit <mem_test> is equivalent to the following FF/Latch, which will be removed : <cache_data_7> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <memory/FSM_0> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+-------------------
+WARNING:Xst:2042 - Unit ram: 8 internal tristates are replaced by logic (pull-up yes): data_out<0>, data_out<1>, data_out<2>, data_out<3>, data_out<4>, data_out<5>, data_out<6>, data_out<7>.
+
+Optimizing unit <mem_test> ...
+
+Optimizing unit <cache> ...
+WARNING:Xst:1293 - FF/Latch <curr_LRU_0> has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_31> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_30> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_29> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_28> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_27> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_26> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_25> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_24> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_15> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_14> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_13> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_12> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_11> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_10> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_9> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_8> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <cache_addr_0_16> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_17> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_18> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_19> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_20> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_21> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_22> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cache_addr_0_23> (without init value) has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <curr_LRU_1> has a constant value of 0 in block <cache>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <cache_access_0_0> of sequential type is unconnected in block <cache>.
+WARNING:Xst:2677 - Node <cache_access_0_1> of sequential type is unconnected in block <cache>.
+WARNING:Xst:2677 - Node <cache_access_0_2> of sequential type is unconnected in block <cache>.
+WARNING:Xst:2677 - Node <cache_access_0_3> of sequential type is unconnected in block <cache>.
+WARNING:Xst:2677 - Node <cache_access_0_4> of sequential type is unconnected in block <cache>.
+WARNING:Xst:2677 - Node <cache_access_0_5> of sequential type is unconnected in block <cache>.
+WARNING:Xst:2677 - Node <cache_access_0_6> of sequential type is unconnected in block <cache>.
+WARNING:Xst:2677 - Node <cache_access_0_7> of sequential type is unconnected in block <cache>.
+
+Optimizing unit <ram> ...
+WARNING:Xst:2677 - Node <memory/ram_addr_7> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_addr_6> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_addr_5> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_addr_4> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_addr_3> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_addr_2> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_addr_1> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_addr_0> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_data_in_7> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_data_in_6> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_data_in_5> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_data_in_4> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_data_in_3> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_data_in_2> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_data_in_1> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_data_in_0> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_rw> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:2677 - Node <memory/ram_enab> of sequential type is unconnected in block <mem_test>.
+WARNING:Xst:1293 - FF/Latch <i_31> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_30> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_29> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_28> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_27> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_26> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_25> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_24> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_23> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_22> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_21> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_20> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_19> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_18> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_4> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_5> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_6> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_7> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_8> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_9> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_10> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_11> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_12> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_13> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_14> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_15> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_16> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <i_17> has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_hit_1> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_hit_0> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/hit> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <memory/cache_data_0_8> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_9> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_10> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_11> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_12> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_13> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_14> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_15> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_16> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_17> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_18> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_19> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_20> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_21> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_22> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_23> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_24> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_25> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_26> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_27> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_28> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_29> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_30> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <memory/cache_data_0_31> (without init value) has a constant value of 0 in block <mem_test>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mem_test, actual ratio is 0.
+FlipFlop memory/state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop cache_clr has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 45
+ Flip-Flops                                            : 45
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mem_test.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 57
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 3
+#      LUT2                        : 3
+#      LUT3                        : 11
+#      LUT4                        : 4
+#      LUT5                        : 15
+#      LUT6                        : 10
+#      MUXCY                       : 3
+#      VCC                         : 1
+#      XORCY                       : 4
+# FlipFlops/Latches                : 45
+#      FD                          : 5
+#      FD_1                        : 16
+#      FDE                         : 8
+#      FDE_1                       : 8
+#      FDR                         : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 199
+#      IBUF                        : 3
+#      OBUF                        : 196
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              44  out of  54576     0%  
+ Number of Slice LUTs:                   48  out of  27288     0%  
+    Number used as Logic:                48  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     49
+   Number with an unused Flip Flop:       5  out of     49    10%  
+   Number with an unused LUT:             1  out of     49     2%  
+   Number of fully used LUT-FF pairs:    43  out of     49    87%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                         200
+ Number of bonded IOBs:                 200  out of    316    63%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 45    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 7.196ns (Maximum Frequency: 138.966MHz)
+   Minimum input arrival time before clock: 3.772ns
+   Maximum output required time after clock: 4.889ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.196ns (frequency: 138.966MHz)
+  Total number of paths / destination ports: 248 / 59
+-------------------------------------------------------------------------
+Delay:               3.598ns (Levels of Logic = 2)
+  Source:            memory/state_FSM_FFd1 (FF)
+  Destination:       memory/cache_data_0_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: memory/state_FSM_FFd1 to memory/cache_data_0_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             14   0.525   1.355  memory/state_FSM_FFd1 (memory/state_FSM_FFd1)
+     LUT3:I0->O           15   0.235   1.155  memory/_n0405<3>11 (memory/_n0405<3>1)
+     LUT6:I5->O            1   0.254   0.000  memory/Mmux_cache_addr[3][7]_state[3]_mux_143_OUT11 (memory/cache_addr[3][7]_state[3]_mux_143_OUT<0>)
+     FD_1:D                    0.074          memory/cache_addr_0_0
+    ----------------------------------------
+    Total                      3.598ns (1.088ns logic, 2.510ns route)
+                                       (30.2% logic, 69.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 23 / 12
+-------------------------------------------------------------------------
+Offset:              3.772ns (Levels of Logic = 2)
+  Source:            clr (PAD)
+  Destination:       cache_addr_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: clr to cache_addr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.328   0.949  clr_IBUF (clr_IBUF)
+     LUT2:I0->O            8   0.250   0.943  _n01331 (_n0133)
+     FDE:CE                    0.302          cache_addr_0
+    ----------------------------------------
+    Total                      3.772ns (1.880ns logic, 1.892ns route)
+                                       (49.8% logic, 50.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 51 / 51
+-------------------------------------------------------------------------
+Offset:              4.889ns (Levels of Logic = 1)
+  Source:            cache_enab (FF)
+  Destination:       cache_enab (PAD)
+  Source Clock:      clk rising
+
+  Data Path: cache_enab to cache_enab
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              28   0.525   1.452  cache_enab (cache_enab_OBUF)
+     OBUF:I->O                 2.912          cache_enab_OBUF (cache_enab)
+    ----------------------------------------
+    Total                      4.889ns (3.437ns logic, 1.452ns route)
+                                       (70.3% logic, 29.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.598|    2.101|    3.598|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.45 secs
+ 
+--> 
+
+Total memory usage is 260636 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  126 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+
