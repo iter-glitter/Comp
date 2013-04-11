@@ -23,10 +23,6 @@ entity mem_test is
         ram1            : out    vl_logic_vector(7 downto 0);
         ram2            : out    vl_logic_vector(7 downto 0);
         ram3            : out    vl_logic_vector(7 downto 0);
-        ram4            : out    vl_logic_vector(7 downto 0);
-        ram5            : out    vl_logic_vector(7 downto 0);
-        ram6            : out    vl_logic_vector(7 downto 0);
-        ram7            : out    vl_logic_vector(7 downto 0);
         cache_addr      : out    vl_logic_vector(7 downto 0);
         cache_data      : out    vl_logic_vector(7 downto 0);
         i_out           : out    vl_logic_vector(31 downto 0);
@@ -34,6 +30,10 @@ entity mem_test is
         cache_enab      : out    vl_logic;
         cache_rw        : out    vl_logic;
         cache_lru       : out    vl_logic_vector(1 downto 0);
-        cache_hit       : out    vl_logic_vector(1 downto 0)
+        cache_hit       : out    vl_logic_vector(1 downto 0);
+        target_addr     : out    vl_logic_vector(7 downto 0);
+        target_data     : out    vl_logic_vector(7 downto 0);
+        target_rw       : out    vl_logic;
+        cache_input     : out    vl_logic_vector(7 downto 0)
     );
 end mem_test;

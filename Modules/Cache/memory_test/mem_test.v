@@ -10,7 +10,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 module mem_test(clk, clr, rw, enab, addr, data, state, data_out, hit, addr0, 
 					addr1, addr2, addr3, data0, data1, data2, data3,
-					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, cache_addr, cache_data, i_out, cache_clr, cache_enab, cache_rw, cache_lru, cache_hit);
+					ram0, ram1, ram2, ram3,
+					cache_addr, cache_data, i_out, cache_clr, cache_enab, cache_rw, cache_lru, cache_hit,
+					target_addr, target_data, target_rw, cache_input);
 	reg [7:0] test_addr[7:0];
 	initial begin
 		test_addr[0] = 8'b00000001;	
@@ -35,12 +37,14 @@ module mem_test(clk, clr, rw, enab, addr, data, state, data_out, hit, addr0,
 	end
 	
 	input clk, clr, rw, enab;
-	input [7:0] addr, data;
+	input [7:0] addr;
+	input [7:0] data;
+	reg [7:0] addr_wire, data_wire;
 	output hit;
 	output [7:0] data_out;
 	output [7:0] addr0, addr1, addr2, addr3;
 	output [7:0] data0, data1, data2, data3;
-	output [7:0] ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7;
+	output [7:0] ram0, ram1, ram2, ram3;
 	output [3:0] state;
 	output [1:0] cache_lru, cache_hit;
 	integer i;
@@ -50,6 +54,15 @@ module mem_test(clk, clr, rw, enab, addr, data, state, data_out, hit, addr0,
 	output reg [7:0] cache_addr;
 	output reg [7:0] cache_data;
 	output reg cache_clr, cache_enab, cache_rw;
+	
+	output  [7:0] target_data;
+	output  [7:0] target_addr;
+	output target_rw;
+	wire [7:0] target_data_wire, target_addr_wire;
+	wire target_rw_wire;
+	assign target_data = target_data_wire;
+	assign target_addr = target_addr_wire;
+	assign target_rw = target_rw_wire;
 	
 	wire c_hit;
 	wire [7:0] c_data_out;
@@ -71,10 +84,6 @@ module mem_test(clk, clr, rw, enab, addr, data, state, data_out, hit, addr0,
 	assign ram1 = c_ram1;
 	assign ram2 = c_ram2;
 	assign ram3 = c_ram3;
-	assign ram4 = c_ram4;
-	assign ram5 = c_ram5;
-	assign ram6 = c_ram6;
-	assign ram7 = c_ram7;
 	
 	wire [1:0] lru_wire, hit_wire;
 	assign cache_lru = lru_wire;
@@ -82,13 +91,34 @@ module mem_test(clk, clr, rw, enab, addr, data, state, data_out, hit, addr0,
 	wire [3:0] state_wire;
 	assign state = state_wire;
 	
-	/*module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit, addr0, 
+	output [7:0] cache_input;
+	wire [7:0] cache_input_wire;
+	assign cache_input = cache_input_wire;
+	
+	/*		 cache(clk,clr,enab,rw,Addr,data_in,data_out, hit, addr0,  
 					addr1, addr2, addr3, data0, data1, data2, data3,
 					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7);*/
-	cache memory(clk, clr, enab, rw, addr, data, 
+	cache memory(clk,clr,enab,rw,cache_addr,cache_data, 
 					c_data_out, c_hit, c_addr0, c_addr1, c_addr2, c_addr3, c_data0, c_data1,
-					 c_data2, c_data3, c_ram0, c_ram1, c_ram2, c_ram3, c_ram4, c_ram5, c_ram6, c_ram7, state_wire, lru_wire, hit_wire);
+					 c_data2, c_data3, c_ram0, c_ram1, c_ram2, c_ram3, 
+					 state_wire, lru_wire, hit_wire, target_addr_wire, target_data_wire, target_rw_wire, cache_input_wire);
 	
+	always @(posedge clk) begin
+		
+		#200
+			cache_addr <= 8'b00000001;
+			cache_data <= 8'b11100000;
+		
+		#2000
+			cache_addr <= 8'b00000010;
+			cache_data <= 8'b11000000;
+
+		#6500
+			cache_addr <= 8'b10101010;
+			cache_data <= 8'b11000000;
+	
+	end
+
 	/*initial begin
 		i = 0;
 	end

@@ -27,13 +27,13 @@ entity cache is
         ram1            : out    vl_logic_vector;
         ram2            : out    vl_logic_vector;
         ram3            : out    vl_logic_vector;
-        ram4            : out    vl_logic_vector;
-        ram5            : out    vl_logic_vector;
-        ram6            : out    vl_logic_vector;
-        ram7            : out    vl_logic_vector;
         state           : out    vl_logic_vector(3 downto 0);
         curr_LRU        : out    vl_logic_vector(1 downto 0);
-        cache_hit       : out    vl_logic_vector(1 downto 0)
+        cache_hit       : out    vl_logic_vector(1 downto 0);
+        target_data     : out    vl_logic_vector;
+        target_addr     : out    vl_logic_vector;
+        target_rw       : out    vl_logic;
+        cache_input_out : out    vl_logic
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of d_width : constant is 1;

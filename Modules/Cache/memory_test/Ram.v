@@ -76,7 +76,7 @@ module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5
 		if(clr==1'b0) begin:clrBlock //Clear memory contents
 			for(i=0; i<(2**a_width); i=i+1) begin:Clr_Loop
 				memory[i] <= 0;
-				data_out <= 8'bZZZZZZZZ;
+				data_out <= 8'b01010101;
 			end	
 		end
 		else if(enab==1'b1) begin //Only Read/Write if RAM Chip enabled
@@ -88,7 +88,7 @@ module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5
 			end
 		end
 		else if(enab==1'b0) begin //High Z state for output if chip not enabled
-			data_out <= 8'bZZZZZZZZ;
+			data_out <= 8'b01010101;
 		end
 	end
 	

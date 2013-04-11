@@ -1,4 +1,4 @@
-# Reading C:/modeltech_10.1b/tcl/vsim/pref.tcl 
+# Reading D:/MentorGraphics/tcl/vsim/pref.tcl 
 # //  ModelSim SE 10.1b Apr 26 2012 
 # //
 # //  Copyright 1991-2012 Mentor Graphics Corporation
@@ -39,31 +39,48 @@
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.mem_test_vtf glbl 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
-# ** Warning: mem_test_vtf.v(96): (vopt-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 33, found 31.
-# 
-# ** Warning: mem_test_vtf.v(96): (vopt-2718) [TFMPC] - Missing connection for port 'data'.
-# 
-# ** Warning: mem_test_vtf.v(96): (vopt-2718) [TFMPC] - Missing connection for port 'addr'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "cache(fast)".
 # 
 # Loading work.mem_test_vtf(fast)
 # Loading work.mem_test(fast)
 # Loading work.cache(fast)
 # Loading work.ram(fast)
 # Loading work.glbl(fast)
-# ** Warning: (vsim-3015) mem_test_vtf.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (3) for port 'i_out'. The port definition is at: mem_test.v(13).
+# ** Warning: (vsim-3015) mem_test_vtf.v(93): [PCDPC] - Port size (32 or 32) does not match connection size (3) for port 'i_out'. The port definition is at: mem_test.v(14).
 # 
 #         Region: /mem_test_vtf/uut
+# ** Warning: (vsim-3015) mem_test.v(104): [PCDPC] - Port size (1 or 1) does not match connection size (8) for port 'cache_input_out'. The port definition is at: cache.v(36).
+# 
+#         Region: /mem_test_vtf/uut/memory
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 3648
 # 
-#           Attempting to use alternate WLF file "./wlft8v82yk".
+#           Attempting to use alternate WLF file "./wlftmc252s".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft8v82yk
+#           Using alternate file: ./wlftmc252s
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run
 run

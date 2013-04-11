@@ -31,8 +31,6 @@ module mem_test_vtf;
 	reg enab;
 	reg [7:0] addr;
 	reg [7:0] data;
-	
-	reg [20:0] cnt;
 
 	// Outputs
 	wire [7:0] data_out;
@@ -49,16 +47,15 @@ module mem_test_vtf;
 	wire [7:0] ram1;
 	wire [7:0] ram2;
 	wire [7:0] ram3;
-	wire [7:0] ram4;
-	wire [7:0] ram5;
-	wire [7:0] ram6;
-	wire [7:0] ram7;
 	wire [3:0] state;
 	wire [7:0] cache_addr;
 	wire [7:0] cache_data;
 	wire [2:0] i_out;
 	wire cache_clr, cache_enab, cache_rw;
 	wire [1:0] cache_hit, cache_lru;
+	wire [7:0] target_addr,target_data;
+	wire target_rw;
+	wire [7:0] cache_input;
 
 	// Instantiate the Unit Under Test (UUT)
 	mem_test uut (
@@ -79,11 +76,7 @@ module mem_test_vtf;
 		.ram0(ram0), 
 		.ram1(ram1), 
 		.ram2(ram2), 
-		.ram3(ram3), 
-		.ram4(ram4), 
-		.ram5(ram5), 
-		.ram6(ram6), 
-		.ram7(ram7),
+		.ram3(ram3),
 		.state(state),
 		.cache_addr(cache_addr),
 		.cache_data(cache_data),
@@ -92,16 +85,21 @@ module mem_test_vtf;
 		.cache_enab(cache_enab),
 		.cache_rw(cache_rw),
 		.cache_lru(cache_lru),
-		.cache_hit(cache_hit)
+		.cache_hit(cache_hit),
+		.target_addr(target_addr),
+		.target_data(target_data),
+		.target_rw(target_rw),
+		.cache_input(cache_input)
 	);
 
 	initial begin
 		// Initialize Inputs
 		clk = 0;
-		clr = 1;
+		clr = 0;
 		rw = 0;
 		enab = 1;
-		cnt = 0;
+		addr = 8'b00001111;
+		data = 8'b10101111;
 	end
 	
 	always begin
@@ -112,10 +110,6 @@ module mem_test_vtf;
 		// Add stimulus here
 
 	end
-	
-	always @ (posedge clk) begin
-		cnt = cnt + 1;
-	end
 //	
 //	always @ (negedge clk) begin
 //		clr <= cnt[20];
@@ -123,8 +117,6 @@ module mem_test_vtf;
 //		rw <= cnt[10];
 //	end
    always begin
-		#120
-			clr <= 0;
 		
 		#140
 			clr <= 1;
@@ -133,17 +125,17 @@ module mem_test_vtf;
 		#145
 			rw <= 1;
 		
-		#150
-			addr <= 8'b00000000;
-			data <= 8'b10000000;
+		/*#200
+			addr <= 8'b00000001;
+			data <= 8'b11100000;
 		
-		#2500
+		#2000
 			addr <= 8'b00000010;
 			data <= 8'b11000000;
-		
-		#3500
-			addr <= 8'b00000011;
-			data <= 8'b11100000;
+
+		#6500
+			addr <= 8'b10101010;
+			data <= 8'b11000000;*/
 		
 		
 	end   
