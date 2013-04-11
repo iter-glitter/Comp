@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <stdint.h>
 //#include "token.h"
 
 
@@ -47,7 +48,7 @@ struct OPCODE
 	string LOAD;
 	string STOR;
 	string INPUT;
-	string OUTOUT;
+	string OUTPUT;
 	string LMSK;
 	string NOP;
 	string COMP;
@@ -71,7 +72,7 @@ struct OPCODE
 		LOAD = "01010"; //12
 		STOR = "01011"; //13
 		INPUT = "01100"; //14
-		OUTOUT = "01101"; //15
+		OUTPUT = "01101"; //15
 		LMSK = "01110"; //16
 		NOP = "01111"; //17
 		COMP = "10000"; //18
@@ -87,20 +88,31 @@ struct token
 {
 	string opcode;
 	string flag;
-	string operand;
+	int operand;
 	token(){
 		opcode = "UNDEF";
 		flag = "UNDEF";
-		operand = "UNDEF";
 	}
 };
 
 vector<token> scanner(vector<string>);
+void decTobin( int n, ofstream&);
 
 int main()
 {
-	const char* file = "assem_input.txt";
+	string in;
+	string out;
+	cout << "Name of input file: ";
+	cin >> in;
+	cout << endl << "Desired name of output file: ";
+	cin >> out;
+	cout << endl;
+	
+	const char* file =  in.c_str(); //"assem_input.txt";
+	const char* ofile = out.c_str(); //"assem_binary.txt";
+	
 	ifstream inFile;
+	ofstream outFile;
 	inFile.open (file, ios::in);
 
 	string line;
@@ -112,8 +124,8 @@ int main()
 			getline(inFile,line);
 			//Chomp the newline and any other gibberish off the end of the input string
 			string whitespaces (" \t\n\r");	
-			unsigned here = line.find_last_not_of(whitespaces);
-			if (here!=std::string::npos)
+			int here = line.find_last_not_of(whitespaces);
+			if (here != std::string::npos)
 				line.erase(here+1);
 			lines.push_back(line);
 		}
@@ -121,13 +133,35 @@ int main()
 	else
 		cout << file << " Did not open\n";
 	inFile.close();
-	vector<token> tokens = scanner(lines);
-	//next insert simple parser function and print output
 	
-	system("pause");
+	vector<token> tokens = scanner(lines);
+	
+	outFile.open(ofile);
+	for(unsigned i=0; i < tokens.size(); ++i){
+		outFile << "memory[" << i << "] = 8'b" << tokens[i].opcode << tokens[i].flag;
+		decTobin(tokens[i].operand, outFile);
+		outFile << ";" << endl;
+	}
+	outFile.close();
+	
 	return 0;
 }
 
+
+void decTobin( int n, ofstream &outFile ){
+  int c, k;
+ 
+  for (c = 7; c >= 0; c--)
+  {
+    k = n >> c;
+ 
+    if (k & 1)
+      outFile << "1";
+    else
+      outFile << "0";
+  }
+}
+ 
 vector<token> scanner(vector<string> lines)
 {
 
@@ -135,7 +169,7 @@ vector<token> scanner(vector<string> lines)
 
 	for(unsigned i=0; i < lines.size(); ++i){
 
-		cout << "line = " << lines[i] << endl; 
+		//cout << "line = " << lines[i] << endl; 
 
 		OPCODE opcode;
 		FLAG flag;
@@ -144,7 +178,7 @@ vector<token> scanner(vector<string> lines)
 
 
 		//breakdown token
-		unsigned found = lines[i].find(" "); 
+		int found = lines[i].find(" "); 
 		if(found != string::npos){
 			t.opcode = lines[i].substr(0,found);
 			lines[i] = lines[i].substr(found+1);
@@ -152,56 +186,58 @@ vector<token> scanner(vector<string> lines)
 		found = lines[i].find(" "); 
 		if(found != string::npos){
 			t.flag = lines[i].substr(0,found);
-			t.operand = lines[i].substr(found+1);
+			string temp = lines[i].substr(found+1);
+			const char* tmpCstr = temp.c_str();
+			t.operand = atoi(tmpCstr);
 		}
 
 		//handle opcode
 		if(t.opcode == "ADD" || t.opcode == "add")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.ADD;
 		else if (t.opcode == "SUB" || t.opcode == "sub")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.SUB;
 		else if (t.opcode == "MUL" || t.opcode == "mul")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.MUL;
 		else if (t.opcode == "DIV" || t.opcode == "div")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.DIV;
 		else if (t.opcode == "OR" || t.opcode == "or")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.OR;
 		else if (t.opcode == "AND" || t.opcode == "and")
 			t.opcode = opcode.AND;
 		else if (t.opcode == "SHFT" || t.opcode == "shft")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.SHFT;
 		else if (t.opcode == "BRA" || t.opcode == "bra")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.BRA;
 		else if (t.opcode == "JMP" || t.opcode == "jmp")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.JMP;
 		else if (t.opcode == "RTS" || t.opcode == "rts")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.RTS;
 		else if (t.opcode == "RTI" || t.opcode == "rti")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.RTI;
 		else if (t.opcode == "LOAD" || t.opcode == "load")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.LOAD;
 		else if (t.opcode == "STOR" || t.opcode == "stor")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.STOR;
 		else if (t.opcode == "INPUT" || t.opcode == "input")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.INPUT;
 		else if (t.opcode == "OUTPUT" || t.opcode == "output")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.OUTPUT;
 		else if (t.opcode == "LMSK" || t.opcode == "lmsk")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.LMSK;
 		else if (t.opcode == "NOP" || t.opcode == "NOP")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.NOP;
 		else if (t.opcode == "COMP" || t.opcode == "comp")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.COMP;
 		else if (t.opcode == "LDA" || t.opcode == "lda")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.LDA;
 		else if (t.opcode == "STA" || t.opcode == "sta")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.STA;
 		else if (t.opcode == "LDB" || t.opcode == "ldb")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.LDB;
 		else if (t.opcode == "STB" || t.opcode == "stb")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.STB;
 		else if (t.opcode == "BSR" || t.opcode == "bsr")
-			t.opcode = opcode.AND;
+			t.opcode = opcode.BSR;
 	
 		//handle flag
 		if(t.flag == "$" )
