@@ -22,36 +22,27 @@ n@_opt1
 R4
 R5
 T_opt2
-VJSejGC?T_MRn2BiTTjdKb0
-04 8 4 work mem_test fast 0
+VKEZDCfi>Z9b7_^GG8IFfV3
+04 13 4 work mem_testbench fast 0
 R2
-=1-b8975a0ddffd-516640a7-1d0-18e4
+=1-b8975a0ddffd-51676ab4-ca-16c8
 R3
 n@_opt2
 R4
-R5
 T_opt3
-VFTHGLkT1R`DnjZNYNg__U1
-R1
+VnhK[kgmzKa5>0MO8lS7Vb3
+04 5 4 work cache fast 0
 R2
-=1-b8975a0ddffd-51664d4f-29a-1b0c
+=1-b8975a0ddffd-5167684e-3b5-528
 R3
 n@_opt3
 R4
-T_opt4
-VWSlMPa0KZ2I3IA58>I9@J0
-04 5 4 work cache fast 0
-R2
-=1-b8975a0ddffd-51664d42-2cb-a1c
-R3
-n@_opt4
-R4
 R5
 vcache
-IUXkE:R@S?4=59`0oi=Wa41
-Vc;^@GVaHIRHCllQ624a9h1
+IiGc54<Xkhz1`ToGa]mnNE2
+VJBS^eM2AZ6dzlg_>[Hi:P0
 Z6 dD:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test
-w1365658937
+w1365732008
 8cache.v
 Fcache.v
 L0 33
@@ -59,9 +50,9 @@ Z7 OE;L;10.1b;51
 r1
 31
 Z8 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-!s100 F`F[]nhWCmD2EGd?kBXG83
 !s90 -reportprogress|300|cache.v|
-!s108 1365658959.119000
+!s100 h0JnX[@jgki_oAol[GX9K0
+!s108 1365732019.547000
 !s107 cache.v|
 !i10b 1
 !s85 0
@@ -81,13 +72,13 @@ R8
 !s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
 !i10b 1
 !s85 0
-!s108 1365658959.454000
+!s108 1365732020.015000
 !s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
 vmem_test
-Io=OAh9U5`AZL^nB<dQHd_3
-VPEWWTSl^LMEc=K=9Jf]KA1
+IBRm8FN:903M;SVXEJ>BE?2
+VB`X0RJFNRHolS:1bKgiN]2
 R6
-w1365655701
+w1365731659
 8mem_test.v
 Fmem_test.v
 L0 11
@@ -95,17 +86,17 @@ R7
 r1
 31
 R8
-!s100 =9^jmihSW[4@C9QVo@=UH3
+!s100 <WQ?onf35^RU_EBXVbk_m0
 !s90 -reportprogress|300|mem_test.v|
-!s108 1365658959.234000
+!s108 1365732019.734000
 !s107 mem_test.v|
 !i10b 1
 !s85 0
 vmem_test_vtf
-IKJ]W1H3Y0SlDOaz7lOWMB2
+Ii[@5g^=0`L?P3Z]h3S]Na2
 V2YNa4E_8n03nMOZ7XoJo?1
 R6
-w1365655682
+w1365721591
 8mem_test_vtf.v
 Fmem_test_vtf.v
 L0 25
@@ -113,10 +104,28 @@ R7
 r1
 31
 R8
-!s100 EKjEQkCDombEg`8JB2GnV1
+!s100 K[SlFBi[><dE?KAZDAY1d1
 !s90 -reportprogress|300|mem_test_vtf.v|
-!s108 1365658959.353000
+!s108 1365721871.057000
 !s107 mem_test_vtf.v|
+!i10b 1
+!s85 0
+vmem_testbench
+I:S=A<ZN]1IT9UeIRlY4=P2
+Vb6@LQmUX:PLnQP6dhOK6F0
+R6
+w1365728794
+8mem_testbench.v
+Fmem_testbench.v
+L0 25
+R7
+r1
+31
+R8
+!s100 VhAM4d4MThYPE8nYWj>L_1
+!s90 -reportprogress|300|mem_testbench.v|
+!s108 1365732019.890000
+!s107 mem_testbench.v|
 !i10b 1
 !s85 0
 vram
@@ -133,7 +142,7 @@ r1
 R8
 !s100 IOOYQRB9Yn]Coa>6z<SX93
 !s90 -reportprogress|300|Ram.v|
-!s108 1365658959.020000
+!s108 1365732019.453000
 !s107 Ram.v|
 !i10b 1
 !s85 0

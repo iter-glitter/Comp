@@ -79,6 +79,7 @@
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="mem_test_usage.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="mem_test_vtf.fdo"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="mem_test_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="mem_testbench.fdo"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_CMD" xil_pn:name="ram.fdo"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_MODELSIM_LOG" xil_pn:name="vsim.wlf"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -92,19 +93,19 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1365658940" xil_pn:in_ck="5730605690923022959" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1365658940">
+    <transform xil_pn:end_ts="1365732014" xil_pn:in_ck="4642547066566181280" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1365732014">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Ram.v"/>
       <outfile xil_pn:name="cache.v"/>
       <outfile xil_pn:name="mem_test.v"/>
-      <outfile xil_pn:name="mem_test_vtf.v"/>
+      <outfile xil_pn:name="mem_testbench.v"/>
     </transform>
-    <transform xil_pn:end_ts="1365658952" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="2120524478679633252" xil_pn:start_ts="1365658952">
+    <transform xil_pn:end_ts="1365731415" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4082905698293424213" xil_pn:start_ts="1365731415">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1365658952" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8774730222534176034" xil_pn:start_ts="1365658952">
+    <transform xil_pn:end_ts="1365731415" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="529648970872701459" xil_pn:start_ts="1365731415">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -112,20 +113,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1365658940" xil_pn:in_ck="5730605690923022959" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1365658940">
+    <transform xil_pn:end_ts="1365732014" xil_pn:in_ck="4642547066566181280" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1365732014">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Ram.v"/>
       <outfile xil_pn:name="cache.v"/>
       <outfile xil_pn:name="mem_test.v"/>
-      <outfile xil_pn:name="mem_test_vtf.v"/>
+      <outfile xil_pn:name="mem_testbench.v"/>
     </transform>
-    <transform xil_pn:end_ts="1365658953" xil_pn:in_ck="5730605690923022959" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1365658952">
+    <transform xil_pn:end_ts="1365732015" xil_pn:in_ck="4642547066566181280" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1365732014">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="mem_test_vtf.fdo"/>
+      <outfile xil_pn:name="mem_testbench.fdo"/>
       <outfile xil_pn:name="vsim.wlf"/>
       <outfile xil_pn:name="work"/>
     </transform>

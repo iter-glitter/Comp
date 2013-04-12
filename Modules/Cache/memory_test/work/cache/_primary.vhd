@@ -14,7 +14,7 @@ entity cache is
         Addr            : in     vl_logic_vector;
         data_in         : in     vl_logic_vector;
         data_out        : out    vl_logic_vector;
-        hit             : out    vl_logic;
+        hit_out         : out    vl_logic;
         addr0           : out    vl_logic_vector;
         addr1           : out    vl_logic_vector;
         addr2           : out    vl_logic_vector;
@@ -23,17 +23,26 @@ entity cache is
         data1           : out    vl_logic_vector;
         data2           : out    vl_logic_vector;
         data3           : out    vl_logic_vector;
+        access0         : out    vl_logic_vector(1 downto 0);
+        access1         : out    vl_logic_vector(1 downto 0);
+        access2         : out    vl_logic_vector(1 downto 0);
+        access3         : out    vl_logic_vector(1 downto 0);
         ram0            : out    vl_logic_vector;
         ram1            : out    vl_logic_vector;
         ram2            : out    vl_logic_vector;
         ram3            : out    vl_logic_vector;
+        ram4            : out    vl_logic_vector;
+        ram5            : out    vl_logic_vector;
+        ram6            : out    vl_logic_vector;
+        ram7            : out    vl_logic_vector;
         state           : out    vl_logic_vector(3 downto 0);
         curr_LRU        : out    vl_logic_vector(1 downto 0);
         cache_hit       : out    vl_logic_vector(1 downto 0);
-        target_data     : out    vl_logic_vector;
         target_addr     : out    vl_logic_vector;
+        target_data     : out    vl_logic_vector;
         target_rw       : out    vl_logic;
-        cache_input_out : out    vl_logic
+        c_addrIN_out    : out    vl_logic_vector;
+        c_dataIN_out    : out    vl_logic_vector
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of d_width : constant is 1;

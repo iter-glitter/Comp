@@ -137,6 +137,9 @@ module mem_test_vtf;
 			addr <= 8'b10101010;
 			data <= 8'b11000000;*/
 		
+		#4800
+			rw <= 0;
+		
 		
 	end   
 endmodule
