@@ -68,7 +68,13 @@ module mem_testbench;
 		.clr(clr), 
 		.state(state), 
 		.data_out(data_out), 
+		.target_rw(target_rw),
 		.hit(hit), 
+		.cache_hit(cache_hit), 
+		.cache_addr_in(cache_addr_in),
+		.cache_data_in(cache_data_in),
+		.target_addr(target_addr), 
+		.target_data(target_data),
 		.addr0(addr0), 
 		.addr1(addr1), 
 		.addr2(addr2), 
@@ -94,13 +100,7 @@ module mem_testbench;
 		.access0(access0),
 		.access1(access1),
 		.access2(access2),
-		.access3(access3),
-		.cache_hit(cache_hit), 
-		.target_addr(target_addr), 
-		.target_data(target_data), 
-		.target_rw(target_rw), 
-		.cache_addr_in(cache_addr_in),
-		.cache_data_in(cache_data_in)
+		.access3(access3)
 	);
 
 	initial begin

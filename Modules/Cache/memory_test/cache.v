@@ -33,7 +33,7 @@
 module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0, 
 					addr1, addr2, addr3, data0, data1, data2, data3, access0, access1, access2, access3,
 					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, state, curr_LRU, 
-					cache_hit, target_addr, target_data, target_rw, c_addrIN_out, c_dataIN_out);
+					cache_hit, target_addr, target_data, target_rw_out, c_addrIN_out, c_dataIN_out);
 	//Specify address and data width
 	parameter d_width = 8;
 	parameter a_width = 8;
@@ -88,7 +88,11 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 	assign c_dataIN_wire = data_in;
 	assign c_addrIN_out = c_addrIN_wire;
 	assign c_dataIN_out = c_dataIN_wire;
-	output reg target_rw;	//Tartget Read or Write Value to save on miss
+	output target_rw_out;
+	wire target_rw_wire;
+	reg target_rw;	//Tartget Read or Write Value to save on miss
+	assign target_rw_wire = target_rw;
+	assign target_rw_out = target_rw_wire;
 	integer i;
 	output reg [3:0] state; 		//Current State Register
 	
@@ -160,24 +164,21 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 						hit <= 1;
 					end
 				end
+				target_addr <= Addr;
+				target_data <= data_in;
 				state <= 1;
+				if(rw==1'b0) begin //read miss
+					target_rw <= 0; 
+				end
+				else if (rw==1'b1) begin //write miss
+					target_rw <= 1; 
+				end
 			end //End Hit test
 			1: begin	//Identify hit or miss						
 				if(hit==1) begin						//HIT  - T0
 					state <= 0; end //Reset
 				else if(hit==0) begin
-					if(rw==1'b0) begin //read miss
-						state <= 2; 						//MISS - T1
-						target_rw <= 0; 
-						target_addr <= Addr;
-						target_data <= data_in;
-					end
-					else if (rw==1'b1) begin //write miss
-						state <= 2;
-						target_rw <= 1; 
-						target_addr <= Addr;
-						target_data <= data_in;
-					end
+					state <= 2; 						//MISS - T1
 				end
 				else begin
 					hit <= 1'bZ;
@@ -192,7 +193,7 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 					state <= 6;
 			end
 			4: state <= 5;
-			5: state <= 6;
+			5: state <= 8;
 			6: state <= 7;
 			7: state <= 8;
 			8: state <= 9;
@@ -200,9 +201,9 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 			10: state <= 11;
 			11: state <= 12;
 			12: begin
-				if(target_rw==1'b0)
+				if(target_rw==1'b0) //Read Miss
 					state <= 13;
-				else if(target_rw==1'b1)
+				else if(target_rw==1'b1) //Write Miss
 					state <= 14;
 			end
 			13: state <= 0;
@@ -298,9 +299,15 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 					end
 				end
 			end
-			9: //Miss - Do Nothing (Eat Up Clock Cycles For Delay)
+			9: //Miss - Set new LRU
 			begin 
-				ram_enab <= 1'b0;
+				for(i=0; i<n; i=i+1) begin:Update_LRU
+					if(i!=curr_LRU) begin 
+						if(cache_access[i]==2'b00) begin
+							curr_LRU <= i;
+						end
+					end
+				end
 			end
 			10: //Miss - Do Nothing (Eat Up Clock Cycles For Delay)
 			begin
@@ -316,7 +323,8 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 			end
 			13: //Miss READ - Output Targeted Memory Data
 			begin
-				data_out <= cache_data[n-1];
+				i = cache_access[3];
+				data_out <= cache_data[i];
 			end
 			14: //Miss WRITE - Do Nothing
 			begin

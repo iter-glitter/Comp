@@ -8,12 +8,12 @@
 // Memory structure test
 //
 //////////////////////////////////////////////////////////////////////////////////
-module mem_test(clk, clr, state, data_out, hit, addr0, 
+module mem_test(clk, clr, state,  data_out, target_rw, hit, cache_hit, target_addr, 
+					cache_addr_in, cache_data_in, target_data, addr0, 
 					addr1, addr2, addr3, data0, data1, data2, data3,
-					access0, access1, access2, access3, 
+					 cache_lru, access0, access1, access2, access3, 
 					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7,
-					cache_addr, cache_data, cache_clr, cache_enab, cache_rw, cache_lru, cache_hit,
-					target_addr, target_data, target_rw, cache_addr_in, cache_data_in);
+					cache_addr, cache_data, cache_clr, cache_enab, cache_rw);
 	reg [7:0] test_addr[7:0];
 	initial begin
 		test_addr[0] = 8'b00000001;	
@@ -54,7 +54,8 @@ module mem_test(clk, clr, state, data_out, hit, addr0,
 	
 	output reg [7:0] cache_addr;
 	output reg [7:0] cache_data;
-	output reg cache_clr, cache_enab, cache_rw;
+	output cache_clr, cache_enab, cache_rw;
+	
 	
 	output  [7:0] target_data;
 	output  [7:0] target_addr;
@@ -109,6 +110,10 @@ module mem_test(clk, clr, state, data_out, hit, addr0,
 	assign cache_addr_in = c_addr_in_wire;
 	assign cache_data_in = c_data_in_wire;
 	
+	wire cache_rw_wire;
+	assign cache_rw_wire = rw;
+	assign cache_rw = cache_rw_wire;
+	
 	/*		 cache(clk,clr,enab,rw,Addr,data_in,data_out, hit, addr0, 
 					addr1, addr2, addr3, data0, data1, data2, data3, access0, access1, access2, access3,
 					ram0, ram1, ram2, ram3, state, curr_LRU, 
@@ -121,42 +126,35 @@ module mem_test(clk, clr, state, data_out, hit, addr0,
 	initial begin
 		cache_addr <= 8'b00000000;
 		cache_data <= 8'b00000000;
+		rw <= 1'b1;
 	end
 	
 	always begin
-		#1 enab <= 1'b1;
-		#200 rw <= 1'b1;
+		#100 enab <= 1'b1;
 		
-		#200
-			cache_addr <= 8'b00000001;
+		#200 cache_addr <= 8'b00000001;
 			cache_data <= 8'b11100000;
 		
-		#1500
-			cache_addr <= 8'b00000010;
+		#1500 cache_addr <= 8'b00000010;
 			cache_data <= 8'b11000000;
 
-		#3000
-			cache_addr <= 8'b00000011;
+		#3000 cache_addr <= 8'b00000011;
 			cache_data <= 8'b11000111;
 			
-		#4500
-			cache_addr <= 8'b00000100;
+		#4500 cache_addr <= 8'b00000100;
 			cache_data <= 8'b00011000;
-		
-		#5900
-			rw <= 1'b0;
 
-		#6000
-			cache_addr <= 8'b00000010;
+		#9000 cache_addr <= 8'b00000010;
 
-		#7500
-			cache_addr <= 8'b00000011;
+		#10500 cache_addr <= 8'b00000111;
 			
-		#9000
-			cache_addr <= 8'b00000001;
+		#19000 cache_addr <= 8'b00000001;
 	
 	end
 
+	always @ (posedge clk) begin
+		#8000 rw <= ~rw;
+	end
 	/*initial begin
 		i = 0;
 	end

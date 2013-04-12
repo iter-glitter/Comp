@@ -46,22 +46,23 @@
 # Loading work.cache(fast)
 # Loading work.ram(fast)
 # Loading work.glbl(fast)
-# ** Warning: (vsim-3015) mem_test.v(119): [PCDPC] - Port size (9 or 9) does not match connection size (8) for port 'c_addrIN_out'. The port definition is at: cache.v(36).
+# ** Warning: (vsim-3015) mem_test.v(124): [PCDPC] - Port size (9 or 9) does not match connection size (8) for port 'c_addrIN_out'. The port definition is at: cache.v(36).
 # 
 #         Region: /mem_testbench/uut/memory
-# ** Warning: (vsim-3015) mem_test.v(119): [PCDPC] - Port size (9 or 9) does not match connection size (8) for port 'c_dataIN_out'. The port definition is at: cache.v(36).
+# ** Warning: (vsim-3015) mem_test.v(124): [PCDPC] - Port size (9 or 9) does not match connection size (8) for port 'c_dataIN_out'. The port definition is at: cache.v(36).
 # 
 #         Region: /mem_testbench/uut/memory
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 3648
 # 
-#           Attempting to use alternate WLF file "./wlft2agr6x".
+#           Attempting to use alternate WLF file "./wlft0svem0".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft2agr6x
+#           Using alternate file: ./wlft0svem0
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
+run
 run
