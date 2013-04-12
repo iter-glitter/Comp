@@ -7,7 +7,7 @@
 //
 // Module Name:    Shifter 
 //
-// Description:		8-bit shifter for the accumulator reg
+// Description:		8-bit Load Store param shifter for the accumulator reg
 //
 //		Priority (highest lowest): clr, set, clk 
 //			set and clr are synchronous, and active low
@@ -19,7 +19,7 @@
 //			1		1	 |	Righ Shift			
 //
 //////////////////////////////////////////////////////////////////////////////////
-module LdStr_shift_Reg_param(Reg_in,clr,set,clk,Ls,Rs,ctrl,num_shift,Reg_out);
+module LdStr_shifter(Reg_in,clr,set,clk,Ls,Rs,ctrl,num_shift,Reg_out);
 	parameter n = 8; //8-bit accum reg + *Note - if change must change num_shift manually
 	input clr,set,clk,Ls,Rs;	// Ls = Left Shift bit. Rs = Right Shift bit. (1 or 0)
 	input [1:0] ctrl;			// control signal
