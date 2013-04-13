@@ -37,10 +37,6 @@
 # Top level modules:
 # 	glbl
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.mem_testbench glbl 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# 
-# ** Note: (vopt-143) Recognized 1 FSM in module "cache(fast)".
-# 
 # Loading work.mem_testbench(fast)
 # Loading work.mem_test(fast)
 # Loading work.cache(fast)
@@ -56,10 +52,10 @@
 # 
 #           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 3648
 # 
-#           Attempting to use alternate WLF file "./wlft0svem0".
+#           Attempting to use alternate WLF file "./wlfty7iy0g".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft0svem0
+#           Using alternate file: ./wlfty7iy0g
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
