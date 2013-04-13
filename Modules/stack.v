@@ -10,14 +10,20 @@
 // Description:
 //		Parameterized stack with synchronous active low clear
 //
+//		Control States
+//			00		push
+//			01		pop
+//			10		Do nothing
+//			11		Do nothing
+//
 //////////////////////////////////////////////////////////////////////////////////
-module stack(en, clr, clk, ctrl, data_in, data_out);
+module stack(en, clr, clk, con, data_in, data_out);
 	parameter width = 8; //the width of the data in bits
 	parameter depth = 2; // amout of data
 	input en; 	// enable 
 	input clr; 	// clear all contents
 	input clk;	// the clock
-	input ctrl;	// controller signal. pop when ctrl=1. push when ctrl=0;
+	input [1:0] con;	// controller signal. pop when con=01. push when con=00. do nothing when con=10/11;
 	input [width-1:0] data_in;
 	reg full; // inform controller if stack full. 1 on full, else 0
 	output reg [width-1:0] data_out;
@@ -45,7 +51,7 @@ module stack(en, clr, clk, ctrl, data_in, data_out);
 		begin
 			if (en == 1) // if the stack is enabled
 			begin
-				if (ctrl == 0) // if controller says push 
+				if (con == 2'b00) // if controller says push 
 				begin
 					if( full == 0 ) //if stack not full
 					begin 
@@ -59,7 +65,7 @@ module stack(en, clr, clk, ctrl, data_in, data_out);
 							full <= 1; // stack is full - controller must pop to make room
 					end
 				end
-				else // pop --> controller = 1 
+				else if( con == 2'b01) // pop --> controller = 1 
 				begin
 					if(empty == 0) //if the stack is not empty
 					begin
