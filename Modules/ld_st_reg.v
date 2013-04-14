@@ -7,15 +7,15 @@
 //
 //Parameterized load store register
 //
-// set  clr  funct
+// clr set   funct
 //	0	0    clear register to zero
-//	1	0	 clear register to zero
-//	0	1    store
+//	0	1	 clear register to zero
+//	1	0    store
 //	1	1    load from input
 //
 ///////////////////////////////////////////////////////////////////////////////////////
 module ld_st_reg(in, set, clr, clk, out);
-    parameter n = 4;            //register size in bits
+    parameter n = 8;            //register size in bits
     input [n-1:0] in;           //load input
     input set;                  //set
     input clr;                  //active-low clear

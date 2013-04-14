@@ -9,7 +9,6 @@
 //
 // Description:
 //		Parameterized stack with synchronous active low clear
-<<<<<<< HEAD
 //
 //		Control States
 //			00		push
@@ -17,11 +16,9 @@
 //			10		Do nothing
 //			11		Do nothing
 //
-=======
 //  
 //  
 //  
->>>>>>> 997737c... Fixing modules
 //////////////////////////////////////////////////////////////////////////////////
 module stack(en, clr, clk, con, data_in, data_out);
 	parameter width = 8; //the width of the data in bits

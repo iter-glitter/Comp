@@ -38,6 +38,8 @@ module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out);
 		isr_addr2[7:0] = 8'b11010111; //ISR2
 		isr_addr3[7:0] = 8'b11100110; //ISR3
 		isr_addr4[7:0] = 8'b11110101; //ISR4
+		itr_in[3:0] = 4'b0000;
+		mask_in[3:0] = 4'b0000;
 	end
 	
 	wire [3:0] itr_and_w;
