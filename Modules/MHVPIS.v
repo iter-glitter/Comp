@@ -19,11 +19,11 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out);
-	input clk;					//Input clock signal
-	//input clr;				//Active low clear for whole system
-	input itr_clr;				//Clear pending interrupts
-	input itr_en;				//Enable or disable interrupt handler
-	input [3:0] mask_in;		//Register containing interrupt mask vector (size: 4)
+	input clk;				//Input clock signal
+	//input clr;			//Active low clear for whole system
+	input itr_clr;			//Clear pending interrupts
+	input itr_en;			//Enable or disable interrupt handler
+	input [3:0] mask_in;	//Register containing interrupt mask vector (size: 4)
 	input [3:0] itr_in;		//Vector containing interrupt input signals
 	
 

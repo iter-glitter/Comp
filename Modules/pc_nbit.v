@@ -13,8 +13,8 @@
 //   x      0     Clear all PC bits to zero. *Top Priority
 //   00     1     Hold Count
 //   01     1     Parallel Load
-//   10     1		Increment by 1
-//   11		1 		increment by inc (increment variable)
+//   10     1	  Increment by 1
+//   11		1 	  increment by inc (increment variable)
 //
 //////////////////////////////////////////////////////////////////////////////////
 module nbit_pc(clk,clr, ctrl, pc_in, pc_out);

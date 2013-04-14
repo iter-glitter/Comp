@@ -8,7 +8,7 @@
 //  RAM : Random Access Memory module - Behavioral Style (Parameterized)
 //				RAM unit has 8 bit wide data field and 256 addresses (2**8)
 //
-// Inputs: Addr, enab, clr, rw, data
+// Inputs: Addr, enab, clr, rw, data_in
 //				Addr: Target memory address
 //				data_in: input line for data, Write to target address
 //				enab: Chip enable line
@@ -60,12 +60,23 @@ module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5
 	assign mem6 = memory[6];
 	assign mem7 = memory[7];
 	
+	initial begin
+		memory[0] = 8'b00001111;
+		memory[1] = 8'b00111111;
+		memory[2] = 8'b01111111;
+		memory[3] = 8'b11101111;
+		memory[4] = 8'b00011000;
+		memory[5] = 8'b00011000;
+		memory[6] = 8'b11011011;
+		memory[7] = 8'b10011001;
+	end
+	
 	//Handle CLR/READ/WRITE at positive edge of clk
 	always @(posedge clk) begin
 		if(clr==1'b0) begin:clrBlock //Clear memory contents
 			for(i=0; i<(2**a_width); i=i+1) begin:Clr_Loop
 				memory[i] <= 0;
-				data_out <= 8'bZZZZZZZZ;
+				data_out <= 8'b01010101;
 			end	
 		end
 		else if(enab==1'b1) begin //Only Read/Write if RAM Chip enabled
@@ -77,7 +88,7 @@ module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5
 			end
 		end
 		else if(enab==1'b0) begin //High Z state for output if chip not enabled
-			data_out <= 8'bZZZZZZZZ;
+			data_out <= 8'b01010101;
 		end
 	end
 	
