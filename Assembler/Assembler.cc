@@ -98,17 +98,21 @@ struct token
 vector<token> scanner(vector<string>);
 void decTobin( int n, ofstream&);
 
-int main()
+int main(int argc, char *argv[])
 {
-	string in;
+	if (argc != 2){ // Test for correct number of arguments
+		printf("Parameter(s): <Assembly Program>\n");
+		exit(0);
+	}
+	
+	const char* file = argv[1];
+
+
 	string out;
-	cout << "Name of input file: ";
-	cin >> in;
 	cout << endl << "Desired name of output file: ";
 	cin >> out;
 	cout << endl;
 	
-	const char* file =  in.c_str(); //"assem_input.txt";
 	const char* ofile = out.c_str(); //"assem_binary.txt";
 	
 	ifstream inFile;
@@ -174,7 +178,6 @@ vector<token> scanner(vector<string> lines)
 		OPCODE opcode;
 		FLAG flag;
 		token t;
-		//vector<token> toks;
 
 
 		//breakdown token
