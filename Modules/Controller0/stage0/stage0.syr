@@ -1,0 +1,446 @@
+Release 13.4 - xst O.87xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: stage0.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "stage0.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "stage0"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-fgg484
+
+---- Source Options
+Top Module Name                    : stage0
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : One-Hot
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+INFO:Xst - Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\Controller0\stage0\stage0.v" into library work
+Parsing module <stage0>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <stage0>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <stage0>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/project/modules/controller0/stage0/stage0.v".
+        T0 = 15'b000000000000000
+        T1 = 15'b000000000000001
+        T2 = 15'b000000000000010
+        T3 = 15'b000000000000100
+        T4 = 15'b000000000001000
+        T5 = 15'b000000000010000
+        T6 = 15'b000000000100000
+        T7 = 15'b000000001000000
+        T8 = 15'b000000010000000
+        T9 = 15'b000000100000000
+        T10 = 15'b000010000000000
+        T11 = 15'b000100000000000
+        T12 = 15'b001000000000000
+        T13 = 15'b010000000000000
+        T14 = 15'b100000000000000
+        CP0 = 20'b10110101001010110110
+        CP1 = 20'b10010101000100110110
+        CP2 = 20'b10010101000100100100
+        CP3 = 20'b10110101000101110110
+        CP4 = 20'b10011111001100110110
+        CP5 = 20'b10010101000100110110
+        CP6 = 20'b11010101000100110110
+        CP7 = 20'b10010101000100110110
+        CP8 = 20'b10010101000100110110
+        CP9 = 20'b10010101000100110110
+        CP10 = 20'b10110101000111110110
+        CP11 = 20'b10010101000100110110
+        CP12 = 20'b10010101000100100100
+        CP13 = 20'b10110101100100101101
+        CP14 = 20'b10010101000100110110
+        BRA = 5'b00110
+        JMP = 5'b00111
+        BSR = 5'b10101
+        RTS = 5'b01000
+        RTI = 5'b01001
+        LMSK = 5'b01110
+        BEQ = 3'b000
+        BNE = 3'b001
+    Found 1-bit register for signal <stg0_state>.
+    Found 15-bit register for signal <stage0>.
+    Found finite state machine <FSM_0> for signal <stage0>.
+    -----------------------------------------------------------------------
+    | States             | 15                                             |
+    | Transitions        | 39                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 15                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | clr_GND_1_o_equal_2_o (positive)               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000000000000000                                |
+    | Encoding           | One-Hot                                        |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <stage0> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Multiplexers                                         : 1
+ 1-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Optimizing FSM <FSM_0> on signal <stage0[1:15]> with One-Hot encoding.
+------------------------------------
+ State           | Encoding
+------------------------------------
+ 000000000000000 | 000000000000001
+ 000000000000001 | 000000000000010
+ 000000000000010 | 000000000000100
+ 000000000000100 | 000000000001000
+ 000000000001000 | 000000000010000
+ 000000000010000 | 000000000100000
+ 000000000100000 | 000000001000000
+ 000000001000000 | 000000010000000
+ 000000010000000 | 000000100000000
+ 000000100000000 | 000001000000000
+ 000010000000000 | 000010000000000
+ 000100000000000 | 000100000000000
+ 001000000000000 | 001000000000000
+ 010000000000000 | 010000000000000
+ 100000000000000 | 100000000000000
+------------------------------------
+
+Optimizing unit <stage0> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block stage0, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : stage0.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 37
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 7
+#      LUT3                        : 3
+#      LUT4                        : 3
+#      LUT5                        : 9
+#      LUT6                        : 13
+# FlipFlops/Latches                : 16
+#      FDE                         : 1
+#      FDR                         : 14
+#      FDS                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 12
+#      OBUF                        : 22
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              16  out of  54576     0%  
+ Number of Slice LUTs:                   36  out of  27288     0%  
+    Number used as Logic:                36  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     40
+   Number with an unused Flip Flop:      24  out of     40    60%  
+   Number with an unused LUT:             4  out of     40    10%  
+   Number of fully used LUT-FF pairs:    12  out of     40    30%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          43
+ Number of bonded IOBs:                  35  out of    316    11%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 16    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 3.134ns (Maximum Frequency: 319.081MHz)
+   Minimum input arrival time before clock: 5.595ns
+   Maximum output required time after clock: 7.277ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.134ns (frequency: 319.081MHz)
+  Total number of paths / destination ports: 46 / 15
+-------------------------------------------------------------------------
+Delay:               3.134ns (Levels of Logic = 2)
+  Source:            stage0_FSM_FFd8 (FF)
+  Destination:       stg0_state (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: stage0_FSM_FFd8 to stg0_state
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.525   1.069  stage0_FSM_FFd8 (stage0_FSM_FFd8)
+     LUT5:I4->O            1   0.254   0.958  stage0_stage0[14]_stg0_state_Select_46_o6_SW0 (N6)
+     LUT6:I2->O            1   0.254   0.000  stage0_stage0[14]_stg0_state_Select_46_o6 (stage0[14]_stg0_state_Select_46_o)
+     FDE:D                     0.074          stg0_state
+    ----------------------------------------
+    Total                      3.134ns (1.107ns logic, 2.027ns route)
+                                       (35.3% logic, 64.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 79 / 27
+-------------------------------------------------------------------------
+Offset:              5.595ns (Levels of Logic = 4)
+  Source:            instr<5> (PAD)
+  Destination:       stg0_state (FF)
+  Destination Clock: clk rising
+
+  Data Path: instr<5> to stg0_state
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.328   1.306  instr_5_IBUF (instr_5_IBUF)
+     LUT5:I0->O            4   0.254   1.234  _n0107<7>1 (_n0107)
+     LUT5:I0->O            1   0.254   0.910  stage0_stage0[14]_stg0_state_Select_46_o6_SW1 (N7)
+     LUT6:I3->O            1   0.235   0.000  stage0_stage0[14]_stg0_state_Select_46_o6 (stage0[14]_stg0_state_Select_46_o)
+     FDE:D                     0.074          stg0_state
+    ----------------------------------------
+    Total                      5.595ns (2.145ns logic, 3.450ns route)
+                                       (38.3% logic, 61.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 145 / 20
+-------------------------------------------------------------------------
+Offset:              7.277ns (Levels of Logic = 3)
+  Source:            stage0_FSM_FFd8 (FF)
+  Destination:       ctrl<19> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: stage0_FSM_FFd8 to ctrl<19>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.525   1.499  stage0_FSM_FFd8 (stage0_FSM_FFd8)
+     LUT5:I0->O            1   0.254   0.958  stage0_ctrl<2>1 (stage0_ctrl<2>)
+     LUT6:I2->O            6   0.254   0.875  stage0_ctrl<2>3 (ctrl_2_OBUF)
+     OBUF:I->O                 2.912          ctrl_19_OBUF (ctrl<19>)
+    ----------------------------------------
+    Total                      7.277ns (3.945ns logic, 3.332ns route)
+                                       (54.2% logic, 45.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.134|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.52 secs
+ 
+--> 
+
+Total memory usage is 256344 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
