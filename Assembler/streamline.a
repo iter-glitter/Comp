@@ -1,0 +1,24 @@
+LOAD # 1
+ADD # 2
+STOR $ 0 // 3 stored in mem[0]
+LDA $ 0 // Load 3 into reg a
+MUL # 3 // ACC = ACC*3 = 9
+STOR $ 1 // 9 stores in mem[1]
+load $ 0 // load value of 3 back to ACC
+MUL $ 1 // ACC = ACC*mem[1] = ACC*9 = 27
+STOR $ 2 // 27 stored in mem[2]
+SUB # 7 // ACC = ACC - 7 = 20
+SHFT < 2 // shift ACC to the left by inserting two zeros | result = 80
+STOR ($) 0 // store 80 into mem[mem[0]] ~ mem[3]
+SHFT >> 1 // shift ACC to right by inserting two ones | result = 212
+AND # 31 // ACC = ACC & 31 = 20
+add # 7 // ACC = 27
+div # 3 // ACC = ACC/3 = 9
+stor $ 4 // 9 stored into mem[4]
+NOP
+NOP
+NOP
+NOP
+or # 4 // ACC = ACC | 4 = 13
+STOR ($) 2 // 13 stored at mem[mem[2]] ~ mem[27]
+LDB ($) 2 // load value at mem[mem[2]] into reg B ~ 27 into B
