@@ -381,6 +381,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 								default: stage1 <= T55;
 							endcase
 						end
+						else begin stage1 <= T50; end //Bubble pipeline
 				default: stage1 <= T55;
 			endcase
 		end
