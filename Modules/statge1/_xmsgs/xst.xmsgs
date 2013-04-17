@@ -8,31 +8,31 @@
 <msg type="info" file="Xst" num="0" delta="new" >Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 192: Using initial value of <arg fmt="%s" index="1">rdy_recv</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 195: Using initial value of <arg fmt="%s" index="1">rdy_recv</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 425: Signal &lt;<arg fmt="%s" index="1">mdr_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 437: Signal &lt;<arg fmt="%s" index="1">mdr_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 430: Signal &lt;<arg fmt="%s" index="1">mdr_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 442: Signal &lt;<arg fmt="%s" index="1">mdr_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 435: Signal &lt;<arg fmt="%s" index="1">mdr_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 447: Signal &lt;<arg fmt="%s" index="1">mdr_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 440: Signal &lt;<arg fmt="%s" index="1">mdr_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 445: Signal &lt;<arg fmt="%s" index="1">ir_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 449: Signal &lt;<arg fmt="%s" index="1">ir_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 453: Signal &lt;<arg fmt="%s" index="1">ir_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 452: Signal &lt;<arg fmt="%s" index="1">mdr_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 457: Signal &lt;<arg fmt="%s" index="1">ir_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 461: Signal &lt;<arg fmt="%s" index="1">ir_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 465: Signal &lt;<arg fmt="%s" index="1">ir_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 469: Signal &lt;<arg fmt="%s" index="1">ir_data</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">instr&lt;0:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.

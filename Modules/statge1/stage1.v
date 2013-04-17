@@ -36,6 +36,9 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	reg rdy_recv;						//Ready to Receive Flag
 	reg rdy_out;						//Ready to OUTPUT Flag
 	
+	//Stage1 Pipeline Ready
+	reg stg1_rdy;
+	
 	//Define Stage 1 state encoding
 	parameter T0  = 56'b00000000000000000000000000000000000000000000000000000001;
 	parameter T1  = 56'b00000000000000000000000000000000000000000000000000000010;
@@ -150,7 +153,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	parameter CP52 = 35'b10100110000000010100001101110000000;
 	parameter CP53 = 35'b10100000000000010100010010110000000;
 	parameter CP54 = 35'b10000000000000010100001110110001000;
-	parameter CP55 = 35'b10000000000010010100001110110000000;
+	parameter CP55 = 35'b10000000000000011100001110110000000;
 	
 	//Parameterize Instruction OPcodes
 	parameter opADD  = 5'b00000; 
@@ -192,6 +195,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	initial begin
 		rdy_recv <= 1'b1;
 		rdy_out <= 1'b1;
+		stg1_rdy <= 1'b0;
 	end
 	
 	always @ (posedge clk) begin
@@ -316,70 +320,77 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 							opMULDIV: stage1 <= T19;			
 						endcase
 				T55:	if(stg0_state==1'b1) begin  		//Digest OPcode
-							case(instr[7:3]) 
-								opADD:	case(instr[2:0])
-												flDIR: stage1 <= T0;
-												flIND: stage1 <= T4;
-												flIMM: stage1 <= T9;
-											endcase
-								opSUB:	case(instr[2:0])
-												flDIR: stage1 <= T0;
-												flIND: stage1 <= T4;
-												flIMM: stage1 <= T9;
-											endcase
-								opOR:	case(instr[2:0])
-												flDIR: stage1 <= T0;
-												flIND: stage1 <= T4;
-												flIMM: stage1 <= T9;
-											endcase
-								opAND:	case(instr[2:0])
-												flDIR: stage1 <= T0;
-												flIND: stage1 <= T4;
-												flIMM: stage1 <= T9;
-											endcase
-								opCOMP: stage1 <= T18;
-								opMULDIV: case(instr[2:0])
-												flMUL_DIR: stage1 <= T0;
-												flMUL_IND: stage1 <= T4;
-												flDIV_DIR: stage1 <= T0;
-												flDIV_IND: stage1 <= T4;
-											 endcase								
-								opSHFT: stage1 <= T0;
-								opBRA:  stage1 <= T51;
-								opRTS:  stage1 <= T53; 
-								opRTI:  stage1 <= T53;
-								opLOAD: case(instr[2:0])
-												flDIR: stage1 <= T0;
-												flIND: stage1 <= T4;
-												flIMM: stage1 <= T9;
-										  endcase
-								opSTOR: case(instr[2:0])
-												flDIR: stage1 <= T0;
-												flIND: stage1 <= T4;
-										  endcase
-								opLDA: case(instr[2:0])
-												flDIR: stage1 <= T0;
-												flIND: stage1 <= T4;
-												flIMM: stage1 <= T9;
-										 endcase
-								opSTA: case(instr[2:0])
-												flDIR: stage1 <= T0;
-												flIND: stage1 <= T4;
-										 endcase
-								opLDB: case(instr[2:0])
-												flDIR: stage1 <= T0;
-												flIND: stage1 <= T4;
-												flIMM: stage1 <= T9;
-										 endcase
-								opSTB: case(instr[2:0])
-												flDIR: stage1 <= T0;
-												flIND: stage1 <= T4;
-										 endcase
-								opINPUT: stage1 <= T42;
-								opOUTPUT: stage1 <= T46;
-								opNOP: stage1 <= T50;
-								default: stage1 <= T55;
-							endcase
+							if(stg1_rdy == 1'b1) begin
+								stg1_rdy <= 1'b0;
+								case(instr[7:3]) 
+									opADD:	case(instr[2:0])
+													flDIR: stage1 <= T0;
+													flIND: stage1 <= T4;
+													flIMM: stage1 <= T9;
+												endcase
+									opSUB:	case(instr[2:0])
+													flDIR: stage1 <= T0;
+													flIND: stage1 <= T4;
+													flIMM: stage1 <= T9;
+												endcase
+									opOR:	case(instr[2:0])
+													flDIR: stage1 <= T0;
+													flIND: stage1 <= T4;
+													flIMM: stage1 <= T9;
+												endcase
+									opAND:	case(instr[2:0])
+													flDIR: stage1 <= T0;
+													flIND: stage1 <= T4;
+													flIMM: stage1 <= T9;
+												endcase
+									opCOMP: stage1 <= T18;
+									opMULDIV: case(instr[2:0])
+													flMUL_DIR: stage1 <= T0;
+													flMUL_IND: stage1 <= T4;
+													flDIV_DIR: stage1 <= T0;
+													flDIV_IND: stage1 <= T4;
+												 endcase								
+									opSHFT: stage1 <= T0;
+									opBRA:  stage1 <= T51;
+									opRTS:  stage1 <= T53; 
+									opRTI:  stage1 <= T53;
+									opLOAD: case(instr[2:0])
+													flDIR: stage1 <= T0;
+													flIND: stage1 <= T4;
+													flIMM: stage1 <= T9;
+											  endcase
+									opSTOR: case(instr[2:0])
+													flDIR: stage1 <= T0;
+													flIND: stage1 <= T4;
+											  endcase
+									opLDA: case(instr[2:0])
+													flDIR: stage1 <= T0;
+													flIND: stage1 <= T4;
+													flIMM: stage1 <= T9;
+											 endcase
+									opSTA: case(instr[2:0])
+													flDIR: stage1 <= T0;
+													flIND: stage1 <= T4;
+											 endcase
+									opLDB: case(instr[2:0])
+													flDIR: stage1 <= T0;
+													flIND: stage1 <= T4;
+													flIMM: stage1 <= T9;
+											 endcase
+									opSTB: case(instr[2:0])
+													flDIR: stage1 <= T0;
+													flIND: stage1 <= T4;
+											 endcase
+									opINPUT: stage1 <= T42;
+									opOUTPUT: stage1 <= T46;
+									opNOP: stage1 <= T50;
+									default: stage1 <= T55;
+								endcase
+							end
+							else begin
+								stg1_rdy <= 1'b1;
+								stage1 <= T55;
+							end
 						end
 						else begin stage1 <= T50; end //Bubble pipeline
 				default: stage1 <= T55;
