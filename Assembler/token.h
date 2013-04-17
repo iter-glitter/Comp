@@ -93,6 +93,7 @@ struct token
 	token(){
 		opcode = "UNDEF";
 		flag = "UNDEF";
+		operand = 0;
 	}
 };
 

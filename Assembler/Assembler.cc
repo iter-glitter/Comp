@@ -97,34 +97,40 @@ vector<token> scanner(vector<string> lines)
 		FLAG flag;
 		token t;
 		bool nullFlag = false;
+		bool nop = false;
 
 		//breakdown token
 		size_t found = lines[i].find(" "); 
 		if(found != string::npos){
 			t.opcode = lines[i].substr(0,found);
 			lines[i] = lines[i].substr(found+1);
-		}
-		found = lines[i].find(" "); 
-		if(found != string::npos){
-			t.flag = lines[i].substr(0,found);
-			string temp = lines[i].substr(found+1);
-			size_t comFind = temp.find("//");
-			if(comFind != string::npos){
-				// any comments are completely ignored
-				temp = temp.substr(0,comFind);
+			
+			found = lines[i].find(" "); 
+			if(found != string::npos){
+				t.flag = lines[i].substr(0,found);
+				string temp = lines[i].substr(found+1);
+				size_t comFind = temp.find("//");
+				if(comFind != string::npos){
+					// any comments are completely ignored
+					temp = temp.substr(0,comFind);
+				}
+				//Chomp gibberish off the end of string
+				string whitespaces (" \t");	
+				size_t here = temp.find_last_not_of(whitespaces);
+				if (here != std::string::npos)
+					temp.erase(here+1);
+				const char* tmpCstr = temp.c_str();
+				t.operand = atoi(tmpCstr);
 			}
-			//Chomp gibberish off the end of string
-			string whitespaces (" \t");	
-			size_t here = temp.find_last_not_of(whitespaces);
-			if (here != std::string::npos)
-				temp.erase(here+1);
-			const char* tmpCstr = temp.c_str();
-			t.operand = atoi(tmpCstr);
+			else{ //Flags are NULL
+				const char* tmpCstr = lines[i].c_str();
+				t.operand = atoi(tmpCstr);
+				nullFlag = true;
+			}
 		}
-		else{ //Flags are NULL
-			const char* tmpCstr = lines[i].c_str();
-			t.operand = atoi(tmpCstr);
-			nullFlag = true;
+		else{ // NOP
+			t.opcode = lines[i];
+			nop = true;
 		}
 
 		//handle opcode
@@ -160,7 +166,7 @@ vector<token> scanner(vector<string> lines)
 			t.opcode = opcode.OUTPUT;
 		else if (t.opcode == "LMSK" || t.opcode == "lmsk")
 			t.opcode = opcode.LMSK;
-		else if (t.opcode == "NOP" || t.opcode == "NOP")
+		else if (t.opcode == "NOP" || t.opcode == "nop")
 			t.opcode = opcode.NOP;
 		else if (t.opcode == "COMP" || t.opcode == "comp")
 			t.opcode = opcode.COMP;
@@ -199,6 +205,8 @@ vector<token> scanner(vector<string> lines)
 		else if(t.flag == "!=" )
 			t.flag = flag.notEqual;	
 		else if(nullFlag)
+			t.flag = flag.null;
+		else if(nop)
 			t.flag = flag.null;
 		else{
 			cout << "Error: '" << t.flag << "' not valid flag option @ line " << i+1 << endl;
