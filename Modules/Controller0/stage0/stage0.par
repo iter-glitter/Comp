@@ -1,7 +1,7 @@
 Release 13.4 par O.87xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-HENDRENDESKTOP::  Tue Apr 16 14:41:35 2013
+HENDRENDESKTOP::  Tue Apr 16 14:56:15 2013
 
 par -w -intstyle ise -ol high -mt off stage0_map.ncd stage0.ncd stage0.pcf 
 
@@ -40,12 +40,12 @@ Slice Logic Utilization:
     Number used as Memory:                       0 out of   6,408    0%
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    14 out of   6,822    1%
+  Number of occupied Slices:                    12 out of   6,822    1%
   Nummber of MUXCYs used:                        0 out of  13,644    0%
-  Number of LUT Flip Flop pairs used:           30
-    Number with an unused Flip Flop:            14 out of      30   46%
-    Number with an unused LUT:                   1 out of      30    3%
-    Number of fully used LUT-FF pairs:          15 out of      30   50%
+  Number of LUT Flip Flop pairs used:           29
+    Number with an unused Flip Flop:            13 out of      29   44%
+    Number with an unused LUT:                   0 out of      29    0%
+    Number of fully used LUT-FF pairs:          16 out of      29   55%
     Number of slice register sites lost
       to control set restrictions:               0 out of  54,576    0%
 
@@ -56,7 +56,7 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        35 out of     316   11%
+  Number of bonded IOBs:                        43 out of     316   13%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of     116    0%
@@ -93,29 +93,29 @@ Finished initial Timing Analysis.  REAL time: 7 secs
 Starting Router
 
 
-Phase  1  : 202 unrouted;      REAL time: 7 secs 
+Phase  1  : 208 unrouted;      REAL time: 7 secs 
 
-Phase  2  : 184 unrouted;      REAL time: 7 secs 
+Phase  2  : 190 unrouted;      REAL time: 7 secs 
 
-Phase  3  : 52 unrouted;      REAL time: 7 secs 
+Phase  3  : 89 unrouted;      REAL time: 11 secs 
 
-Phase  4  : 52 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  4  : 89 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
 Updating file: stage0.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
-Total REAL time to Router completion: 9 secs 
-Total CPU time to Router completion: 4 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 13 secs 
+Total REAL time to Router completion: 13 secs 
+Total CPU time to Router completion: 9 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -135,8 +135,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     2.656ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.431ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     2.587ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.469ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -152,10 +152,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 9 secs 
-Total CPU time to PAR completion: 5 secs 
+Total REAL time to PAR completion: 13 secs 
+Total CPU time to PAR completion: 9 secs 
 
-Peak Memory Usage:  356 MB
+Peak Memory Usage:  369 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

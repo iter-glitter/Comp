@@ -5,7 +5,7 @@
 // EE480 - Spring 2013 - Heath
 // Accumulator Based Processor
 //
-// Controller Unit
+// Controller Unit 0
 //
 // Moore Model Finite State Machine (FSM) implements control of stage 0 of the
 // accumulator processor. 
@@ -75,6 +75,10 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 	//Define flags
 	parameter BEQ = 3'b000; //BRA - If Equal
 	parameter BNE = 3'b001; //BRA - If Not Equal
+	
+	initial begin
+		pc_out <= 8'b00000000;
+	end
 	
 	always @ (posedge clk) begin
 		if(clr==1'b0) begin

@@ -1,0 +1,64 @@
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 
+bitgen -intstyle ise -f stage1.ut stage1.ncd 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 
+xst -intstyle ise -ifn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.xst" -ofn "D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/stage1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-2 "stage1.ngc" stage1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o stage1_map.ncd stage1.ngd stage1.pcf 
+par -w -intstyle ise -ol high -mt off stage1_map.ncd stage1.ncd stage1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml stage1.twx stage1.ncd -o stage1.twr stage1.pcf 

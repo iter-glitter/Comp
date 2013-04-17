@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.20 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: stage0.prj
 
@@ -159,6 +159,7 @@ Synthesizing Unit <stage0>.
         LMSK = 5'b01110
         BEQ = 3'b000
         BNE = 3'b001
+WARNING:Xst:2935 - Signal 'pc_out', unconnected in block 'stage0', is tied to its initial value (00000000).
     Found 1-bit register for signal <stg0_state>.
     Found 15-bit register for signal <stage0>.
     Found finite state machine <FSM_0> for signal <stage0>.
@@ -281,9 +282,9 @@ Primitive and Black Box Usage:
 #      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 34
+# IO Buffers                       : 42
 #      IBUF                        : 12
-#      OBUF                        : 22
+#      OBUF                        : 30
 
 Device utilization summary:
 ---------------------------
@@ -305,7 +306,7 @@ Slice Logic Distribution:
 
 IO Utilization: 
  Number of IOs:                          43
- Number of bonded IOBs:                  35  out of    316    11%  
+ Number of bonded IOBs:                  43  out of    316    13%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -433,14 +434,14 @@ clk            |    3.134|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.44 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.45 secs
  
 --> 
 
-Total memory usage is 255832 kilobytes
+Total memory usage is 256216 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

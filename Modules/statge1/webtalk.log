@@ -1,0 +1,16 @@
+Release 13.4 - WebTalk (O.87xd)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Project Information
+--------------------
+ProjectID=6C1AE6F146284FF99471E3B28A5B08C1
+ProjectIteration=8
+
+WebTalk Summary
+----------------
+INFO:WebTalk:2 - WebTalk is enabled.
+
+INFO:WebTalk:8 - WebTalk Install setting is ON.
+INFO:WebTalk:6 - WebTalk User setting is ON.
+
+INFO:WebTalk:4 - D:/Users/Hendren/My Documents/School/EE480/Project/Modules/statge1/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2013-04-16T20:06:36.  For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/13.4/ISE_DS/ISE/data/reports/webtalk_introduction.html

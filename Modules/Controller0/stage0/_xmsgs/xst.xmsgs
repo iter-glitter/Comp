@@ -8,5 +8,8 @@
 <msg type="info" file="Xst" num="0" delta="new" >Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
 </msg>
 
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">pc_out</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">stage0</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">00000000</arg>).
+</msg>
+
 </messages>
 
