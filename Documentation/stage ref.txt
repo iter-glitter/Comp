@@ -1,0 +1,37 @@
+	//Parameterize Instruction OPcodes
+	parameter opADD  = 5'b00000; 
+	parameter opSUB  = 5'b00001;
+	parameter opOR	  = 5'b00011;
+	parameter opAND  = 5'b00100;
+	parameter opCOMP = 5'b10000;
+	parameter opMULDIV = 5'b00010;
+	parameter opSHFT = 5'b00101;
+	parameter opBRA  = 5'b00110;
+	parameter opRTS  = 5'b01000;
+	parameter opRTI  = 5'b01001;
+	parameter opLOAD = 5'b01010;
+	parameter opSTOR = 5'b01011;
+	parameter opLDA  = 5'b10001;
+	parameter opSTA  = 5'b10010;
+	parameter opLDB  = 5'b10011;
+	parameter opSTB  = 5'b10100;
+	parameter opINPUT = 5'b01100;
+	parameter opOUTPUT = 5'b01101;
+	parameter opLMSK = 5'b01110;
+	parameter opNOP  = 5'b01111;
+	
+	
+	//Parameterize Instruction Flags
+	parameter flDIR = 3'b000; 		//Direct
+	parameter flIND = 3'b001;		//Indirect
+	parameter flIMM = 3'b010;		//Immediate
+	parameter flMUL_DIR = 3'b000;	//Multiply Direct
+	parameter flMUL_IND = 1'b001;	//Multiply Indirect
+	parameter flDIV_DIR = 1'b010;	//Multiply Direct
+	parameter flDIV_IND = 1'b011;	//Multiply Indirect
+	parameter flMUL = 1'b0;			//MULDIV Multiply
+	parameter flDIV = 1'b1;			//MULDIV Division
+	parameter flLS0 = 3'b000;		//Left Shift 0stag
+	parameter flLS1 = 3'b001;		//Left Shift 1
+	parameter flRS0 = 3'b010;		//Right Shift 0
+	parameter flRS1 = 3'b011;		//Right Shift 1

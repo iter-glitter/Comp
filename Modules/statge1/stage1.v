@@ -11,8 +11,8 @@
 // accumulator processor. 
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, 
-					cache_hit, stg1_state, ctrl, num_shift);
+module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_recv, 
+				out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv);
 	//Inputs
 	input clk, clr;
 	input [7:0] ir_data;				//Contents of IR1_0 - Data Register
@@ -20,16 +20,21 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 	input [7:0] instr;				//Contents of IR0_0 - Instruction Register
 	input stg0_state;					//Handshake control line - Stage 1 interface
 	input cache_hit;					//Hit signal from the cache
+	input input_rdy;					//Handhsake control line - Input device
+	input out_dev_rdy;				//Handshake control line - Output Device Ready
+	input out_recv;					//Handshake Control Line - Out Dev Received Data
 	
 	//Outputs
 	output reg stg1_state;			//Handshake control line - Stage 0 status
 	output reg [34:0] ctrl; 		//21 bit control line - control and sel points
 	output reg [2:0] num_shift;	//Control Shifter - Number to shift by
+	output reg input_recv;			//Handhsake Control Line - Input Received
 	
-	reg [55:0] stage1; 			//Current Controller state
+	reg [55:0] stage1; 				//Current Controller state
 	
-	//Temporary Registers
-	
+	//INPUT/OUTPUT Handshake registers
+	reg rdy_recv;						//Ready to Receive Flag
+	reg rdy_out;						//Ready to OUTPUT Flag
 	
 	//Define Stage 1 state encoding
 	parameter T0  = 56'b00000000000000000000000000000000000000000000000000000001;
@@ -174,9 +179,9 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 	parameter flIND = 3'b001;		//Indirect
 	parameter flIMM = 3'b010;		//Immediate
 	parameter flMUL_DIR = 3'b000;	//Multiply Direct
-	parameter flMUL_IND = 1'b001;	//Multiply Indirect
-	parameter flDIV_DIR = 1'b010;	//Multiply Direct
-	parameter flDIV_IND = 1'b011;	//Multiply Indirect
+	parameter flMUL_IND = 3'b001;	//Multiply Indirect
+	parameter flDIV_DIR = 3'b010;	//Multiply Direct
+	parameter flDIV_IND = 3'b011;	//Multiply Indirect
 	parameter flMUL = 1'b0;			//MULDIV Multiply
 	parameter flDIV = 1'b1;			//MULDIV Division
 	parameter flLS0 = 3'b000;		//Left Shift 0
@@ -184,6 +189,11 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 	parameter flRS0 = 3'b010;		//Right Shift 0
 	parameter flRS1 = 3'b011;		//Right Shift 1
 
+	initial begin
+		rdy_recv <= 1'b1;
+		rdy_out <= 1'b1;
+	end
+	
 	always @ (posedge clk) begin
 		if(clr==1'b0) begin
 			stage1 <= T55;
@@ -193,7 +203,11 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 				T0:  if(instr[7:3]==opSHFT) begin stage1 <= T54; end
 					  else begin stage1 <= T1; end
 				T1:  stage1 <= T2;
-				T2:  if(cache_hit==1'b1) begin stage1 <= T3; end //Handle cache hit
+				T2:  if(instr[7:3]==opSTOR) begin stage1 <= T34; end
+					  else if(instr[7:3]==opSTA) begin stage1 <= T38; end
+					  else if(instr[7:3]==opSTB) begin stage1 <= T41; end
+					  else if(instr[7:3]==opINPUT) begin stage1 <= T44; end
+					  else if(cache_hit==1'b1) begin stage1 <= T3; end //Handle cache hit
 					  else begin stage1 <= T3; end
 				T3: 	case(instr[7:3])
 							opADD: stage1 <= T10;
@@ -202,6 +216,9 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 							opAND: stage1 <= T16;
 							opMULDIV: stage1 <= T54;
 							opLOAD: stage1 <= T32;
+							opLDA: stage1 <= T36;
+							opLDB: stage1 <= T39;
+							opOUTPUT: stage1 <= T48;
 						endcase
 				T4:  stage1 <= T5;
 				T5:  stage1 <= T6;
@@ -215,6 +232,8 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 							opOR:  stage1 <= T15;
 							opAND: stage1 <= T17;
 							opLOAD: stage1 <= T33;
+							opLDA: stage1 <= T37;
+							opLDB: stage1 <= T40;
 					  endcase
 				T10: stage1 <= T55;
 				T11: stage1 <= T55;
@@ -250,22 +269,40 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 				T32: stage1 <= T55;
 				T33: stage1 <= T55;
 				T34: stage1 <= T35;
-				T35: stage1 <= T55;
-				T36:  ;
-				T37:  ;
-				T38:  ;
-				T39:  ;
-				T40:  ;
-				T41:  ;
-				T42:  ;
-				T43:  ;
-				T44:  ;
-				T45:  ;
-				T46:  ;  
-				T47:  ;
-				T48:  ;
-				T49:  ;
-				T50:  ;
+				T35: if(instr[7:3]==opINPUT) begin 
+						stage1 <= T45;
+						input_recv <= 1'b1;
+					  end
+					  else begin stage1 <= T55; end
+				T36: stage1 <= T55;
+				T37: stage1 <= T55;
+				T38: stage1 <= T35;
+				T39: stage1 <= T55;
+				T40: stage1 <= T55;
+				T41: stage1 <= T35;
+				T42:  if(rdy_recv==1'b1) begin 
+							stage1 <= T43; end
+						else begin stage1 <= T42; end
+				T43:  if(input_rdy==1'b1) begin
+							case(instr[2:0])
+								flDIR: stage1 <= T0;
+								flIND: stage1 <= T4;
+							endcase end
+						else begin stage1 <= T43; end
+				T44: stage1 <= T35;
+				T45: if(input_recv == 1'b1) begin
+							stage1 <= T55;
+							input_recv <= 1'b0;
+						end
+					  else begin stage1 <= T44; end 
+				T46: if(rdy_out==1'b1) begin stage1 <= T47; end
+					  else begin stage1 <= T46; end
+				T47: if(out_dev_rdy==1'b1) begin stage1 <= T4; end
+					  else begin stage1 <= T47; end
+				T48: stage1 <= T49;
+				T49: if(out_recv==1'b1) begin stage1 <= T55; end
+					  else begin stage1 <= T48; end
+				T50: stage1 <= T55;
 				T51: stage1 <= T52;
 				T52: stage1 <= T55;
 				T53: stage1 <= T55;
@@ -315,20 +352,32 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 												flDIR: stage1 <= T0;
 												flIND: stage1 <= T4;
 												flIMM: stage1 <= T9;
-											endcase
+										  endcase
 								opSTOR: case(instr[2:0])
 												flDIR: stage1 <= T0;
 												flIND: stage1 <= T4;
+										  endcase
+								opLDA: case(instr[2:0])
+												flDIR: stage1 <= T0;
+												flIND: stage1 <= T4;
 												flIMM: stage1 <= T9;
-											endcase
-								opLDA: ;
-								opSTA: ;
-								opLDB: ;
-								opSTB: ;
-								opINPUT: ;
-								opOUTPUT: ;
-								opLMSK: ;
-								opNOP: ;
+										 endcase
+								opSTA: case(instr[2:0])
+												flDIR: stage1 <= T0;
+												flIND: stage1 <= T4;
+										 endcase
+								opLDB: case(instr[2:0])
+												flDIR: stage1 <= T0;
+												flIND: stage1 <= T4;
+												flIMM: stage1 <= T9;
+										 endcase
+								opSTB: case(instr[2:0])
+												flDIR: stage1 <= T0;
+												flIND: stage1 <= T4;
+										 endcase
+								opINPUT: stage1 <= T42;
+								opOUTPUT: stage1 <= T46;
+								opNOP: stage1 <= T50;
 								default: stage1 <= T55;
 							endcase
 						end
@@ -417,18 +466,33 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 			T39: ctrl <= CP39;
 			T40: ctrl <= CP40;
 			T41: ctrl <= CP41;
-			T42: ctrl <= CP42;
+			T42: begin
+					ctrl <= CP42;
+					stg1_state <= 1'b0;
+				  end
 			T43: ctrl <= CP43;
 			T44: ctrl <= CP44;
 			T45: ctrl <= CP45;
-			T46: ctrl <= CP46; 
+			T46: begin
+					ctrl <= CP46;
+					stg1_state <= 1'b0;
+				  end
 			T47: ctrl <= CP47;
 			T48: ctrl <= CP48;
 			T49: ctrl <= CP49;
-			T50: ctrl <= CP50;
-			T51: ctrl <= CP51;
+			T50: begin
+					ctrl <= CP50;
+					stg1_state <= 1'b0;
+				  end
+			T51: begin
+					ctrl <= CP51;
+					stg1_state <= 1'b0;
+				  end
 			T52: ctrl <= CP52;
-			T53: ctrl <= CP53;
+			T53: begin
+					ctrl <= CP53;
+					stg1_state <= 1'b0;
+				 end
 			T54: ctrl <= CP54;
 			T55: begin
 					ctrl <= CP55;

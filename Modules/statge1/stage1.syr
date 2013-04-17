@@ -108,22 +108,21 @@ INFO:Xst - Part-select index evaluated to out of bound value may lead to incorre
 =========================================================================
 Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" into library work
 Parsing module <stage1>.
-WARNING:HDLCompiler:568 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 178: Constant value is truncated to fit in <1> bits.
-WARNING:HDLCompiler:568 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 179: Constant value is truncated to fit in <1> bits.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
 
 Elaborating module <stage1>.
-WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 363: Signal <mdr_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 368: Signal <mdr_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 373: Signal <mdr_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 378: Signal <mdr_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 383: Signal <ir_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 387: Signal <ir_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 391: Signal <ir_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 395: Signal <ir_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:872 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 192: Using initial value of rdy_recv since it is never assigned
+WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 425: Signal <mdr_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 430: Signal <mdr_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 435: Signal <mdr_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 440: Signal <mdr_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 445: Signal <ir_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 449: Signal <ir_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 453: Signal <ir_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\statge1\stage1.v" Line 457: Signal <ir_data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -267,9 +266,9 @@ Synthesizing Unit <stage1>.
         flIND = 3'b001
         flIMM = 3'b010
         flMUL_DIR = 3'b000
-        flMUL_IND = 1'b1
-        flDIV_DIR = 1'b0
-        flDIV_IND = 1'b1
+        flMUL_IND = 3'b001
+        flDIV_DIR = 3'b010
+        flDIV_IND = 3'b011
         flMUL = 1'b0
         flDIV = 1'b1
         flLS0 = 3'b000
@@ -280,35 +279,14 @@ WARNING:Xst:647 - Input <instr<0:0>> is never used. This port will be preserved 
 WARNING:Xst:647 - Input <ir_data<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <mdr_data<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <cache_hit> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <input_recv>.
     Found 56-bit register for signal <stage1>.
-INFO:Xst:1799 - State 00000000000000000000000100000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000000000000001000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000000000000010000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000000000000100000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000000000001000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000000000010000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000000000100000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000000001000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000000010000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000000100000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000001000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000010000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000000100000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000001000000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000010000000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000000100000000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000001000000000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000010000000000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00000100000000000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00001000000000000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00010000000000000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
-INFO:Xst:1799 - State 00100000000000000000000000000000000000000000000000000000 is never reached in FSM <stage1>.
     Found finite state machine <FSM_0> for signal <stage1>.
     -----------------------------------------------------------------------
     | States             | 56                                             |
-    | Transitions        | 73                                             |
-    | Inputs             | 21                                             |
-    | Outputs            | 34                                             |
+    | Transitions        | 132                                            |
+    | Inputs             | 36                                             |
+    | Outputs            | 56                                             |
     | Clock              | clk (rising_edge)                              |
     | Reset              | clr_GND_1_o_equal_2_o (positive)               |
     | Reset type         | synchronous                                    |
@@ -321,7 +299,9 @@ WARNING:Xst:737 - Found 1-bit latch for signal <num_shift<2>>. Latches may be ge
 WARNING:Xst:737 - Found 1-bit latch for signal <num_shift<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <num_shift<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
+	inferred   1 D-type flip-flop(s).
 	inferred   4 Latch(s).
+	inferred   2 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <stage1> synthesized.
 
@@ -329,8 +309,12 @@ Unit <stage1> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
+# Registers                                            : 1
+ 1-bit register                                        : 1
 # Latches                                              : 4
  1-bit latch                                           : 4
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
 # FSMs                                                 : 1
 
 =========================================================================
@@ -344,6 +328,10 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Multiplexers                                         : 2
+ 1-bit 2-to-1 multiplexer                              : 2
 # FSMs                                                 : 1
 
 =========================================================================
@@ -351,67 +339,67 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-Optimizing FSM <FSM_0> on signal <stage1[1:34]> with One-Hot encoding.
-------------------------------------------------------------------------------------------------
+Optimizing FSM <FSM_0> on signal <stage1[1:56]> with One-Hot encoding.
+----------------------------------------------------------------------------------------------------------------------
  State                                                    | Encoding
-------------------------------------------------------------------------------------------------
- 10000000000000000000000000000000000000000000000000000000 | 0000000000000000000000000000000001
- 00000000000000000000000000000000000000000000000000000001 | 0000000000000000000000000000000010
- 00000000000000000000000000000000000000000000000000000010 | 0000000000000000000000000000000100
- 00000000000000000000000000000000000000000000000000000100 | 0000000000000000000000000000001000
- 00000000000000000000000000000000000000000000000000001000 | 0000000000000000000000000000010000
- 00000000000000000000000000000000000000000000000000010000 | 0000000000000000000000000000100000
- 00000000000000000000000000000000000000000000000000100000 | 0000000000000000000000000001000000
- 00000000000000000000000000000000000000000000000001000000 | 0000000000000000000000000010000000
- 00000000000000000000000000000000000000000000000010000000 | 0000000000000000000000000100000000
- 00000000000000000000000000000000000000000000000100000000 | 0000000000000000000000001000000000
- 00000000000000000000000000000000000000000000001000000000 | 0000000000000000000000010000000000
- 00000000000000000000000000000000000000000000010000000000 | 0000000000000000000000100000000000
- 00000000000000000000000000000000000000000000100000000000 | 0000000000000000000001000000000000
- 00000000000000000000000000000000000000000001000000000000 | 0000000000000000000010000000000000
- 00000000000000000000000000000000000000000010000000000000 | 0000000000000000000100000000000000
- 00000000000000000000000000000000000000000100000000000000 | 0000000000000000001000000000000000
- 00000000000000000000000000000000000000001000000000000000 | 0000000000000000010000000000000000
- 00000000000000000000000000000000000000010000000000000000 | 0000000000000000100000000000000000
- 00000000000000000000000000000000000000100000000000000000 | 0000000000000001000000000000000000
- 00000000000000000000000000000000000001000000000000000000 | 0000000000000010000000000000000000
- 00000000000000000000000000000000000010000000000000000000 | 0000000000000100000000000000000000
- 00000000000000000000000000000000000100000000000000000000 | 0000000000001000000000000000000000
- 00000000000000000000000000000000001000000000000000000000 | 0000000000010000000000000000000000
- 00000000000000000000000000000000010000000000000000000000 | 0000000000100000000000000000000000
- 00000000000000000000000000000000100000000000000000000000 | 0000000001000000000000000000000000
- 00000000000000000000000000000001000000000000000000000000 | 0000000010000000000000000000000000
- 00000000000000000000000000000010000000000000000000000000 | 0000000100000000000000000000000000
- 00000000000000000000000000000100000000000000000000000000 | 0000001000000000000000000000000000
- 00000000000000000000000000001000000000000000000000000000 | 0000010000000000000000000000000000
- 00000000000000000000000000010000000000000000000000000000 | 0000100000000000000000000000000000
- 00000000000000000000000000100000000000000000000000000000 | 0001000000000000000000000000000000
- 00000000000000000000000001000000000000000000000000000000 | 0010000000000000000000000000000000
- 00000000000000000000000010000000000000000000000000000000 | 0100000000000000000000000000000000
- 00000000000000000000000100000000000000000000000000000000 | unreached
- 00000000000000000000001000000000000000000000000000000000 | unreached
- 00000000000000000000010000000000000000000000000000000000 | unreached
- 00000000000000000000100000000000000000000000000000000000 | unreached
- 00000000000000000001000000000000000000000000000000000000 | unreached
- 00000000000000000010000000000000000000000000000000000000 | unreached
- 00000000000000000100000000000000000000000000000000000000 | unreached
- 00000000000000001000000000000000000000000000000000000000 | unreached
- 00000000000000010000000000000000000000000000000000000000 | unreached
- 00000000000000100000000000000000000000000000000000000000 | unreached
- 00000000000001000000000000000000000000000000000000000000 | unreached
- 00000000000010000000000000000000000000000000000000000000 | unreached
- 00000000000100000000000000000000000000000000000000000000 | unreached
- 00000000001000000000000000000000000000000000000000000000 | unreached
- 00000000010000000000000000000000000000000000000000000000 | unreached
- 00000000100000000000000000000000000000000000000000000000 | unreached
- 00000001000000000000000000000000000000000000000000000000 | unreached
- 00000010000000000000000000000000000000000000000000000000 | unreached
- 00000100000000000000000000000000000000000000000000000000 | unreached
- 00001000000000000000000000000000000000000000000000000000 | unreached
- 00010000000000000000000000000000000000000000000000000000 | unreached
- 00100000000000000000000000000000000000000000000000000000 | unreached
- 01000000000000000000000000000000000000000000000000000000 | 1000000000000000000000000000000000
-------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ 10000000000000000000000000000000000000000000000000000000 | 00000000000000000000000000000000000000000000000000000001
+ 00000000000000000000000000000000000000000000000000000001 | 00000000000000000000000000000000000000000000000000000010
+ 00000000000000000000000000000000000000000000000000000010 | 00000000000000000000000000000000000000000000000000000100
+ 00000000000000000000000000000000000000000000000000000100 | 00000000000000000000000000000000000000000000000000001000
+ 00000000000000000000000000000000000000000000000000001000 | 00000000000000000000000000000000000000000000000000010000
+ 00000000000000000000000000000000000000000000000000010000 | 00000000000000000000000000000000000000000000000000100000
+ 00000000000000000000000000000000000000000000000000100000 | 00000000000000000000000000000000000000000000000001000000
+ 00000000000000000000000000000000000000000000000001000000 | 00000000000000000000000000000000000000000000000010000000
+ 00000000000000000000000000000000000000000000000010000000 | 00000000000000000000000000000000000000000000000100000000
+ 00000000000000000000000000000000000000000000000100000000 | 00000000000000000000000000000000000000000000001000000000
+ 00000000000000000000000000000000000000000000001000000000 | 00000000000000000000000000000000000000000000010000000000
+ 00000000000000000000000000000000000000000000010000000000 | 00000000000000000000000000000000000000000000100000000000
+ 00000000000000000000000000000000000000000000100000000000 | 00000000000000000000000000000000000000000001000000000000
+ 00000000000000000000000000000000000000000001000000000000 | 00000000000000000000000000000000000000000010000000000000
+ 00000000000000000000000000000000000000000010000000000000 | 00000000000000000000000000000000000000000100000000000000
+ 00000000000000000000000000000000000000000100000000000000 | 00000000000000000000000000000000000000001000000000000000
+ 00000000000000000000000000000000000000001000000000000000 | 00000000000000000000000000000000000000010000000000000000
+ 00000000000000000000000000000000000000010000000000000000 | 00000000000000000000000000000000000000100000000000000000
+ 00000000000000000000000000000000000000100000000000000000 | 00000000000000000000000000000000000001000000000000000000
+ 00000000000000000000000000000000000001000000000000000000 | 00000000000000000000000000000000000010000000000000000000
+ 00000000000000000000000000000000000010000000000000000000 | 00000000000000000000000000000000000100000000000000000000
+ 00000000000000000000000000000000000100000000000000000000 | 00000000000000000000000000000000001000000000000000000000
+ 00000000000000000000000000000000001000000000000000000000 | 00000000000000000000000000000000010000000000000000000000
+ 00000000000000000000000000000000010000000000000000000000 | 00000000000000000000000000000000100000000000000000000000
+ 00000000000000000000000000000000100000000000000000000000 | 00000000000000000000000000000001000000000000000000000000
+ 00000000000000000000000000000001000000000000000000000000 | 00000000000000000000000000000010000000000000000000000000
+ 00000000000000000000000000000010000000000000000000000000 | 00000000000000000000000000000100000000000000000000000000
+ 00000000000000000000000000000100000000000000000000000000 | 00000000000000000000000000001000000000000000000000000000
+ 00000000000000000000000000001000000000000000000000000000 | 00000000000000000000000000010000000000000000000000000000
+ 00000000000000000000000000010000000000000000000000000000 | 00000000000000000000000000100000000000000000000000000000
+ 00000000000000000000000000100000000000000000000000000000 | 00000000000000000000000001000000000000000000000000000000
+ 00000000000000000000000001000000000000000000000000000000 | 00000000000000000000000010000000000000000000000000000000
+ 00000000000000000000000010000000000000000000000000000000 | 00000000000000000000000100000000000000000000000000000000
+ 00000000000000000000000100000000000000000000000000000000 | 00000000000000000000001000000000000000000000000000000000
+ 00000000000000000000001000000000000000000000000000000000 | 00000000000000000000010000000000000000000000000000000000
+ 00000000000000000000010000000000000000000000000000000000 | 00000000000000000000100000000000000000000000000000000000
+ 00000000000000000000100000000000000000000000000000000000 | 00000000000000000001000000000000000000000000000000000000
+ 00000000000000000001000000000000000000000000000000000000 | 00000000000000000010000000000000000000000000000000000000
+ 00000000000000000010000000000000000000000000000000000000 | 00000000000000000100000000000000000000000000000000000000
+ 00000000000000000100000000000000000000000000000000000000 | 00000000000000001000000000000000000000000000000000000000
+ 00000000000000001000000000000000000000000000000000000000 | 00000000000000010000000000000000000000000000000000000000
+ 00000000000000010000000000000000000000000000000000000000 | 00000000000000100000000000000000000000000000000000000000
+ 00000000000000100000000000000000000000000000000000000000 | 00000000000001000000000000000000000000000000000000000000
+ 00000000000001000000000000000000000000000000000000000000 | 00000000000010000000000000000000000000000000000000000000
+ 00000000000010000000000000000000000000000000000000000000 | 00000000000100000000000000000000000000000000000000000000
+ 00000000000100000000000000000000000000000000000000000000 | 00000000001000000000000000000000000000000000000000000000
+ 00000000001000000000000000000000000000000000000000000000 | 00000000010000000000000000000000000000000000000000000000
+ 00000000010000000000000000000000000000000000000000000000 | 00000000100000000000000000000000000000000000000000000000
+ 00000000100000000000000000000000000000000000000000000000 | 00000001000000000000000000000000000000000000000000000000
+ 00000001000000000000000000000000000000000000000000000000 | 00000010000000000000000000000000000000000000000000000000
+ 00000010000000000000000000000000000000000000000000000000 | 00000100000000000000000000000000000000000000000000000000
+ 00000100000000000000000000000000000000000000000000000000 | 00001000000000000000000000000000000000000000000000000000
+ 00001000000000000000000000000000000000000000000000000000 | 00010000000000000000000000000000000000000000000000000000
+ 00010000000000000000000000000000000000000000000000000000 | 00100000000000000000000000000000000000000000000000000000
+ 00100000000000000000000000000000000000000000000000000000 | 01000000000000000000000000000000000000000000000000000000
+ 01000000000000000000000000000000000000000000000000000000 | 10000000000000000000000000000000000000000000000000000000
+----------------------------------------------------------------------------------------------------------------------
 
 Optimizing unit <stage1> ...
 
@@ -425,8 +413,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 34
- Flip-Flops                                            : 34
+# Registers                                            : 57
+ Flip-Flops                                            : 57
 
 =========================================================================
 
@@ -449,24 +437,26 @@ Top Level Output File Name         : stage1.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 74
+# BELS                             : 192
 #      GND                         : 1
-#      INV                         : 1
+#      INV                         : 2
 #      LUT2                        : 11
-#      LUT3                        : 17
-#      LUT4                        : 4
-#      LUT5                        : 7
-#      LUT6                        : 33
-# FlipFlops/Latches                : 38
-#      FD                          : 7
-#      FDR                         : 26
+#      LUT3                        : 19
+#      LUT4                        : 18
+#      LUT5                        : 26
+#      LUT6                        : 80
+#      MUXCY                       : 34
+#      VCC                         : 1
+# FlipFlops/Latches                : 61
+#      FDE                         : 1
+#      FDR                         : 55
 #      FDS                         : 1
 #      LD                          : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 55
-#      IBUF                        : 16
-#      OBUF                        : 39
+# IO Buffers                       : 59
+#      IBUF                        : 19
+#      OBUF                        : 40
 
 Device utilization summary:
 ---------------------------
@@ -475,20 +465,20 @@ Selected Device : 6slx45fgg484-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              34  out of  54576     0%  
- Number of Slice LUTs:                   73  out of  27288     0%  
-    Number used as Logic:                73  out of  27288     0%  
+ Number of Slice Registers:              57  out of  54576     0%  
+ Number of Slice LUTs:                  156  out of  27288     0%  
+    Number used as Logic:               156  out of  27288     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     77
-   Number with an unused Flip Flop:      43  out of     77    55%  
-   Number with an unused LUT:             4  out of     77     5%  
-   Number of fully used LUT-FF pairs:    30  out of     77    38%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:    168
+   Number with an unused Flip Flop:     111  out of    168    66%  
+   Number with an unused LUT:            12  out of    168     7%  
+   Number of fully used LUT-FF pairs:    45  out of    168    26%  
+   Number of unique control sets:        15
 
 IO Utilization: 
- Number of IOs:                          67
- Number of bonded IOBs:                  56  out of    316    17%  
+ Number of IOs:                          71
+ Number of bonded IOBs:                  60  out of    316    18%  
     IOB Flip Flops/Latches:               4
 
 Specific Feature Utilization:
@@ -515,9 +505,9 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 57    |
 ctrl_4_OBUF(ctrl<4>:O)             | NONE(*)(num_shift_2)   | 3     |
-_n0177(stage1__n01771:O)           | NONE(*)(stg1_state)    | 1     |
-clk                                | BUFGP                  | 34    |
+_n0184(stage1__n0184:O)            | NONE(*)(stg1_state)    | 1     |
 -----------------------------------+------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -532,9 +522,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 3.074ns (Maximum Frequency: 325.309MHz)
-   Minimum input arrival time before clock: 5.729ns
-   Maximum output required time after clock: 9.792ns
+   Minimum period: 4.447ns (Maximum Frequency: 224.871MHz)
+   Minimum input arrival time before clock: 7.148ns
+   Maximum output required time after clock: 9.641ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -543,26 +533,51 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.074ns (frequency: 325.309MHz)
-  Total number of paths / destination ports: 55 / 34
+  Clock period: 4.447ns (frequency: 224.871MHz)
+  Total number of paths / destination ports: 161 / 57
 -------------------------------------------------------------------------
-Delay:               3.074ns (Levels of Logic = 2)
-  Source:            stage1_FSM_FFd6 (FF)
-  Destination:       stage1_FSM_FFd34 (FF)
+Delay:               4.447ns (Levels of Logic = 3)
+  Source:            stage1_FSM_FFd17 (FF)
+  Destination:       input_recv (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: stage1_FSM_FFd6 to stage1_FSM_FFd34
+  Data Path: stage1_FSM_FFd17 to input_recv
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.525   1.137  stage1_FSM_FFd6 (stage1_FSM_FFd6)
-     LUT6:I0->O            2   0.254   0.834  stage1_ctrl<12>1_SW0 (N6)
-     LUT6:I4->O            1   0.250   0.000  stage1_FSM_FFd34-In4 (stage1_FSM_FFd34-In)
-     FDS:D                     0.074          stage1_FSM_FFd34
+     FDR:C->Q              7   0.525   1.365  stage1_FSM_FFd17 (stage1_FSM_FFd17)
+     LUT6:I0->O            2   0.254   0.954  stage1_stage1[55]_input_recv_Select_176_o13 (stage1_stage1[55]_input_recv_Select_176_o14)
+     LUT5:I2->O            1   0.235   0.790  stage1_stage1[55]_input_recv_Select_176_o16_SW1 (N15)
+     LUT5:I3->O            1   0.250   0.000  stage1_stage1[55]_input_recv_Select_176_o2 (stage1[55]_input_recv_Select_176_o)
+     FDE:D                     0.074          input_recv
     ----------------------------------------
-    Total                      3.074ns (1.103ns logic, 1.971ns route)
-                                       (35.9% logic, 64.1% route)
+    Total                      4.447ns (1.338ns logic, 3.109ns route)
+                                       (30.1% logic, 69.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 466 / 97
+-------------------------------------------------------------------------
+Offset:              7.148ns (Levels of Logic = 6)
+  Source:            instr<1> (PAD)
+  Destination:       stage1_FSM_FFd56 (FF)
+  Destination Clock: clk rising
+
+  Data Path: instr<1> to stage1_FSM_FFd56
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.328   1.290  instr_1_IBUF (instr_1_IBUF)
+     LUT2:I0->O            2   0.250   0.954  stage1_FSM_FFd56-In171 (stage1_FSM_FFd56-In17)
+     LUT6:I3->O            1   0.235   0.682  stage1_FSM_FFd56-In3 (stage1_FSM_FFd56-In3)
+     LUT5:I4->O            1   0.254   0.910  stage1_FSM_FFd56-In5 (stage1_FSM_FFd56-In5)
+     LUT6:I3->O            1   0.235   0.682  stage1_stage1[55]_input_recv_Select_176_o115_SW0 (N17)
+     LUT6:I5->O            1   0.254   0.000  stage1_FSM_FFd56-In7 (stage1_FSM_FFd56-In)
+     FDS:D                     0.074          stage1_FSM_FFd56
+    ----------------------------------------
+    Total                      7.148ns (2.630ns logic, 4.518ns route)
+                                       (36.8% logic, 63.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'ctrl_4_OBUF'
@@ -578,58 +593,35 @@ Offset:              3.604ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             5   1.328   1.069  mdr_data_0_IBUF (mdr_data_0_IBUF)
-     LUT3:I0->O            1   0.235   0.682  stage1[55]_num_shift[2]_select_177_OUT<2>_SW0 (N10)
-     LUT6:I5->O            1   0.254   0.000  stage1[55]_num_shift[2]_select_177_OUT<2> (stage1[55]_num_shift[2]_select_177_OUT<1>)
+     LUT3:I0->O            1   0.235   0.682  stage1[55]_num_shift[2]_select_240_OUT<2>_SW0 (N8)
+     LUT6:I5->O            1   0.254   0.000  stage1[55]_num_shift[2]_select_240_OUT<2> (stage1[55]_num_shift[2]_select_240_OUT<1>)
      LD:D                      0.036          num_shift_1
     ----------------------------------------
     Total                      3.604ns (1.853ns logic, 1.751ns route)
                                        (51.4% logic, 48.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 170 / 52
--------------------------------------------------------------------------
-Offset:              5.729ns (Levels of Logic = 4)
-  Source:            instr<5> (PAD)
-  Destination:       stage1_FSM_FFd34 (FF)
-  Destination Clock: clk rising
-
-  Data Path: instr<5> to stage1_FSM_FFd34
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            20   1.328   1.716  instr_5_IBUF (instr_5_IBUF)
-     LUT6:I1->O            1   0.254   0.958  stage1_FSM_FFd34-In3 (stage1_FSM_FFd34-In3)
-     LUT5:I1->O            1   0.254   0.910  stage1_FSM_FFd34-In2_SW0 (N22)
-     LUT6:I3->O            1   0.235   0.000  stage1_FSM_FFd34-In4 (stage1_FSM_FFd34-In)
-     FDS:D                     0.074          stage1_FSM_FFd34
-    ----------------------------------------
-    Total                      5.729ns (2.145ns logic, 3.584ns route)
-                                       (37.4% logic, 62.6% route)
-
-=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 322 / 24
+  Total number of paths / destination ports: 516 / 33
 -------------------------------------------------------------------------
-Offset:              9.792ns (Levels of Logic = 6)
-  Source:            stage1_FSM_FFd6 (FF)
+Offset:              9.641ns (Levels of Logic = 5)
+  Source:            stage1_FSM_FFd45 (FF)
   Destination:       ctrl<34> (PAD)
   Source Clock:      clk rising
 
-  Data Path: stage1_FSM_FFd6 to ctrl<34>
+  Data Path: stage1_FSM_FFd45 to ctrl<34>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.525   1.137  stage1_FSM_FFd6 (stage1_FSM_FFd6)
-     LUT6:I0->O            2   0.254   0.726  stage1_ctrl<12>1_SW0 (N6)
-     LUT6:I5->O            2   0.254   0.834  stage1_ctrl<12>1 (stage1_ctrl<12>1)
-     LUT4:I2->O            1   0.250   0.682  stage1_ctrl<12>_SW0 (N18)
-     LUT6:I5->O            3   0.254   0.874  stage1_ctrl<12> (ctrl_12_OBUF)
-     LUT2:I0->O            5   0.250   0.840  stage1_ctrl<19>1 (ctrl_19_OBUF)
+     FDR:C->Q              5   0.525   1.271  stage1_FSM_FFd45 (stage1_FSM_FFd45)
+     LUT6:I1->O            3   0.254   1.042  stage1_ctrl<32>4 (stage1_ctrl<32>3)
+     LUT6:I2->O            2   0.254   1.181  stage1_stage1[55]_input_recv_Select_176_o115 (stage1_stage1[55]_input_recv_Select_176_o11)
+     LUT6:I0->O            1   0.254   0.910  stage1_stage1[55]_input_recv_Select_176_o16 (stage1_stage1[55]_input_recv_Select_176_o1)
+     LUT3:I0->O            4   0.235   0.803  stage1_ctrl<19>1 (ctrl_19_OBUF)
      OBUF:I->O                 2.912          ctrl_34_OBUF (ctrl<34>)
     ----------------------------------------
-    Total                      9.792ns (4.699ns logic, 5.093ns route)
-                                       (48.0% logic, 52.0% route)
+    Total                      9.641ns (4.434ns logic, 5.207ns route)
+                                       (46.0% logic, 54.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'ctrl_4_OBUF'
@@ -651,13 +643,13 @@ Offset:              4.174ns (Levels of Logic = 1)
                                        (83.7% logic, 16.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock '_n0177'
+Timing constraint: Default OFFSET OUT AFTER for Clock '_n0184'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              4.174ns (Levels of Logic = 1)
   Source:            stg1_state (LATCH)
   Destination:       stg1_state (PAD)
-  Source Clock:      _n0177 falling
+  Source Clock:      _n0184 falling
 
   Data Path: stg1_state to stg1_state
                                 Gate     Net
@@ -674,12 +666,12 @@ Offset:              4.174ns (Levels of Logic = 1)
 Cross Clock Domains Report:
 --------------------------
 
-Clock to Setup on destination clock _n0177
+Clock to Setup on destination clock _n0184
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.504|         |
+clk            |         |         |    1.769|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -687,7 +679,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.074|         |         |         |
+clk            |    4.447|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ctrl_4_OBUF
@@ -695,20 +687,20 @@ Clock to Setup on destination clock ctrl_4_OBUF
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    3.161|         |
+clk            |         |         |    3.264|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.73 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.31 secs
  
 --> 
 
-Total memory usage is 259800 kilobytes
+Total memory usage is 260888 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   18 (   0 filtered)
-Number of infos    :   24 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 
