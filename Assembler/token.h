@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 struct FLAG
 {
 	string direct;

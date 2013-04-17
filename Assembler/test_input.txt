@@ -1,6 +1,5 @@
 //	Test assembly program for Assembler
 //
-//
 
 AND $ 5 //test
 and ($) 34//test

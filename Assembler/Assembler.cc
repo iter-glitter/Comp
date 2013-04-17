@@ -7,7 +7,7 @@
 // Description: This program acts as the Assembler for for our Processors ISA
 //
 //		Execution: ./assem <input file> <output file name> 		
-// 
+//  
 //////////////////////////////////////////////////////////////////////////////////
 #include <stdio.h>
 #include <stdlib.h>
