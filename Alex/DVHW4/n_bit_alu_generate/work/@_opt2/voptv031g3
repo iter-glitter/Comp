@@ -1,0 +1,193 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW4\n_bit_alu_generate
+T_opt
+VnbBWfG4U5=`j6C]C80_aE1
+04 22 4 work n_bit_alu_generate_vtf fast 0
+Z1 04 4 4 work glbl fast 0
+=1-b8975a0ddffd-511b218c-35e-11f8
+Z2 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+Z3 OE;O;10.1b;51
+Z4 dD:\Users\Hendren\My Documents\School\EE480\DVHW4\n_bit_alu_generate
+T_opt1
+VzQCAe6fO4IOHb?CSPZgSY3
+04 8 4 work alu_nbit fast 0
+R1
+=1-0019b910fc4b-516f1545-2de-1b9c
+R2
+n@_opt1
+R3
+R4
+T_opt2
+VW`V1<UN;[=45U?SQM^liA2
+04 12 4 work alu_nbit_vtf fast 0
+R1
+=1-0019b910fc4b-516f15cd-2a6-1b28
+R2
+n@_opt2
+R3
+valu_bitslice
+IA_Ij@LG06F8BOmDa^oXk<1
+VU]P[2j?9Ld@nkOBTW6?G<3
+Z5 dC:\Users\jahend6\Documents\School\EE480\Alex\DVHW4\n_bit_alu_generate
+Z6 w1364993735
+8alu_bitslice.v
+Falu_bitslice.v
+L0 27
+Z7 OE;L;10.1b;51
+r1
+31
+Z8 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 JJ29G]FL7[`SUSEP<8m<00
+!s90 -reportprogress|300|alu_bitslice.v|
+!s108 1366234572.913000
+!s107 alu_bitslice.v|
+!i10b 1
+!s85 0
+valu_nbit
+I`E37KLVFm31EXHlPJ_LJn1
+VRfkdN]J^AJCI4[k`XkIe40
+R5
+w1366234420
+Z9 8n_bit_alu_generate.v
+Z10 Fn_bit_alu_generate.v
+L0 26
+R7
+r1
+31
+Z11 !s90 -reportprogress|300|n_bit_alu_generate.v|
+R8
+Z12 !s107 n_bit_alu_generate.v|
+!s100 7CmV1B0EG;B3mkFoIi7YP3
+!s108 1366234573.012000
+!i10b 1
+!s85 0
+valu_nbit_vtf
+I55CMUCZOdIYJ:DB<V><6j0
+VA?`d:H>GiZLgb1C5dCBM30
+R5
+w1366234564
+8alu_nbit_vtf.v
+Falu_nbit_vtf.v
+L0 25
+R7
+r1
+31
+R8
+!s100 1XM_3bW2WC_KM:WbQG2L=2
+!s108 1366234573.147000
+!s107 alu_nbit_vtf.v|
+!s90 -reportprogress|300|alu_nbit_vtf.v|
+!i10b 1
+!s85 0
+vbfa_gate
+ISAFk^QWoUmgDSBLZ>:Ald1
+V0D:0JOj;N`oROzaHH?m142
+R5
+R6
+8bfa_gate.v
+Fbfa_gate.v
+L0 23
+R7
+r1
+31
+R8
+!s100 1X1U?lNFheHLV@Z7A<1:B2
+!s90 -reportprogress|300|bfa_gate.v|
+!s108 1366234572.786000
+!s107 bfa_gate.v|
+!i10b 1
+!s85 0
+vglbl
+IMYmcH1k1aUSF20m;E^Zc93
+VM[9mS]S:KA1i4VeCMX35[3
+R5
+w1325912016
+8C:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FC:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R7
+r1
+31
+R8
+!s100 0_DRo;fA:VYmmK<EYim]A0
+!s90 -reportprogress|300|C:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!i10b 1
+!s85 0
+!s108 1366234573.304000
+!s107 C:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+vmux_2_1_rtl
+IVek1>?518<TGNEFcfJFNa1
+VYKzTc1hT1RgnA_H]PZeJc3
+R5
+R6
+8mux_2-1_rtl.v
+Fmux_2-1_rtl.v
+L0 21
+R7
+r1
+31
+R8
+!s100 Dl@AR2D[_K4zab75jZj9U1
+!s90 -reportprogress|300|mux_2-1_rtl.v|
+!s108 1366234572.663000
+!s107 mux_2-1_rtl.v|
+!i10b 1
+!s85 0
+vmux_4_1_behavioral
+IkZK]5Rgm8dTmcMUU^jo3]1
+VHiOW6@C>;c:RZPXzg[K^R3
+R5
+R6
+8mux_4_1_behavioral.v
+Fmux_4_1_behavioral.v
+L0 27
+R7
+r1
+31
+R8
+!s100 l8^?n67<PPca6Yfn84k9k3
+!s90 -reportprogress|300|mux_4_1_behavioral.v|
+!s108 1366234572.480000
+!s107 mux_4_1_behavioral.v|
+!i10b 1
+!s85 0
+vn_bit_alu_generate
+I3mBKDaDLLbDfXFf7R>2jc3
+VzeFIS0^4W4ZG<Z1YNFDzV1
+R4
+w1360732108
+R9
+R10
+L0 21
+R7
+r1
+31
+R8
+R11
+R12
+!s100 XEI9zBfWH2=^o^DH59WOZ1
+!s108 1360732556.379000
+!i10b 1
+!s85 0
+vn_bit_alu_generate_vtf
+IgNOR@@h=0lZ5[=W6K@SjK2
+V_NBO6T?PCiz[<Y=SiKH>]0
+R4
+w1360732548
+8n_bit_alu_generate_vtf.v
+Fn_bit_alu_generate_vtf.v
+L0 25
+R7
+r1
+31
+R8
+!s90 -reportprogress|300|n_bit_alu_generate_vtf.v|
+!s100 B[@X5j9>De5S11dUQ^j4;2
+!s108 1360732556.490000
+!s107 n_bit_alu_generate_vtf.v|
+!i10b 1
+!s85 0

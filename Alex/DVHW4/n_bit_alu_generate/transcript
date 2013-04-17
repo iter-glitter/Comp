@@ -1,4 +1,4 @@
-# Reading D:/MentorGraphics/tcl/vsim/pref.tcl 
+# Reading C:/modeltech_10.1b/tcl/vsim/pref.tcl 
 # //  ModelSim SE 10.1b Apr 26 2012 
 # //
 # //  Copyright 1991-2012 Mentor Graphics Corporation
@@ -8,7 +8,7 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# do {n_bit_alu_generate_vtf.fdo} 
+# do {alu_nbit_vtf.fdo} 
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
@@ -32,40 +32,33 @@
 # Top level modules:
 # 	alu_bitslice
 # Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
-# -- Compiling module n_bit_alu_generate
+# -- Compiling module alu_nbit
 # 
 # Top level modules:
-# 	n_bit_alu_generate
+# 	alu_nbit
 # Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
-# -- Compiling module n_bit_alu_generate_vtf
+# -- Compiling module alu_nbit_vtf
 # 
 # Top level modules:
-# 	n_bit_alu_generate_vtf
+# 	alu_nbit_vtf
 # Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
 # -- Compiling module glbl
 # 
 # Top level modules:
 # 	glbl
-# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ns work.n_bit_alu_generate_vtf glbl 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# 
-# Loading work.n_bit_alu_generate_vtf(fast)
-# Loading work.n_bit_alu_generate(fast)
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ns work.alu_nbit_vtf glbl 
+# Loading work.alu_nbit_vtf(fast)
+# Loading work.alu_nbit(fast)
 # Loading work.alu_bitslice(fast)
 # Loading work.mux_2_1_rtl(fast)
 # Loading work.bfa_gate(fast)
 # Loading work.mux_4_1_behavioral(fast)
 # Loading work.glbl(fast)
+# ** Warning: (vsim-3015) alu_nbit_vtf.v(53): [PCDPC] - Port size (4 or 4) does not match connection size (8) for port 'alu_out'. The port definition is at: n_bit_alu_generate.v(26).
+# 
+#         Region: /alu_nbit_vtf/uut
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-restart
-# Loading work.n_bit_alu_generate_vtf(fast)
-# Loading work.n_bit_alu_generate(fast)
-# Loading work.alu_bitslice(fast)
-# Loading work.mux_2_1_rtl(fast)
-# Loading work.bfa_gate(fast)
-# Loading work.mux_4_1_behavioral(fast)
-# Loading work.glbl(fast)
-run
-# Causality operation skipped due to absense of debug database file
+# Break key hit 
+# Break in Module alu_nbit at n_bit_alu_generate.v line 64

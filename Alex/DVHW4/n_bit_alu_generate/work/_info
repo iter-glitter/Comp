@@ -4,154 +4,191 @@ K3
 cModel Technology
 Z0 dD:\Users\Hendren\My Documents\School\EE480\DVHW4\n_bit_alu_generate
 T_opt
-VnbBWfG4U5=`j6C]C80_aE1
-Z1 04 22 4 work n_bit_alu_generate_vtf fast 0
-Z2 04 4 4 work glbl fast 0
-=1-b8975a0ddffd-511b218c-35e-11f8
-Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
-n@_opt
-Z4 OE;O;10.1b;51
+Z1 VnbBWfG4U5=`j6C]C80_aE1
+Z2 04 22 4 work n_bit_alu_generate_vtf fast 0
+Z3 04 4 4 work glbl fast 0
+Z4 =1-b8975a0ddffd-511b218c-35e-11f8
+Z5 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+Z6 n@_opt
+Z7 OE;O;10.1b;51
+Z8 dD:\Users\Hendren\My Documents\School\EE480\DVHW4\n_bit_alu_generate
 T_opt1
-V08QZfZNQ3hiha@nHJQ=bJ1
-R1
-R2
-=1-b8975a0ddffd-511b1ef8-308-19f8
+Z9 VzQCAe6fO4IOHb?CSPZgSY3
+Z10 04 8 4 work alu_nbit fast 0
 R3
-n@_opt1
-R4
-Z5 dD:\Users\Hendren\My Documents\School\EE480\DVHW4\n_bit_alu_generate
+Z11 =1-0019b910fc4b-516f1545-2de-1b9c
+R5
+Z12 n@_opt1
+R7
+R8
 T_opt2
-Vh8k6RXfMn6WDY7b0G7Y430
-04 12 4 work alu_bitslice fast 0
-R2
-=1-b8975a0ddffd-511b11dd-292-818
+Z13 VW`V1<UN;[=45U?SQM^liA2
+Z14 04 12 4 work alu_nbit_vtf fast 0
 R3
-n@_opt2
-R4
+Z15 =1-0019b910fc4b-516f15cd-2a6-1b28
 R5
+Z16 n@_opt2
+R7
+R8
 valu_bitslice
-IA_Ij@LG06F8BOmDa^oXk<1
-VU]P[2j?9Ld@nkOBTW6?G<3
-R5
-w1360710725
-8alu_bitslice.v
-Falu_bitslice.v
+Z17 !s100 JJ29G]FL7[`SUSEP<8m<00
+Z18 IA_Ij@LG06F8BOmDa^oXk<1
+Z19 VU]P[2j?9Ld@nkOBTW6?G<3
+Z20 dC:\Users\jahend6\Documents\School\EE480\Alex\DVHW4\n_bit_alu_generate
+Z21 w1364993735
+Z22 8alu_bitslice.v
+Z23 Falu_bitslice.v
 L0 27
-Z6 OE;L;10.1b;51
+Z24 OE;L;10.1b;51
 r1
 31
-Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-!s100 JJ29G]FL7[`SUSEP<8m<00
-!s90 -reportprogress|300|alu_bitslice.v|
-!s108 1360732556.250000
-!s107 alu_bitslice.v|
+Z25 !s90 -reportprogress|300|alu_bitslice.v|
+Z26 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z27 !s108 1366234621.815000
+Z28 !s107 alu_bitslice.v|
 !i10b 1
 !s85 0
-vbfa_gate
-ISAFk^QWoUmgDSBLZ>:Ald1
-V0D:0JOj;N`oROzaHH?m142
-R5
-w1359088441
-8bfa_gate.v
-Fbfa_gate.v
-L0 23
-R6
+valu_nbit
+Z29 !s100 7CmV1B0EG;B3mkFoIi7YP3
+Z30 I`E37KLVFm31EXHlPJ_LJn1
+Z31 VRfkdN]J^AJCI4[k`XkIe40
+R20
+Z32 w1366234420
+Z33 8n_bit_alu_generate.v
+Z34 Fn_bit_alu_generate.v
+L0 26
+R24
 r1
 31
-R7
-!s100 1X1U?lNFheHLV@Z7A<1:B2
-!s90 -reportprogress|300|bfa_gate.v|
-!s108 1360732556.145000
-!s107 bfa_gate.v|
+Z35 !s90 -reportprogress|300|n_bit_alu_generate.v|
+R26
+Z36 !s108 1366234621.918000
+Z37 !s107 n_bit_alu_generate.v|
+!i10b 1
+!s85 0
+valu_nbit_vtf
+Z38 !s100 1XM_3bW2WC_KM:WbQG2L=2
+Z39 I55CMUCZOdIYJ:DB<V><6j0
+Z40 VA?`d:H>GiZLgb1C5dCBM30
+R20
+Z41 w1366234564
+Z42 8alu_nbit_vtf.v
+Z43 Falu_nbit_vtf.v
+L0 25
+R24
+r1
+31
+Z44 !s90 -reportprogress|300|alu_nbit_vtf.v|
+R26
+!i10b 1
+!s85 0
+Z45 !s108 1366234622.052000
+Z46 !s107 alu_nbit_vtf.v|
+vbfa_gate
+Z47 !s100 1X1U?lNFheHLV@Z7A<1:B2
+Z48 ISAFk^QWoUmgDSBLZ>:Ald1
+Z49 V0D:0JOj;N`oROzaHH?m142
+R20
+R21
+Z50 8bfa_gate.v
+Z51 Fbfa_gate.v
+L0 23
+R24
+r1
+31
+Z52 !s90 -reportprogress|300|bfa_gate.v|
+R26
+Z53 !s108 1366234621.722000
+Z54 !s107 bfa_gate.v|
 !i10b 1
 !s85 0
 vglbl
-IlN77838lTSOK8o;l=MSIc0
-VM[9mS]S:KA1i4VeCMX35[3
-R5
-w1325908416
-8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
-FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
-L0 5
-R6
-r1
-31
-R7
-!s100 US6of7W;COLU=>D@U>:[Y0
-!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
 !i10b 1
+Z55 !s100 0_DRo;fA:VYmmK<EYim]A0
+Z56 IMYmcH1k1aUSF20m;E^Zc93
+Z57 VM[9mS]S:KA1i4VeCMX35[3
+R20
+Z58 w1325912016
+Z59 8C:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+Z60 FC:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R24
+r1
 !s85 0
-!s108 1360732556.613000
-!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+31
+!s108 1366234622.195000
+!s107 C:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+Z61 !s90 -reportprogress|300|C:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+R26
 vmux_2_1_rtl
-IVek1>?518<TGNEFcfJFNa1
-VYKzTc1hT1RgnA_H]PZeJc3
-R5
-w1359082798
-8mux_2-1_rtl.v
-Fmux_2-1_rtl.v
+Z62 !s100 Dl@AR2D[_K4zab75jZj9U1
+Z63 IVek1>?518<TGNEFcfJFNa1
+Z64 VYKzTc1hT1RgnA_H]PZeJc3
+R20
+R21
+Z65 8mux_2-1_rtl.v
+Z66 Fmux_2-1_rtl.v
 L0 21
-R6
+R24
 r1
 31
-R7
-!s100 Dl@AR2D[_K4zab75jZj9U1
-!s90 -reportprogress|300|mux_2-1_rtl.v|
-!s108 1360732556.045000
-!s107 mux_2-1_rtl.v|
+Z67 !s90 -reportprogress|300|mux_2-1_rtl.v|
+R26
+Z68 !s108 1366234621.564000
+Z69 !s107 mux_2-1_rtl.v|
 !i10b 1
 !s85 0
 vmux_4_1_behavioral
-IkZK]5Rgm8dTmcMUU^jo3]1
-VHiOW6@C>;c:RZPXzg[K^R3
-R5
-w1359086085
-8mux_4_1_behavioral.v
-Fmux_4_1_behavioral.v
+Z70 !s100 l8^?n67<PPca6Yfn84k9k3
+Z71 IkZK]5Rgm8dTmcMUU^jo3]1
+Z72 VHiOW6@C>;c:RZPXzg[K^R3
+R20
+R21
+Z73 8mux_4_1_behavioral.v
+Z74 Fmux_4_1_behavioral.v
 L0 27
-R6
+R24
 r1
 31
-R7
-!s100 l8^?n67<PPca6Yfn84k9k3
-!s90 -reportprogress|300|mux_4_1_behavioral.v|
-!s108 1360732555.946000
-!s107 mux_4_1_behavioral.v|
+Z75 !s90 -reportprogress|300|mux_4_1_behavioral.v|
+R26
+Z76 !s108 1366234621.465000
+Z77 !s107 mux_4_1_behavioral.v|
 !i10b 1
 !s85 0
 vn_bit_alu_generate
-I3mBKDaDLLbDfXFf7R>2jc3
-VzeFIS0^4W4ZG<Z1YNFDzV1
-R5
-w1360732108
-8n_bit_alu_generate.v
-Fn_bit_alu_generate.v
+Z78 I3mBKDaDLLbDfXFf7R>2jc3
+Z79 VzeFIS0^4W4ZG<Z1YNFDzV1
+R8
+Z80 w1360732108
+R33
+R34
 L0 21
-R6
+R24
 r1
 31
-R7
-!s100 XEI9zBfWH2=^o^DH59WOZ1
-!s90 -reportprogress|300|n_bit_alu_generate.v|
-!s108 1360732556.379000
-!s107 n_bit_alu_generate.v|
+R26
+R35
+R37
+Z81 !s100 XEI9zBfWH2=^o^DH59WOZ1
+Z82 !s108 1360732556.379000
 !i10b 1
 !s85 0
 vn_bit_alu_generate_vtf
-IgNOR@@h=0lZ5[=W6K@SjK2
-V_NBO6T?PCiz[<Y=SiKH>]0
-R5
-w1360732548
-8n_bit_alu_generate_vtf.v
-Fn_bit_alu_generate_vtf.v
+Z83 IgNOR@@h=0lZ5[=W6K@SjK2
+Z84 V_NBO6T?PCiz[<Y=SiKH>]0
+R8
+Z85 w1360732548
+Z86 8n_bit_alu_generate_vtf.v
+Z87 Fn_bit_alu_generate_vtf.v
 L0 25
-R6
+R24
 r1
 31
-R7
-!s90 -reportprogress|300|n_bit_alu_generate_vtf.v|
-!s100 B[@X5j9>De5S11dUQ^j4;2
-!s108 1360732556.490000
-!s107 n_bit_alu_generate_vtf.v|
+R26
+Z88 !s90 -reportprogress|300|n_bit_alu_generate_vtf.v|
+Z89 !s100 B[@X5j9>De5S11dUQ^j4;2
+Z90 !s108 1360732556.490000
+Z91 !s107 n_bit_alu_generate_vtf.v|
 !i10b 1
 !s85 0

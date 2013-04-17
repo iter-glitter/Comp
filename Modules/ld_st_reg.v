@@ -14,7 +14,7 @@
 //	1	1    load from input
 //
 ///////////////////////////////////////////////////////////////////////////////////////
-module ld_st_reg(in, set, clr, clk, out);
+module ld_st_reg(clk, clr, set, in, out);
     parameter n = 8;            //register size in bits
     input [n-1:0] in;           //load input
     input set;                  //set

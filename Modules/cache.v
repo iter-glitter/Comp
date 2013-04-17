@@ -27,7 +27,7 @@
 //   x      x      0     Clear all cache contents to zero *Top Priority
 //   x 		0      1     RAM Chip not enabled - Do not read or write
 //   0 		1      1     Read Target Address
-//   1 		1      1	 Write 
+//   1 		1      1		 Write 
 //
 //////////////////////////////////////////////////////////////////////////////////
 module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0, 

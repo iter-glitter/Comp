@@ -1,0 +1,203 @@
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf
+
+Design file:              alu_nbit.ncd
+Physical constraint file: alu_nbit.pcf
+Device,package,speed:     xc6slx45,fgg484,C,-3 (PRODUCTION 1.21 2012-01-07)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock c_in to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         9.266(F)|      SLOW  |         4.653(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock ctrl<0> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         9.434(F)|      SLOW  |         4.314(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock ctrl<1> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         9.487(F)|      SLOW  |         4.182(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock ctrl<2> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         8.685(F)|      SLOW  |         4.357(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock in0<0> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         9.360(F)|      SLOW  |         4.543(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock in0<1> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         9.258(F)|      SLOW  |         4.621(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock in0<2> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         9.074(F)|      SLOW  |         4.486(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock in0<3> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         7.687(F)|      SLOW  |         4.262(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock in1<0> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         9.606(F)|      SLOW  |         4.692(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock in1<1> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         9.705(F)|      SLOW  |         4.667(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock in1<2> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         8.747(F)|      SLOW  |         4.483(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock in1<3> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+Z           |         8.198(F)|      SLOW  |         4.657(F)|      FAST  |Z_G               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+c_in           |V              |    7.468|
+c_in           |alu_out<0>     |    6.148|
+c_in           |alu_out<1>     |    7.088|
+c_in           |alu_out<2>     |    8.018|
+c_in           |alu_out<3>     |    8.969|
+c_in           |c_out          |    6.880|
+ctrl<0>        |V              |    7.546|
+ctrl<0>        |alu_out<0>     |    6.650|
+ctrl<0>        |alu_out<1>     |    7.340|
+ctrl<0>        |alu_out<2>     |    8.096|
+ctrl<0>        |alu_out<3>     |    9.047|
+ctrl<0>        |c_out          |    6.958|
+ctrl<1>        |alu_out<0>     |    6.142|
+ctrl<1>        |alu_out<1>     |    7.393|
+ctrl<1>        |alu_out<2>     |    7.038|
+ctrl<1>        |alu_out<3>     |    7.258|
+ctrl<2>        |alu_out<0>     |    6.294|
+ctrl<2>        |alu_out<1>     |    6.591|
+ctrl<2>        |alu_out<2>     |    7.301|
+ctrl<2>        |alu_out<3>     |    7.487|
+in0<0>         |V              |    7.149|
+in0<0>         |alu_out<0>     |    6.468|
+in0<0>         |alu_out<1>     |    7.266|
+in0<0>         |alu_out<2>     |    7.699|
+in0<0>         |alu_out<3>     |    8.650|
+in0<0>         |c_out          |    6.561|
+in0<1>         |V              |    7.341|
+in0<1>         |alu_out<1>     |    7.164|
+in0<1>         |alu_out<2>     |    7.891|
+in0<1>         |alu_out<3>     |    8.842|
+in0<1>         |c_out          |    6.753|
+in0<2>         |V              |    7.019|
+in0<2>         |alu_out<2>     |    7.422|
+in0<2>         |alu_out<3>     |    8.777|
+in0<2>         |c_out          |    6.344|
+in0<3>         |V              |    6.777|
+in0<3>         |alu_out<3>     |    7.390|
+in0<3>         |c_out          |    6.500|
+in1<0>         |V              |    7.650|
+in1<0>         |alu_out<0>     |    6.302|
+in1<0>         |alu_out<1>     |    7.512|
+in1<0>         |alu_out<2>     |    8.200|
+in1<0>         |alu_out<3>     |    9.151|
+in1<0>         |c_out          |    7.062|
+in1<1>         |V              |    7.360|
+in1<1>         |alu_out<1>     |    7.611|
+in1<1>         |alu_out<2>     |    7.910|
+in1<1>         |alu_out<3>     |    8.861|
+in1<1>         |c_out          |    6.772|
+in1<2>         |V              |    7.224|
+in1<2>         |alu_out<2>     |    7.454|
+in1<2>         |alu_out<3>     |    8.450|
+in1<2>         |c_out          |    6.036|
+in1<3>         |V              |    6.799|
+in1<3>         |alu_out<3>     |    7.901|
+in1<3>         |c_out          |    6.106|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Apr 17 17:41:15 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 260 MB
+
+
+
