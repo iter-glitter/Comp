@@ -29,6 +29,7 @@ struct FLAG
 	}
 };
 
+
 struct OPCODE
 {
 	string ADD;

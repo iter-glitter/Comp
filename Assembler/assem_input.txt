@@ -2,3 +2,4 @@ AND $ 5 //test
 and ($) 34//test
 OR # 17// testasdf
 sub # 64
+dib $ 45
