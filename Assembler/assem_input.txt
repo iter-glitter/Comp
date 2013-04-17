@@ -1,4 +1,8 @@
-AND $ 5
-and ($) 34
-OR # 17
+AND $ 5 //test
+and ($) 34//test
+OR # 17// testasdf
 sub # 64
+dib $ 45
+BRA = 5
+BRA != 1
+JMP 51

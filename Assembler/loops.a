@@ -1,0 +1,5 @@
+LDA # 10
+LOAD #1
+MUL # 2 // ACC = ACC*2
+STOR $ 5 //store result to mem[5]
+//not finished

@@ -6,12 +6,9 @@
 #include <fstream>
 #include <vector>
 #include <stdint.h>
-//#include "token.h"
-
 
 using namespace std;
 
-//16-bit instructions : uint16_t
 struct FLAG
 {
 	string direct;
@@ -21,6 +18,8 @@ struct FLAG
 	string leftSone;
 	string rightSzero;
 	string rightSone;
+	string equal;
+	string notEqual;
 	FLAG(){
 		direct = "000"; //$
 		indir = "001"; //($)
@@ -29,8 +28,11 @@ struct FLAG
 		leftSone = "001"; //<<
 		rightSzero = "010"; //>
 		rightSone = "011"; //>>
+		equal = "000"; //=
+		notEqual = "001"; //!=
 	}
 };
+
 
 struct OPCODE
 {
@@ -101,7 +103,7 @@ void decTobin( int n, ofstream&);
 int main(int argc, char *argv[])
 {
 	if (argc != 2){ // Test for correct number of arguments
-		printf("Parameter(s): <Assembly Program>\n");
+		printf("Parameter(s): <input file>\n");
 		exit(0);
 	}
 	
@@ -113,7 +115,7 @@ int main(int argc, char *argv[])
 	cin >> out;
 	cout << endl;
 	
-	const char* ofile = out.c_str(); //"assem_binary.txt";
+	const char* ofile = out.c_str(); 
 	
 	ifstream inFile;
 	ofstream outFile;
@@ -190,7 +192,17 @@ vector<token> scanner(vector<string> lines)
 		if(found != string::npos){
 			t.flag = lines[i].substr(0,found);
 			string temp = lines[i].substr(found+1);
+			int comFind = temp.find("//");
+			if(comFind != string::npos){
+				// string comment = temp.substr(comFind);
+				temp = temp.substr(0,comFind);
+			}
+			// reminder ----> erase any whitespace off the end of this line
 			const char* tmpCstr = temp.c_str();
+			t.operand = atoi(tmpCstr);
+		}
+		else{ //Flags are NULL
+			const char* tmpCstr = lines[i].c_str();
 			t.operand = atoi(tmpCstr);
 		}
 
@@ -257,6 +269,10 @@ vector<token> scanner(vector<string> lines)
 			t.flag = flag.rightSzero;
 		else if(t.flag == ">>" )
 			t.flag = flag.rightSone;
+		else if(t.flag == "=" )
+			t.flag = flag.equal;
+		else if(t.flag == "!=" )
+			t.flag = flag.notEqual;	
 
 		toks.push_back(t);
 	}
