@@ -201,6 +201,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 							opOR:	 stage1 <= T14;
 							opAND: stage1 <= T16;
 							opMULDIV: stage1 <= T54;
+							opLOAD: stage1 <= T32;
 						endcase
 				T4:  stage1 <= T5;
 				T5:  stage1 <= T6;
@@ -213,6 +214,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 							opSUB: stage1 <= T13;
 							opOR:  stage1 <= T15;
 							opAND: stage1 <= T17;
+							opLOAD: stage1 <= T33;
 					  endcase
 				T10: stage1 <= T55;
 				T11: stage1 <= T55;
@@ -245,10 +247,10 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 				T29: stage1 <= T55;
 				T30: stage1 <= T55;
 				T31: stage1 <= T55;
-				T32:  ;
-				T33:  ;
-				T34:  ;
-				T35:  ;
+				T32: stage1 <= T55;
+				T33: stage1 <= T55;
+				T34: stage1 <= T35;
+				T35: stage1 <= T55;
 				T36:  ;
 				T37:  ;
 				T38:  ;
@@ -309,8 +311,16 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state,
 								opBRA:  stage1 <= T51;
 								opRTS:  stage1 <= T53; 
 								opRTI:  stage1 <= T53;
-								opLOAD: ;
-								opSTOR: ;
+								opLOAD: case(instr[2:0])
+												flDIR: stage1 <= T0;
+												flIND: stage1 <= T4;
+												flIMM: stage1 <= T9;
+											endcase
+								opSTOR: case(instr[2:0])
+												flDIR: stage1 <= T0;
+												flIND: stage1 <= T4;
+												flIMM: stage1 <= T9;
+											endcase
 								opLDA: ;
 								opSTA: ;
 								opLDB: ;
