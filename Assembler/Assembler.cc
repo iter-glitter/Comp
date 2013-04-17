@@ -1,3 +1,14 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Alex Hendren
+// Sean McFeely
+// EE480 - Spring 2013 - Heath
+// Accumulator Based Processor
+//
+// Description: This program acts as the Assembler for for our Processors ISA
+//
+//		Execution: ./assem <input file> <output file name> 		
+//
+//////////////////////////////////////////////////////////////////////////////////
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
@@ -6,116 +17,22 @@
 #include <fstream>
 #include <vector>
 #include <stdint.h>
+#include "token.h"
 
 using namespace std;
-
-struct FLAG
-{
-	string direct;
-	string indir;
-	string immed;
-	string leftSzero;
-	string leftSone;
-	string rightSzero;
-	string rightSone;
-	string equal;
-	string notEqual;
-	FLAG(){
-		direct = "000"; //$
-		indir = "001"; //($)
-		immed = "010"; //#
-		leftSzero = "000"; //<
-		leftSone = "001"; //<<
-		rightSzero = "010"; //>
-		rightSone = "011"; //>>
-		equal = "000"; //=
-		notEqual = "001"; //!=
-	}
-};
-
-
-struct OPCODE
-{
-	string ADD;
-	string SUB;
-	string MUL;
-	string DIV;
-	string OR;
-	string AND;
-	string SHFT;
-	string BRA;
-	string JMP;
-	string RTS;
-	string RTI;
-	string LOAD;
-	string STOR;
-	string INPUT;
-	string OUTPUT;
-	string LMSK;
-	string NOP;
-	string COMP;
-	string LDA;
-	string STA;
-	string LDB;
-	string STB;
-	string BSR;
-	OPCODE(){
-		ADD = "00000"; //1
-		SUB = "00001"; //2
-		MUL = "00010"; //3
-		DIV = "00010"; //4
-		OR = "00011"; //5
-		AND = "00100"; //6
-		SHFT = "00101"; //7
-		BRA = "00110"; //8
-		JMP = "00111"; //9
-		RTS = "01000"; //10
-		RTI = "01001"; //11
-		LOAD = "01010"; //12
-		STOR = "01011"; //13
-		INPUT = "01100"; //14
-		OUTPUT = "01101"; //15
-		LMSK = "01110"; //16
-		NOP = "01111"; //17
-		COMP = "10000"; //18
-		LDA = "10001"; //19
-		STA = "10010"; //20
-		LDB = "10011"; //21
-		STB = "10100"; //22
-		BSR = "10101"; //23
-	}
-};
-
-struct token
-{
-	string opcode;
-	string flag;
-	int operand;
-	token(){
-		opcode = "UNDEF";
-		flag = "UNDEF";
-	}
-};
 
 vector<token> scanner(vector<string>);
 void decTobin( int n, ofstream&);
 
 int main(int argc, char *argv[])
 {
-	if (argc != 2){ // Test for correct number of arguments
-		printf("Parameter(s): <input file>\n");
+	if (argc != 3){ // Test for correct number of arguments
+		printf("Parameter(s): <input file> <output file name>\n");
 		exit(0);
 	}
 	
 	const char* file = argv[1];
-
-
-	string out;
-	cout << endl << "Desired name of output file: ";
-	cin >> out;
-	cout << endl;
-	
-	const char* ofile = out.c_str(); 
+	const char* ofile = argv[2];		
 	
 	ifstream inFile;
 	ofstream outFile;
@@ -130,7 +47,7 @@ int main(int argc, char *argv[])
 			getline(inFile,line);
 			//Chomp the newline and any other gibberish off the end of the input string
 			string whitespaces (" \t\n\r");	
-			int here = line.find_last_not_of(whitespaces);
+			size_t here = line.find_last_not_of(whitespaces);
 			if (here != std::string::npos)
 				line.erase(here+1);
 			lines.push_back(line);
@@ -175,15 +92,14 @@ vector<token> scanner(vector<string> lines)
 
 	for(unsigned i=0; i < lines.size(); ++i){
 
-		//cout << "line = " << lines[i] << endl; 
 
 		OPCODE opcode;
 		FLAG flag;
 		token t;
-
+		bool nullFlag = false;
 
 		//breakdown token
-		int found = lines[i].find(" "); 
+		size_t found = lines[i].find(" "); 
 		if(found != string::npos){
 			t.opcode = lines[i].substr(0,found);
 			lines[i] = lines[i].substr(found+1);
@@ -192,18 +108,23 @@ vector<token> scanner(vector<string> lines)
 		if(found != string::npos){
 			t.flag = lines[i].substr(0,found);
 			string temp = lines[i].substr(found+1);
-			int comFind = temp.find("//");
+			size_t comFind = temp.find("//");
 			if(comFind != string::npos){
-				// string comment = temp.substr(comFind);
+				// any comments are completely ignored
 				temp = temp.substr(0,comFind);
 			}
-			// reminder ----> erase any whitespace off the end of this line
+			//Chomp gibberish off the end of string
+			string whitespaces (" \t");	
+			size_t here = temp.find_last_not_of(whitespaces);
+			if (here != std::string::npos)
+				temp.erase(here+1);
 			const char* tmpCstr = temp.c_str();
 			t.operand = atoi(tmpCstr);
 		}
 		else{ //Flags are NULL
 			const char* tmpCstr = lines[i].c_str();
 			t.operand = atoi(tmpCstr);
+			nullFlag = true;
 		}
 
 		//handle opcode
@@ -253,6 +174,10 @@ vector<token> scanner(vector<string> lines)
 			t.opcode = opcode.STB;
 		else if (t.opcode == "BSR" || t.opcode == "bsr")
 			t.opcode = opcode.BSR;
+		else{
+			cout << "Error: '" << t.opcode << "' not recognized instruction @ line " << i+1 << endl;
+			exit(1);
+		}
 	
 		//handle flag
 		if(t.flag == "$" )
@@ -273,7 +198,13 @@ vector<token> scanner(vector<string> lines)
 			t.flag = flag.equal;
 		else if(t.flag == "!=" )
 			t.flag = flag.notEqual;	
-
+		else if(nullFlag)
+			t.flag = flag.null;
+		else{
+			cout << "Error: '" << t.flag << "' not valid flag option @ line " << i+1 << endl;
+			exit(1);
+		}
+		
 		toks.push_back(t);
 	}
 	

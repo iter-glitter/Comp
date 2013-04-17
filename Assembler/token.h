@@ -1,7 +1,10 @@
 #ifndef _TOKEN_H_
 #define _TOKEN_H_
 
+#include <stdlib.h>
 #include <string>
+
+using namespace std;
 
 struct FLAG
 {
@@ -12,6 +15,9 @@ struct FLAG
 	string leftSone;
 	string rightSzero;
 	string rightSone;
+	string equal;
+	string notEqual;
+	string null;
 	FLAG(){
 		direct = "000"; //$
 		indir = "001"; //($)
@@ -20,8 +26,12 @@ struct FLAG
 		leftSone = "001"; //<<
 		rightSzero = "010"; //>
 		rightSone = "011"; //>>
+		equal = "000"; //=
+		notEqual = "001"; //!=
+		null = "000"; // for cmds with no flags
 	}
 };
+
 
 struct OPCODE
 {
@@ -39,7 +49,7 @@ struct OPCODE
 	string LOAD;
 	string STOR;
 	string INPUT;
-	string OUTOUT;
+	string OUTPUT;
 	string LMSK;
 	string NOP;
 	string COMP;
@@ -63,7 +73,7 @@ struct OPCODE
 		LOAD = "01010"; //12
 		STOR = "01011"; //13
 		INPUT = "01100"; //14
-		OUTOUT = "01101"; //15
+		OUTPUT = "01101"; //15
 		LMSK = "01110"; //16
 		NOP = "01111"; //17
 		COMP = "10000"; //18
@@ -79,7 +89,11 @@ struct token
 {
 	string opcode;
 	string flag;
-	string operand;
+	int operand;
+	token(){
+		opcode = "UNDEF";
+		flag = "UNDEF";
+	}
 };
 
 #endif
