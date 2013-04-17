@@ -3,3 +3,6 @@ and ($) 34//test
 OR # 17// testasdf
 sub # 64
 dib $ 45
+BRA = 5
+BRA != 1
+JMP 51

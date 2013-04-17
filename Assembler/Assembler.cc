@@ -18,6 +18,8 @@ struct FLAG
 	string leftSone;
 	string rightSzero;
 	string rightSone;
+	string equal;
+	string notEqual;
 	FLAG(){
 		direct = "000"; //$
 		indir = "001"; //($)
@@ -26,6 +28,8 @@ struct FLAG
 		leftSone = "001"; //<<
 		rightSzero = "010"; //>
 		rightSone = "011"; //>>
+		equal = "000"; //=
+		notEqual = "001"; //!=
 	}
 };
 
@@ -197,6 +201,10 @@ vector<token> scanner(vector<string> lines)
 			const char* tmpCstr = temp.c_str();
 			t.operand = atoi(tmpCstr);
 		}
+		else{ //Flags are NULL
+			const char* tmpCstr = lines[i].c_str();
+			t.operand = atoi(tmpCstr);
+		}
 
 		//handle opcode
 		if(t.opcode == "ADD" || t.opcode == "add")
@@ -261,6 +269,10 @@ vector<token> scanner(vector<string> lines)
 			t.flag = flag.rightSzero;
 		else if(t.flag == ">>" )
 			t.flag = flag.rightSone;
+		else if(t.flag == "=" )
+			t.flag = flag.equal;
+		else if(t.flag == "!=" )
+			t.flag = flag.notEqual;	
 
 		toks.push_back(t);
 	}
