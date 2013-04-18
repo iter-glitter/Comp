@@ -14,16 +14,16 @@
 //			  0   | Zero ALU output	
 //			  1   | Overflow (ALU) Output
 //			  2   | Illegal OPcode
-//			  3	  | INPUT/OUTPUT Interrupt
+//			  3	| INPUT/OUTPUT Interrupt
 //
 //
 //////////////////////////////////////////////////////////////////////////////////
 module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out);
-	input clk;				//Input clock signal
-	//input clr;			//Active low clear for whole system
-	input itr_clr;			//Clear pending interrupts
-	input itr_en;			//Enable or disable interrupt handler
-	input [3:0] mask_in;	//Register containing interrupt mask vector (size: 4)
+	input clk;					//Input clock signal
+	//input clr;				//Active low clear for whole system
+	input itr_clr;				//Clear pending interrupts
+	input itr_en;				//Enable or disable interrupt handler
+	input [3:0] mask_in;		//Register containing interrupt mask vector (size: 4)
 	input [3:0] itr_in;		//Vector containing interrupt input signals
 	
 
@@ -38,8 +38,6 @@ module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out);
 		isr_addr2[7:0] = 8'b11010111; //ISR2
 		isr_addr3[7:0] = 8'b11100110; //ISR3
 		isr_addr4[7:0] = 8'b11110101; //ISR4
-		itr_in[3:0] = 4'b0000;
-		mask_in[3:0] = 4'b0000;
 	end
 	
 	wire [3:0] itr_and_w;
@@ -74,7 +72,7 @@ module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out);
 	
 	//Select Output using mux 4x1 MUX. Output from Encoder = Select Lines
 	//module mux_4_1_behavioral(i1, i2, i3, i4, sel, out);
-	mux_4_1_behavioral PC_MUX(isr_addr1, isr_addr2, isr_addr3, isr_addr4, encoder_w, PC_out);
+	mux_4_1 PC_MUX(isr_addr1, isr_addr2, isr_addr3, isr_addr4, encoder_w, PC_out);
 	
 
 endmodule

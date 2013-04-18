@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="0" delta="new" >Part-select index evaluated to out of bound value may lead to incorrect synthesis results; it is recommended not to use them in RTL
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 119: Port <arg fmt="%s" index="1">sel</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 75: Assignment to <arg fmt="%s" index="1">stg0_state</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\MHVPIS.v" Line 36: Using initial value of <arg fmt="%s" index="1">isr_addr1</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\MHVPIS.v" Line 52: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">clk</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">4</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\MHVPIS.v" Line 54: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">clk</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">4</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\pc_nbit.v" Line 36: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\pc_nbit.v" Line 37: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\stack.v" Line 65: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\stack.v" Line 79: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 99: Assignment to <arg fmt="%s" index="1">ir1_1_out</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 117: Assignment to <arg fmt="%s" index="1">CP8_9</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 32: Net &lt;<arg fmt="%s" index="1">stg1_state</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 43: Net &lt;<arg fmt="%s" index="1">itr_in[3]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 51: Net &lt;<arg fmt="%s" index="1">ir1_0_s</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 61: Net &lt;<arg fmt="%s" index="1">pc_in[7]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 74: Net &lt;<arg fmt="%s" index="1">ccr_z</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 119: Input port <arg fmt="%s" index="1">sel[1]</arg> is not connected on this instance
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%d" index="2">74</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">controller0</arg>&gt; of block &lt;<arg fmt="%s" index="4">stage0</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">processor</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%d" index="2">81</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ITR_SYSTEM</arg>&gt; of block &lt;<arg fmt="%s" index="4">MHVPIS</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">processor</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%d" index="2">89</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">PC</arg>&gt; of block &lt;<arg fmt="%s" index="4">nbit_pc</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">processor</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%d" index="2">92</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">PC_STACK</arg>&gt; of block &lt;<arg fmt="%s" index="4">stack</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">processor</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%d" index="2">97</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">IR1_0</arg>&gt; of block &lt;<arg fmt="%s" index="4">ld_st_reg</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">processor</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%d" index="2">98</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">IR0_0</arg>&gt; of block &lt;<arg fmt="%s" index="4">ld_st_reg</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">processor</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%d" index="2">99</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">IR1_1</arg>&gt; of block &lt;<arg fmt="%s" index="4">ld_st_reg</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">processor</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%d" index="2">100</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">IR0_1</arg>&gt; of block &lt;<arg fmt="%s" index="4">ld_st_reg</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">processor</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%d" index="2">107</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">iRAM</arg>&gt; of block &lt;<arg fmt="%s" index="4">ram</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">processor</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%d" index="2">119</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">MUX_PC</arg>&gt; of block &lt;<arg fmt="%s" index="4">mux_4_1</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">processor</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2898" delta="new" >Port &apos;<arg fmt="%s" index="1">sel</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">MUX_PC</arg>&apos;, is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">in_dev_hs</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">out_dev_hs</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">out_dev_ack</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%s" index="2">74</arg>: Output port &lt;<arg fmt="%s" index="3">stg0_state</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">controller0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%s" index="2">99</arg>: Output port &lt;<arg fmt="%s" index="3">out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">IR1_1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v</arg>&quot; line <arg fmt="%s" index="2">119</arg>: Output port &lt;<arg fmt="%s" index="3">out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">MUX_PC</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">itr_in</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">itr_mask</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">pc_in</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">stg1_state</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">ir1_0_s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">ir0_0_s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">ir1_1_s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">ir0_1_s</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">ccr_z</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+</messages>
+

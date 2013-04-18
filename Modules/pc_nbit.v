@@ -18,7 +18,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module nbit_pc(clk,clr, ctrl, pc_in, pc_out);
-	parameter n=4; //default 4-bit program counter
+	parameter n=8; //default 4-bit program counter
 	parameter inc=2; //default increment value
 	input clk, clr;
 	input [1:0] ctrl;

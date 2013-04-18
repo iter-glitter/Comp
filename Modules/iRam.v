@@ -27,23 +27,24 @@
 //   1 		1      1     Write 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5, 
-				mem6, mem7, data_out);
+//module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5, 
+//				mem6, mem7, data_out);
+module ram(clk, clr, enab, rw, Addr, data_out);
 	parameter d_width = 16;
 	parameter a_width = 8;
 	//Input Ports
 	input clk, clr, enab, rw;
 	input [a_width-1:0] Addr;
-	input	[d_width-1:0] data_in;
+	//input	[d_width-1:0] data_in;
 	//Output Ports
-	output [d_width-1:0] mem0;
+	/*output [d_width-1:0] mem0;
 	output [d_width-1:0] mem1;
 	output [d_width-1:0] mem2;
 	output [d_width-1:0] mem3;
 	output [d_width-1:0] mem4;
 	output [d_width-1:0] mem5;
 	output [d_width-1:0] mem6;
-	output [d_width-1:0] mem7;
+	output [d_width-1:0] mem7;*/
 	output reg [d_width-1:0] data_out;
 	//Declare memory register
 	reg [d_width-1:0] memory [2**a_width-1:0];
@@ -51,14 +52,14 @@ module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5
 	integer i;
 	
 	//Assign mem0-7 to first 8 memory indices
-	assign mem0 = memory[0];
+	/*assign mem0 = memory[0];
 	assign mem1 = memory[1];
 	assign mem2 = memory[2];
 	assign mem3 = memory[3];
 	assign mem4 = memory[4];
 	assign mem5 = memory[5];
 	assign mem6 = memory[6];
-	assign mem7 = memory[7];
+	assign mem7 = memory[7];*/
 	
 	initial begin
 		memory[0] = 8'b00001111;
@@ -84,7 +85,7 @@ module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5
 				data_out <= memory[Addr];
 			end
 			else if(rw==1'b1) begin //Write
-				memory[Addr] <= data_in;
+				//memory[Addr] <= data_in;
 			end
 		end
 		else if(enab==1'b0) begin //High Z state for output if chip not enabled
