@@ -33,7 +33,7 @@ module LdStr_shifter(Reg_in,clr,set,clk,Ls,Rs,ctrl,num_shift,Reg_out);
 	always@(posedge clk) begin
 		if(clr == 1'b0) begin	// Clear all bits to zero
 			for(i=0;i<n;i=i+1) begin 
-				Reg_out[i] = 1'b0;
+				Reg_out[i] = 8'b00000000;
 			end
 		end
 		else if(set == 1'b0) begin // Set all bits to one

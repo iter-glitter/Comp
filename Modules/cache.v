@@ -89,10 +89,10 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	assign hit_out=hit_wire;
 	wire [7:0] c_addrIN_wire;
 	wire [7:0] c_dataIN_wire;
-	assign c_addrIN_wire = Addr;
-	assign c_dataIN_wire = data_in;
-	assign c_addrIN_out = c_addrIN_wire;
-	assign c_dataIN_out = c_dataIN_wire;
+//	assign c_addrIN_wire = Addr;
+//	assign c_dataIN_wire = data_in;
+//	assign c_addrIN_out = c_addrIN_wire;
+//	assign c_dataIN_out = c_dataIN_wire;
 	//output target_rw_out;
 	wire target_rw_wire;
 	reg target_rw;	//Tartget Read or Write Value to save on miss
@@ -147,6 +147,7 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	initial begin
 		curr_LRU <= 2'b00;
 		hit <= 1'b0;
+		ram_clr <= 1'b1;
 	end
 	
 

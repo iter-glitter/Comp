@@ -47,11 +47,11 @@ module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out);
 	wire [3:0] itr_reg_w;
 	wire [3:0] mask_reg_w;
 	
-	//module ld_st_reg(in, set, clr, clk, out);
+	//module ld_st_reg(clk, clr, set, in, out);
 	//Interrupt Register - Load Store
-	ld_st_reg ITR_REG(itr_in, itr_en, itr_clr, clk, itr_reg_w);
+	ld_st_reg_4bit ITR_REG(clk, itr_clr, itr_en, itr_in, itr_reg_w);
 	//Mask Register - Load Store
-	ld_st_reg MASK_REG(mask_in, itr_en, itr_clr, clk, mask_reg_w);
+	ld_st_reg_4bit MASK_REG(clk, itr_clr, itr_en, mask_in, mask_reg_w);
 	
 	//priority logic
 	// ITR1: 1000

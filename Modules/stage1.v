@@ -16,13 +16,13 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	//Inputs
 	input clk, clr;
 	input [7:0] ir_data;			//Contents of IR1_0 - Data Register
-	input [7:0] mdr_data;			//Contents of IR1_0 - Data Register
-	input [7:0] instr;				//Contents of IR0_0 - Instruction Register
+	input [7:0] mdr_data;		//Contents of IR1_0 - Data Register
+	input [7:0] instr;			//Contents of IR0_0 - Instruction Register
 	input stg0_state;				//Handshake control line - Stage 1 interface
 	input cache_hit;				//Hit signal from the cache
 	input input_rdy;				//Handhsake control line - Input device
-	input out_dev_rdy;				//Handshake control line - Output Device Ready
-	input out_recv;					//Handshake Control Line - Out Dev Received Data
+	input out_dev_rdy;			//Handshake control line - Output Device Ready
+	input out_recv;				//Handshake Control Line - Out Dev Received Data
 	
 	//Outputs
 	output reg stg1_state;			//Handshake control line - Stage 0 status
@@ -398,11 +398,13 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 		end
 	end
 	
-	always @ (stage1) begin
+	always @ (stage1, mdr_data, ir_data) begin
 		case(stage1) 
 			T0: begin
 					ctrl <= CP0;
 					stg1_state <= 1'b0;
+					rdy_recv <= 1'b1;
+					rdy_out <= 1'b1;
 				 end
 			T1: ctrl <= CP1;
 			T2: ctrl <= CP2;

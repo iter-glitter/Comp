@@ -7,9 +7,6 @@ processor.ngd
 
 Reading NGO file "D:/Users/Hendren/My
 Documents/School/EE480/Project/Modules/processor/processor.ngc" ...
-Loading design module "D:\Users\Hendren\My
-Documents\School\EE480\Project\Modules\processor/processor.ngc"...
-WARNING:NgdBuild:578 - Design contains no instances.
 Gathering constraint information from source properties...
 Done.
 
@@ -28,12 +25,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   1
+  Number of warnings:   0
 
-Total memory usage is 160024 kilobytes
+Total memory usage is 160856 kilobytes
 
 Writing NGD file "processor.ngd" ...
-Total REAL time to NGDBUILD completion:  2 sec
-Total CPU time to NGDBUILD completion:   2 sec
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
 
 Writing NGDBUILD log file "processor.bld"...

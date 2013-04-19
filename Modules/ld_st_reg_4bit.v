@@ -14,8 +14,8 @@
 //	1	1    load from input
 //
 ///////////////////////////////////////////////////////////////////////////////////////
-module ld_st_reg(clk, clr, set, in, out);
-    parameter n = 8;            //register size in bits
+module ld_st_reg_4bit(clk, clr, set, in, out);
+    parameter n = 4;            //register size in bits
     input [n-1:0] in;           //load input
     input set;                  //set
     input clr;                  //active-low clear
@@ -26,11 +26,11 @@ module ld_st_reg(clk, clr, set, in, out);
     begin
         if(clr == 0) //clear to 0s
         begin
-            out <= 8'b00000000;
+            out <= 4'b0000;
         end
 		else if( (set==0) && (clr==0) ) //clear to 0s
 		begin 
-			out <= 8'b00000000;
+			out <= 4'b0000;
 		end
         else if(set == 1) //load
         begin
