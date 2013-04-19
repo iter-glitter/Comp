@@ -33,7 +33,7 @@ module alu_bitslice(a,b,c,c_in,c_out,f_out);
 	
 	//B is negated when C[0] is 1, use 2x1 mux to make selection
 	//module mux_2_1_rtl(i1, i2, sel, out);
-	mux_2_1_rtl MUX_2x1_1(b,w_not_b_out,c[0],w_b);
+	mux_2_1 MUX_2x1_1(b,w_not_b_out,c[0],w_b);
 	
 	//Setup Binary Full Adder
 	//module bfa_gate(i0, i1, ci, sout, cout);
@@ -47,11 +47,11 @@ module alu_bitslice(a,b,c,c_in,c_out,f_out);
 
 	//The selection of ~a or ~b is made on c[0], use a 2x1 mux to make selection
 	//module mux_2_1_rtl(i1, i2, sel, out);
-	mux_2_1_rtl MUX_2x1_2(w_not_a_out, w_not_b_out, c[0], w_not_out);
+	mux_2_1 MUX_2x1_2(w_not_a_out, w_not_b_out, c[0], w_not_out);
 	
 	//f_out is determined on the selection of c[2] and c[1], use 4x1 mux
 	//module mux_4_1_behavioral(i1, i2, i3, i4, sel, out);
-	mux_4_1_behavioral MUX_4x1(w_bfa_out, w_or_out, w_and_out, w_not_out, c[2:1], w_fout);
+	mux_4_1 MUX_4x1(w_bfa_out, w_or_out, w_and_out, w_not_out, c[2:1], w_fout);
 	assign f_out = w_fout;
 
 

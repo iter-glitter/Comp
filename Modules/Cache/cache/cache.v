@@ -30,10 +30,13 @@
 //   1 		1      1		 Write 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0, 
+/*module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0, 
 					addr1, addr2, addr3, data0, data1, data2, data3, access0, access1, access2, access3,
 					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, state, curr_LRU, 
-					cache_hit, target_addr, target_data, target_rw_out, c_addrIN_out, c_dataIN_out);
+					cache_hit, target_addr, target_data, target_rw_out, c_addrIN_out, c_dataIN_out);*/
+module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, 
+					addr0, addr1, addr2, addr3, data0, data1, data2, data3, 
+					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, curr_LRU, cache_hit);
 	//Specify address and data width
 	parameter d_width = 8;
 	parameter a_width = 8;
@@ -45,8 +48,8 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 	//Output Ports
 	output hit_out;
 	output reg [d_width-1:0] data_out;
-	output [a_width:0] c_addrIN_out;
-	output [d_width:0] c_dataIN_out;
+//	output [a_width:0] c_addrIN_out;
+//	output [d_width:0] c_dataIN_out;
 	output [a_width-1:0] addr0;
 	output [a_width-1:0] addr1;
 	output [a_width-1:0] addr2;
@@ -55,10 +58,10 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 	output [d_width-1:0] data1;
 	output [d_width-1:0] data2;
 	output [d_width-1:0] data3;
-	output [1:0] access0;
+	/*output [1:0] access0;
 	output [1:0] access1;
 	output [1:0] access2;
-	output [1:0] access3;
+	output [1:0] access3;*/
 	//Output Ports For Monitoring RAM Contents
 	output [a_width-1:0] ram0;
 	output [a_width-1:0] ram1;
@@ -76,8 +79,8 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 	//Declare Cache Flag Registers
 	output reg [1:0] curr_LRU;		//Index of current least recently used address
 	output reg [1:0] cache_hit; 	//Index of cache hit
-	output reg [d_width-1:0] target_addr; //Target memory address to be saved on miss
-	output reg [d_width-1:0] target_data;	//Target data to be saved on a miss (write)
+	reg [d_width-1:0] target_addr; //Target memory address to be saved on miss
+	reg [d_width-1:0] target_data;	//Target data to be saved on a miss (write)
 	reg hit;
 	wire hit_wire;
 	assign hit_wire=hit;
@@ -88,13 +91,13 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 	assign c_dataIN_wire = data_in;
 	assign c_addrIN_out = c_addrIN_wire;
 	assign c_dataIN_out = c_dataIN_wire;
-	output target_rw_out;
+	//output target_rw_out;
 	wire target_rw_wire;
 	reg target_rw;	//Tartget Read or Write Value to save on miss
-	assign target_rw_wire = target_rw;
-	assign target_rw_out = target_rw_wire;
+	//assign target_rw_wire = target_rw;
+	//assign target_rw_out = target_rw_wire;
 	integer i;
-	output reg [3:0] state; 		//Current State Register
+	reg [3:0] state; 		//Current State Register
 	
 	//Assign Cache Data Monitor Outputs
 	assign data0 = cache_data[0];
@@ -107,10 +110,10 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 	assign addr2 = cache_addr[2];
 	assign addr3 = cache_addr[3];
 	//Assign Cache Access Output
-	assign access0 = cache_access[0];
+	/*assign access0 = cache_access[0];
 	assign access1 = cache_access[1];
 	assign access2 = cache_access[2];
-	assign access3 = cache_access[3];
+	assign access3 = cache_access[3];*/
 	
 	//Declare DATA Ram unit and wires to control the RAM
 	reg ram_clr, ram_rw, ram_enab;

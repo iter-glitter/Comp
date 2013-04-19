@@ -7,7 +7,9 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/alu_nbit D:|Users|Hendren|My Documents|School|EE480|Project|Modules|alu_nbit.v</ClosedNode>
          <ClosedNode>/processor C:|Users|jahend6|Documents|School|EE480|Modules|processor|processor.v</ClosedNode>
+         <ClosedNode>/processor D:|Users|Hendren|My Documents|School|EE480|Project|Modules|processor|processor.v/ALU - alu_nbit</ClosedNode>
          <ClosedNode>/processor D:|Users|Hendren|My Documents|School|EE480|Project|Modules|processor|processor.v/ITR_SYSTEM - MHVPIS</ClosedNode>
       </ClosedNodes>
       <SelectedItems>

@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Reading design: processor.prj
 
@@ -106,34 +106,43 @@ INFO:Xst - Part-select index evaluated to out of bound value may lead to incorre
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\pri_encoder_4_2.v" into library work
-Parsing module <pri_encoder_4_2>.
 Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\mux_4_1.v" into library work
 Parsing module <mux_4_1>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\mux_2_1.v" into library work
+Parsing module <mux_2_1>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\bfa_gate.v" into library work
+Parsing module <bfa_gate>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\pri_encoder_4_2.v" into library work
+Parsing module <pri_encoder_4_2>.
 Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\ld_st_reg.v" into library work
 Parsing module <ld_st_reg>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\alu_bitslice.v" into library work
+Parsing module <alu_bitslice>.
 Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\stage0.v" into library work
 Parsing module <stage0>.
 Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\stack.v" into library work
 Parsing module <stack>.
 Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\pc_nbit.v" into library work
 Parsing module <nbit_pc>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\mux_5_1.v" into library work
+Parsing module <mux_5_1>.
 Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\MHVPIS.v" into library work
 Parsing module <MHVPIS>.
 Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\iRam.v" into library work
 Parsing module <ram>.
+Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\alu_nbit.v" into library work
+Parsing module <alu_nbit>.
 Analyzing Verilog file "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" into library work
 Parsing module <processor>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 119: Port sel is not connected to this instance
 
 Elaborating module <processor>.
 
 Elaborating module <stage0>.
-WARNING:HDLCompiler:1127 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 75: Assignment to stg0_state ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 96: Assignment to stg0_state ignored, since the identifier is never used
 
 Elaborating module <MHVPIS>.
 WARNING:HDLCompiler:872 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\MHVPIS.v" Line 36: Using initial value of isr_addr1 since it is never assigned
@@ -146,6 +155,16 @@ Elaborating module <pri_encoder_4_2>.
 
 Elaborating module <mux_4_1>.
 
+Elaborating module <alu_nbit>.
+
+Elaborating module <alu_bitslice>.
+
+Elaborating module <mux_2_1>.
+
+Elaborating module <bfa_gate>.
+WARNING:HDLCompiler:189 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\alu_bitslice.v" Line 54: Size mismatch in connection of port <i0>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 110: Assignment to ccr_C ignored, since the identifier is never used
+
 Elaborating module <nbit_pc>.
 WARNING:HDLCompiler:413 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\pc_nbit.v" Line 36: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:413 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\pc_nbit.v" Line 37: Result of 9-bit expression is truncated to fit in 8-bit target.
@@ -153,26 +172,51 @@ WARNING:HDLCompiler:413 - "D:\Users\Hendren\My Documents\School\EE480\Project\Mo
 Elaborating module <stack>.
 WARNING:HDLCompiler:413 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\stack.v" Line 65: Result of 5-bit expression is truncated to fit in 4-bit target.
 WARNING:HDLCompiler:413 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\stack.v" Line 79: Result of 32-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:1127 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 99: Assignment to ir1_1_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 125: Assignment to ir1_1_out ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 129: Assignment to mar_out ignored, since the identifier is never used
 
 Elaborating module <ram>.
-WARNING:HDLCompiler:1127 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 117: Assignment to CP8_9 ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 32: Net <stg1_state> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 43: Net <itr_in[3]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 51: Net <ir1_0_s> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 61: Net <pc_in[7]> does not have a driver.
-WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 74: Net <ccr_z> does not have a driver.
-WARNING:HDLCompiler:552 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 119: Input port sel[1] is not connected on this instance
-WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 74. All outputs of instance <controller0> of block <stage0> are unconnected in block <processor>. Underlying logic will be removed.
-WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 81. All outputs of instance <ITR_SYSTEM> of block <MHVPIS> are unconnected in block <processor>. Underlying logic will be removed.
-WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 89. All outputs of instance <PC> of block <nbit_pc> are unconnected in block <processor>. Underlying logic will be removed.
-WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 92. All outputs of instance <PC_STACK> of block <stack> are unconnected in block <processor>. Underlying logic will be removed.
-WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 97. All outputs of instance <IR1_0> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
-WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 98. All outputs of instance <IR0_0> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
-WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 99. All outputs of instance <IR1_1> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
-WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 100. All outputs of instance <IR0_1> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
-WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 107. All outputs of instance <iRAM> of block <ram> are unconnected in block <processor>. Underlying logic will be removed.
-WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 119. All outputs of instance <MUX_PC> of block <mux_4_1> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:HDLCompiler:189 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 162: Size mismatch in connection of port <i0>. Formal port size is 1-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 166: Size mismatch in connection of port <i3>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 167: Size mismatch in connection of port <i0>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 168: Size mismatch in connection of port <i0>. Formal port size is 8-bit while actual signal size is 1-bit.
+
+Elaborating module <mux_5_1>.
+WARNING:HDLCompiler:189 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 171: Size mismatch in connection of port <i0>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 172: Size mismatch in connection of port <out>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 172: Assignment to alu_in ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 173: Size mismatch in connection of port <i4>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 32: Net <ctrl1[33]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 35: Net <stg1_state> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 46: Net <itr_in[3]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 54: Net <ir1_0_s> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 79: Net <acc_in[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 95: Net <ccr_z> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 162: Net <IR1_1_out> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 171: Net <shft_out> does not have a driver.
+WARNING:HDLCompiler:634 - "D:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor\processor.v" Line 173: Net <cache_out> does not have a driver.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 95. All outputs of instance <controller0> of block <stage0> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 102. All outputs of instance <ITR_SYSTEM> of block <MHVPIS> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 110. All outputs of instance <ALU> of block <alu_nbit> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 114. All outputs of instance <PC> of block <nbit_pc> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 118. All outputs of instance <PC_STACK> of block <stack> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 123. All outputs of instance <IR1_0> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 124. All outputs of instance <IR0_0> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 125. All outputs of instance <IR1_1> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 126. All outputs of instance <IR0_1> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 128. All outputs of instance <MDR> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 129. All outputs of instance <MAR> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 130. All outputs of instance <A_REG> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 131. All outputs of instance <B_REG> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 132. All outputs of instance <ACC> of block <ld_st_reg> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 139. All outputs of instance <iRAM> of block <ram> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 162. All outputs of instance <MUX_MAR> of block <mux_2_1> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 165. All outputs of instance <MUX_PC> of block <mux_4_1> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 166. All outputs of instance <MUX_ALU> of block <mux_4_1> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 167. All outputs of instance <MUX_A> of block <mux_4_1> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 168. All outputs of instance <MUX_B> of block <mux_4_1> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 171. All outputs of instance <MUX_ACC> of block <mux_5_1> are unconnected in block <processor>. Underlying logic will be removed.
+WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 173. All outputs of instance <MUX_MDR> of block <mux_5_1> are unconnected in block <processor>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -180,22 +224,31 @@ WARNING:Xst:2972 - "d:/users/hendren/my documents/school/ee480/project/modules/p
 
 Synthesizing Unit <processor>.
     Related source file is "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v".
-WARNING:Xst:2898 - Port 'sel', unconnected in block instance 'MUX_PC', is tied to GND.
 WARNING:Xst:647 - Input <in_dev_hs> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <out_dev_hs> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <out_dev_ack> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 74: Output port <stg0_state> of the instance <controller0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 99: Output port <out> of the instance <IR1_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 119: Output port <out> of the instance <MUX_PC> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 95: Output port <stg0_state> of the instance <controller0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 110: Output port <c_out> of the instance <ALU> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 110: Output port <V> of the instance <ALU> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 110: Output port <Z> of the instance <ALU> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 125: Output port <out> of the instance <IR1_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 129: Output port <out> of the instance <MAR> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "d:/users/hendren/my documents/school/ee480/project/modules/processor/processor.v" line 171: Output port <out> of the instance <MUX_ACC> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <ctrl1<33:23>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <ctrl1<15:5>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <itr_in> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <itr_mask> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <pc_in> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <acc_in> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <stg1_state> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <ir1_0_s> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <ir0_0_s> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <ir1_1_s> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <ir0_1_s> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <ccr_z> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <IR1_1_out> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <shft_out> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <acc_s_reg_out> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <cache_out> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <processor> synthesized.
@@ -223,9 +276,27 @@ Unit <pri_encoder_4_2> synthesized.
 
 Synthesizing Unit <mux_4_1>.
     Related source file is "d:/users/hendren/my documents/school/ee480/project/modules/mux_4_1.v".
+    Found 8-bit 4-to-1 multiplexer for signal <out> created at line 23.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_4_1> synthesized.
+
+Synthesizing Unit <alu_bitslice>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/project/modules/alu_bitslice.v".
     Summary:
 	no macro.
-Unit <mux_4_1> synthesized.
+Unit <alu_bitslice> synthesized.
+
+Synthesizing Unit <mux_2_1>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/project/modules/mux_2_1.v".
+    Summary:
+	no macro.
+Unit <mux_2_1> synthesized.
+
+Synthesizing Unit <bfa_gate>.
+    Related source file is "d:/users/hendren/my documents/school/ee480/project/modules/bfa_gate.v".
+    Summary:
+Unit <bfa_gate> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -298,7 +369,7 @@ Slice Logic Distribution:
    Number of unique control sets:         0
 
 IO Utilization: 
- Number of IOs:                           6
+ Number of IOs:                          22
  Number of bonded IOBs:                   0  out of    316     0%  
 
 Specific Feature Utilization:
@@ -349,13 +420,13 @@ Cross Clock Domains Report:
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.38 secs
+Total CPU time to Xst completion: 4.73 secs
  
 --> 
 
-Total memory usage is 258968 kilobytes
+Total memory usage is 261208 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   40 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :   69 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 

@@ -29,7 +29,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 //module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5, 
 //				mem6, mem7, data_out);
-module ram(clk, clr, enab, rw, Addr, data_out);
+module iram(clk, clr, enab, rw, Addr, data_out);
 	parameter d_width = 16;
 	parameter a_width = 8;
 	//Input Ports
