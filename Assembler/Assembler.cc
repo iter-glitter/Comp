@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 	
 	outFile.open(ofile);
 	for(unsigned i=0; i < tokens.size(); ++i){
-		outFile << "memory[" << i << "] = 8'b" << tokens[i].opcode << tokens[i].flag;
+		outFile << "memory[" << i << "] = 16'b" << tokens[i].opcode << tokens[i].flag;
 		decTobin(tokens[i].operand, outFile);
 		outFile << ";" << endl;
 	}
