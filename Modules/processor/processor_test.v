@@ -67,6 +67,7 @@ module processor_test;
 	wire [7:0] stg1_instr;
 	wire [7:0] pc_output;
 	wire [7:0] acc_reg_out;
+	wire [7:0] alu_out_w;
 
 	// Instantiate the Unit Under Test (UUT)
 	processor uut (
@@ -107,7 +108,8 @@ module processor_test;
 		.stg0_instr(stg0_instr),
 		.stg1_instr(stg1_instr),
 		.pc_output(pc_output),
-		.acc_reg_out(acc_reg_out)
+		.acc_reg_out(acc_reg_out),
+		.alu_out_w(alu_out_w)
 	);
 
 	initial begin

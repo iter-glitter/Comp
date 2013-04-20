@@ -13,7 +13,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					input_bus, output_bus, mem0, mem1, mem2, mem3, mem4, mem5, mem6,
 					mem7, c_data0, c_data1, c_data2, c_data3, c_addr0, c_addr1, c_addr2,
 					c_addr3, c_hit, c_LRU, cache_hit, C, V, Z, stage0, stage1,
-					stage0_rdy, stage1_rdy, stg1_instr, stg0_instr, pc_output, acc_reg_out);
+					stage0_rdy, stage1_rdy, stg1_instr, stg0_instr, pc_output, acc_reg_out, alu_out_w);
 	
 	//Define Inputs
 	input g_clk;					//Global Clock
@@ -32,6 +32,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output [14:0] stage0;
 	output stage0_rdy, stage1_rdy;
 	output [7:0] acc_reg_out;
+	output [7:0] alu_out_w;
 	
 	//Cache Outputs
 	output [7:0] mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7;
@@ -140,6 +141,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire alu_cin;
 	assign alu_cin = ctrl1[28];
 	wire [7:0] ALU_in1, alu_out;
+	assign alu_out_w = alu_out;
 	
 	//Data Register Wires
 	wire [7:0] mdr_in, mdr_out, mar_in, mar_out, acc_s_reg_out;
@@ -272,7 +274,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	
 	//mux_4_1(i0, i1, i2, i3, sel, out);
 	mux_4_1 MUX_PC(pc_stack_out, itr_pc_addr, stg0_pc, ir1_0_out, CP8_9, pc_in);
-	mux_3_1 MUX_ALU(b_out, a_out, mdr_out,  CP1_0, ALU_in1);
+	mux_4_1 MUX_ALU(b_out, a_out, mdr_out, ir1_1_out, CP1_0, ALU_in1);
 	mux_3_1 MUX_A(ir1_1_out, acc_out, mdr_out, CP12_11, a_reg_in);
 	mux_3_1 MUX_B(ir1_1_out, acc_out, mdr_out, CP14_13, b_reg_in);
 	

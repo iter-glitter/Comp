@@ -18,7 +18,7 @@
 //			1		1	 |	Right Shift			
 //
 //////////////////////////////////////////////////////////////////////////////////
-module LdStr_shift_Reg_param(Reg_in,clr,set,clk,Ls,Rs,ctrl,num_shift,Reg_out);
+module LdStr_shifter(Reg_in,clr,set,clk,Ls,Rs,ctrl,num_shift,Reg_out);
 	parameter n = 8; //8-bit accum reg + *Note - if change must change num_shift manually
 	input clr,set,clk,Ls,Rs;	// Ls = Left Shift bit. Rs = Right Shift bit. (1 or 0)
 	input [1:0] ctrl;				// control signal
@@ -44,23 +44,23 @@ module LdStr_shift_Reg_param(Reg_in,clr,set,clk,Ls,Rs,ctrl,num_shift,Reg_out);
 		end
 		else if(ctrl == 2'b10) begin //Left Shift
 			for(i=0; i<num_shift; i=i+1) begin
-				prev = Reg_out[0];
-				Reg_out[0] = Ls; 
+				prev <= Reg_out[0];
+				Reg_out[0] <= Ls; 
 				for(j=1;j<n;j=j+1) begin
-						curr = Reg_out[j]; //save current value
-						Reg_out[j] = prev; //set current position value to previous position value
-						prev = curr;
+						curr <= Reg_out[j]; //save current value
+						Reg_out[j] <= prev; //set current position value to previous position value
+						prev <= curr;
 				end
 			end
 		end
 		else if(ctrl == 2'b11) begin //Right Shift 
 			for(i=0; i<num_shift; i=i+1) begin
-				prev = Reg_out[n-1];
-				Reg_out[n-1] = Rs; 
+				prev <= Reg_out[n-1];
+				Reg_out[n-1] <= Rs; 
 				for(j=(n-2);j>=0;j=j-1) begin
-						curr = Reg_out[j]; //save current value
-						Reg_out[j] = prev; //set current position value to previous position value
-						prev = curr;
+						curr <= Reg_out[j]; //save current value
+						Reg_out[j] <= prev; //set current position value to previous position value
+						prev <= curr;
 				end
 			end
 		end
