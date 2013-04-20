@@ -129,9 +129,13 @@ vector<token> scanner(vector<string> lines)
 				nullFlag = true;
 			}
 		}
-		else{ // NOP
-			t.opcode = lines[i];
-			nop = true;
+		else{ 
+			found = lines[i].find("//");
+			if(found == string::npos){ // NOP
+				t.opcode = lines[i];
+				nop = true;
+			}
+			// else, do nothing - it's a comment
 		}
 
 		//handle opcode

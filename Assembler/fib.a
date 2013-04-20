@@ -1,0 +1,12 @@
+//
+//	Alex Hendren & Sean McFeely
+//	
+//	Fibonacci Sequence test program
+//		Program solves for the first 10 fib numbers and stores them into memory
+//	
+//	Requirements:
+//		Data Ram memory[0]=0 and memory[1]=1;
+//
+
+LOAD $ 0
+STORE $ 1
