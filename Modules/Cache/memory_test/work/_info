@@ -4,146 +4,145 @@ K3
 cModel Technology
 Z0 dC:\Users\jahend6\Documents\School\EE480\Modules\Cache\memory_test
 T_opt
-Z1 VdUJ1zk67S88[SQT]jd8mW1
-Z2 04 12 4 work mem_test_vtf fast 0
-Z3 04 4 4 work glbl fast 0
-Z4 =1-b8975a0ddffd-51663124-324-1810
-Z5 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
-Z6 n@_opt
-Z7 OE;O;10.1b;51
-Z8 dC:\Users\jahend6\Documents\School\EE480\Modules\Cache\memory_test
+VdUJ1zk67S88[SQT]jd8mW1
+Z1 04 12 4 work mem_test_vtf fast 0
+Z2 04 4 4 work glbl fast 0
+=1-b8975a0ddffd-51663124-324-1810
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+Z4 OE;O;10.1b;51
+Z5 dC:\Users\jahend6\Documents\School\EE480\Modules\Cache\memory_test
 T_opt1
-Z9 VioTC9Vnb=[DL4II_1mWkQ0
+VioTC9Vnb=[DL4II_1mWkQ0
+R1
 R2
+=1-b8975a0ddffd-51661c4d-269-9ac
 R3
-Z10 =1-b8975a0ddffd-51661c4d-269-9ac
+n@_opt1
+R4
 R5
-Z11 n@_opt1
-R7
-R8
 T_opt2
-Z12 VGC:]gYVJ[7L[@PGDBBnTY0
-Z13 04 13 4 work mem_testbench fast 0
+VnF^S`d?@QKklDMIaFDRoJ1
+04 13 4 work mem_testbench fast 0
+R2
+=1-b8975a0ddffd-51730024-210-1c58
 R3
-Z14 =1-b8975a0ddffd-51678660-20-10e0
-R5
-Z15 n@_opt2
-R7
-R8
+n@_opt2
+R4
 T_opt3
-Z16 VoojJMXLejc7e6aL;70YT21
-Z17 04 5 4 work cache fast 0
+V5;a0eQ;Yfa7::H4bn;_D71
+04 5 4 work cache fast 0
+R2
+=1-b8975a0ddffd-51730013-85-1d9c
 R3
-Z18 =1-b8975a0ddffd-5167852b-3b3-1a60
+n@_opt3
+R4
 R5
-Z19 n@_opt3
-R7
-R8
 vcache
-Z20 !s100 bfe7?b3Q1AkA2?aPb46lZ3
-Z21 I4WJcAF4lIzS[NEWEGK3Na3
-Z22 V[JOAI4Tn<6K4Wh[Ue1_aV0
-Z23 dD:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test
-Z24 w1365739091
-Z25 8cache.v
-Z26 Fcache.v
+IP3BTefgkiSVKVnfaGOgBI0
+V[JOAI4Tn<6K4Wh[Ue1_aV0
+Z6 dD:\Users\Hendren\My Documents\School\EE480\Project\Modules\Cache\memory_test
+w1366491144
+8cache.v
+Fcache.v
 L0 33
-Z27 OE;L;10.1b;51
+Z7 OE;L;10.1b;51
 r1
 31
-Z28 !s90 -reportprogress|300|cache.v|
-Z29 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
-Z30 !s108 1365812489.880000
-Z31 !s107 cache.v|
+Z8 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 m?Rf^ffRD`J:R=Rn]DcIV1
+!s90 -reportprogress|300|cache.v|
+!s108 1366491171.748000
+!s107 cache.v|
 !i10b 1
 !s85 0
 vglbl
-!i10b 1
-Z32 !s100 US6of7W;COLU=>D@U>:[Y0
-Z33 IlN77838lTSOK8o;l=MSIc0
-Z34 VM[9mS]S:KA1i4VeCMX35[3
-R23
-Z35 w1325912016
-Z36 8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
-Z37 FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+R6
+w1325912016
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
 L0 5
-R27
+R7
 r1
+31
+R8
+!s100 US6of7W;COLU=>D@U>:[Y0
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!i10b 1
 !s85 0
-31
-!s108 1365812490.457000
+!s108 1366491172.310000
 !s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
-Z38 !s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
-R29
 vmem_test
-Z39 !s100 AzIC@bEi^WYkQGWo2lgaT1
-Z40 IKS=Gj0X;C6WY7d^V7_zoh1
-Z41 VV12`<:Pi;K0oP7U?mFhVR3
-R23
-Z42 w1365737937
-Z43 8mem_test.v
-Z44 Fmem_test.v
+IKS=Gj0X;C6WY7d^V7_zoh1
+VV12`<:Pi;K0oP7U?mFhVR3
+R6
+w1365737937
+8mem_test.v
+Fmem_test.v
 L0 11
-R27
+R7
 r1
 31
-Z45 !s90 -reportprogress|300|mem_test.v|
-R29
-Z46 !s108 1365812490.098000
-Z47 !s107 mem_test.v|
+R8
+!s100 AzIC@bEi^WYkQGWo2lgaT1
+!s90 -reportprogress|300|mem_test.v|
+!s108 1366491171.966000
+!s107 mem_test.v|
 !i10b 1
 !s85 0
 vmem_test_vtf
-Z48 Ii[@5g^=0`L?P3Z]h3S]Na2
-Z49 V2YNa4E_8n03nMOZ7XoJo?1
-R23
-Z50 w1365721591
-Z51 8mem_test_vtf.v
-Z52 Fmem_test_vtf.v
+Ii[@5g^=0`L?P3Z]h3S]Na2
+V2YNa4E_8n03nMOZ7XoJo?1
+R6
+w1365721591
+8mem_test_vtf.v
+Fmem_test_vtf.v
 L0 25
-R27
+R7
 r1
 31
-R29
-Z53 !s100 K[SlFBi[><dE?KAZDAY1d1
-Z54 !s90 -reportprogress|300|mem_test_vtf.v|
-Z55 !s108 1365721871.057000
-Z56 !s107 mem_test_vtf.v|
+R8
+!s100 K[SlFBi[><dE?KAZDAY1d1
+!s90 -reportprogress|300|mem_test_vtf.v|
+!s108 1365721871.057000
+!s107 mem_test_vtf.v|
 !i10b 1
 !s85 0
 vmem_testbench
-Z57 !s100 la>C2H150]^l_j^a@cPkm0
-Z58 IN90=l_:7[Y:Mod2:i^i`=0
-Z59 Vb6@LQmUX:PLnQP6dhOK6F0
-R23
-Z60 w1365735531
-Z61 8mem_testbench.v
-Z62 Fmem_testbench.v
+IN90=l_:7[Y:Mod2:i^i`=0
+Vb6@LQmUX:PLnQP6dhOK6F0
+R6
+w1365735531
+8mem_testbench.v
+Fmem_testbench.v
 L0 25
-R27
+R7
 r1
 31
-Z63 !s90 -reportprogress|300|mem_testbench.v|
-R29
+R8
+!s100 la>C2H150]^l_j^a@cPkm0
+!s90 -reportprogress|300|mem_testbench.v|
+!s108 1366491172.169000
+!s107 mem_testbench.v|
 !i10b 1
 !s85 0
-Z64 !s108 1365812490.316000
-Z65 !s107 mem_testbench.v|
 vram
-Z66 !s100 IOOYQRB9Yn]Coa>6z<SX93
-Z67 IWj?UzHk372danDm>>S0GN1
-Z68 VXj2;MW^3ESl9fKET8o2H^3
-R23
-Z69 w1365646403
-Z70 8Ram.v
-Z71 FRam.v
+IWj?UzHk372danDm>>S0GN1
+VXj2;MW^3ESl9fKET8o2H^3
+R6
+w1365646403
+8Ram.v
+FRam.v
 L0 30
-R27
+R7
 r1
 31
-Z72 !s90 -reportprogress|300|Ram.v|
-R29
-Z73 !s108 1365812489.568000
-Z74 !s107 Ram.v|
+R8
+!s100 IOOYQRB9Yn]Coa>6z<SX93
+!s90 -reportprogress|300|Ram.v|
+!s108 1366491171.639000
+!s107 Ram.v|
 !i10b 1
 !s85 0

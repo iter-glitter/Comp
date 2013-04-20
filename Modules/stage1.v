@@ -236,13 +236,19 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 			case(stage1)
 				T0:  if(instr[7:3]==opSHFT) begin stage1 <= T54; end
 					  else begin stage1 <= T1; end
-				T1:  stage1 <= T2;
-				T2:  if(instr[7:3]==opSTOR) begin stage1 <= T34; end
-					  else if(instr[7:3]==opSTA) begin stage1 <= T38; end
+				T1:  if(instr[7:3]==opSTOR) begin stage1 <= T34; end  
+					  else begin stage1 <= T2; end
+				T2:  
+					  if(instr[7:3]==opSTA) begin stage1 <= T38; end
 					  else if(instr[7:3]==opSTB) begin stage1 <= T41; end
 					  else if(instr[7:3]==opINPUT) begin stage1 <= T44; end
 					  else if(cache_hit==1'b1) begin stage1 <= T3; end //Handle cache hit
-					  else begin stage1 <= T3; end
+					  else 
+							begin 
+								if(instr[7:3]==opSTOR) begin stage1 <= T55; end
+								else begin stage1 <= T3; end
+							end
+					  
 				T3: 	case(instr[7:3])
 							opADD: stage1 <= T10;
 							opSUB: stage1 <= T12;
@@ -302,8 +308,9 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 				T31: stage1 <= T55;
 				T32: stage1 <= T55;
 				T33: stage1 <= T55;
-				T34: stage1 <= T35;
-				T35: if(instr[7:3]==opINPUT) begin 
+				T34: stage1 <= T35;	
+				T35: if(instr[7:3]==opSTOR) begin stage1 <= T2; end
+					  else if(instr[7:3]==opINPUT) begin 
 						stage1 <= T45;
 						input_recv <= 1'b1;
 					  end

@@ -141,7 +141,7 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 	
 	initial begin
 		curr_LRU <= 2'b00;
-		hit <= 1'b0;
+		//hit <= 1'b0;
 	end
 	
 
@@ -216,7 +216,7 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, addr0,
 	end								//End @ Posedge
 	
 
-	always @ (negedge clk) begin
+	always @ (state) begin
 		if(clr==1'b0) begin
 			//ram_clr <= 1'b0;
 			for(i=0; i<4; i=i+1) begin:CLR_loop
