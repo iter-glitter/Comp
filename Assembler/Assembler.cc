@@ -101,8 +101,12 @@ vector<token> scanner(vector<string> lines)
 		bool divide = false;
 
 		//breakdown token
+		size_t comFind = lines[i].find("//");
 		size_t found = lines[i].find(" "); 
-		if(found != string::npos){
+		if( (comFind != string::npos) && (comFind <= 2) ){ // comment
+			continue;
+		}
+		else if(found != string::npos){
 			t.opcode = lines[i].substr(0,found);
 			lines[i] = lines[i].substr(found+1);
 			
@@ -110,7 +114,7 @@ vector<token> scanner(vector<string> lines)
 			if(found != string::npos){
 				t.flag = lines[i].substr(0,found);
 				string temp = lines[i].substr(found+1);
-				size_t comFind = temp.find("//");
+				comFind = temp.find("//");
 				if(comFind != string::npos){
 					// any comments are completely ignored
 					temp = temp.substr(0,comFind);
@@ -129,14 +133,15 @@ vector<token> scanner(vector<string> lines)
 				nullFlag = true;
 			}
 		}
-		else{ 
-			found = lines[i].find("//");
-			if(found == string::npos){ // NOP
-				t.opcode = lines[i];
-				nop = true;
+		else{ //NOP
+			if (lines[i].size() < 2){
+				continue;
 			}
-			// else, do nothing - it's a comment
-		}
+			else{
+				t.opcode = lines[i];
+				nop = true;				
+			}
+		}	
 
 		//handle opcode
 		if(t.opcode == "ADD" || t.opcode == "add")
