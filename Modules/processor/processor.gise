@@ -78,7 +78,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366471950" xil_pn:in_ck="-8505982741503009142" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366471950">
+    <transform xil_pn:end_ts="1366476412" xil_pn:in_ck="-8505982741503009142" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366476412">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../MHVPIS.v"/>
@@ -103,11 +103,11 @@
       <outfile xil_pn:name="processor.v"/>
       <outfile xil_pn:name="processor_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1366471965" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7829342110755216662" xil_pn:start_ts="1366471965">
+    <transform xil_pn:end_ts="1366476426" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7829342110755216662" xil_pn:start_ts="1366476426">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366471965" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2926749293020700884" xil_pn:start_ts="1366471965">
+    <transform xil_pn:end_ts="1366476426" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2926749293020700884" xil_pn:start_ts="1366476426">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -115,7 +115,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366471950" xil_pn:in_ck="-8505982741503009142" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366471950">
+    <transform xil_pn:end_ts="1366476412" xil_pn:in_ck="-8505982741503009142" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366476412">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../MHVPIS.v"/>
@@ -140,9 +140,11 @@
       <outfile xil_pn:name="processor.v"/>
       <outfile xil_pn:name="processor_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1366472377" xil_pn:in_ck="-8505982741503009142" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1366472376">
+    <transform xil_pn:end_ts="1366476427" xil_pn:in_ck="-8505982741503009142" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1366476426">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="processor_test.fdo"/>
       <outfile xil_pn:name="vsim.wlf"/>
       <outfile xil_pn:name="work"/>

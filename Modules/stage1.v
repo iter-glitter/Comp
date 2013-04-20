@@ -335,8 +335,8 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 									  endcase
 							opMULDIV: stage1 <= T19;			
 						endcase
-				T55:	if(stg0_state==1'b1) begin  		//Digest OPcode
-							if(stg1_state == 1'b1) begin
+				T55:	if((stg0_state==1'b1)||(stg1_rdy==1'b1)) begin  	//Digest OPcode
+							if(stg1_rdy == 1'b1) begin
 								stg1_rdy <= 1'b0;
 								case(instr[7:3]) 
 									opADD:	case(instr[2:0])
@@ -404,8 +404,8 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 								endcase
 							end
 							else begin
-								stg1_rdy <= 1'b1;
 								stage1 <= T55;
+								stg1_rdy <= 1'b1;
 							end
 						end
 						else begin stage1 <= T55; end //Bubble pipeline

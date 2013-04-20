@@ -122,6 +122,14 @@
 # Top level modules:
 # 	glbl
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.processor_test glbl 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "stage0(fast)".
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "stage1(fast)".
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "cache(fast)".
+# 
 # Loading work.processor_test(fast)
 # Loading work.processor(fast)
 # Loading work.stage0(fast)
@@ -412,18 +420,14 @@
 # 
 #           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 2348
 # 
-#           Attempting to use alternate WLF file "./wlftne91wj".
+#           Attempting to use alternate WLF file "./wlft3i1cge".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftne91wj
+#           Using alternate file: ./wlft3i1cge
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# Causality operation skipped due to absense of debug database file
-run
-run
-run
 run
 run
 run
