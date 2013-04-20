@@ -28,7 +28,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output in_dev_ack;			//INPUT Device Handshake - Data Received by proc
 	output [7:0] output_bus;   //OUTPUT data bus
 	output [7:0] pc_output;			
-	output [55:0] stage1;
+	output [56:0] stage1;
 	output [14:0] stage0;
 	output stage0_rdy, stage1_rdy;
 	output [7:0] acc_reg_out;
@@ -53,7 +53,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	//State Control Lines
 	wire [20:0] ctrl0;
 	wire [34:0] ctrl1;
-	wire [55:0] state1_w;
+	wire [56:0] state1_w;
 	wire [14:0] state0_w;
 	assign stage1 = state1_w;
 	assign stage0 = state0_w;
