@@ -13,7 +13,7 @@ STOR ($) 0 // store 80 into mem[mem[0]] ~ mem[3]
 SHFT >> 1 // shift ACC to right by inserting two ones | result = 212
 AND # 31 // ACC = ACC & 31 = 20
 add # 7 // ACC = 27
-div # 3  // ACC = ACC/3 = 9
+div $ 0  // ACC = ACC/3 = 9
 stor $ 4 // 9 stored into mem[4]
 NOP
 NOP
