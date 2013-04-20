@@ -98,6 +98,7 @@ vector<token> scanner(vector<string> lines)
 		token t;
 		bool nullFlag = false;
 		bool nop = false;
+		bool divide = false;
 
 		//breakdown token
 		size_t found = lines[i].find(" "); 
@@ -140,8 +141,10 @@ vector<token> scanner(vector<string> lines)
 			t.opcode = opcode.SUB;
 		else if (t.opcode == "MUL" || t.opcode == "mul")
 			t.opcode = opcode.MUL;
-		else if (t.opcode == "DIV" || t.opcode == "div")
+		else if (t.opcode == "DIV" || t.opcode == "div"){
 			t.opcode = opcode.DIV;
+			divide = true;
+		}
 		else if (t.opcode == "OR" || t.opcode == "or")
 			t.opcode = opcode.OR;
 		else if (t.opcode == "AND" || t.opcode == "and")
@@ -187,9 +190,15 @@ vector<token> scanner(vector<string> lines)
 	
 		//handle flag
 		if(t.flag == "$" )
-			t.flag = flag.direct;
+			if(divide)
+				t.flag = "010";
+			else
+				t.flag = flag.direct;
 		else if(t.flag == "($)" )
-			t.flag = flag.indir;
+			if(divide)
+				t.flag = "011";
+			else
+				t.flag = flag.indir;
 		else if(t.flag == "#" )
 			t.flag = flag.immed;
 		else if(t.flag == "<" )
