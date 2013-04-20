@@ -3,6 +3,9 @@ ADD # 2
 STOR $ 0 // 3 stored in mem[0]
 LDA $ 0 // Load 3 into reg a
 MUL $ 0 // ACC = ACC*3 = 9
+SHFT < 2 // shift ACC to the left by inserting two zeros | result = 36
+div $ 0 // ACC/3 = 12
+sub # 3 // ACC - 3 = 9
 STOR $ 1 // 9 stores in mem[1]
 load $ 0 // load value of 3 back to ACC
 MUL $ 1 // ACC = ACC*mem[1] = ACC*9 = 27
