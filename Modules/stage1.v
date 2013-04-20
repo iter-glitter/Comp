@@ -30,7 +30,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	output reg [2:0] num_shift;		//Control Shifter - Number to shift by
 	output reg input_recv;			//Handhsake Control Line - Input Received
 	
-	output reg [56:0] stage1; 				//Current Controller state
+	output reg [64:0] stage1; 				//Current Controller state
 	
 	//INPUT/OUTPUT Handshake registers
 	reg rdy_recv;						//Ready to Receive Flag

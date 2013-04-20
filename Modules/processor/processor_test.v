@@ -60,7 +60,7 @@ module processor_test;
 	wire V;
 	wire Z;
 	wire [14:0] stage0;
-	wire [56:0] stage1;
+	wire [64:0] stage1;
 	wire stage0_rdy;
 	wire stage1_rdy;
 	wire [7:0] stg0_instr;
