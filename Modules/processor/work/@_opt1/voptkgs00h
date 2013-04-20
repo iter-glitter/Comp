@@ -33,13 +33,16 @@ entity processor is
         V               : out    vl_logic;
         Z               : out    vl_logic;
         stage0          : out    vl_logic_vector(14 downto 0);
-        stage1          : out    vl_logic_vector(56 downto 0);
+        stage1          : out    vl_logic_vector(64 downto 0);
         stage0_rdy      : out    vl_logic;
         stage1_rdy      : out    vl_logic;
         stg1_instr      : out    vl_logic_vector(7 downto 0);
         stg0_instr      : out    vl_logic_vector(7 downto 0);
         pc_output       : out    vl_logic_vector(7 downto 0);
         acc_reg_out     : out    vl_logic_vector(7 downto 0);
-        alu_out_w       : out    vl_logic_vector(7 downto 0)
+        alu_out_w       : out    vl_logic_vector(7 downto 0);
+        a_reg_out       : out    vl_logic_vector(7 downto 0);
+        mar_out_w       : out    vl_logic_vector(7 downto 0);
+        mdr_out_w       : out    vl_logic_vector(7 downto 0)
     );
 end processor;
