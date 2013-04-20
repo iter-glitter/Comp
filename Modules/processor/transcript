@@ -124,6 +124,8 @@
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.processor_test glbl 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
+# ** Note: (vopt-143) Recognized 1 FSM in module "stage1(fast)".
+# 
 # Loading work.processor_test(fast)
 # Loading work.processor(fast)
 # Loading work.stage0(fast)
@@ -414,10 +416,10 @@
 # 
 #           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 2348
 # 
-#           Attempting to use alternate WLF file "./wlft6e3sze".
+#           Attempting to use alternate WLF file "./wlftzmq3i6".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft6e3sze
+#           Using alternate file: ./wlftzmq3i6
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
@@ -709,4 +711,5 @@ restart
 # ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_4_1.v(16).
 # 
 #         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_4x1
+run
 run
