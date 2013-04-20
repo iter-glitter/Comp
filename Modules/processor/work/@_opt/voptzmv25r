@@ -1,0 +1,50 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor
+T_opt
+V_^idC3;?BLNFh=:kV=]D]2
+04 13 4 work LdStr_shifter fast 0
+04 4 4 work glbl fast 0
+=1-b8975a0ddffd-5172d3bf-c8-c48
+o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+OE;O;10.1b;51
+vglbl
+IlN77838lTSOK8o;l=MSIc0
+VM[9mS]S:KA1i4VeCMX35[3
+Z1 dD:\Users\Hendren\My Documents\School\EE480\Project\Modules\processor
+w1325912016
+8D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+FD:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+Z2 OE;L;10.1b;51
+r1
+31
+Z3 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 US6of7W;COLU=>D@U>:[Y0
+!s85 0
+!s108 1366479806.966000
+!s107 D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+!s90 -reportprogress|300|D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v|
+vLdStr_shifter
+I5:BK:>hhBi7LnzM6:@S5A0
+VJjC_MQ0ej`6``VVHKZUff1
+R1
+w1366479490
+8../Shifter.v
+F../Shifter.v
+L0 19
+R2
+r1
+31
+R3
+n@ld@str_shifter
+!s100 Q:HDC_20j<@jDXc7BF6[91
+!s108 1366479806.857000
+!s107 ../Shifter.v|
+!s90 -reportprogress|300|../Shifter.v|
+!i10b 1
+!s85 0
