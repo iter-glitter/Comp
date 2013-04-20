@@ -133,18 +133,18 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	parameter CP17=35'b10110000000000010100001111110000001;
 	parameter CP18=35'b10111000000000010100001110110000001;
 	parameter CP19=35'b10000000000000010100001110110001001;
-	parameter CP20=35'b10100000000000010100000010110010101;
+	parameter CP20=35'b10100000000000010100000010110000001;
 	parameter CP21=35'b10000000010100010100001110110000001;
-	parameter CP22=35'b10100000000000010100000010110010101;
+	parameter CP22=35'b10100000000000010100000010110000001;
 	parameter CP23=35'b10100000000000010100001100110000001;
-	parameter CP24=35'b10100000000000010100000010110011011;
+	parameter CP24=35'b10100000000000010100000010110000001;
 	parameter CP25=35'b10000000010100010100001110110000001;
-	parameter CP26=35'b10100000000000010100000010110011011;
+	parameter CP26=35'b10100000000000010100000010110000001;
 	parameter CP27=35'b10100000000000010100001100110000001;
-	parameter CP28=35'b10100000000000010100000010110010001;
-	parameter CP29=35'b10100000000000010100000010110010101;
-	parameter CP30=35'b10100000000000010100000010110011001;
-	parameter CP31=35'b10100000000000010100000010110011011;
+	parameter CP28=35'b10100000000000010100000010110000001;
+	parameter CP29=35'b10100000000000010100000010110000001;
+	parameter CP30=35'b10100000000000010100000010110000001;
+	parameter CP31=35'b10100000000000010100000010110000001;
 	parameter CP32=35'b10100000000000010100000110110000001;
 	parameter CP33=35'b10100000000000010100001010110000001;
 	parameter CP34=35'b10000000000010010100101110101100001;
@@ -174,10 +174,11 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	parameter CP58=35'b10100000000000010100000010110010101;
 	parameter CP59=35'b10100000000000010100000010110011001;
 	parameter CP60=35'b10100000000000010100000010110011011;
-	parameter CP61=35'b10000000000000010100000010110010101;
-	parameter CP62=35'b10000000000000010100000010110010101;
-	parameter CP63=35'b10000000000000010100000010110011011;
-	parameter CP64=35'b10000000000000010100000010110011011;
+	parameter CP61=35'b10000000000000010100000010110010001;
+	parameter CP62=35'b10000000000000010100000010110010001;
+	parameter CP63=35'b10000000000000010100000010110011001;
+	parameter CP64=35'b10000000000000010100000010110011001;
+
 
 
 
@@ -467,42 +468,18 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 					stg1_state <= 1'b0;
 				  end
 			T19: ctrl <= CP19;
-			T20: begin
-					ctrl <= CP20;
-					num_shift <= (mdr_data[2:0] << 1);
-				  end
+			T20: ctrl <= CP20;
 			T21: ctrl <= CP21;
-			T22: begin
-					ctrl <= CP22;
-					num_shift <= (mdr_data[2:0] << 1);
-				  end
+			T22: ctrl <= CP22;
 			T23: ctrl <= CP23;
-			T24: begin
-					ctrl <= CP24;
-					num_shift <= (mdr_data[2:0] >> 1);
-				  end
+			T24: ctrl <= CP24;
 			T25: ctrl <= CP25; 
-			T26: begin
-					ctrl <= CP26;
-					num_shift <= (mdr_data[2:0] >> 1);
-				  end
+			T26: ctrl <= CP26;
 			T27: ctrl <= CP27;
-			T28: begin
-					ctrl <= CP28;
-					num_shift <= ir_data[2:0];
-				  end
-			T29: begin
-					ctrl <= CP29;
-					num_shift <= ir_data[2:0];
-				  end
-			T30: begin
-					ctrl <= CP30;
-					num_shift <= ir_data[2:0];
-				  end
-			T31: begin
-					ctrl <= CP31;
-					num_shift <= ir_data[2:0];
-				  end
+			T28: ctrl <= CP28;
+			T29: ctrl <= CP29;
+			T30: ctrl <= CP30;
+			T31: ctrl <= CP31;
 			T32: ctrl <= CP32;
 			T33: ctrl <= CP33;
 			T34: ctrl <= CP34;
@@ -564,11 +541,11 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 				  end 
 			T61: begin
 					ctrl <= CP61;
-					num_shift <= (mdr_data[2:0] << 1);
+					num_shift <= (mdr_data[2:0] >> 1);
 				  end
 			T62: begin
 					ctrl <= CP62;
-					num_shift <= (mdr_data[2:0] << 1);
+					num_shift <= (mdr_data[2:0] >> 1);
 				  end
 			T63: begin
 					ctrl <= CP63;

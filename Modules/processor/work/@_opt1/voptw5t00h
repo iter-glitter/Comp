@@ -43,6 +43,8 @@ entity processor is
         alu_out_w       : out    vl_logic_vector(7 downto 0);
         a_reg_out       : out    vl_logic_vector(7 downto 0);
         mar_out_w       : out    vl_logic_vector(7 downto 0);
-        mdr_out_w       : out    vl_logic_vector(7 downto 0)
+        mdr_out_w       : out    vl_logic_vector(7 downto 0);
+        num_shift_out   : out    vl_logic_vector(2 downto 0);
+        shifter_out     : out    vl_logic_vector(7 downto 0)
     );
 end processor;
