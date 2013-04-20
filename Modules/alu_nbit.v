@@ -60,9 +60,10 @@ module alu_nbit(in0,in1,c_in,ctrl,c_out,alu_out,V, Z);
 	endgenerate
 	xor overflow_detect(V,w_c[n],w_c[n-1]);
 	
-	always begin
-		for(j=0; j<n; j=j+1) begin:zeroDetect
-			if(alu_out[j]==1'b1) begin zero_state = 1'b0; end
-		end
-	end
+//	always begin
+//		zero_state = 1'b1;
+//		for(j=0; j<n; j=j+1) begin:zeroDetect
+//			if(alu_out[j]==1'b1) begin zero_state = 1'b0; end
+//		end
+//	end
 endmodule

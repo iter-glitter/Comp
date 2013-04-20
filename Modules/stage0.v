@@ -12,7 +12,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state, 
-					stg0_state, ctrl, pc_out);
+					stg0_state, ctrl, pc_out, stage0, stg0_instr);
 	//Inputs
 	input clk, clr;
 	input ccr_z;				//Condition Code Register Z - Zero Flag (For Branch)
@@ -26,9 +26,12 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 	output reg [7:0] pc_out;	//Used to set PC address
 	output reg [20:0] ctrl; 	//21 bit control line - control and select points
 	
-	reg [14:0] stage0; 			//Current Controller state
+	output reg [14:0] stage0; 			//Current Controller state
+	output [7:0] stg0_instr;
 	
-	
+	wire [7:0] stg0_instr_w;
+	assign stg0_instr_w = instr;
+	assign stg0_instr = stg0_instr_w;
 	
 	//Define Stage 0 state parameters
 	parameter T0 =  15'b000000000000001;  
@@ -49,20 +52,20 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 	
 	//Define Stage 0 control points
 	parameter CP0 =  20'b10110101001010110110;
-	parameter CP1 =  20'b10010101000100110110; 
-	parameter CP2 =  20'b10010101000100100100;
-	parameter CP3 =  20'b10110101000101110110;
+	parameter CP1 =  20'b10010101001100110110; //Logic State
+	parameter CP2 =  20'b10010101001100100100;
+	parameter CP3 =  20'b10110101001101110110;
 	parameter CP4 =  20'b10011111001100110110;
-	parameter CP5 =  20'b10010101000100110110;
-	parameter CP6 =  20'b11010101000100110110;
-	parameter CP7 =  20'b10010101000100110110;
-	parameter CP8 =  20'b10010101000100110110;
-	parameter CP9 =  20'b10010101000100110110;
-	parameter CP10 = 20'b10110101000111110110;
-	parameter CP11 = 20'b10010101000100110110;
-	parameter CP12 = 20'b10010101000100100100;
-	parameter CP13 = 20'b10110101100100101101;
-	parameter CP14 = 20'b10010101000100110110;
+	parameter CP5 =  20'b10010101001100110110; //Logic State
+	parameter CP6 =  20'b11010101001100110110;
+	parameter CP7 =  20'b10010101001100110110; //Logic State
+	parameter CP8 =  20'b10010101001100110110; //Logic State
+	parameter CP9 =  20'b10010101001100110110; //Logic State
+	parameter CP10 = 20'b10110101001111110110;
+	parameter CP11 = 20'b10010101001100110110; //Logic State
+	parameter CP12 = 20'b10010101001100100100;
+	parameter CP13 = 20'b10110101101100101101;
+	parameter CP14 = 20'b10010101001100110110;
 	
 	//Define OPcodes that will be executed by this controller
 	parameter BRA  = 5'b00110;
@@ -101,9 +104,7 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 					else if(instr[7:3]==RTI) begin stage0 <= T13; end
 					else if(instr[7:3]==LMSK) begin stage0 <= T14; end
 					else begin 
-						stg0_state <= 1'b1; 				//Stage0 Finished
 						if(stg1_state==1'b1) begin 	//Stage1 Handshake				
-							stg0_state <= 1'b0;
 							stage0 <= T1; 					//Restart Fetch Cycle
 						end
 						else begin
@@ -111,9 +112,8 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 						end
 					end
 			T8:	begin
-						stg0_state <= 1'b1;				//Start Stage1
+						//stg0_state <= 1'b1;				//Start Stage1
 						if(stg1_state==1'b1) begin		//Continue Branch
-							stg0_state <= 1'b0;
 							if(instr[2:0]==BEQ) begin stage0 <= T9; end
 							else if (instr[2:0]==BNE) begin stage0 <= T11; end
 							else begin stage0 <= T1; end
@@ -137,17 +137,32 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 	always @ (stage0) begin
 		case(stage0) 
 			T0: ctrl <= CP0;
-			T1: ctrl <= CP1;
+			T1: begin
+					ctrl <= CP1;
+					stg0_state <= 1'b0;
+				 end
 			T2: ctrl <= CP2;
 			T3: ctrl <= CP3;
 			T4: ctrl <= CP4;
 			T5: ctrl <= CP5;
 			T6: ctrl <= CP6;
-			T7: ctrl <= CP7;
-			T8: ctrl <= CP8;
-			T9: ctrl <= CP9;
+			T7: begin
+				ctrl <= CP7;
+				stg0_state <= 1'b1; 		//Stage0 Finished
+				end
+			T8: begin
+				ctrl <= CP8;
+				stg0_state <= 1'b1; 		//Stage0 Finished
+				end
+			T9: begin
+					ctrl <= CP9;
+					stg0_state <= 1'b0;
+				 end
 			T10: ctrl <= CP10;
-			T11: ctrl <= CP11;
+			T11: begin
+					ctrl <= CP11;
+					stg0_state <= 1'b0;
+				 end
 			T12: ctrl <= CP12;
 			T13: ctrl <= CP13;
 			T14: ctrl <= CP14;

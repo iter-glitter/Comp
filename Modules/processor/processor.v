@@ -12,7 +12,8 @@
 module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					input_bus, output_bus, mem0, mem1, mem2, mem3, mem4, mem5, mem6,
 					mem7, c_data0, c_data1, c_data2, c_data3, c_addr0, c_addr1, c_addr2,
-					c_addr3, c_hit, c_LRU, cache_hit, C, V, Z);
+					c_addr3, c_hit, c_LRU, cache_hit, C, V, Z, stage0, stage1,
+					stage0_rdy, stage1_rdy, stg1_instr, stg0_instr, pc_output, acc_reg_out);
 	
 	//Define Inputs
 	input g_clk;					//Global Clock
@@ -21,10 +22,16 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	input out_dev_hs;				//OUTPUT Device Handhsake - Device Ready to Receive
 	input out_dev_ack;			//OUTPUT Device Handshake - Data received
 	input [7:0] input_bus;		//INPUT data bus
+	
 
 	//Define Outputs
 	output in_dev_ack;			//INPUT Device Handshake - Data Received by proc
 	output [7:0] output_bus;   //OUTPUT data bus
+	output [7:0] pc_output;			
+	output [55:0] stage1;
+	output [14:0] stage0;
+	output stage0_rdy, stage1_rdy;
+	output [7:0] acc_reg_out;
 	
 	//Cache Outputs
 	output [7:0] mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7;
@@ -33,29 +40,11 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output [1:0] c_hit, c_LRU;
 	output cache_hit, C, V, Z;
 	
-	//Assign Outputs to wires
-	assign mem0 = ram0;
-	assign mem1 = ram1;
-	assign mem2 = ram2;
-	assign mem3 = ram3;
-	assign mem4 = ram4;
-	assign mem5 = ram5;
-	assign mem6 = ram6;
-	assign mem7 = ram7;
-	assign c_data0 = ch_data0;
-	assign c_data1 = ch_data1;
-	assign c_data2 = ch_data2;
-	assign c_data3 = ch_data3;
-	assign c_addr0 = ch_addr0;
-	assign c_addr1 = ch_addr1;
-	assign c_addr2 = ch_addr2;
-	assign c_addr3 = ch_addr3;
-	assign c_hit = curr_hit;
-	assign c_LRU = ch_LRU;
-	assign cache_hit = ch_hit;
-	assign C = ccr_C;
-	assign V = ccr_V;
-	assign Z = ccr_Z;
+	
+	output [7:0] stg0_instr, stg1_instr;
+	wire [7:0] stg0_instr_w, stg1_instr_w;
+	assign stg0_instr = stg0_instr_w;
+	assign stg1_instr = stg1_instr_w;
 	
 //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////  Wire Definitions  //////////////////////////////////////
@@ -63,9 +52,13 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	//State Control Lines
 	wire [20:0] ctrl0;
 	wire [34:0] ctrl1;
+	wire [55:0] state1_w;
+	wire [14:0] state0_w;
+	assign stage1 = state1_w;
+	assign stage0 = state0_w;
 	
 	//Controller Wires
-	wire stg1_state, stg0_state;
+	wire stg1_state, stg0_state, stg1_state2;
 	wire [7:0] stg0_pc;
 	
 	
@@ -103,8 +96,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign ir1_1_s = ctrl1[16];
 	assign ir1_1_c = ctrl1[17];
 	
-	assign ir1_0_in = imem_out[15:8];
-	assign ir0_0_in = imem_out[7:0];
+	assign ir1_0_in = imem_out[7:0];
+	assign ir0_0_in = imem_out[15:8];
 	
 	//Shifter Wires
 	wire [7:0] shft_out;
@@ -130,7 +123,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [1:0] pc_ctrl;
 	assign pc_ctrl = ctrl0[18:17];
 	wire [7:0] pc_in, pc_out;
-	
+	assign pc_output = pc_out;
 	
 	//Stack Wire
 	wire [1:0] PCs_ctrl, ACCs_ctrl;
@@ -159,7 +152,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign acc_s = ctrl1[32];
 	assign acc_s_reg_g_clr = ctrl0[12];
 	assign acc_s_reg_set = ctrl0[11];
-	
+	assign acc_reg_out = acc_out;
 	
 //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////  Controller Units  //////////////////////////////////////
@@ -169,13 +162,14 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [7:0] ctrl0_pc;
 	//stage0(g_clk, g_clr, instr, i_pending, ccr_z, stg1_state, stg0_state, ctrl, stg0_pc_out);
 	stage0 controller0(g_clk, g_clr, ir0_0_out, i_pending, ccr_Z, stg1_state, 
-							stg0_state,	ctrl0, stg0_pc);
+							stg0_state,	ctrl0, stg0_pc, state0_w, stg0_instr_w);
 	//stage1(g_clk, g_clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_recv, 
 				//out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv);
 	stage1 controller1(g_clk ,g_clr, ir0_1_out, ir1_1_out, mdr_out, stg0_state, 
 							in_dev_hs, out_dev_ack, out_dev_hs, ch_hit, stg1_state, 
-							ctrl1, num_shift, in_dev_ack);
-							
+							ctrl1, num_shift, in_dev_ack, state1_w, stg1_instr_w);
+	assign stage1_rdy = stg1_state;
+	assign stage0_rdy = stg0_state;
 				
 	//MHVPIS
 	//MHVPIS(g_clk, itr_g_clr, itr_in, mask_in, itr_en, i_pending, PC_out);	
@@ -198,6 +192,30 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					ch_addr0, ch_addr1, ch_addr2, ch_addr3, 
 					ch_data0, ch_data1, ch_data2, ch_data3, 
 					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, ch_LRU, curr_hit);
+	
+	//Assign Outputs to wires
+	assign mem0 = ram0;
+	assign mem1 = ram1;
+	assign mem2 = ram2;
+	assign mem3 = ram3;
+	assign mem4 = ram4;
+	assign mem5 = ram5;
+	assign mem6 = ram6;
+	assign mem7 = ram7;
+	assign c_data0 = ch_data0;
+	assign c_data1 = ch_data1;
+	assign c_data2 = ch_data2;
+	assign c_data3 = ch_data3;
+	assign c_addr0 = ch_addr0;
+	assign c_addr1 = ch_addr1;
+	assign c_addr2 = ch_addr2;
+	assign c_addr3 = ch_addr3;
+	assign c_hit = curr_hit;
+	assign c_LRU = ch_LRU;
+	assign cache_hit = ch_hit;
+	assign C = ccr_C;
+	assign V = ccr_V;
+	assign Z = ccr_Z;
 	
 	//Stacks
 	//module stack(en, g_clr, g_clk, con, data_in, data_out);

@@ -12,7 +12,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_recv, 
-				out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv);
+				out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv, stage1, stg1_instr);
 	//Inputs
 	input clk, clr;
 	input [7:0] ir_data;			//Contents of IR1_0 - Data Register
@@ -30,7 +30,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	output reg [2:0] num_shift;		//Control Shifter - Number to shift by
 	output reg input_recv;			//Handhsake Control Line - Input Received
 	
-	reg [55:0] stage1; 				//Current Controller state
+	output reg [55:0] stage1; 				//Current Controller state
 	
 	//INPUT/OUTPUT Handshake registers
 	reg rdy_recv;						//Ready to Receive Flag
@@ -38,6 +38,12 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	
 	//Stage1 Pipeline Ready
 	reg stg1_rdy;
+	
+	//Stage 1 Instruciton IN - Output
+	output [7:0] stg1_instr;
+	wire [7:0] stg1_instr_w;
+	assign stg1_instr_w = instr;
+	assign stg1_instr = stg1_instr_w;
 	
 	//Define Stage 1 state encoding
 	parameter T0  = 56'b00000000000000000000000000000000000000000000000000000001;
@@ -196,6 +202,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 		rdy_recv <= 1'b1;
 		rdy_out <= 1'b1;
 		stg1_rdy <= 1'b0;
+		stg1_state <= 1'b0;
 	end
 	
 	always @ (posedge clk) begin
@@ -320,7 +327,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 							opMULDIV: stage1 <= T19;			
 						endcase
 				T55:	if(stg0_state==1'b1) begin  		//Digest OPcode
-							if(stg1_rdy == 1'b1) begin
+							if(stg1_state == 1'b1) begin
 								stg1_rdy <= 1'b0;
 								case(instr[7:3]) 
 									opADD:	case(instr[2:0])
@@ -392,7 +399,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 								stage1 <= T55;
 							end
 						end
-						else begin stage1 <= T50; end //Bubble pipeline
+						else begin stage1 <= T55; end //Bubble pipeline
 				default: stage1 <= T55;
 			endcase
 		end
