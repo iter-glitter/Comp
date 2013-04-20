@@ -27,7 +27,7 @@ module LdStr_shifter(Reg_in,clr,set,clk,Ls,Rs,ctrl,num_shift,Reg_out);
 	reg curr, prev;
 	
 	integer i, j;
-	always@(posedge clk, ctrl) begin
+	always@(posedge clk) begin
 		if(clr == 1'b0) begin	// Clear all bits to zero
 			Reg_out = 8'b00000000;
 		end
