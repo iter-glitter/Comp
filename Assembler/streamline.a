@@ -5,7 +5,7 @@ LDA $ 5 // Load 3 into reg a
 MUL $ 5 // ACC = ACC*3 = 9
 SHFT < 2 // shift ACC to the left by inserting two zeros | result = 36
 div $ 5 // ACC/3 = 12
-sub # 3 // ACC - 5 = 4
+sub # 8 // ACC - 8 = 4
 STOR $ 1 // 4 stores in mem[1]
 load $ 5 // load value of 3 back to ACC
 MUL $ 1 // ACC = ACC*mem[1] = ACC*4 = 12
