@@ -135,7 +135,7 @@ vector<token> scanner(vector<string> lines)
 		}
 		else{ //NOP
 			if (lines[i].size() < 2){
-				continue;
+				continue; // empty line
 			}
 			else{
 				t.opcode = lines[i];

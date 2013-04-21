@@ -8,6 +8,7 @@ div $ 5 // ACC/3 = 12
 sub # 3 // ACC - 3 = 9
 STOR $ 1 // 9 stores in mem[1]
 load $ 5 // load value of 3 back to ACC
+load $ 1 // alex test
 MUL $ 1 // ACC = ACC*mem[1] = ACC*9 = 27
 STOR $ 2 // 27 stored in mem[2]
 SUB # 7 // ACC = ACC - 7 = 20
