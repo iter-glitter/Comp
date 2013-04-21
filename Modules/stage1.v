@@ -39,6 +39,9 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	//Stage1 Pipeline Ready
 	reg stg1_rdy;
 	
+	//Cache Miss Loop
+	reg [4:0] ch_miss_loop;
+	
 	//Stage 1 Instruciton IN - Output
 	output [7:0] stg1_instr;
 	wire [7:0] stg1_instr_w;
@@ -226,6 +229,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 		rdy_out <= 1'b1;
 		stg1_rdy <= 1'b0;
 		stg1_state <= 1'b0;
+		ch_miss_loop <= 5'b00000;
 	end
 	
 	always @ (posedge clk) begin
@@ -234,21 +238,39 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 		end
 		else begin
 			case(stage1)
-				T0:  if(instr[7:3]==opSHFT) begin stage1 <= T54; end
-					  else begin stage1 <= T1; end
-				T1:  if(instr[7:3]==opSTOR) begin stage1 <= T34; end  
-					  else begin stage1 <= T2; end
-				T2:  
-					  if(instr[7:3]==opSTA) begin stage1 <= T38; end
-					  else if(instr[7:3]==opSTB) begin stage1 <= T41; end
-					  else if(instr[7:3]==opINPUT) begin stage1 <= T44; end
-					  else if(cache_hit==1'b1) begin stage1 <= T3; end //Handle cache hit
-					  else 
-							begin 
-								if(instr[7:3]==opSTOR) begin stage1 <= T55; end
-								else begin stage1 <= T3; end
+				T0: if(instr[7:3]==opSHFT) begin stage1 <= T54; end
+					 else begin stage1 <= T1; end
+				T1: case(instr[7:3])
+						opSTOR: stage1 <= T34;
+						opSTA: stage1 <= T38;
+						opSTB: stage1 <= T41;
+						opINPUT: stage1 <= T44;
+						default: stage1 <= T2; 
+					 endcase   
+				T2:  if(cache_hit==1'b1) begin 	//Handle cache hit
+							case(instr[7:3])
+								opSTOR: stage1 <= T55;
+								opSTA: stage1 <= T55;
+								opSTB: stage1 <= T55;
+								opINPUT: stage1 <= T55;
+								default: stage1 <= T3; 
+							endcase
 							end
-					  
+					  else begin 						//HANDLE MISS
+					  if(ch_miss_loop==5'b01010) begin
+							case(instr[7:3])
+								opSTOR: stage1 <= T55;
+								opSTA: stage1 <= T55;
+								opSTB: stage1 <= T55;
+								opINPUT: stage1 <= T55;
+								default: stage1 <= T3; 
+							endcase 
+							ch_miss_loop <= 5'b00000;
+						end else begin
+							ch_miss_loop <= (ch_miss_loop + 1);
+							stage1 <= T2;
+						end
+					  end
 				T3: 	case(instr[7:3])
 							opADD: stage1 <= T10;
 							opSUB: stage1 <= T12;
@@ -265,7 +287,13 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 				T6:  if(cache_hit==1'b1) begin stage1 <= T7; end //Handle cache hit
 					  else begin stage1 <= T7; end
 				T7:  stage1 <= T8;
-				T8:  stage1 <= T2;
+				T8:  case(instr[7:3])
+						opSTOR: stage1 <= T34;
+						opSTA: stage1 <= T38;
+						opSTB: stage1 <= T41;
+						opINPUT: stage1 <= T44;
+						default: stage1 <= T2; 
+					  endcase   
 				T9:  case(instr[7:3])
 							opADD: stage1 <= T11;
 							opSUB: stage1 <= T13;
@@ -309,12 +337,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 				T32: stage1 <= T55;
 				T33: stage1 <= T55;
 				T34: stage1 <= T35;	
-				T35: if(instr[7:3]==opSTOR) begin stage1 <= T2; end
-					  else if(instr[7:3]==opINPUT) begin 
-						stage1 <= T45;
-						input_recv <= 1'b1;
-					  end
-					  else begin stage1 <= T55; end
+				T35: stage1 <= T2;
 				T36: stage1 <= T55;
 				T37: stage1 <= T55;
 				T38: stage1 <= T35;
@@ -440,7 +463,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 		end
 	end
 	
-	always @ (stage1, mdr_data, ir_data) begin
+	always @ (stage1) begin
 		case(stage1) 
 			T0: begin
 					ctrl <= CP0;
