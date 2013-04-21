@@ -13,16 +13,16 @@ STOR $ 2 // 12 stored in mem[2]
 SUB # 7 // ACC = ACC - 7 = 5
 SHFT < 2 // shift ACC to the left by inserting two zeros | result = 20
 STOR ($) 5 // store 20 into mem[mem[5]] ~ mem[3]
-SHFT >> 1 // shift ACC to right by inserting two ones | result = 29
-AND # 11 // ACC = ACC & 11 = 9
-add # 18 // ACC = 27
-div $ 5  // ACC = ACC/3 = 9
-stor $ 4 // 9 stored into mem[4]
+SHFT >> 2 // shift ACC to right by inserting two ones | result = 197
+AND # 11 // ACC = ACC & 11 = 1
+add # 18 // ACC = 19
+div $ 5  // ACC = ACC/3 = 6
+stor $ 4 // 6 stored into mem[4]
 NOP
 NOP
 NOP
 NOP
-add # 98 // ACC + 98 = 107
-or # 4 // ACC = ACC | 4 = 111
-STOR ($) 2 // 111 stored at mem[mem[2]] ~ mem[12]
-LDB ($) 2 // load value at mem[mem[2]] into reg B ~ 111 into B
+add # 98 // ACC + 98 = 104
+or # 4 // ACC = ACC | 4 = 108
+STOR ($) 2 // 108 stored at mem[mem[2]] ~ mem[12]
+LDB ($) 2 // load value at mem[mem[2]] into reg B ~ 108 into B
