@@ -104,7 +104,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366234564" xil_pn:in_ck="-970862128453654472" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366234564">
+    <transform xil_pn:end_ts="1366576798" xil_pn:in_ck="-970862128453654472" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366576798">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -130,7 +130,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366234564" xil_pn:in_ck="-970862128453654472" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366234564">
+    <transform xil_pn:end_ts="1366576798" xil_pn:in_ck="-970862128453654472" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366576798">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -145,7 +145,7 @@
       <outfile xil_pn:name="mux_4_1_behavioral.v"/>
       <outfile xil_pn:name="n_bit_alu_generate.v"/>
     </transform>
-    <transform xil_pn:end_ts="1366234614" xil_pn:in_ck="-970862128453654472" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-3235082157764034238" xil_pn:start_ts="1366234613">
+    <transform xil_pn:end_ts="1366576799" xil_pn:in_ck="-970862128453654472" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-3235082157764034238" xil_pn:start_ts="1366576798">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -185,11 +185,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366234801" xil_pn:in_ck="6024948536052433591" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4305842377904661151" xil_pn:start_ts="1366234790">
+    <transform xil_pn:end_ts="1366575933" xil_pn:in_ck="6024948536052433591" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4305842377904661151" xil_pn:start_ts="1366575919">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="alu_nbit.lso"/>
@@ -208,18 +209,20 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366234809" xil_pn:in_ck="3668159078393278321" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1948059925558766861" xil_pn:start_ts="1366234801">
+    <transform xil_pn:end_ts="1366575987" xil_pn:in_ck="3668159078393278321" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1948059925558766861" xil_pn:start_ts="1366575977">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="alu_nbit.bld"/>
       <outfile xil_pn:name="alu_nbit.ngd"/>
       <outfile xil_pn:name="alu_nbit_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1366234840" xil_pn:in_ck="-3560200594570932685" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-2415728198128772097" xil_pn:start_ts="1366234809">
+    <transform xil_pn:end_ts="1366576005" xil_pn:in_ck="-3560200594570932685" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-2415728198128772097" xil_pn:start_ts="1366575987">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="alu_nbit.pcf"/>
       <outfile xil_pn:name="alu_nbit_map.map"/>
@@ -230,9 +233,10 @@
       <outfile xil_pn:name="alu_nbit_summary.xml"/>
       <outfile xil_pn:name="alu_nbit_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1366234877" xil_pn:in_ck="3344515216961897893" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1366234840">
+    <transform xil_pn:end_ts="1366576031" xil_pn:in_ck="3344515216961897893" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1366576005">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="alu_nbit.ncd"/>
       <outfile xil_pn:name="alu_nbit.pad"/>
@@ -244,9 +248,10 @@
       <outfile xil_pn:name="alu_nbit_pad.txt"/>
       <outfile xil_pn:name="alu_nbit_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1366234877" xil_pn:in_ck="-8647415596191763925" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1366234866">
+    <transform xil_pn:end_ts="1366576031" xil_pn:in_ck="-8647415596191763925" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1366576022">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="alu_nbit.twr"/>
       <outfile xil_pn:name="alu_nbit.twx"/>

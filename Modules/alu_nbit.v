@@ -41,7 +41,7 @@ module alu_nbit(in0,in1,c_in,ctrl,c_out,alu_out,V, Z);
 	wire zero_wire;
 	
 	initial begin
-		zero_state = 1'b1;
+		zero_state = 1'b0;
 	end
 	
 	assign zero_wire = zero_state;
@@ -56,14 +56,18 @@ module alu_nbit(in0,in1,c_in,ctrl,c_out,alu_out,V, Z);
 		for(i=0;i<n;i=i+1) 
 		begin:submit
 			alu_bitslice ALU_slice(in0[i],in1[i],ctrl,w_c[i],w_c[i+1],alu_out[i]);
+			if(alu_out[i]==1'b1 && zero_state == 1'b0) begin
+				zero_state = 1'b1;
+			end
 		end
 	endgenerate
 	xor overflow_detect(V,w_c[n],w_c[n-1]);
 	
-//	always begin
-//		zero_state = 1'b1;
-//		for(j=0; j<n; j=j+1) begin:zeroDetect
-//			if(alu_out[j]==1'b1) begin zero_state = 1'b0; end
-//		end
-//	end
+	// always begin
+		// zero_state = 1'b1;
+		// for(j=0; j<n; j=j+1) begin:zeroDetect
+			// if(alu_out[j]==1'b1) begin zero_state = 1'b0; end
+		// end
+	// end
+
 endmodule

@@ -6,3 +6,67 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.n
 map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
 par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+xst -intstyle ise -ifn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.xst" -ofn "C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/alu_nbit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx45-fgg484-3 alu_nbit.ngc alu_nbit.ngd  
+map -intstyle ise -p xc6slx45-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o alu_nbit_map.ncd alu_nbit.ngd alu_nbit.pcf 
+par -w -intstyle ise -ol high -mt off alu_nbit_map.ncd alu_nbit.ncd alu_nbit.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml alu_nbit.twx alu_nbit.ncd -o alu_nbit.twr alu_nbit.pcf 

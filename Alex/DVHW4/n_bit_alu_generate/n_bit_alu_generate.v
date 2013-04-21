@@ -34,18 +34,9 @@ module alu_nbit(in0,in1,c_in,ctrl,c_out,alu_out,V, Z);
 	output Z;				//Zero Output
 	
 	wire [n:0] w_c;
-	
-	integer j;
-	
-	reg zero_state;
-	wire zero_wire;
-	
-	initial begin
-		zero_state = 1'b1;
-	end
-	
-	assign zero_wire = zero_state;
-	assign Z = zero_wire;
+	wire [n-1:0] zero_check;
+
+	assign zero_check[0] = alu_out[0];
 	
 	//Instantiate module alu_bitslice(a,b,c,c_in,c_out,alu_out);
 	genvar i;
@@ -53,16 +44,18 @@ module alu_nbit(in0,in1,c_in,ctrl,c_out,alu_out,V, Z);
 	assign c_out = w_c[n];
 	
 	generate
-		for(i=0;i<n;i=i+1) 
+		for(i=0; i<n; i=i+1) 
 		begin:submit
 			alu_bitslice ALU_slice(in0[i],in1[i],ctrl,w_c[i],w_c[i+1],alu_out[i]);
 		end
+		for(i=0; i<n-1; i=i+1)
+		begin:or_loop
+			or OR (zero_check[i+1],alu_out[i+1],zero_check[i]);
+		end
 	endgenerate
 	xor overflow_detect(V,w_c[n],w_c[n-1]);
+
+   //handle zero
+	not(Z,zero_check[n-1]);	
 	
-	always begin
-		for(j=0; j<n; j=j+1) begin:zeroDetect
-			if(alu_out[j]==1'b1) begin zero_state = 1'b0; end
-		end
-	end
 endmodule

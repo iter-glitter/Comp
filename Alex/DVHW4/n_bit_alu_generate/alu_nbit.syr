@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: alu_nbit.prj
 
@@ -106,15 +106,15 @@ INFO:Xst - Part-select index evaluated to out of bound value may lead to incorre
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\jahend6\Documents\School\EE480\Alex\DVHW4\n_bit_alu_generate\mux_4_1_behavioral.v" into library work
+Analyzing Verilog file "C:\EE480\Project\Alex\DVHW4\n_bit_alu_generate\mux_4_1_behavioral.v" into library work
 Parsing module <mux_4_1_behavioral>.
-Analyzing Verilog file "C:\Users\jahend6\Documents\School\EE480\Alex\DVHW4\n_bit_alu_generate\mux_2-1_rtl.v" into library work
+Analyzing Verilog file "C:\EE480\Project\Alex\DVHW4\n_bit_alu_generate\mux_2-1_rtl.v" into library work
 Parsing module <mux_2_1_rtl>.
-Analyzing Verilog file "C:\Users\jahend6\Documents\School\EE480\Alex\DVHW4\n_bit_alu_generate\bfa_gate.v" into library work
+Analyzing Verilog file "C:\EE480\Project\Alex\DVHW4\n_bit_alu_generate\bfa_gate.v" into library work
 Parsing module <bfa_gate>.
-Analyzing Verilog file "C:\Users\jahend6\Documents\School\EE480\Alex\DVHW4\n_bit_alu_generate\alu_bitslice.v" into library work
+Analyzing Verilog file "C:\EE480\Project\Alex\DVHW4\n_bit_alu_generate\alu_bitslice.v" into library work
 Parsing module <alu_bitslice>.
-Analyzing Verilog file "C:\Users\jahend6\Documents\School\EE480\Alex\DVHW4\n_bit_alu_generate\n_bit_alu_generate.v" into library work
+Analyzing Verilog file "C:\EE480\Project\Alex\DVHW4\n_bit_alu_generate\n_bit_alu_generate.v" into library work
 Parsing module <alu_nbit>.
 
 =========================================================================
@@ -136,32 +136,30 @@ Elaborating module <mux_4_1_behavioral>.
 =========================================================================
 
 Synthesizing Unit <alu_nbit>.
-    Related source file is "c:/users/jahend6/documents/school/ee480/alex/dvhw4/n_bit_alu_generate/n_bit_alu_generate.v".
+    Related source file is "c:/ee480/project/alex/dvhw4/n_bit_alu_generate/n_bit_alu_generate.v".
         n = 4
-WARNING:Xst:737 - Found 1-bit latch for signal <Z>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   1 Latch(s).
 Unit <alu_nbit> synthesized.
 
 Synthesizing Unit <alu_bitslice>.
-    Related source file is "c:/users/jahend6/documents/school/ee480/alex/dvhw4/n_bit_alu_generate/alu_bitslice.v".
+    Related source file is "c:/ee480/project/alex/dvhw4/n_bit_alu_generate/alu_bitslice.v".
     Summary:
 	no macro.
 Unit <alu_bitslice> synthesized.
 
 Synthesizing Unit <mux_2_1_rtl>.
-    Related source file is "c:/users/jahend6/documents/school/ee480/alex/dvhw4/n_bit_alu_generate/mux_2-1_rtl.v".
+    Related source file is "c:/ee480/project/alex/dvhw4/n_bit_alu_generate/mux_2-1_rtl.v".
     Summary:
 	no macro.
 Unit <mux_2_1_rtl> synthesized.
 
 Synthesizing Unit <bfa_gate>.
-    Related source file is "c:/users/jahend6/documents/school/ee480/alex/dvhw4/n_bit_alu_generate/bfa_gate.v".
+    Related source file is "c:/ee480/project/alex/dvhw4/n_bit_alu_generate/bfa_gate.v".
     Summary:
 Unit <bfa_gate> synthesized.
 
 Synthesizing Unit <mux_4_1_behavioral>.
-    Related source file is "c:/users/jahend6/documents/school/ee480/alex/dvhw4/n_bit_alu_generate/mux_4_1_behavioral.v".
+    Related source file is "c:/ee480/project/alex/dvhw4/n_bit_alu_generate/mux_4_1_behavioral.v".
     Found 1-bit 4-to-1 multiplexer for signal <out> created at line 35.
     Summary:
 	inferred   1 Multiplexer(s).
@@ -171,8 +169,6 @@ Unit <mux_4_1_behavioral> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Latches                                              : 1
- 1-bit latch                                           : 1
 # Multiplexers                                         : 4
  1-bit 4-to-1 multiplexer                              : 4
 # Xors                                                 : 9
@@ -184,8 +180,6 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1426 - The value init of the FF/Latch Z hinder the constant cleaning in the block alu_nbit.
-   You should achieve better results by setting this init to 0.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -201,41 +195,12 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1426 - The value init of the FF/Latch Z hinder the constant cleaning in the block alu_nbit.
-   You should achieve better results by setting this init to 0.
-WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
-   incompatible with the Spartan6 architecture. The two primary causes of this is
-   either a register or latch described with both an asynchronous set and
-   asynchronous reset, or a register or latch described with an asynchronous
-   set or reset which however has an initialization value of the opposite 
-   polarity (i.e. asynchronous reset with an initialization value of 1).
-    While this circuit can be built, it creates a sub-optimal implementation
-   in terms of area, power and performance. For a more optimal implementation
-   Xilinx highly recommends one of the following:
-
-          1) Remove either the set or reset from all registers and latches
-             if not needed for required functionality
-          2) Modify the code in order to produce a synchronous set
-             and/or reset (both is preferred)
-          3) Ensure all registers have the same initialization value as the
-             described asynchronous set or reset polarity
-          4) Use the -async_to_sync option to transform the asynchronous
-             set/reset to synchronous operation
-             (timing simulation highly recommended when using this option)
-
-  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
-
-  List of register instances with asynchronous set or reset and opposite initialization value:
-    Z in unit <alu_nbit>
-
 
 Optimizing unit <alu_nbit> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block alu_nbit, actual ratio is 0.
-WARNING:Xst:1426 - The value init of the FF/Latch Z hinder the constant cleaning in the block alu_nbit.
-   You should achieve better results by setting this init to 0.
 
 Final Macro Processing ...
 
@@ -264,13 +229,10 @@ Top Level Output File Name         : alu_nbit.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 13
-#      GND                         : 1
+# BELS                             : 12
 #      LUT4                        : 2
 #      LUT6                        : 9
 #      MUXF7                       : 1
-# FlipFlops/Latches                : 1
-#      LD                          : 1
 # IO Buffers                       : 19
 #      IBUF                        : 12
 #      OBUF                        : 7
@@ -290,12 +252,11 @@ Slice Logic Distribution:
    Number with an unused Flip Flop:      11  out of     11   100%  
    Number with an unused LUT:             0  out of     11     0%  
    Number of fully used LUT-FF pairs:     0  out of     11     0%  
-   Number of unique control sets:         1
+   Number of unique control sets:         0
 
 IO Utilization: 
  Number of IOs:                          19
  Number of bonded IOBs:                  19  out of    316     6%  
-    IOB Flip Flops/Latches:               1
 
 Specific Feature Utilization:
 
@@ -317,15 +278,7 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-------------------------------------+------------------------+-------+
-Clock Signal                        | Clock buffer(FF name)  | Load  |
-------------------------------------+------------------------+-------+
-Z_G(alu_out[3]_alu_out[2]_OR_6_o1:O)| NONE(*)(Z)             | 1     |
-------------------------------------+------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+No clock signals found in this design
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -337,52 +290,34 @@ Speed Grade: -3
 
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 3.648ns
-   Maximum combinational path delay: 7.715ns
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 8.601ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'Z_G'
-  Total number of paths / destination ports: 1 / 1
--------------------------------------------------------------------------
-Offset:              3.648ns (Levels of Logic = 1)
-  Source:            Z (LATCH)
-  Destination:       Z (PAD)
-  Source Clock:      Z_G falling
-
-  Data Path: Z to Z
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     LD:G->Q               1   0.498   0.579  Z (Z_OBUF)
-     OBUF:I->O                 2.571          Z_OBUF (Z)
-    ----------------------------------------
-    Total                      3.648ns (3.069ns logic, 0.579ns route)
-                                       (84.1% logic, 15.9% route)
-
-=========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 71 / 6
+  Total number of paths / destination ports: 120 / 7
 -------------------------------------------------------------------------
-Delay:               7.715ns (Levels of Logic = 5)
+Delay:               8.601ns (Levels of Logic = 6)
   Source:            ctrl<0> (PAD)
-  Destination:       alu_out<3> (PAD)
+  Destination:       Z (PAD)
 
-  Data Path: ctrl<0> to alu_out<3>
+  Data Path: ctrl<0> to Z
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            10   1.222   1.201  ctrl_0_IBUF (ctrl_0_IBUF)
      LUT6:I1->O            4   0.203   0.912  submit[1].ALU_slice/BFA/cout1 (w_c<2>)
      LUT4:I1->O            1   0.205   0.580  submit[2].ALU_slice/BFA/cout1 (w_c<3>)
-     LUT6:I5->O            2   0.205   0.616  submit[3].ALU_slice/MUX_4x1/Mmux_out11 (alu_out_3_OBUF)
-     OBUF:I->O                 2.571          alu_out_3_OBUF (alu_out<3>)
+     LUT6:I5->O            2   0.205   0.721  submit[3].ALU_slice/MUX_4x1/Mmux_out11 (alu_out_3_OBUF)
+     LUT4:I2->O            1   0.203   0.579  Z1 (Z_OBUF)
+     OBUF:I->O                 2.571          Z_OBUF (Z)
     ----------------------------------------
-    Total                      7.715ns (4.406ns logic, 3.309ns route)
-                                       (57.1% logic, 42.9% route)
+    Total                      8.601ns (4.609ns logic, 3.992ns route)
+                                       (53.6% logic, 46.4% route)
 
 =========================================================================
 
@@ -392,14 +327,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.92 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.72 secs
  
 --> 
 
-Total memory usage is 255368 kilobytes
+Total memory usage is 254264 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

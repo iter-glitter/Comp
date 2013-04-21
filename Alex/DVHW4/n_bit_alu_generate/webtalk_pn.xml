@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Wed Apr 17 17:40:40 2013">
+<application name="pn" timeStamp="Sun Apr 21 16:26:46 2013">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="DD54198F1A4D447E97CE22799BD7D78E" type="project"/>
-<property name="ProjectIteration" value="10" type="project"/>
-<property name="ProjectFile" value="C:/Users/jahend6/Documents/School/EE480/Alex/DVHW4/n_bit_alu_generate/n_bit_alu_generate.xise" type="project"/>
+<property name="ProjectIteration" value="21" type="project"/>
+<property name="ProjectFile" value="C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/n_bit_alu_generate.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2013-02-12T19:03:46" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -17,7 +17,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_LastAppliedStrategy" value="Xilinx Default (unlocked)" type="design"/>
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
-<property name="PROP_SelectedInstanceHierarchicalPath" value="/alu_nbit_vtf/uut" type="process"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/alu_nbit_vtf" type="process"/>
 <property name="PROP_Simulator" value="Modelsim-SE Mixed" type="design"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
@@ -26,10 +26,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_VHDLSourceAnalysisStandard" value="VHDL-200X" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2013-02-12T19:03:46" type="design"/>
 <property name="PROP_intWbtProjectID" value="DD54198F1A4D447E97CE22799BD7D78E" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="10" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="21" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
-<property name="PROP_selectedSimRootSourceNode_behav" value="work.alu_nbit" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.alu_nbit_vtf" type="process"/>
 <property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>

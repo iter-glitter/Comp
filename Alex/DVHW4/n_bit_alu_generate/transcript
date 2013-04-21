@@ -47,6 +47,8 @@
 # Top level modules:
 # 	glbl
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ns work.alu_nbit_vtf glbl 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
 # Loading work.alu_nbit_vtf(fast)
 # Loading work.alu_nbit(fast)
 # Loading work.alu_bitslice(fast)
@@ -54,11 +56,6 @@
 # Loading work.bfa_gate(fast)
 # Loading work.mux_4_1_behavioral(fast)
 # Loading work.glbl(fast)
-# ** Warning: (vsim-3015) alu_nbit_vtf.v(53): [PCDPC] - Port size (4 or 4) does not match connection size (8) for port 'alu_out'. The port definition is at: n_bit_alu_generate.v(26).
-# 
-#         Region: /alu_nbit_vtf/uut
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# Break key hit 
-# Break in Module alu_nbit at n_bit_alu_generate.v line 64

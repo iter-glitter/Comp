@@ -30,12 +30,13 @@ module alu_nbit_vtf;
 
 	// Outputs
 	wire c_out;
-	wire [7:0] alu_out;
+	wire [3:0] alu_out;
 	wire V;
 	wire Z;
 	reg [3:0] alu_out_tc;
 	reg c_out_tc;
 	reg v_tc;
+	reg z_tc;
 	
 	reg temp_c, notB, overflow_check;
 	reg error;
@@ -60,6 +61,7 @@ module alu_nbit_vtf;
 		v_tc=0;
 		temp_c=0;
 		overflow_check=0;
+		z_tc = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;
@@ -70,7 +72,6 @@ module alu_nbit_vtf;
 	
 	always begin
 	#20 cnt=cnt+1;
-	
 
 	//cnt[((2*n)+3):((2*n)+1)] = 3 Control Bits (3 MSB)
 	if(cnt[11:9]==3'b000) begin
@@ -220,10 +221,17 @@ module alu_nbit_vtf;
 		else v_tc=0;
 	end
 	
-	#1 if( (alu_out_tc==alu_out) && (c_out_tc==c_out) && (v_tc==V) ) error=0;
+	#1 if( (alu_out_tc==alu_out) && (c_out_tc==c_out) && (v_tc==V) && z_tc == Z) error=0;
 	else error=1;
-		
+	
 	end
-      
+	
+	always@(alu_out_tc) begin
+		if(alu_out_tc == 4'b0000)
+			z_tc = 1'b1;
+		else
+			z_tc = 1'b0;
+	end
+	
 endmodule
 
