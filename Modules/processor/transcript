@@ -124,6 +124,8 @@
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.processor_test glbl 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
+# ** Note: (vopt-143) Recognized 1 FSM in module "stage1(fast)".
+# 
 # Loading work.processor_test(fast)
 # Loading work.processor(fast)
 # Loading work.stage0(fast)
@@ -146,15 +148,6 @@
 # Loading work.mux_3_1(fast)
 # Loading work.mux_5_1(fast)
 # Loading work.glbl(fast)
-# ** Warning: (vsim-3015) processor.v(201): [PCDPC] - Port size (4 or 4) does not match connection size (8) for port 'in0'. The port definition is at: ../alu_nbit.v(26).
-# 
-#         Region: /processor_test/uut/ALU
-# ** Warning: (vsim-3015) processor.v(201): [PCDPC] - Port size (4 or 4) does not match connection size (8) for port 'in1'. The port definition is at: ../alu_nbit.v(26).
-# 
-#         Region: /processor_test/uut/ALU
-# ** Warning: (vsim-3015) processor.v(201): [PCDPC] - Port size (4 or 4) does not match connection size (8) for port 'alu_out'. The port definition is at: ../alu_nbit.v(26).
-# 
-#         Region: /processor_test/uut/ALU
 # ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_2_1.v(14).
 # 
 #         Region: /processor_test/uut/ALU/submit[0]/ALU_slice/MUX_2x1_1
@@ -287,15 +280,148 @@
 # ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_4_1.v(16).
 # 
 #         Region: /processor_test/uut/ALU/submit[3]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i2'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i3'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[4]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i2'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i3'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[5]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i2'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i3'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[6]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(36): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_2x1_1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(50): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_2_1.v(14).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_2x1_2
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i0'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i1'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i2'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'i3'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_4x1
+# ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_4_1.v(16).
+# 
+#         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_4x1
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 2348
 # 
-#           Attempting to use alternate WLF file "./wlft3e0i10".
+#           Attempting to use alternate WLF file "./wlftmjxr0i".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft3e0i10
+#           Using alternate file: ./wlftmjxr0i
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
+run

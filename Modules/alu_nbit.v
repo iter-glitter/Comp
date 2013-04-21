@@ -24,7 +24,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module alu_nbit(in0,in1,c_in,ctrl,c_out,alu_out,V, Z);
-	parameter n=4;
+	parameter n=8;
 	input [n-1:0] in0,in1; 	//Input data1 and Input data2
 	input c_in;				//Carry In
 	input [2:0] ctrl; 		//ALU Control Lines

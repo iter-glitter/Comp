@@ -42,6 +42,8 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	//Cache Miss Loop
 	reg [4:0] ch_miss_loop;
 	reg ch_hit_loop;
+	reg [4:0] ch_miss_loop_ind;
+	reg ch_hit_loop_ind;
 	
 	//Stage 1 Instruciton IN - Output
 	output [7:0] stg1_instr;
@@ -257,6 +259,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 								ch_hit_loop <= 1'b0;
 							end else begin
 								ch_hit_loop <= (ch_hit_loop + 1);
+								stage1 <= T2;
 							end
 					  end
 					  else begin 						//HANDLE MISS
@@ -287,8 +290,24 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 						endcase
 				T4:  stage1 <= T5;
 				T5:  stage1 <= T6;
-				T6:  if(cache_hit==1'b1) begin stage1 <= T7; end //Handle cache hit
-					  else begin stage1 <= T7; end
+				T6:  if(cache_hit==1'b1) begin 	//Handle cache hit
+							if(ch_hit_loop==1'b1) begin
+								stage1 <= T7;
+								ch_hit_loop <= 1'b0;
+							end else begin
+								stage1 <= T6;
+								ch_hit_loop <= (ch_hit_loop + 1);
+							end
+					  end
+					  else begin 						//HANDLE MISS
+					  if(ch_miss_loop==5'b01010) begin
+							stage1 <= T7; 
+							ch_miss_loop <= 5'b00000;
+						end else begin
+							ch_miss_loop <= (ch_miss_loop + 1);
+							stage1 <= T6;
+						end
+					  end
 				T7:  stage1 <= T8;
 				T8:  case(instr[7:3])
 						opSTOR: stage1 <= T34;
