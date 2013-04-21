@@ -21,7 +21,7 @@
 //	  1     1    0    | ~in0			 (COMPLEMENT)
 //	  1     1    1    | ~in1			 (COMPLEMENT)
 //
-//
+// 
 //////////////////////////////////////////////////////////////////////////////////
 module alu_nbit(in0,in1,c_in,ctrl,c_out,alu_out,V, Z);
 	parameter n=4;
