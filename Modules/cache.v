@@ -283,8 +283,8 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 			end
 			6: //Miss WRITE - Write Target to RAM
 			begin
-				ram_addr <= target_addr;
-				ram_data_in <= target_data;
+				//ram_addr <= target_addr;
+				//ram_data_in <= target_data;
 			end
 			7: //Miss WRITE - Fill CURR LRU
 			begin

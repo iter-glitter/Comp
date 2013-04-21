@@ -57,5 +57,4 @@ module alu_nbit(in0,in1,c_in,ctrl,c_out,alu_out,V, Z);
 
    //handle zero
 	not(Z,zero_check[n-1]);	
-	
 endmodule

@@ -69,10 +69,12 @@ module processor_test;
 	wire [7:0] acc_reg_out;
 	wire [7:0] alu_out_w;
 	wire [7:0] a_reg_out;
+	wire [7:0] b_reg_out;
 	wire [7:0] mar_out_w;
 	wire [7:0] mdr_out_w;
 	wire [2:0] num_shift_out;
 	wire [7:0] shifter_out;
+	wire [7:0] ch_output;
 
 	// Instantiate the Unit Under Test (UUT)
 	processor uut (
@@ -116,10 +118,12 @@ module processor_test;
 		.acc_reg_out(acc_reg_out),
 		.alu_out_w(alu_out_w),
 		.a_reg_out(a_reg_out),
+		.b_reg_out(b_reg_out),
 		.mar_out_w(mar_out_w),
 		.mdr_out_w(mdr_out_w),
 		.num_shift_out(num_shift_out),
-		.shifter_out(shifter_out)
+		.shifter_out(shifter_out),
+		.ch_output(ch_output)
 	);
 
 	initial begin

@@ -14,7 +14,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					mem7, c_data0, c_data1, c_data2, c_data3, c_addr0, c_addr1, c_addr2,
 					c_addr3, c_hit, c_LRU, cache_hit, C, V, Z, stage0, stage1,
 					stage0_rdy, stage1_rdy, stg1_instr, stg0_instr, pc_output, acc_reg_out, alu_out_w,
-					a_reg_out, mar_out_w, mdr_out_w, num_shift_out, shifter_out);
+					a_reg_out, b_reg_out, mar_out_w, mdr_out_w, num_shift_out, shifter_out, ch_output);
 	
 	//Define Inputs
 	input g_clk;					//Global Clock
@@ -35,11 +35,13 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output [7:0] acc_reg_out;
 	output [7:0] alu_out_w;
 	output [7:0] a_reg_out;
+	output [7:0] b_reg_out;
 	output [7:0] mdr_out_w;
 	output [7:0] mar_out_w;
 	output C, V, Z;
 	output [2:0] num_shift_out;
 	output [7:0] shifter_out;
+	output [7:0] ch_output;
 	
 	//Cache Outputs
 	output [7:0] mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7;
@@ -127,7 +129,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [7:0] ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7;
 	assign ch_en = ctrl1[22];
 	assign ch_rw = ctrl1[21];
-	
+	assign ch_output = cache_out;
 	
 	//Program Counter Wire
 	wire [1:0] pc_ctrl;
@@ -165,6 +167,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign acc_s_reg_set = ctrl0[11];
 	assign acc_reg_out = acc_out;
 	assign a_reg_out = a_out;
+	assign b_reg_out = b_out;
 	assign mdr_out_w = mdr_out;
 	assign mar_out_w = mar_out;
 	
