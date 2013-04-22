@@ -36,7 +36,7 @@
 					cache_hit, target_addr, target_data, target_rw_out, c_addrIN_out, c_dataIN_out);*/
 module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, 
 					addr0, addr1, addr2, addr3, data0, data1, data2, data3, 
-					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, 
+					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, ram8, ram9, ram10, ram11, ram12, ram13, ram14, ram15, 
 					curr_LRU, cache_hit, target_rw_out, c_dataIN_out, state, ram_data_in_monitor, ram_addr_in_monitor);
 					
 	
@@ -74,6 +74,14 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	output [a_width-1:0] ram5;
 	output [a_width-1:0] ram6;
 	output [a_width-1:0] ram7;
+	output [a_width-1:0] ram8;
+	output [a_width-1:0] ram9;
+	output [a_width-1:0] ram10;
+	output [a_width-1:0] ram11;
+	output [a_width-1:0] ram12;
+	output [a_width-1:0] ram13;
+	output [a_width-1:0] ram14;
+	output [a_width-1:0] ram15;
 	//Declare Cache Registers
 	reg [d_width-1:0] cache_data [n-1:0];
 	reg [a_width-1:0] cache_addr [n-1:0];
@@ -140,6 +148,14 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	wire [d_width-1:0] ram_mem5;
 	wire [d_width-1:0] ram_mem6;
 	wire [d_width-1:0] ram_mem7;
+	wire [d_width-1:0] ram_mem8;
+	wire [d_width-1:0] ram_mem9;
+	wire [d_width-1:0] ram_mem10;
+	wire [d_width-1:0] ram_mem11;
+	wire [d_width-1:0] ram_mem12;
+	wire [d_width-1:0] ram_mem13;
+	wire [d_width-1:0] ram_mem14;
+	wire [d_width-1:0] ram_mem15;
 	//Connect RAM contents with Cache Output Ports
 	assign ram0 = ram_mem0;
 	assign ram1 = ram_mem1;
@@ -149,9 +165,19 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	assign ram5 = ram_mem5;
 	assign ram6 = ram_mem6;
 	assign ram7 = ram_mem7;
+	assign ram8 = ram_mem8;
+	assign ram9 = ram_mem9;
+	assign ram10 = ram_mem10;
+	assign ram11 = ram_mem11;
+	assign ram12 = ram_mem12;
+	assign ram13 = ram_mem13;
+	assign ram14 = ram_mem14;
+	assign ram15 = ram_mem15;
 	ram	DATA_RAM(clk, ram_clr, ram_enab, ram_rw, ram_addr, ram_data_in, 
 							ram_mem0, ram_mem1, ram_mem2, ram_mem3, ram_mem4, 
-							ram_mem5, ram_mem6, ram_mem7, ram_data_out);
+							ram_mem5, ram_mem6, ram_mem7, ram_mem8, ram_mem9, 
+							ram_mem10, ram_mem11, ram_mem12, ram_mem13, ram_mem14, 
+							ram_mem15, ram_data_out);
 	
 	initial begin
 		curr_LRU <= 2'b00;

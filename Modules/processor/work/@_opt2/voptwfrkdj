@@ -31,6 +31,14 @@ entity cache is
         ram5            : out    vl_logic_vector;
         ram6            : out    vl_logic_vector;
         ram7            : out    vl_logic_vector;
+        ram8            : out    vl_logic_vector;
+        ram9            : out    vl_logic_vector;
+        ram10           : out    vl_logic_vector;
+        ram11           : out    vl_logic_vector;
+        ram12           : out    vl_logic_vector;
+        ram13           : out    vl_logic_vector;
+        ram14           : out    vl_logic_vector;
+        ram15           : out    vl_logic_vector;
         curr_LRU        : out    vl_logic_vector(1 downto 0);
         cache_hit       : out    vl_logic_vector(1 downto 0);
         target_rw_out   : out    vl_logic;

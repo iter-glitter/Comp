@@ -20,6 +20,14 @@ entity ram is
         mem5            : out    vl_logic_vector;
         mem6            : out    vl_logic_vector;
         mem7            : out    vl_logic_vector;
+        mem8            : out    vl_logic_vector;
+        mem9            : out    vl_logic_vector;
+        mem10           : out    vl_logic_vector;
+        mem11           : out    vl_logic_vector;
+        mem12           : out    vl_logic_vector;
+        mem13           : out    vl_logic_vector;
+        mem14           : out    vl_logic_vector;
+        mem15           : out    vl_logic_vector;
         data_out        : out    vl_logic_vector
     );
     attribute mti_svvh_generic_type : integer;

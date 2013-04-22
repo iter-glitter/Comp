@@ -28,7 +28,8 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5, 
-				mem6, mem7, data_out);
+				mem6, mem7, mem8, mem9, mem10, mem11, mem12, mem13, mem14, mem15, 
+				data_out);
 	parameter d_width = 8;
 	parameter a_width = 8;
 	//Input Ports
@@ -44,6 +45,14 @@ module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5
 	output [d_width-1:0] mem5;
 	output [d_width-1:0] mem6;
 	output [d_width-1:0] mem7;
+	output [d_width-1:0] mem8;
+	output [d_width-1:0] mem9;
+	output [d_width-1:0] mem10;
+	output [d_width-1:0] mem11;
+	output [d_width-1:0] mem12;
+	output [d_width-1:0] mem13;
+	output [d_width-1:0] mem14;
+	output [d_width-1:0] mem15;
 	output reg [d_width-1:0] data_out;
 	//Declare memory register
 	reg [d_width-1:0] memory [2**a_width-1:0];
@@ -59,6 +68,14 @@ module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5
 	assign mem5 = memory[5];
 	assign mem6 = memory[6];
 	assign mem7 = memory[7];
+	assign mem8 = memory[8];
+	assign mem9 = memory[9];
+	assign mem10 = memory[10];
+	assign mem11 = memory[11];
+	assign mem12 = memory[12];
+	assign mem13 = memory[13];
+	assign mem14 = memory[14];
+	assign mem15 = memory[15];
 	
 	initial begin
 		memory[0] = 8'b00000000;

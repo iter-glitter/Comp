@@ -11,7 +11,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					input_bus, output_bus, mem0, mem1, mem2, mem3, mem4, mem5, mem6,
-					mem7, c_data0, c_data1, c_data2, c_data3, c_addr0, c_addr1, c_addr2,
+					mem7, mem8, mem9, mem10, mem11, mem12, mem13, mem14, mem15,
+					c_data0, c_data1, c_data2, c_data3, c_addr0, c_addr1, c_addr2,
 					c_addr3, c_hit, c_LRU, cache_hit, C, V, Z, stage0, stage1,
 					stage0_rdy, stage1_rdy, stg1_instr, stg0_instr, pc_output, acc_reg_out, alu_out_w,
 					a_reg_out, b_reg_out, mar_out_w, mdr_out_w, num_shift_out, shifter_out, ch_output , 
@@ -51,6 +52,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	
 	//Cache Outputs
 	output [7:0] mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7;
+	output [7:0] mem8, mem9, mem10, mem11, mem12, mem13, mem14, mem15;
 	output [7:0] c_data0, c_data1, c_data2, c_data3;
 	output [7:0] c_addr0, c_addr1, c_addr2, c_addr3;
 	output [1:0] c_hit, c_LRU;
@@ -89,13 +91,13 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	
 	//MHVPIS Wire
 	wire [3:0] itr_in, itr_mask;
-	wire itr_en, i_pending;
+	wire itr_en, i_pending, itr_clr;
 	wire [7:0] itr_pc_addr;
 	assign itr_en = ctrl0[8];
 	assign itr_in[0] = ccr_Z;
 	assign itr_in[1] = ccr_V;
 	assign itr_in[2] = 1'b0;
-	assign itr_in[3] = 1'b0;
+	assign itr_in[3] = in_dev_hs;
 	
 	//Instruction Registers
 	wire [7:0] ir1_0_in, ir1_0_out, ir0_0_in, ir0_0_out;
@@ -133,6 +135,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire ch_en, ch_rw, ch_hit;
 	wire [1:0] curr_hit, ch_LRU;
 	wire [7:0] ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7;
+	wire [7:0] ram8, ram9, ram10, ram11, ram12, ram13, ram14, ram15;
 	wire cache_target_rw;
 	wire [7:0] ch_target_data_wire, ch_ram_data, ch_ram_addr;
 	wire [3:0] ch_state_w;
@@ -204,7 +207,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 				
 	//MHVPIS
 	//MHVPIS(g_clk, itr_g_clr, itr_in, mask_in, itr_en, i_pending, PC_out);	
-	MHVPIS ITR_SYSTEM(g_clk, g_clr, itr_in, itr_mask, itr_en, i_pending, itr_pc_addr);
+	MHVPIS ITR_SYSTEM(g_clk, itr_clr, itr_in, itr_mask, itr_en, i_pending, itr_pc_addr);
 	
 //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////  Functional Units  //////////////////////////////////////
@@ -222,7 +225,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	cache DATA_CACHE(g_clk, g_clr, ch_en, ch_rw, mar_out, mdr_out, cache_out, ch_hit, 
 					ch_addr0, ch_addr1, ch_addr2, ch_addr3, 
 					ch_data0, ch_data1, ch_data2, ch_data3, 
-					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, ch_LRU, curr_hit, cache_target_rw, ch_target_data_wire, ch_state_w, ch_ram_data, ch_ram_addr);
+					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, ram8, ram9, ram10, ram11, ram12, ram13, ram14, ram15,
+					ch_LRU, curr_hit, cache_target_rw, ch_target_data_wire, ch_state_w, ch_ram_data, ch_ram_addr);
 	
 	//Assign Outputs to wires
 	assign mem0 = ram0;
@@ -233,6 +237,14 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign mem5 = ram5;
 	assign mem6 = ram6;
 	assign mem7 = ram7;
+	assign mem8 = ram8;
+	assign mem9 = ram9;
+	assign mem10 = ram10;
+	assign mem11 = ram11;
+	assign mem12 = ram12;
+	assign mem13 = ram13;
+	assign mem14 = ram14;
+	assign mem15 = ram15;
 	assign c_data0 = ch_data0;
 	assign c_data1 = ch_data1;
 	assign c_data2 = ch_data2;

@@ -18,6 +18,14 @@ entity processor is
         mem5            : out    vl_logic_vector(7 downto 0);
         mem6            : out    vl_logic_vector(7 downto 0);
         mem7            : out    vl_logic_vector(7 downto 0);
+        mem8            : out    vl_logic_vector(7 downto 0);
+        mem9            : out    vl_logic_vector(7 downto 0);
+        mem10           : out    vl_logic_vector(7 downto 0);
+        mem11           : out    vl_logic_vector(7 downto 0);
+        mem12           : out    vl_logic_vector(7 downto 0);
+        mem13           : out    vl_logic_vector(7 downto 0);
+        mem14           : out    vl_logic_vector(7 downto 0);
+        mem15           : out    vl_logic_vector(7 downto 0);
         c_data0         : out    vl_logic_vector(7 downto 0);
         c_data1         : out    vl_logic_vector(7 downto 0);
         c_data2         : out    vl_logic_vector(7 downto 0);

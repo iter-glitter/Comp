@@ -45,6 +45,14 @@ module processor_test;
 	wire [7:0] mem5;
 	wire [7:0] mem6;
 	wire [7:0] mem7;
+	wire [7:0] mem8;
+	wire [7:0] mem9;
+	wire [7:0] mem10;
+	wire [7:0] mem11;
+	wire [7:0] mem12;
+	wire [7:0] mem13;
+	wire [7:0] mem14;
+	wire [7:0] mem15;
 	wire [7:0] c_data0;
 	wire [7:0] c_data1;
 	wire [7:0] c_data2;
@@ -99,6 +107,14 @@ module processor_test;
 		.mem5(mem5), 
 		.mem6(mem6), 
 		.mem7(mem7), 
+		.mem8(mem8), 
+		.mem9(mem9), 
+		.mem10(mem10), 
+		.mem11(mem11), 
+		.mem12(mem12), 
+		.mem13(mem13), 
+		.mem14(mem14), 
+		.mem15(mem15), 
 		.c_data0(c_data0), 
 		.c_data1(c_data1), 
 		.c_data2(c_data2), 
