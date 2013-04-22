@@ -92,10 +92,10 @@
 # Top level modules:
 # 	ld_st_reg
 # Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
-# -- Compiling module iramFib
+# -- Compiling module iramP1
 # 
 # Top level modules:
-# 	iramFib
+# 	iramP1
 # Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
 # -- Compiling module cache
 # 
@@ -124,7 +124,7 @@
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.processor_test glbl 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
-# ** Note: (vopt-143) Recognized 1 FSM in module "stage1(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "stage0(fast)".
 # 
 # Loading work.processor_test(fast)
 # Loading work.processor(fast)
@@ -144,7 +144,7 @@
 # Loading work.stack(fast)
 # Loading work.LdStr_shifter(fast)
 # Loading work.ld_st_reg(fast)
-# Loading work.iramFib(fast)
+# Loading work.iramP1(fast)
 # Loading work.mux_3_1(fast)
 # Loading work.mux_5_1(fast)
 # Loading work.glbl(fast)
@@ -419,10 +419,10 @@
 # 
 #           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 2348
 # 
-#           Attempting to use alternate WLF file "./wlftwtex7f".
+#           Attempting to use alternate WLF file "./wlftsgqsei".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftwtex7f
+#           Using alternate file: ./wlftsgqsei
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
@@ -446,7 +446,7 @@ restart
 # Loading work.stack(fast)
 # Loading work.LdStr_shifter(fast)
 # Loading work.ld_st_reg(fast)
-# Loading work.iramFib(fast)
+# Loading work.iramP1(fast)
 # Loading work.mux_3_1(fast)
 # Loading work.mux_5_1(fast)
 # Loading work.glbl(fast)
@@ -718,9 +718,3 @@ restart
 # 
 #         Region: /processor_test/uut/DATA_CACHE
 run
-run
-run
-run
-run
-run
-# Causality operation skipped due to absense of debug database file

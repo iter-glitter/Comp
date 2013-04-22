@@ -79,8 +79,12 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 	parameter BEQ = 3'b000; //BRA - If Equal
 	parameter BNE = 3'b001; //BRA - If Not Equal
 	
+	//Branch Wait Flag
+	reg [2:0] bra_loop;
+	
 	initial begin
 		pc_out <= 8'b00000000;
+		bra_loop <= 3'b000;
 	end
 	
 	always @ (posedge clk) begin
@@ -116,11 +120,26 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 							stage0 <= T8;					//Wait for stage1 Handshake
 						end
 					end
-			T9: if(ccr_z==1'b1) begin stage0 <= T10; end 	//Branch
-				else begin stage0 <= T1; end						
+			T9: if(bra_loop==3'b001) begin
+					if(ccr_z==1'b1) begin stage0 <= T10; end 	//Branch
+					else begin stage0 <= T1; end
+					bra_loop <= 3'b000;
+				 end else begin 
+					if(ccr_z==1'b1) begin stage0 <= T10; end 	//Branch
+					else begin stage0 <= T9; end
+					bra_loop <= (bra_loop + 1);
+				 end
+				 
 			T10: stage0 <= T1; 		
-			T11: if(ccr_z==1'b0) begin stage0 <= T10; end //Branch
-				else begin stage0 <= T1; end
+			T11:if(bra_loop==3'b001) begin 
+					if(ccr_z==1'b0) begin stage0 <= T10; end //Branch
+					else begin stage0 <= T1; end
+					bra_loop <= 3'b000;
+				 end else begin 
+					if(ccr_z==1'b1) begin stage0 <= T1; end //Branch
+					else begin stage0 <= T11; end
+					bra_loop <= (bra_loop + 1);
+				end
 			T12: stage0 <= T10;
 			T13: stage0 <= T7;
 			T14: stage0 <= T1;

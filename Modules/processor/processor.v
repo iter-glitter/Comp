@@ -292,8 +292,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 //////////////////////////////////////////////////////////////////////////////////
 	//module ram(g_clk, g_clr, enab, rw, Addr, data_out);
 	//iram iRAM(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
-	//iramP1 iRAMP1(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
-	iramFib iRAMFib(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	iramP1 iRAMP1(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	//iramFib iRAMFib(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
 	
 	
 //////////////////////////////////////////////////////////////////////////////////
