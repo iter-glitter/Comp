@@ -3,10 +3,29 @@
 //	
 //	Fibonacci Sequence test program
 //		Program solves for the first 10 fib numbers and stores them into memory
-//	
+//		fib_n = fib_n-1 + fib_n-2	
+//
 //	Requirements:
 //		Data Ram memory[0]=0 and memory[1]=1;
 //
 
-LOAD $ 0
-STOR $ 1
+LOAD # 2
+STOR $ 10 // index pointer stored in dmem[10]
+LDA # 10 // comparitor, n = 10
+
+SUB # 2 // the n-2 index
+STOR $ 11 // fib_n-2 index
+add # 1
+stor $ 12 // fib_n-1
+
+LOAD ($) 11 // fib_n-2 in ACC
+ADD ($) 12 // ACC = fib_n = fib_n-2 + fib_n-1
+stor ($) 10 // fib_n stored at index n ~ mem[n]
+
+LOAD $ 10
+ADD # 1
+STOR $ 10 // index pointer has now been incremented
+
+BRA != 3 // Brance to iRam[3] (4th instruction) if dmem[10] != REG_A
+
+//next try to use the OUTPUT command and output last fib number calculated?

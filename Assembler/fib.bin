@@ -1,0 +1,14 @@
+memory[0] = 16'b0101001000000010; // LOAD # 2
+memory[1] = 16'b0101100000001010; // STOR $ 10 // index pointer stored in dmem[10]
+memory[2] = 16'b1000101000001010; // LDA # 10 // comparitor, n = 10
+memory[3] = 16'b0000101000000010; // SUB # 2 // the n-2 index
+memory[4] = 16'b0101100000001011; // STOR $ 11 // fib_n-2 index
+memory[5] = 16'b0000001000000001; // add # 1
+memory[6] = 16'b0101100000001100; // stor $ 12 // fib_n-1
+memory[7] = 16'b0101000100001011; // LOAD ($) 11 // fib_n-2 in ACC
+memory[8] = 16'b0000000100001100; // ADD ($) 12 // ACC = fib_n = fib_n-2 + fib_n-1
+memory[9] = 16'b0101100100001010; // stor ($) 10 // fib_n stored at index n ~ mem[n]
+memory[10] = 16'b0101000000001010; // LOAD $ 10
+memory[11] = 16'b0000001000000001; // ADD # 1
+memory[12] = 16'b0101100000001010; // STOR $ 10 // index pointer has now been incremented
+memory[13] = 16'b0011000100000011; // BRA != 3 // Brance to iRam[3] (4th instruction) if dmem[10] != REG_A
