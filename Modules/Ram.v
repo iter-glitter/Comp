@@ -61,8 +61,8 @@ module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5
 	assign mem7 = memory[7];
 	
 	initial begin
-		memory[0] = 8'b00001111;
-		memory[1] = 8'b00111111;
+		memory[0] = 8'b00000000;
+		memory[1] = 8'b00000001;
 		memory[2] = 8'b01111111;
 		memory[3] = 8'b11101111;
 		memory[4] = 8'b00011000;

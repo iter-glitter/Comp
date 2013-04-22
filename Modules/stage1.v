@@ -271,7 +271,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 							endcase
 							ch_hit_loop <= 1'b0;
 						end else	begin				//HANDLE MISS
-							if(ch_miss_loop==5'b01000) begin
+							if(ch_miss_loop==5'b01011) begin
 								case(instr[7:3])
 									opSTOR: stage1 <= T55;
 									opSTA: stage1 <= T55;
@@ -315,7 +315,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 							stage1 <= T7;
 							ch_hit_loop <= 1'b0;
 						end else	begin				//HANDLE MISS
-							if(ch_miss_loop==5'b01000) begin
+							if(ch_miss_loop==5'b01010) begin
 								ch_miss_loop <= 5'b00000;
 								ch_hit_loop <= 1'b0;
 								stage1 <= T7;
@@ -530,7 +530,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 							endcase
 							ch_hit_loop <= 1'b0;
 						end else	begin				//HANDLE MISS
-							if(ch_miss_loop==5'b01000) begin
+							if(ch_miss_loop==5'b01011) begin
 								case(instr[7:3])
 									opSTOR: stage1 <= T55;
 									opSTA: stage1 <= T55;

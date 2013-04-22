@@ -96,22 +96,17 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 			T3: stage0 <= T4;
 			T4: stage0 <= T5;
 			T5: stage0 <= T6; 
-			T6: stage0 <= T7;
-			T7: 	if(instr[7:3]==BRA) begin stage0 <= T8; end
-					else if(instr[7:3]==JMP) begin stage0 <= T10; end
-					else if(instr[7:3]==BSR) begin stage0 <= T12; end
-					else if(instr[7:3]==RTS) begin stage0 <= T13; end
-					else if(instr[7:3]==RTI) begin stage0 <= T13; end
-					else if(instr[7:3]==LMSK) begin stage0 <= T14; end
-					else begin 
-						if(stg1_state==1'b1) begin 	//Stage1 Handshake				
-							stage0 <= T1; 					//Restart Fetch Cycle
-						end
-						else begin
-							stage0 <= T7;					//Wait for Stage1 Handshake
-						end
-					end
-			T8:	begin
+			T6: if(instr[7:3]==BRA) begin stage0 <= T8; end
+				 else if(instr[7:3]==JMP) begin stage0 <= T10; end
+				 else if(instr[7:3]==BSR) begin stage0 <= T12; end
+				 else if(instr[7:3]==RTS) begin stage0 <= T13; end
+				 else if(instr[7:3]==RTI) begin stage0 <= T13; end
+				 else if(instr[7:3]==LMSK) begin stage0 <= T14; end
+				 else begin stage0 <= T7; end
+			T7: if(stg1_state==1'b1) begin 	//Stage1 Handshake				
+						stage0 <= T1; 				//Restart Fetch Cycle
+				 end else begin stage0 <= T7; end	//Wait for Stage1 Handshake
+			T8: begin
 						//stg0_state <= 1'b1;				//Start Stage1
 						if(stg1_state==1'b1) begin		//Continue Branch
 							if(instr[2:0]==BEQ) begin stage0 <= T9; end

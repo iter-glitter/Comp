@@ -78,6 +78,8 @@ module processor_test;
 	wire ch_target_rw;
 	wire [7:0] ch_target_data;
 	wire [3:0] ch_state;
+	wire [7:0] ram_data_in;
+	wire [7:0] ram_addr_in;
 
 	// Instantiate the Unit Under Test (UUT)
 	processor uut (
@@ -129,7 +131,9 @@ module processor_test;
 		.ch_output(ch_output),
 		.ch_target_rw(ch_target_rw),
 		.ch_target_data(ch_target_data),
-		.ch_state(ch_state)
+		.ch_state(ch_state),
+		.ram_data_in(ram_data_in),
+		.ram_addr_in(ram_addr_in)
 	);
 
 	initial begin

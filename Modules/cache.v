@@ -36,7 +36,8 @@
 					cache_hit, target_addr, target_data, target_rw_out, c_addrIN_out, c_dataIN_out);*/
 module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, 
 					addr0, addr1, addr2, addr3, data0, data1, data2, data3, 
-					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, curr_LRU, cache_hit, target_rw_out, c_dataIN_out, state);
+					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, 
+					curr_LRU, cache_hit, target_rw_out, c_dataIN_out, state, ram_data_in_monitor, ram_addr_in_monitor);
 					
 	
 	//Specify address and data width
@@ -101,6 +102,7 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	integer i;
 	output reg [3:0] state; 		//Current State Register
 	
+	reg [d_width-1:0] ram_data_in_w;
 	//Assign Cache Data Monitor Outputs
 	assign data0 = cache_data[0];
 	assign data1 = cache_data[1];
@@ -121,7 +123,14 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	reg ram_clr, ram_rw, ram_enab;
 	reg [a_width-1:0] ram_addr;
 	reg [d_width-1:0] ram_data_in;
-	wire [d_width-1:0] ram_data_out;
+	
+	wire [d_width-1:0] ram_data_in_monitor_w, ram_addr_in_monitor_w;
+	assign ram_data_in_monitor_w = ram_data_in;
+	assign ram_addr_in_monitor_w = ram_addr;
+	output [d_width-1:0] ram_data_in_monitor;
+	output [a_width-1:0] ram_addr_in_monitor;
+	assign ram_data_in_monitor = ram_data_in_monitor_w;
+	assign ram_addr_in_monitor = ram_addr_in_monitor_w;
 	
 	wire [d_width-1:0] ram_mem0;
 	wire [d_width-1:0] ram_mem1;
@@ -266,6 +275,8 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 			begin
 				ram_enab <= 1'b1; //enable ram
 				ram_rw <= 1'b1; //write
+				ram_addr <= cache_addr[curr_LRU];
+				ram_data_in <= cache_data[curr_LRU];
 			end
 			3: //Miss - Write LRU entry to RAM
 			begin

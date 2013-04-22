@@ -14,7 +14,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					mem7, c_data0, c_data1, c_data2, c_data3, c_addr0, c_addr1, c_addr2,
 					c_addr3, c_hit, c_LRU, cache_hit, C, V, Z, stage0, stage1,
 					stage0_rdy, stage1_rdy, stg1_instr, stg0_instr, pc_output, acc_reg_out, alu_out_w,
-					a_reg_out, b_reg_out, mar_out_w, mdr_out_w, num_shift_out, shifter_out, ch_output , ch_target_rw, ch_target_data, ch_state);
+					a_reg_out, b_reg_out, mar_out_w, mdr_out_w, num_shift_out, shifter_out, ch_output , 
+					ch_target_rw, ch_target_data, ch_state, ram_data_in, ram_addr_in);
 	
 	//Define Inputs
 	input g_clk;					//Global Clock
@@ -45,6 +46,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output [7:0] ch_target_data;
 	output ch_target_rw;
 	output [3:0] ch_state;
+	output [7:0] ram_data_in;
+	output [7:0] ram_addr_in;
 	
 	//Cache Outputs
 	output [7:0] mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7;
@@ -131,7 +134,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [1:0] curr_hit, ch_LRU;
 	wire [7:0] ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7;
 	wire cache_target_rw;
-	wire [7:0] ch_target_data_wire;
+	wire [7:0] ch_target_data_wire, ch_ram_data, ch_ram_addr;
 	wire [3:0] ch_state_w;
 	assign ch_en = ctrl1[22];
 	assign ch_rw = ctrl1[21];
@@ -139,6 +142,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign ch_target_rw = cache_target_rw;
 	assign ch_target_data = ch_target_data_wire;
 	assign ch_state = ch_state_w;
+	assign ram_data_in = ch_ram_data;
+	assign ram_addr_in = ch_ram_addr;
 	
 	//Program Counter Wire
 	wire [1:0] pc_ctrl;
@@ -217,7 +222,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	cache DATA_CACHE(g_clk, g_clr, ch_en, ch_rw, mar_out, mdr_out, cache_out, ch_hit, 
 					ch_addr0, ch_addr1, ch_addr2, ch_addr3, 
 					ch_data0, ch_data1, ch_data2, ch_data3, 
-					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, ch_LRU, curr_hit, cache_target_rw, ch_target_data_wire, ch_state_w);
+					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, ch_LRU, curr_hit, cache_target_rw, ch_target_data_wire, ch_state_w, ch_ram_data, ch_ram_addr);
 	
 	//Assign Outputs to wires
 	assign mem0 = ram0;
@@ -272,7 +277,9 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 ////////////////////////  Instruction Memory  ////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 	//module ram(g_clk, g_clr, enab, rw, Addr, data_out);
-	iram iRAM(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	//iram iRAM(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	//iramP1 iRAMP1(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	iramFib iRAMFib(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
 	
 	
 //////////////////////////////////////////////////////////////////////////////////
