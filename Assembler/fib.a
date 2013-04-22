@@ -29,4 +29,24 @@ STOR $ 10 // index pointer has now been incremented
 
 BRA != 3 // Brance to iRam[3] (4th instruction) if dmem[10] != REG_A
 
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
 //next try to use the OUTPUT command and output last fib number calculated?
