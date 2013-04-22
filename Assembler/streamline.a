@@ -1,3 +1,11 @@
+//
+//	Alex Hendren & Sean McFeely
+//	
+//	Streamline test program
+//		End result is value of 109 stored in Reg_B
+//
+//		Simulate for 6500ns to see entire program
+
 LOAD # 1 // load 1 into ACC
 ADD # 2
 STOR $ 5 // 3 stored in mem[5]
