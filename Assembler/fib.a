@@ -13,6 +13,7 @@ LOAD # 2
 STOR $ 10 // index pointer stored in dmem[10]
 LDA # 10 // comparitor, n = 10
 
+LOAD $ 10
 SUB # 2 // the n-2 index
 STOR $ 11 // fib_n-2 index
 add # 1
