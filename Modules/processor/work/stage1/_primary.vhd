@@ -196,7 +196,8 @@ entity stage1 is
         num_shift       : out    vl_logic_vector(2 downto 0);
         input_recv      : out    vl_logic;
         stage1          : out    vl_logic_vector(71 downto 0);
-        stg1_instr      : out    vl_logic_vector(7 downto 0)
+        stg1_instr      : out    vl_logic_vector(7 downto 0);
+        ch_miss_loop    : out    vl_logic_vector(4 downto 0)
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of T0 : constant is 1;

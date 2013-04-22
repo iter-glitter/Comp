@@ -60,6 +60,7 @@ entity processor is
         ch_target_data  : out    vl_logic_vector(7 downto 0);
         ch_state        : out    vl_logic_vector(3 downto 0);
         ram_data_in     : out    vl_logic_vector(7 downto 0);
-        ram_addr_in     : out    vl_logic_vector(7 downto 0)
+        ram_addr_in     : out    vl_logic_vector(7 downto 0);
+        ch_miss_loop    : out    vl_logic_vector(4 downto 0)
     );
 end processor;

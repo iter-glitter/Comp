@@ -131,6 +131,7 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	reg ram_clr, ram_rw, ram_enab;
 	reg [a_width-1:0] ram_addr;
 	reg [d_width-1:0] ram_data_in;
+	wire [d_width-1:0] ram_data_out;
 	
 	wire [d_width-1:0] ram_data_in_monitor_w, ram_addr_in_monitor_w;
 	assign ram_data_in_monitor_w = ram_data_in;

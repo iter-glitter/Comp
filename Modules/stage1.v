@@ -12,7 +12,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_recv, 
-				out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv, stage1, stg1_instr);
+				out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv, stage1, stg1_instr, ch_miss_loop);
 	//Inputs
 	input clk, clr;
 	input [7:0] ir_data;			//Contents of IR1_0 - Data Register
@@ -40,10 +40,8 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	reg stg1_rdy;
 	
 	//Cache Miss Loop
-	reg [4:0] ch_miss_loop;
+	output reg [4:0] ch_miss_loop;
 	reg ch_hit_loop;
-	reg [4:0] ch_miss_loop_ind;
-	reg ch_hit_loop_ind;
 	
 	//Stage 1 Instruciton IN - Output
 	output [7:0] stg1_instr;
@@ -270,6 +268,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 								default: stage1 <= T3; 
 							endcase
 							ch_hit_loop <= 1'b0;
+							ch_miss_loop <= 5'b00000;
 						end else	begin				//HANDLE MISS
 							if(ch_miss_loop==5'b01011) begin
 								case(instr[7:3])
@@ -310,22 +309,26 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 						opINPUT: stage1 <= T66;
 						default: stage1 <= T69; 
 					 endcase
-				T6: if(ch_hit_loop==1'b1) begin
-						if(cache_hit==1'b1) begin 	//Handle cache hit
-							stage1 <= T7;
-							ch_hit_loop <= 1'b0;
-						end else	begin				//HANDLE MISS
-							if(ch_miss_loop==5'b01010) begin
-								ch_miss_loop <= 5'b00000;
-								ch_hit_loop <= 1'b0;
+				T6: if(ch_hit_loop==1'b1) 
+						begin
+							if(cache_hit==1'b1) begin 	//Handle cache hit
 								stage1 <= T7;
+								ch_hit_loop <= 1'b0;
+								ch_miss_loop <= 5'b00000;
 							end
-							else begin
-								ch_miss_loop <= (ch_miss_loop + 1);
-								stage1 <= T6;
+							else begin				//HANDLE MISS
+								if(ch_miss_loop==5'b01011) begin
+									ch_miss_loop <= 5'b00000;
+									ch_hit_loop <= 1'b0;
+									stage1 <= T7;
+								end
+								else begin
+									ch_miss_loop <= (ch_miss_loop + 1);
+									stage1 <= T6;
+								end
 							end
-						end
-					end else begin
+						end 
+					else begin
 						ch_hit_loop <= (ch_hit_loop + 1);
 						stage1 <= T6; 
 					end	
@@ -529,6 +532,7 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 								default: stage1 <= T3; 
 							endcase
 							ch_hit_loop <= 1'b0;
+							ch_miss_loop <= 5'b00000;
 						end else	begin				//HANDLE MISS
 							if(ch_miss_loop==5'b01011) begin
 								case(instr[7:3])

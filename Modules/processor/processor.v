@@ -16,7 +16,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					c_addr3, c_hit, c_LRU, cache_hit, C, V, Z, stage0, stage1,
 					stage0_rdy, stage1_rdy, stg1_instr, stg0_instr, pc_output, acc_reg_out, alu_out_w,
 					a_reg_out, b_reg_out, mar_out_w, mdr_out_w, num_shift_out, shifter_out, ch_output , 
-					ch_target_rw, ch_target_data, ch_state, ram_data_in, ram_addr_in);
+					ch_target_rw, ch_target_data, ch_state, ram_data_in, ram_addr_in, ch_miss_loop);
 	
 	//Define Inputs
 	input g_clk;					//Global Clock
@@ -49,6 +49,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output [3:0] ch_state;
 	output [7:0] ram_data_in;
 	output [7:0] ram_addr_in;
+	output [4:0] ch_miss_loop;
 	
 	//Cache Outputs
 	output [7:0] mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7;
@@ -78,7 +79,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	//Controller Wires
 	wire stg1_state, stg0_state, stg1_state2;
 	wire [7:0] stg0_pc;
-	
+	wire [4:0] ch_miss_loop_wire;
+	assign ch_miss_loop = ch_miss_loop_wire;
 	
 	//Instruction Memory Wire
 	wire imem_rw, imem_en;
@@ -201,7 +203,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 				//out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv);
 	stage1 controller1(g_clk ,g_clr, ir0_1_out, ir1_1_out, mdr_out, stg0_state, 
 							in_dev_hs, out_dev_ack, out_dev_hs, ch_hit, stg1_state, 
-							ctrl1, num_shift, in_dev_ack, state1_w, stg1_instr_w);
+							ctrl1, num_shift, in_dev_ack, state1_w, stg1_instr_w, ch_miss_loop_wire);
 	assign stage1_rdy = stg1_state;
 	assign stage0_rdy = stg0_state;
 				
