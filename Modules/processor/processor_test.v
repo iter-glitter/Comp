@@ -60,7 +60,7 @@ module processor_test;
 	wire V;
 	wire Z;
 	wire [14:0] stage0;
-	wire [64:0] stage1;
+	wire [71:0] stage1;
 	wire stage0_rdy;
 	wire stage1_rdy;
 	wire [7:0] stg0_instr;
@@ -75,6 +75,9 @@ module processor_test;
 	wire [2:0] num_shift_out;
 	wire [7:0] shifter_out;
 	wire [7:0] ch_output;
+	wire ch_target_rw;
+	wire [7:0] ch_target_data;
+	wire [3:0] ch_state;
 
 	// Instantiate the Unit Under Test (UUT)
 	processor uut (
@@ -123,7 +126,10 @@ module processor_test;
 		.mdr_out_w(mdr_out_w),
 		.num_shift_out(num_shift_out),
 		.shifter_out(shifter_out),
-		.ch_output(ch_output)
+		.ch_output(ch_output),
+		.ch_target_rw(ch_target_rw),
+		.ch_target_data(ch_target_data),
+		.ch_state(ch_state)
 	);
 
 	initial begin

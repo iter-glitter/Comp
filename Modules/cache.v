@@ -36,7 +36,7 @@
 					cache_hit, target_addr, target_data, target_rw_out, c_addrIN_out, c_dataIN_out);*/
 module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out, 
 					addr0, addr1, addr2, addr3, data0, data1, data2, data3, 
-					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, curr_LRU, cache_hit);
+					ram0, ram1, ram2, ram3, ram4, ram5, ram6, ram7, curr_LRU, cache_hit, target_rw_out, c_dataIN_out, state);
 					
 	
 	//Specify address and data width
@@ -51,7 +51,7 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	output hit_out;
 	output reg [d_width-1:0] data_out;
 //	output [a_width:0] c_addrIN_out;
-//	output [d_width:0] c_dataIN_out;
+	output [d_width:0] c_dataIN_out;
 	output [a_width-1:0] addr0;
 	output [a_width-1:0] addr1;
 	output [a_width-1:0] addr2;
@@ -90,16 +90,16 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	wire [7:0] c_addrIN_wire;
 	wire [7:0] c_dataIN_wire;
 //	assign c_addrIN_wire = Addr;
-//	assign c_dataIN_wire = data_in;
+	assign c_dataIN_wire = data_in;
 //	assign c_addrIN_out = c_addrIN_wire;
-//	assign c_dataIN_out = c_dataIN_wire;
-	//output target_rw_out;
+	assign c_dataIN_out = c_dataIN_wire;
+	output target_rw_out;
 	wire target_rw_wire;
 	reg target_rw;	//Tartget Read or Write Value to save on miss
-	//assign target_rw_wire = target_rw;
-	//assign target_rw_out = target_rw_wire;
+	assign target_rw_wire = target_rw;
+	assign target_rw_out = target_rw_wire;
 	integer i;
-	reg [3:0] state; 		//Current State Register
+	output reg [3:0] state; 		//Current State Register
 	
 	//Assign Cache Data Monitor Outputs
 	assign data0 = cache_data[0];
@@ -147,6 +147,7 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 	initial begin
 		curr_LRU <= 2'b00;
 		hit <= 1'b0;
+		cache_hit <= 2'b11;
 		ram_clr <= 1'b1;
 	end
 	
@@ -288,7 +289,7 @@ module cache(clk,clr,enab,rw,Addr,data_in,data_out, hit_out,
 			end
 			7: //Miss WRITE - Fill CURR LRU
 			begin
-				cache_data[curr_LRU] <= target_data;
+				cache_data[curr_LRU] <= data_in;
 				cache_addr[curr_LRU] <= target_addr;
 			end
 			8: //Miss - Update Cache Access Records
