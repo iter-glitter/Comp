@@ -99,10 +99,11 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [3:0] itr_in, itr_mask, itr_out, itr_mask_out;
 	wire itr_en, i_pending, itr_clr;
 	wire [7:0] itr_pc_addr;
+	wire v_state;
 	assign itr_clr = ctrl0[9];
 	assign itr_en = ctrl0[8];
 	assign itr_in[0] = ccr_Z;
-	assign itr_in[1] = ccr_V;
+	assign itr_in[1] = v_state;
 	assign itr_in[2] = 1'b0;
 	assign itr_in[3] = in_dev_hs;
 	assign itr_pend = i_pending;
@@ -180,9 +181,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign alu_ctrl = ctrl1[32:30];
 	wire alu_cin;
 	assign alu_cin = ctrl1[29];
-	wire [7:0] ALU_in1, alu_out, alu_zero_wire;
+	wire [7:0] ALU_in1, alu_out;
 	assign alu_out_w = alu_out;
-	assign alu_zero_wire = 8'b00000000;
 	
 	//Data Register Wires
 	wire [7:0] mdr_in, mdr_out, mar_in, mar_out, acc_s_reg_out;
@@ -207,10 +207,11 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 
 	//Controllers
 	wire [7:0] ctrl0_pc;
-	//stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state, 
-	//				stg0_state, ctrl, pc_out, itr_mask, stage0, stg0_instr);
-	stage0 controller0(g_clk,g_clr,ir0_0_out,ir1_0_out,i_pending,ccr_Z,stg1_state, 
-							stg0_state,	ctrl0, stg0_pc, itr_mask, state0_w, stg0_instr_w);
+	//stage0(clk, clr, instr, data_in, i_pending, ccr_z, ccr_v, stg1_state, 
+	//				stg0_state, ctrl, pc_out, itr_mask, stage0, stg0_instr, v_state);
+	stage0 controller0(g_clk,g_clr,ir0_0_out,ir1_0_out,i_pending,ccr_Z,
+							ccr_V, stg1_state, stg0_state, ctrl0, stg0_pc, 
+							itr_mask, state0_w, stg0_instr_w, v_state);
 	//stage1(g_clk, g_clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_recv, 
 				//out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv);
 	stage1 controller1(g_clk ,g_clr, ir0_1_out, ir1_1_out, mdr_out, stg0_state, 

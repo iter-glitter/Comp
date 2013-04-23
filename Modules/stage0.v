@@ -11,11 +11,12 @@
 // accumulator processor. 
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state, 
-					stg0_state, ctrl, pc_out, itr_mask, stage0, stg0_instr);
+module stage0(clk, clr, instr, data_in, i_pending, ccr_z, ccr_v, stg1_state, 
+					stg0_state, ctrl, pc_out, itr_mask, stage0, stg0_instr, v_state);
 	//Inputs
 	input clk, clr;
 	input ccr_z;				//Condition Code Register Z - Zero Flag (For Branch)
+	input ccr_v;				//Identify overflow and hold value while spinning
 	input i_pending;			//Pending interrupt signal sent from MHVPIS
 	//input [7:0] data;			//Contents of IR0_0 - Data Register
 	input [7:0] instr;		//Contents of IR0_0 - Instruction Register
@@ -30,6 +31,7 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 	output reg [15:0] stage0; 	//Current Controller state
 	output [7:0] stg0_instr;
 	output reg [3:0] itr_mask;	//Output ITR mask
+	output reg v_state;
 	
 	wire [7:0] stg0_instr_w;
 	assign stg0_instr_w = instr;
@@ -93,6 +95,7 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 		bra_loop <= 3'b000;
 		itr_state <= 1'b0;
 		itr_pc_loop <= 1'b0;
+		v_state <= 1'b0;
 	end
 	
 	always @ (posedge clk) begin
@@ -125,9 +128,12 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 				 else if(instr[7:3]==LMSK) begin stage0 <= T14; end
 				 else begin stage0 <= T7; end
 			T6: stage0 <= T1;
-			T7: if(stg1_state==1'b1) begin 	//Stage1 Handshake				
+			T7: begin 
+					 if(stg1_state==1'b1) begin 	//Stage1 Handshake				
 						stage0 <= T6; 				//Restart Fetch Cycle
-				 end else begin stage0 <= T7; end	//Wait for Stage1 Handshake
+					 end else begin stage0 <= T7; end	//Wait for Stage1 Handshake
+					 if(ccr_v==1'b1) begin v_state <= 1'b1; end
+				 end
 			T8: begin
 						//stg0_state <= 1'b1;				//Start Stage1
 						if(stg1_state==1'b1) begin		//Continue Branch
@@ -161,6 +167,7 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 			T12: stage0 <= T10;
 			T13: if(instr[7:3]==RTI) begin
 					itr_state <= 1'b0;
+					v_state <= 1'b0;
 					stage0 <= T15;
 				  end else begin 
 					stage0 <= T15;

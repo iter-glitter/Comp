@@ -50,13 +50,15 @@ entity stage0 is
         data_in         : in     vl_logic_vector(7 downto 0);
         i_pending       : in     vl_logic;
         ccr_z           : in     vl_logic;
+        ccr_v           : in     vl_logic;
         stg1_state      : in     vl_logic;
         stg0_state      : out    vl_logic;
         ctrl            : out    vl_logic_vector(20 downto 0);
         pc_out          : out    vl_logic_vector(7 downto 0);
         itr_mask        : out    vl_logic_vector(3 downto 0);
         stage0          : out    vl_logic_vector(15 downto 0);
-        stg0_instr      : out    vl_logic_vector(7 downto 0)
+        stg0_instr      : out    vl_logic_vector(7 downto 0);
+        v_state         : out    vl_logic
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of T0 : constant is 1;

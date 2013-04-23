@@ -5,7 +5,7 @@
 // EE480 - Heath - Spring 2013
 // Accumulator Based Processor
 //
-// 4x1 MUX operation -
+// 5x1 MUX operation -
 //
 //	SELECT | OUTPUT
 //   000   |   i0

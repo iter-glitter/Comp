@@ -1,6 +1,6 @@
 library verilog;
 use verilog.vl_types.all;
-entity iramP1 is
+entity iramITR is
     generic(
         d_width         : integer := 16;
         a_width         : integer := 8
@@ -16,4 +16,4 @@ entity iramP1 is
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of d_width : constant is 1;
     attribute mti_svvh_generic_type of a_width : constant is 1;
-end iramP1;
+end iramITR;

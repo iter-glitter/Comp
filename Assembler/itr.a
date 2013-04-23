@@ -1,7 +1,28 @@
-LDA # 3
-STA $ 5
-LOAD # 3
+LDA # 3 	// A = 3
+STA $ 5 	// mem[5] = 3
+LOAD # 3 	// ACC = 3
+// MHVPIS Enabled for Zero Detection
 LMSK 1
-SUB $ 5
+SUB $ 5		// ACC - 3 = 0
+// NOP (Interrupted by ISR - itr1 Executes)
+NOP	
+NOP
+ADD # 2		// ACC + 2 = 2
+ADD $ 5		// ACC + 3 = 5
+STOR $ 1 	// mem[1] = 5
+LOAD # 2 	// ACC = 2
+STOR $ 3 	// mem[3] = 2 @ 3270ns 
+
 NOP
 NOP
+NOP
+
+LOAD # 200
+STOR $ 3
+LMSK 2
+LOAD # 158
+ADD $ 3
+ADD $ 3
+NOP
+NOP
+LOAD # 4

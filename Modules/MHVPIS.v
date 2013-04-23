@@ -36,8 +36,8 @@ module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out, ITR_regi
 	
 	initial begin //define ISR Addresses
 		isr_addr1[7:0] = 8'b10010110; //ISR1 
-		isr_addr2[7:0] = 8'b11010111; //ISR2
-		isr_addr3[7:0] = 8'b11100110; //ISR3
+		isr_addr2[7:0] = 8'b10110100; //ISR2 180 - Handle Overflow
+		isr_addr3[7:0] = 8'b11010111; //ISR3 
 		isr_addr4[7:0] = 8'b01010110; //ISR4 150 - Handle Zero Output
 	end
 	

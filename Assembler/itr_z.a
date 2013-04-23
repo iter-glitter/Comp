@@ -2,5 +2,6 @@ NOP
 LDA # 111
 STA $ 6
 LOAD $ 6
+LMSK 0
 SUB # 5
 RTI

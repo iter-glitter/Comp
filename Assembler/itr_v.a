@@ -1,0 +1,10 @@
+NOP
+LDA # 6
+STA $ 15
+LDB # 2
+STB $16
+LOAD #0
+LMSK 0
+ADD $ 16
+ADD $ 15
+RTI
