@@ -1,0 +1,11 @@
+//
+//	Alex Hendren & Sean McFeely
+//	
+//	Interrupt Service Routine to handle illegal opcode
+//
+
+SHFT >> 1
+STOR $ 55
+LMSK 0
+LDA $ 8
+SUB # 3
