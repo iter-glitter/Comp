@@ -3,135 +3,38 @@ Xilinx Mapping Report File for Design 'processor'
 
 Design Information
 ------------------
-Command Line   : map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol
-high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
--pr off -x -lc off -power off -o processor_map.ncd processor.ngd processor.pcf 
-Target Device  : xc6slx45
-Target Package : fgg484
+Command Line   : map -intstyle ise -p xc7a8-csg324-2 -w -logic_opt off -ol high
+-t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -x -lc off
+-power off -o processor_map.ncd processor.ngd processor.pcf 
+Target Device  : xc7a8
+Target Package : csg324
 Target Speed   : -2
-Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Mon Apr 22 01:13:51 2013
-
-Interim Summary
----------------
-Slice Logic Utilization:
-  Number of Slice Registers:                 2,477 out of  54,576    4%
-    Number used as Flip Flops:               2,372
-    Number used as Latches:                    105
-    Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,521 out of  27,288    9%
-    Number used as logic:                    2,521 out of  27,288    9%
-      Number using O6 output only:           1,408
-      Number using O5 output only:               0
-      Number using O5 and O6:                1,113
-      Number used as ROM:                        0
-    Number used as Memory:                       0 out of   6,408    0%
-
-Slice Logic Distribution:
-  Nummber of MUXCYs used:                       56 out of  13,644    1%
-  Number of LUT Flip Flop pairs used:        2,662
-    Number with an unused Flip Flop:         1,226 out of   2,662   46%
-    Number with an unused LUT:                 141 out of   2,662    5%
-    Number of fully used LUT-FF pairs:       1,295 out of   2,662   48%
-    Number of unique control sets:              48
-    Number of slice register sites lost
-      to control set restrictions:             131 out of  54,576    1%
-
-  A LUT Flip Flop pair for this architecture represents one LUT paired with
-  one Flip Flop within a slice.  A control set is a unique combination of
-  clock, reset, set, and enable signals for a registered element.
-  The Slice Logic Distribution report is not meaningful if the design is
-  over-mapped for a non-slice resource or if Placement fails.
-
-IO Utilization:
-  Number of bonded IOBs:                       329 out of     316  104% (OVERMAPPED)
-    IOB Flip Flops:                              1
-    IOB Latches:                                77
-
-Specific Feature Utilization:
-  Number of RAMB16BWERs:                         0 out of     116    0%
-  Number of RAMB8BWERs:                          0 out of     232    0%
-  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
-  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
-  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
-    Number used as BUFGs:                        2
-    Number used as BUFGMUX:                      0
-  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
-  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
-  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
-  Number of OLOGIC2/OSERDES2s:                  78 out of     376   20%
-    Number used as OLOGIC2s:                    78
-    Number used as OSERDES2s:                    0
-  Number of BSCANs:                              0 out of       4    0%
-  Number of BUFHs:                               0 out of     256    0%
-  Number of BUFPLLs:                             0 out of       8    0%
-  Number of BUFPLL_MCBs:                         0 out of       4    0%
-  Number of DSP48A1s:                            0 out of      58    0%
-  Number of ICAPs:                               0 out of       1    0%
-  Number of MCBs:                                0 out of       2    0%
-  Number of PCILOGICSEs:                         0 out of       2    0%
-  Number of PLL_ADVs:                            0 out of       4    0%
-  Number of PMVs:                                0 out of       1    0%
-  Number of STARTUPs:                            0 out of       1    0%
-  Number of SUSPEND_SYNCs:                       0 out of       1    0%
-
-
-Mapping completed.
-See MAP report file "processor_map.mrp" for details.
-Problem encountered during the packing phase.
+Mapper Version : artix7 -- $Revision: 1.55 $
+Mapped Date    : Tue Apr 23 00:05:38 2013
 
 Design Summary
 --------------
-Number of errors   :   2
+Number of errors   :   1
 Number of warnings :   0
 
 Section 1 - Errors
 ------------------
-ERROR:Pack:2309 - Too many bonded comps of type "IOB" found to fit this device.
-ERROR:Map:237 - The design is too large to fit the device.  Please check the Design Summary section to see which resource requirement for
-   your design exceeds the resources available in the device. Note that the number of slices reported may not be reflected accurately as
-   their packing might not have been completed.
+ERROR:Security:11 - No 'xc7a8' feature version 2012.01 was available for 'ISE',
+ERROR:Map:258 - A problem was encountered attempting to get the license for this
+   architecture. 
 
 Section 2 - Warnings
 --------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network output_bus<7> has no load.
-INFO:LIT:395 - The above info message is repeated 7 more times for the following
-   (max. 5 shown):
-   output_bus<6>,
-   output_bus<5>,
-   output_bus<4>,
-   output_bus<3>,
-   output_bus<2>
-   To see the details of these info messages, please use the -detail switch.
-INFO:MapLib:562 - No environment variables are currently set.
-INFO:LIT:244 - All of the single ended outputs in this design are using slew
-   rate limited output drivers. The delay on speed critical single ended outputs
-   can be dramatically reduced by designating them as fast outputs.
-INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
-   0.000 to 85.000 Celsius)
-INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
-   1.260 Volts)
-
-Section 4 - Removed Logic Summary
----------------------------------
-   2 block(s) optimized away
-
-Section 5 - Removed Logic
--------------------------
-
-Optimized Block(s):
-TYPE 		BLOCK
-GND 		XST_GND
-VCC 		XST_VCC
-
-Section 12 - Configuration String Details
------------------------------------------
-Use the "-detail" map option to print out Configuration Strings
-
-Section 13 - Control Set Information
-------------------------------------
-Use the "-detail" map option to print out Control Set Information.
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2100@beagle.ecc.engr.uky.edu'.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
+'27000@beagle.ecc.engr.uky.edu;2100@beagle.ecc.engr.uky.edu'.
+INFO:Security:54 - 'xc7a8' is a Beta WebPack part.
+INFO:Security:54b - Beta part 'xc7a8' is not eligible for a WebPack license.
+INFO:Security:68a - user is Hendren, on host HENDRENDESKTOP.
