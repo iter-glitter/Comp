@@ -1,0 +1,16 @@
+//
+//	Alex Hendren & Sean McFeely
+//	
+//	Interrupt Service Routine to handle input
+//		Outputs parity of Input
+//		Input is even - output 0
+//		Input is off  = output 1	
+//
+
+INPUT $ 37
+LOAD $ 37
+AND # 1
+STOR $ 38
+OUTPUT $38
+LMSK 0
+RTI
