@@ -67,24 +67,24 @@ module iramSUB(clk, clr, enab, rw, Addr, data_out);
 		memory[2] = 16'b0101100000000010; // STOR $ 2 // mem[2] = 0
 		memory[3] = 16'b0101100000000011; // STOR $ 3 // mem[3] = 0
 		memory[4] = 16'b1000100000000101; // LDA $ 5 // A = n
-		memory[5] = 16'b0101000000000001; // LOAD $ 1 // Sub: Find_Cube starts here
-		memory[6] = 16'b0000000000000101; // ADD $ 5 // ACC = ACC+n
-		memory[7] = 16'b0101100000000001; // STOR $ 1
-		memory[8] = 16'b0101000000000010; // LOAD $ 2
-		memory[9] = 16'b0000001000000001; // ADD # 1
-		memory[10] = 16'b0101100000000010; // STOR $ 2
-		memory[11] = 16'b0011000100000101; // BRA != 5 // branch to 1st instr of Find_Cube
-		memory[12] = 16'b0101001000000000; // LOAD # 0
+		memory[5] = 16'b1010100000001000; // BSR 8
+		memory[6] = 16'b0111100000000000; // nop
+		memory[7] = 16'b0011100000000110; // JMP 6
+		memory[8] = 16'b0101000000000001; // LOAD $ 1 // Sub: Find_Cube starts here
+		memory[9] = 16'b0000000000000101; // ADD $ 5 // ACC = ACC+n
+		memory[10] = 16'b0101100000000001; // STOR $ 1
+		memory[11] = 16'b0101000000000010; // LOAD $ 2
+		memory[12] = 16'b0000001000000001; // ADD # 1
 		memory[13] = 16'b0101100000000010; // STOR $ 2
-		memory[14] = 16'b0101000000000011; // LOAD $ 3
-		memory[15] = 16'b0000001000000001; // ADD # 1
-		memory[16] = 16'b0101100000000011; // STOR $ 3
-		memory[17] = 16'b0011000000010011; // BRA = 19 // jump to RTS
-		memory[18] = 16'b1010100000000101; // BSR 5
-		memory[19] = 16'b0100000000000000; // RTS
-		memory[20] = 16'b0111100000000000; // nop
-		memory[21] = 16'b0011100000010100; // JMP 20
-		memory[22] = 16'b0000000000000000;
+		memory[14] = 16'b0011000100001000; // BRA != 8 // branch to 1st instr of Find_Cube
+		memory[15] = 16'b0101001000000000; // LOAD # 0
+		memory[16] = 16'b0101100000000010; // STOR $ 2
+		memory[17] = 16'b0101000000000011; // LOAD $ 3
+		memory[18] = 16'b0000001000000001; // ADD # 1
+		memory[19] = 16'b0101100000000011; // STOR $ 3
+		memory[20] = 16'b0011000000010110; // BRA = 22 // jump to RTS
+		memory[21] = 16'b1010100000001000; // BSR 8
+		memory[22] = 16'b0100000000000000; // RTS
 		memory[23] = 16'b0000000000000000;
 		memory[24] = 16'b0000000000000000;
 		memory[25] = 16'b0000000000000000;
@@ -328,24 +328,24 @@ module iramSUB(clk, clr, enab, rw, Addr, data_out);
 			memory[2] = 16'b0101100000000010; // STOR $ 2 // mem[2] = 0
 			memory[3] = 16'b0101100000000011; // STOR $ 3 // mem[3] = 0
 			memory[4] = 16'b1000100000000101; // LDA $ 5 // A = n
-			memory[5] = 16'b0101000000000001; // LOAD $ 1 // Sub: Find_Cube starts here
-			memory[6] = 16'b0000000000000101; // ADD $ 5 // ACC = ACC+n
-			memory[7] = 16'b0101100000000001; // STOR $ 1
-			memory[8] = 16'b0101000000000010; // LOAD $ 2
-			memory[9] = 16'b0000001000000001; // ADD # 1
-			memory[10] = 16'b0101100000000010; // STOR $ 2
-			memory[11] = 16'b0011000100000101; // BRA != 5 // branch to 1st instr of Find_Cube
-			memory[12] = 16'b0101001000000000; // LOAD # 0
+			memory[5] = 16'b1010100000001000; // BSR 8
+			memory[6] = 16'b0111100000000000; // nop
+			memory[7] = 16'b0011100000000110; // JMP 6
+			memory[8] = 16'b0101000000000001; // LOAD $ 1 // Sub: Find_Cube starts here
+			memory[9] = 16'b0000000000000101; // ADD $ 5 // ACC = ACC+n
+			memory[10] = 16'b0101100000000001; // STOR $ 1
+			memory[11] = 16'b0101000000000010; // LOAD $ 2
+			memory[12] = 16'b0000001000000001; // ADD # 1
 			memory[13] = 16'b0101100000000010; // STOR $ 2
-			memory[14] = 16'b0101000000000011; // LOAD $ 3
-			memory[15] = 16'b0000001000000001; // ADD # 1
-			memory[16] = 16'b0101100000000011; // STOR $ 3
-			memory[17] = 16'b0011000000010011; // BRA = 19 // jump to RTS
-			memory[18] = 16'b1010100000000101; // BSR 5
-			memory[19] = 16'b0100000000000000; // RTS
-			memory[20] = 16'b0111100000000000; // nop
-			memory[21] = 16'b0011100000010100; // JMP 20
-			memory[22] = 16'b0000000000000000;
+			memory[14] = 16'b0011000100001000; // BRA != 8 // branch to 1st instr of Find_Cube
+			memory[15] = 16'b0101001000000000; // LOAD # 0
+			memory[16] = 16'b0101100000000010; // STOR $ 2
+			memory[17] = 16'b0101000000000011; // LOAD $ 3
+			memory[18] = 16'b0000001000000001; // ADD # 1
+			memory[19] = 16'b0101100000000011; // STOR $ 3
+			memory[20] = 16'b0011000000010110; // BRA = 22 // jump to RTS
+			memory[21] = 16'b1010100000001000; // BSR 8
+			memory[22] = 16'b0100000000000000; // RTS
 			memory[23] = 16'b0000000000000000;
 			memory[24] = 16'b0000000000000000;
 			memory[25] = 16'b0000000000000000;
