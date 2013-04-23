@@ -84,8 +84,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	
 	//Instruction Memory Wire
 	wire imem_rw, imem_en;
-	assign imem_rw = ctrl0[10];
-	assign imem_en = ctrl0[9];
+	assign imem_rw = ctrl0[11];
+	assign imem_en = ctrl0[10];
 	wire [15:0] imem_out;
 	
 	//Condition Code Registers
@@ -95,6 +95,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [3:0] itr_in, itr_mask;
 	wire itr_en, i_pending, itr_clr;
 	wire [7:0] itr_pc_addr;
+	assign itr_clr = ctrl0[9];
 	assign itr_en = ctrl0[8];
 	assign itr_in[0] = ccr_Z;
 	assign itr_in[1] = ccr_V;
@@ -106,10 +107,10 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [7:0] ir1_1_out, ir0_1_out;
 	wire ir1_0_s, ir0_0_s, ir1_1_s, ir0_1_s;
 	wire ir1_0_c, ir0_0_c, ir1_1_c, ir0_1_c;
-	assign ir0_0_s = ctrl0[13];
-	assign ir0_0_c = ctrl0[14];
-	assign ir1_0_s = ctrl0[15];
-	assign ir1_0_c = ctrl0[16];
+	assign ir0_0_s = ctrl0[14];
+	assign ir0_0_c = ctrl0[15];
+	assign ir1_0_s = ctrl0[16];
+	assign ir1_0_c = ctrl0[17];
 	
 	assign ir0_1_s = ctrl1[18];
 	assign ir0_1_c = ctrl1[19];
@@ -152,7 +153,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	
 	//Program Counter Wire
 	wire [1:0] pc_ctrl;
-	assign pc_ctrl = ctrl0[18:17];
+	assign pc_ctrl = ctrl0[19:18];
 	wire [7:0] pc_in, pc_out;
 	assign pc_output = pc_out;
 	
@@ -182,8 +183,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign a_s   = ctrl1[33];
 	assign b_s   = ctrl1[25];
 	assign acc_s = ctrl1[32];
-	assign acc_s_reg_g_clr = ctrl0[12];
-	assign acc_s_reg_set = ctrl0[11];
+	assign acc_s_reg_g_clr = ctrl0[13];
+	assign acc_s_reg_set = ctrl0[12];
 	assign acc_reg_out = acc_out;
 	assign a_reg_out = a_out;
 	assign b_reg_out = b_out;
@@ -292,8 +293,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 //////////////////////////////////////////////////////////////////////////////////
 	//module ram(g_clk, g_clr, enab, rw, Addr, data_out);
 	//iram iRAM(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
-	iramP1 iRAMP1(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
-	//iramFib iRAMFib(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	//iramP1 iRAMP1(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	iramFib iRAMFib(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
 	
 	
 //////////////////////////////////////////////////////////////////////////////////

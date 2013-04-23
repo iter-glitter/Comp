@@ -92,10 +92,10 @@
 # Top level modules:
 # 	ld_st_reg
 # Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
-# -- Compiling module iramP1
+# -- Compiling module iramFib
 # 
 # Top level modules:
-# 	iramP1
+# 	iramFib
 # Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
 # -- Compiling module cache
 # 
@@ -124,8 +124,6 @@
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.processor_test glbl 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
-# ** Note: (vopt-143) Recognized 1 FSM in module "stage0(fast)".
-# 
 # Loading work.processor_test(fast)
 # Loading work.processor(fast)
 # Loading work.stage0(fast)
@@ -144,7 +142,7 @@
 # Loading work.stack(fast)
 # Loading work.LdStr_shifter(fast)
 # Loading work.ld_st_reg(fast)
-# Loading work.iramP1(fast)
+# Loading work.iramFib(fast)
 # Loading work.mux_3_1(fast)
 # Loading work.mux_5_1(fast)
 # Loading work.glbl(fast)
@@ -412,17 +410,17 @@
 # ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_4_1.v(16).
 # 
 #         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_4x1
-# ** Warning: (vsim-3015) processor.v(231): [PCDPC] - Port size (9 or 9) does not match connection size (8) for port 'c_dataIN_out'. The port definition is at: ../cache.v(40).
+# ** Warning: (vsim-3015) processor.v(232): [PCDPC] - Port size (9 or 9) does not match connection size (8) for port 'c_dataIN_out'. The port definition is at: ../cache.v(40).
 # 
 #         Region: /processor_test/uut/DATA_CACHE
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 2348
 # 
-#           Attempting to use alternate WLF file "./wlftsgqsei".
+#           Attempting to use alternate WLF file "./wlfthx3q06".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftsgqsei
+#           Using alternate file: ./wlfthx3q06
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
@@ -446,7 +444,7 @@ restart
 # Loading work.stack(fast)
 # Loading work.LdStr_shifter(fast)
 # Loading work.ld_st_reg(fast)
-# Loading work.iramP1(fast)
+# Loading work.iramFib(fast)
 # Loading work.mux_3_1(fast)
 # Loading work.mux_5_1(fast)
 # Loading work.glbl(fast)
@@ -714,7 +712,7 @@ restart
 # ** Warning: (vsim-3015) ../alu_bitslice.v(54): [PCDPC] - Port size (8 or 8) does not match connection size (1) for port 'out'. The port definition is at: ../mux_4_1.v(16).
 # 
 #         Region: /processor_test/uut/ALU/submit[7]/ALU_slice/MUX_4x1
-# ** Warning: (vsim-3015) processor.v(231): [PCDPC] - Port size (9 or 9) does not match connection size (8) for port 'c_dataIN_out'. The port definition is at: ../cache.v(40).
+# ** Warning: (vsim-3015) processor.v(232): [PCDPC] - Port size (9 or 9) does not match connection size (8) for port 'c_dataIN_out'. The port definition is at: ../cache.v(40).
 # 
 #         Region: /processor_test/uut/DATA_CACHE
 run
