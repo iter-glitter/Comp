@@ -11,23 +11,25 @@
 // accumulator processor. 
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state, 
-					stg0_state, ctrl, pc_out, stage0, stg0_instr);
+module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state, 
+					stg0_state, ctrl, pc_out, itr_mask, stage0, stg0_instr);
 	//Inputs
 	input clk, clr;
 	input ccr_z;				//Condition Code Register Z - Zero Flag (For Branch)
 	input i_pending;			//Pending interrupt signal sent from MHVPIS
-	//input [7:0] data;			//Contents of IR1_0 - Data Register
+	//input [7:0] data;			//Contents of IR0_0 - Data Register
 	input [7:0] instr;		//Contents of IR0_0 - Instruction Register
 	input stg1_state;			//Handshake control line - Stage 1 interface
+	input [7:0] data_in;		//Contents of IR1_0 - Operand Register
 	
 	//Outputs
 	output reg stg0_state;		//Handshake control line - Stage 0 (this unit) status
 	output reg [7:0] pc_out;	//Used to set PC address
 	output reg [20:0] ctrl; 	//21 bit control line - control and select points
 	
-	output reg [14:0] stage0; 			//Current Controller state
+	output reg [14:0] stage0; 	//Current Controller state
 	output [7:0] stg0_instr;
+	output reg [3:0] itr_mask;	//Output ITR mask
 	
 	wire [7:0] stg0_instr_w;
 	assign stg0_instr_w = instr;
@@ -51,13 +53,13 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 	parameter T14 = 15'b100000000000000;
 	
 	//Define Stage 0 control points
-	parameter CP0=21'b101101010011010110110;
+	parameter CP0=21'b101101010010010110110;
 	parameter CP1=21'b100101010011100110110;
 	parameter CP2=21'b100101010011100100100;
 	parameter CP3=21'b101101010011101110110;
 	parameter CP4=21'b100111110011100110110;
-	parameter CP5=21'b100101010010100110110;
-	parameter CP6=21'b110101010010100110110;
+	parameter CP5=21'b100101010011100110110;
+	parameter CP6=21'b110101010011100110110;
 	parameter CP7=21'b100101010011100110110;
 	parameter CP8=21'b100101010011100110110;
 	parameter CP9=21'b100101010011100110110;
@@ -66,7 +68,6 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 	parameter CP12=21'b100101010011100100100;
 	parameter CP13=21'b101101011011100101101;
 	parameter CP14=21'b100101010011100110110;
-
 	
 	//Define OPcodes that will be executed by this controller
 	parameter BRA  = 5'b00110;
@@ -80,12 +81,14 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 	parameter BEQ = 3'b000; //BRA - If Equal
 	parameter BNE = 3'b001; //BRA - If Not Equal
 	
-	//Branch Wait Flag
-	reg [2:0] bra_loop;
+	//Control Flags
+	reg [2:0] bra_loop; //Branch Wait Flag
+	reg itr_state; //1: Handling Interrupt 0: No ITR
 	
 	initial begin
 		pc_out <= 8'b00000000;
 		bra_loop <= 3'b000;
+		itr_state <= 1'b0;
 	end
 	
 	always @ (posedge clk) begin
@@ -95,9 +98,12 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 		else begin 
 			case(stage0) 
 			T0: stage0 <= T1;
-			T1: if(i_pending==1'b1) begin stage0 <= T2; end
+			T1: if((i_pending==1'b1)&&(itr_state==1'b0)) begin stage0 <= T2; end
 				 else begin stage0 <= T4; end
-			T2: stage0 <= T3;
+			T2: begin
+					stage0 <= T3;
+					itr_state <= 1'b1;
+				 end
 			T3: stage0 <= T4;
 			T4: stage0 <= T5;
 			T5: stage0 <= T6; 
@@ -143,7 +149,10 @@ module stage0(clk, clr, instr, i_pending, ccr_z, stg1_state,
 				end
 			T12: stage0 <= T10;
 			T13: stage0 <= T7;
-			T14: stage0 <= T1;
+			T14: begin 
+					stage0 <= T1;
+					if(instr[7:3]==LMSK) begin	itr_mask <= data_in[3:0]; end
+				  end
 			default: stage0 <= T1;
 			endcase 
 		end

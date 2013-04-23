@@ -82,9 +82,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366676266" xil_pn:in_ck="6203951357004475532" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366676266">
+    <transform xil_pn:end_ts="1366687850" xil_pn:in_ck="3224206941223292755" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366687850">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
       <outfile xil_pn:name="../MHVPIS.v"/>
       <outfile xil_pn:name="../Ram.v"/>
       <outfile xil_pn:name="../Shifter.v"/>
@@ -94,6 +96,7 @@
       <outfile xil_pn:name="../cache.v"/>
       <outfile xil_pn:name="../iRam.v"/>
       <outfile xil_pn:name="../iRamFib.v"/>
+      <outfile xil_pn:name="../iRamITR.v"/>
       <outfile xil_pn:name="../iRamP1.v"/>
       <outfile xil_pn:name="../ld_st_reg.v"/>
       <outfile xil_pn:name="../ld_st_reg_4bit.v"/>
@@ -109,11 +112,11 @@
       <outfile xil_pn:name="processor.v"/>
       <outfile xil_pn:name="processor_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1366670878" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7829342110755216662" xil_pn:start_ts="1366670878">
+    <transform xil_pn:end_ts="1366685463" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7829342110755216662" xil_pn:start_ts="1366685463">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366670878" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2926749293020700884" xil_pn:start_ts="1366670878">
+    <transform xil_pn:end_ts="1366685463" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2926749293020700884" xil_pn:start_ts="1366685463">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -121,9 +124,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366676266" xil_pn:in_ck="6203951357004475532" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366676266">
+    <transform xil_pn:end_ts="1366687850" xil_pn:in_ck="3224206941223292755" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366687850">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="../MHVPIS.v"/>
       <outfile xil_pn:name="../Ram.v"/>
       <outfile xil_pn:name="../Shifter.v"/>
@@ -133,6 +137,7 @@
       <outfile xil_pn:name="../cache.v"/>
       <outfile xil_pn:name="../iRam.v"/>
       <outfile xil_pn:name="../iRamFib.v"/>
+      <outfile xil_pn:name="../iRamITR.v"/>
       <outfile xil_pn:name="../iRamP1.v"/>
       <outfile xil_pn:name="../ld_st_reg.v"/>
       <outfile xil_pn:name="../ld_st_reg_4bit.v"/>
@@ -148,9 +153,12 @@
       <outfile xil_pn:name="processor.v"/>
       <outfile xil_pn:name="processor_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1366676267" xil_pn:in_ck="6203951357004475532" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1366676266">
+    <transform xil_pn:end_ts="1366687851" xil_pn:in_ck="3224206941223292755" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1366687850">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="processor_test.fdo"/>
       <outfile xil_pn:name="vsim.wlf"/>
       <outfile xil_pn:name="work"/>
@@ -231,7 +239,7 @@
     </transform>
     <transform xil_pn:end_ts="1366565824" xil_pn:in_ck="-1775227461118258528" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1366565802">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>

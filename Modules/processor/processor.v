@@ -16,7 +16,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					c_addr3, c_hit, c_LRU, cache_hit, C, V, Z, stage0, stage1,
 					stage0_rdy, stage1_rdy, stg1_instr, stg0_instr, pc_output, acc_reg_out, alu_out_w,
 					a_reg_out, b_reg_out, mar_out_w, mdr_out_w, num_shift_out, shifter_out, ch_output , 
-					ch_target_rw, ch_target_data, ch_state, ram_data_in, ram_addr_in, ch_miss_loop);
+					ch_target_rw, ch_target_data, ch_state, ram_data_in, ram_addr_in, ch_miss_loop, 
+					itr_pend, itr_reg, mask_reg);
 	
 	//Define Inputs
 	input g_clk;					//Global Clock
@@ -50,6 +51,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output [7:0] ram_data_in;
 	output [7:0] ram_addr_in;
 	output [4:0] ch_miss_loop;
+	output itr_pend;
+	output [3:0] mask_reg, itr_reg;
 	
 	//Cache Outputs
 	output [7:0] mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7;
@@ -92,7 +95,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire ccr_V, ccr_Z, ccr_C;
 	
 	//MHVPIS Wire
-	wire [3:0] itr_in, itr_mask;
+	wire [3:0] itr_in, itr_mask, itr_out, itr_mask_out;
 	wire itr_en, i_pending, itr_clr;
 	wire [7:0] itr_pc_addr;
 	assign itr_clr = ctrl0[9];
@@ -101,6 +104,9 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign itr_in[1] = ccr_V;
 	assign itr_in[2] = 1'b0;
 	assign itr_in[3] = in_dev_hs;
+	assign itr_pend = i_pending;
+	assign itr_reg = itr_out;
+	assign mask_reg = itr_mask_out;
 	
 	//Instruction Registers
 	wire [7:0] ir1_0_in, ir1_0_out, ir0_0_in, ir0_0_out;
@@ -197,9 +203,10 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 
 	//Controllers
 	wire [7:0] ctrl0_pc;
-	//stage0(g_clk, g_clr, instr, i_pending, ccr_z, stg1_state, stg0_state, ctrl, stg0_pc_out);
-	stage0 controller0(g_clk, g_clr, ir0_0_out, i_pending, ccr_Z, stg1_state, 
-							stg0_state,	ctrl0, stg0_pc, state0_w, stg0_instr_w);
+	//stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state, 
+	//				stg0_state, ctrl, pc_out, itr_mask, stage0, stg0_instr);
+	stage0 controller0(g_clk,g_clr,ir0_0_out,ir1_0_out,i_pending,ccr_Z,stg1_state, 
+							stg0_state,	ctrl0, stg0_pc, itr_mask, state0_w, stg0_instr_w);
 	//stage1(g_clk, g_clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_recv, 
 				//out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv);
 	stage1 controller1(g_clk ,g_clr, ir0_1_out, ir1_1_out, mdr_out, stg0_state, 
@@ -210,7 +217,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 				
 	//MHVPIS
 	//MHVPIS(g_clk, itr_g_clr, itr_in, mask_in, itr_en, i_pending, PC_out);	
-	MHVPIS ITR_SYSTEM(g_clk, itr_clr, itr_in, itr_mask, itr_en, i_pending, itr_pc_addr);
+	MHVPIS ITR_SYSTEM(g_clk, itr_clr, itr_in, itr_mask, itr_en, i_pending, itr_pc_addr, itr_out, itr_mask_out);
 	
 //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////  Functional Units  //////////////////////////////////////
@@ -294,7 +301,9 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	//module ram(g_clk, g_clr, enab, rw, Addr, data_out);
 	//iram iRAM(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
 	//iramP1 iRAMP1(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
-	iramFib iRAMFib(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	//iramFib iRAMFib(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	//iramITR iRAM_ITR(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	iramSUB iRAM_ITR(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
 	
 	
 //////////////////////////////////////////////////////////////////////////////////

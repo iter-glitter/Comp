@@ -1,0 +1,5 @@
+LDA # 3
+STA $ 5
+LOAD # 3
+LMSK 8
+SUB $ 5

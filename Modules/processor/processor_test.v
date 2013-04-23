@@ -32,7 +32,6 @@ module processor_test;
 	reg out_dev_ack;
 	reg [7:0] input_bus;
 	
-	
 
 	// Outputs
 	wire in_dev_ack;
@@ -89,6 +88,9 @@ module processor_test;
 	wire [7:0] ram_data_in;
 	wire [7:0] ram_addr_in;
 	wire [4:0] ch_miss_loop;
+	wire itr_pend;
+	wire [3:0] mask_reg;
+	wire [3:0] itr_reg;
 
 	// Instantiate the Unit Under Test (UUT)
 	processor uut (
@@ -151,7 +153,10 @@ module processor_test;
 		.ch_state(ch_state),
 		.ram_data_in(ram_data_in),
 		.ram_addr_in(ram_addr_in),
-		.ch_miss_loop(ch_miss_loop)
+		.ch_miss_loop(ch_miss_loop),
+		.itr_pend(itr_pend),
+		.itr_reg(itr_reg),
+		.mask_reg(mask_reg)
 	);
 
 	initial begin

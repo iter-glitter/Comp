@@ -610,7 +610,10 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 			T32: ctrl <= CP32;
 			T33: ctrl <= CP33;
 			T34: ctrl <= CP34;
-			T35: ctrl <= CP35;
+			T35: begin 
+					ctrl <= CP35;
+					if(instr[7:3]==opINPUT) begin	input_recv <= 1'b1; end
+				  end
 			T36: ctrl <= CP36;
 			T37: ctrl <= CP37;
 			T38: ctrl <= CP38;

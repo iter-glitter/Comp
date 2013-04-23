@@ -18,7 +18,7 @@
 //
 //
 //////////////////////////////////////////////////////////////////////////////////
-module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out);
+module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out, ITR_register, MASK_register);
 	input clk;					//Input clock signal
 	//input clr;				//Active low clear for whole system
 	input itr_clr;				//Clear pending interrupts
@@ -29,15 +29,16 @@ module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out);
 
 	output i_pending;		//Pending interrupt
 	output [7:0] PC_out;	//Memory address containing ISR 
+	output [3:0] ITR_register, MASK_register;
 	
 	reg [7:0] isr_addr1, isr_addr2; //ISR Addresses
 	reg [7:0] isr_addr3, isr_addr4; //ISR Addresses
 	
 	initial begin //define ISR Addresses
-		isr_addr1[7:0] = 8'b11001000; //ISR1
+		isr_addr1[7:0] = 8'b10010111; //ISR1 150 - Handle Zero Output
 		isr_addr2[7:0] = 8'b11010111; //ISR2
 		isr_addr3[7:0] = 8'b11100110; //ISR3
-		isr_addr4[7:0] = 8'b11110101; //ISR4
+		isr_addr4[7:0] = 8'b10010111; //ISR4
 	end
 	
 	wire [3:0] itr_and_w;
@@ -46,6 +47,8 @@ module MHVPIS(clk, itr_clr, itr_in, mask_in, itr_en, i_pending, PC_out);
 	
 	wire [3:0] itr_reg_w;
 	wire [3:0] mask_reg_w;
+	assign MASK_register = mask_reg_w;
+	assign ITR_register = itr_reg_w;
 	
 	//module ld_st_reg(clk, clr, set, in, out);
 	//Interrupt Register - Load Store

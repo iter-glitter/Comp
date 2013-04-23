@@ -1,0 +1,6 @@
+NOP
+LDA # 111
+STA $ 6
+LOAD $ 6
+SUB # 5
+RTI
