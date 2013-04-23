@@ -74,7 +74,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 //////////////////////////////////////////////////////////////////////////////////
 	//State Control Lines
 	wire [20:0] ctrl0;
-	wire [34:0] ctrl1;
+	wire [35:0] ctrl1;
 	wire [71:0] state1_w;
 	wire [15:0] state0_w;
 	assign stage1 = state1_w;
@@ -119,10 +119,10 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign ir1_0_s = ctrl0[16];
 	assign ir1_0_c = ctrl0[17];
 	
-	assign ir0_1_s = ctrl1[18];
-	assign ir0_1_c = ctrl1[19];
-	assign ir1_1_s = ctrl1[16];
-	assign ir1_1_c = ctrl1[17];
+	assign ir0_1_s = ctrl1[19];
+	assign ir0_1_c = ctrl1[20];
+	assign ir1_1_s = ctrl1[17];
+	assign ir1_1_c = ctrl1[18];
 	
 	assign ir1_0_in = imem_out[7:0];
 	assign ir0_0_in = imem_out[15:8];
@@ -149,8 +149,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire cache_target_rw;
 	wire [7:0] ch_target_data_wire, ch_ram_data, ch_ram_addr;
 	wire [3:0] ch_state_w;
-	assign ch_en = ctrl1[22];
-	assign ch_rw = ctrl1[21];
+	assign ch_en = ctrl1[23];
+	assign ch_rw = ctrl1[22];
 	assign ch_output = cache_out;
 	assign ch_target_rw = cache_target_rw;
 	assign ch_target_data = ch_target_data_wire;
@@ -177,21 +177,22 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	
 	//ALU Wires
 	wire [2:0] alu_ctrl;
-	assign alu_ctrl = ctrl1[31:29];
+	assign alu_ctrl = ctrl1[32:30];
 	wire alu_cin;
-	assign alu_cin = ctrl1[28];
-	wire [7:0] ALU_in1, alu_out;
+	assign alu_cin = ctrl1[29];
+	wire [7:0] ALU_in1, alu_out, alu_zero_wire;
 	assign alu_out_w = alu_out;
+	assign alu_zero_wire = 8'b00000000;
 	
 	//Data Register Wires
 	wire [7:0] mdr_in, mdr_out, mar_in, mar_out, acc_s_reg_out;
 	wire [7:0] b_reg_in, b_out, a_reg_in, a_out, acc_in, acc_out;
 	wire mar_s, mdr_s, a_s, b_s, acc_s, acc_s_reg_g_clr, acc_s_reg_set;
-	assign mar_s = ctrl1[15];
-	assign mdr_s = ctrl1[14];
-	assign a_s   = ctrl1[33];
-	assign b_s   = ctrl1[25];
-	assign acc_s = ctrl1[32];
+	assign mar_s = ctrl1[16];
+	assign mdr_s = ctrl1[15];
+	assign a_s   = ctrl1[34];
+	assign b_s   = ctrl1[26];
+	assign acc_s = ctrl1[33];
 	assign acc_s_reg_g_clr = ctrl0[13];
 	assign acc_s_reg_set = ctrl0[12];
 	assign acc_reg_out = acc_out;
@@ -316,15 +317,15 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	
 	//MUX Select Lines
 	wire CP10;
-	wire [1:0] CP1_0, CP8_9, CP12_11, CP14_13;
-	wire [2:0] CP4_3_2, CP7_6_5;
-	assign CP1_0 = ctrl1[10:9];
-	assign CP4_3_2 = ctrl1[13:11];
+	wire [1:0] CP8_9, CP12_11, CP14_13;
+	wire [2:0] CP1_0, CP4_3_2, CP7_6_5;
+	assign CP1_0 = ctrl1[11:9];
+	assign CP4_3_2 = ctrl1[14:12];
 	assign CP7_6_5 = ctrl1[7:5];
 	assign CP8_9 = ctrl0[7:6];
 	assign CP10 = ctrl1[8];
-	assign CP12_11 = ctrl1[27:26];
-	assign CP14_13 = ctrl1[24:23];
+	assign CP12_11 = ctrl1[28:27];
+	assign CP14_13 = ctrl1[25:24];
 
 	//MUX Units
 	//module mux_2_1(i0, i1, sel, out);
@@ -332,7 +333,6 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	
 	//mux_4_1(i0, i1, i2, i3, sel, out);
 	mux_4_1 MUX_PC(pc_stack_out, itr_pc_addr, stg0_pc, ir1_0_out, CP8_9, pc_in);
-	mux_4_1 MUX_ALU(b_out, a_out, mdr_out, ir1_1_out, CP1_0, ALU_in1);
 	mux_3_1 MUX_A(ir1_1_out, acc_out, mdr_out, CP12_11, a_reg_in);
 	mux_3_1 MUX_B(ir1_1_out, acc_out, mdr_out, CP14_13, b_reg_in);
 	
@@ -341,6 +341,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 							CP4_3_2, acc_in);
 	mux_5_1 MUX_MDR(input_bus, b_out, a_out, acc_out, cache_out, 
 							CP7_6_5, mdr_in);
+	mux_ALU MUX_ALU(b_out, a_out, mdr_out, ir1_1_out, acc_out, CP1_0, ALU_in1);
 	
 	
 endmodule

@@ -84,7 +84,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366697999" xil_pn:in_ck="-6720112111990963627" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366697999">
+    <transform xil_pn:end_ts="1366700852" xil_pn:in_ck="3688660920946902403" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1366700852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../MHVPIS.v"/>
@@ -105,6 +105,7 @@
       <outfile xil_pn:name="../mux_3_1.v"/>
       <outfile xil_pn:name="../mux_4_1.v"/>
       <outfile xil_pn:name="../mux_5_1.v"/>
+      <outfile xil_pn:name="../mux_5_1_alu.v"/>
       <outfile xil_pn:name="../pc_nbit.v"/>
       <outfile xil_pn:name="../pri_encoder_4_2.v"/>
       <outfile xil_pn:name="../stack.v"/>
@@ -113,11 +114,11 @@
       <outfile xil_pn:name="processor.v"/>
       <outfile xil_pn:name="processor_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1366698021" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7829342110755216662" xil_pn:start_ts="1366698021">
+    <transform xil_pn:end_ts="1366700754" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7829342110755216662" xil_pn:start_ts="1366700754">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366698021" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2926749293020700884" xil_pn:start_ts="1366698021">
+    <transform xil_pn:end_ts="1366700754" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2926749293020700884" xil_pn:start_ts="1366700754">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -125,7 +126,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366697999" xil_pn:in_ck="-6720112111990963627" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366697999">
+    <transform xil_pn:end_ts="1366700852" xil_pn:in_ck="3688660920946902403" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1366700852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../MHVPIS.v"/>
@@ -146,6 +147,7 @@
       <outfile xil_pn:name="../mux_3_1.v"/>
       <outfile xil_pn:name="../mux_4_1.v"/>
       <outfile xil_pn:name="../mux_5_1.v"/>
+      <outfile xil_pn:name="../mux_5_1_alu.v"/>
       <outfile xil_pn:name="../pc_nbit.v"/>
       <outfile xil_pn:name="../pri_encoder_4_2.v"/>
       <outfile xil_pn:name="../stack.v"/>
@@ -154,11 +156,9 @@
       <outfile xil_pn:name="processor.v"/>
       <outfile xil_pn:name="processor_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1366698021" xil_pn:in_ck="-6720112111990963627" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1366698021">
+    <transform xil_pn:end_ts="1366700853" xil_pn:in_ck="3688660920946902403" xil_pn:name="TRAN_MSimulateBehavioralModel" xil_pn:prop_ck="-35684419682725798" xil_pn:start_ts="1366700852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="processor_test.fdo"/>
       <outfile xil_pn:name="vsim.wlf"/>
       <outfile xil_pn:name="work"/>
@@ -196,6 +196,7 @@
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="processor.lso"/>
