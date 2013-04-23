@@ -66,7 +66,7 @@ module processor_test;
 	wire C;
 	wire V;
 	wire Z;
-	wire [14:0] stage0;
+	wire [15:0] stage0;
 	wire [71:0] stage1;
 	wire stage0_rdy;
 	wire stage1_rdy;
@@ -91,6 +91,8 @@ module processor_test;
 	wire itr_pend;
 	wire [3:0] mask_reg;
 	wire [3:0] itr_reg;
+	wire [7:0] pc_s_out;
+	wire [7:0] acc_s_out;
 
 	// Instantiate the Unit Under Test (UUT)
 	processor uut (
@@ -156,7 +158,9 @@ module processor_test;
 		.ch_miss_loop(ch_miss_loop),
 		.itr_pend(itr_pend),
 		.itr_reg(itr_reg),
-		.mask_reg(mask_reg)
+		.mask_reg(mask_reg),
+		.pc_s_out(pc_s_out),
+		.acc_s_out(acc_s_out)
 	);
 
 	initial begin

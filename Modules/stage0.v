@@ -27,7 +27,7 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 	output reg [7:0] pc_out;	//Used to set PC address
 	output reg [20:0] ctrl; 	//21 bit control line - control and select points
 	
-	output reg [14:0] stage0; 	//Current Controller state
+	output reg [15:0] stage0; 	//Current Controller state
 	output [7:0] stg0_instr;
 	output reg [3:0] itr_mask;	//Output ITR mask
 	
@@ -36,21 +36,22 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 	assign stg0_instr = stg0_instr_w;
 	
 	//Define Stage 0 state parameters
-	parameter T0 =  15'b000000000000001;  
-	parameter T1 =  15'b000000000000010; //Logic States   
-	parameter T2 =  15'b000000000000100;  
-	parameter T3 =  15'b000000000001000;  
-	parameter T4 =  15'b000000000010000;  
-	parameter T5 =  15'b000000000100000; //Logic States  
-	parameter T6 =  15'b000000001000000;  
-	parameter T7 =  15'b000000010000000; //Logic States  
-	parameter T8 =  15'b000000100000000; //Logic States   
-	parameter T9 =  15'b000001000000000; //Logic States   
-	parameter T10 = 15'b000010000000000; 
-	parameter T11 = 15'b000100000000000; //Logic States  
-	parameter T12 = 15'b001000000000000; 
-	parameter T13 = 15'b010000000000000; 
-	parameter T14 = 15'b100000000000000;
+	parameter T0 =  16'b0000000000000001;  
+	parameter T1 =  16'b0000000000000010; //Logic States   
+	parameter T2 =  16'b0000000000000100;  
+	parameter T3 =  16'b0000000000001000;  
+	parameter T4 =  16'b0000000000010000;  
+	parameter T5 =  16'b0000000000100000; //Logic States  
+	parameter T6 =  16'b0000000001000000;  
+	parameter T7 =  16'b0000000010000000; //Logic States  
+	parameter T8 =  16'b0000000100000000; //Logic States   
+	parameter T9 =  16'b0000001000000000; //Logic States   
+	parameter T10 = 16'b0000010000000000; 
+	parameter T11 = 16'b0000100000000000; //Logic States  
+	parameter T12 = 16'b0001000000000000; 
+	parameter T13 = 16'b0010000000000000; 
+	parameter T14 = 16'b0100000000000000;
+	parameter T15 = 16'b1000000000000000;
 	
 	//Define Stage 0 control points
 	parameter CP0=21'b101101010010010110110;
@@ -66,8 +67,9 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 	parameter CP10=21'b101101010011111110110;
 	parameter CP11=21'b100101010011100110110;
 	parameter CP12=21'b100101010011100100100;
-	parameter CP13=21'b101101011011100101101;
+	parameter CP13=21'b100101010011100101101;
 	parameter CP14=21'b100101010011100110110;
+	parameter CP15=21'b101101011011100111111;
 	
 	//Define OPcodes that will be executed by this controller
 	parameter BRA  = 5'b00110;
@@ -84,11 +86,13 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 	//Control Flags
 	reg [2:0] bra_loop; //Branch Wait Flag
 	reg itr_state; //1: Handling Interrupt 0: No ITR
+	reg itr_pc_loop;
 	
 	initial begin
 		pc_out <= 8'b00000000;
 		bra_loop <= 3'b000;
 		itr_state <= 1'b0;
+		itr_pc_loop <= 1'b0;
 	end
 	
 	always @ (posedge clk) begin
@@ -97,39 +101,46 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 		end
 		else begin 
 			case(stage0) 
-			T0: stage0 <= T1;
+			T0: stage0 <= T4;
 			T1: if((i_pending==1'b1)&&(itr_state==1'b0)) begin stage0 <= T2; end
 				 else begin stage0 <= T4; end
 			T2: begin
 					stage0 <= T3;
 					itr_state <= 1'b1;
 				 end
-			T3: stage0 <= T4;
+			T3: if(itr_pc_loop==1'b1) begin
+					stage0 <= T4;
+					itr_pc_loop <= 1'b0;
+				 end
+				 else begin
+					itr_pc_loop <= (itr_pc_loop + 1);
+					stage0 <= T3;
+				 end
 			T4: stage0 <= T5;
-			T5: stage0 <= T6; 
-			T6: if(instr[7:3]==BRA) begin stage0 <= T8; end
+			T5: if(instr[7:3]==BRA) begin stage0 <= T8; end
 				 else if(instr[7:3]==JMP) begin stage0 <= T10; end
 				 else if(instr[7:3]==BSR) begin stage0 <= T12; end
 				 else if(instr[7:3]==RTS) begin stage0 <= T13; end
 				 else if(instr[7:3]==RTI) begin stage0 <= T13; end
 				 else if(instr[7:3]==LMSK) begin stage0 <= T14; end
 				 else begin stage0 <= T7; end
+			T6: stage0 <= T1;
 			T7: if(stg1_state==1'b1) begin 	//Stage1 Handshake				
-						stage0 <= T1; 				//Restart Fetch Cycle
+						stage0 <= T6; 				//Restart Fetch Cycle
 				 end else begin stage0 <= T7; end	//Wait for Stage1 Handshake
 			T8: begin
 						//stg0_state <= 1'b1;				//Start Stage1
 						if(stg1_state==1'b1) begin		//Continue Branch
 							if(instr[2:0]==BEQ) begin stage0 <= T9; end
 							else if (instr[2:0]==BNE) begin stage0 <= T11; end
-							else begin stage0 <= T1; end
+							else begin stage0 <= T6; end
 						end else begin
 							stage0 <= T8;					//Wait for stage1 Handshake
 						end
 					end
 			T9: if(bra_loop==3'b001) begin
 					if(ccr_z==1'b1) begin stage0 <= T10; end 	//Branch
-					else begin stage0 <= T1; end
+					else begin stage0 <= T6; end
 					bra_loop <= 3'b000;
 				 end else begin 
 					if(ccr_z==1'b1) begin stage0 <= T10; end 	//Branch
@@ -140,20 +151,26 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 			T10: stage0 <= T1; 		
 			T11:if(bra_loop==3'b001) begin 
 					if(ccr_z==1'b0) begin stage0 <= T10; end //Branch
-					else begin stage0 <= T1; end
+					else begin stage0 <= T6; end
 					bra_loop <= 3'b000;
 				 end else begin 
-					if(ccr_z==1'b1) begin stage0 <= T1; end //Branch
+					if(ccr_z==1'b1) begin stage0 <= T6; end //Branch
 					else begin stage0 <= T11; end
 					bra_loop <= (bra_loop + 1);
 				end
 			T12: stage0 <= T10;
-			T13: stage0 <= T7;
+			T13: if(instr[7:3]==RTI) begin
+					itr_state <= 1'b0;
+					stage0 <= T15;
+				  end else begin 
+					stage0 <= T15;
+				  end
 			T14: begin 
-					stage0 <= T1;
+					stage0 <= T6;
 					if(instr[7:3]==LMSK) begin	itr_mask <= data_in[3:0]; end
 				  end
-			default: stage0 <= T1;
+			T15: stage0 <= T7;
+			default: stage0 <= T6;
 			endcase 
 		end
 	end
@@ -161,15 +178,15 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 	always @ (stage0) begin
 		case(stage0) 
 			T0: ctrl <= CP0;
-			T1: begin
-					ctrl <= CP1;
-					stg0_state <= 1'b0;
-				 end
+			T1: ctrl <= CP1;
 			T2: ctrl <= CP2;
 			T3: ctrl <= CP3;
 			T4: ctrl <= CP4;
 			T5: ctrl <= CP5;
-			T6: ctrl <= CP6;
+			T6: begin
+					ctrl <= CP6;
+					stg0_state <= 1'b0;
+				 end
 			T7: begin
 				ctrl <= CP7;
 				stg0_state <= 1'b1; 		//Stage0 Finished
@@ -190,6 +207,7 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 			T12: ctrl <= CP12;
 			T13: ctrl <= CP13;
 			T14: ctrl <= CP14;
+			T15: ctrl <= CP15;
 			default: ctrl <= CP1;
 		endcase
 	end

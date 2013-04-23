@@ -17,7 +17,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					stage0_rdy, stage1_rdy, stg1_instr, stg0_instr, pc_output, acc_reg_out, alu_out_w,
 					a_reg_out, b_reg_out, mar_out_w, mdr_out_w, num_shift_out, shifter_out, ch_output , 
 					ch_target_rw, ch_target_data, ch_state, ram_data_in, ram_addr_in, ch_miss_loop, 
-					itr_pend, itr_reg, mask_reg);
+					itr_pend, itr_reg, mask_reg, pc_s_out, acc_s_out);
 	
 	//Define Inputs
 	input g_clk;					//Global Clock
@@ -33,7 +33,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output [7:0] output_bus;   //OUTPUT data bus
 	output [7:0] pc_output;			
 	output [71:0] stage1;
-	output [14:0] stage0;
+	output [15:0] stage0;
 	output stage0_rdy, stage1_rdy;
 	output [7:0] acc_reg_out;
 	output [7:0] alu_out_w;
@@ -53,6 +53,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output [4:0] ch_miss_loop;
 	output itr_pend;
 	output [3:0] mask_reg, itr_reg;
+	output [7:0] pc_s_out, acc_s_out;
 	
 	//Cache Outputs
 	output [7:0] mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7;
@@ -75,7 +76,7 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [20:0] ctrl0;
 	wire [34:0] ctrl1;
 	wire [71:0] state1_w;
-	wire [14:0] state0_w;
+	wire [15:0] state0_w;
 	assign stage1 = state1_w;
 	assign stage0 = state0_w;
 	
@@ -171,6 +172,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign PCs_en = ctrl0[5];
 	assign ACCs_ctrl = ctrl0[1:0];
 	assign ACCs_en = ctrl0[2];
+	assign pc_s_out = pc_stack_out;
+	assign acc_s_out = acc_stack_out;
 	
 	//ALU Wires
 	wire [2:0] alu_ctrl;
@@ -302,8 +305,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	//iram iRAM(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
 	//iramP1 iRAMP1(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
 	//iramFib iRAMFib(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
-	//iramITR iRAM_ITR(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
-	iramSUB iRAM_ITR(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	iramITR iRAM_ITR(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
+	//iramSUB iRAM_ITR(g_clk, g_clr, imem_en, imem_rw, pc_out, imem_out);
 	
 	
 //////////////////////////////////////////////////////////////////////////////////
