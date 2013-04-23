@@ -2,6 +2,39 @@
 //	Alex Hendren & Sean McFeely
 //	
 //	Sub-routine test program
-//
+//		Purporse: find the cube of n, where n < 7
+//	
+//	Requirements: 
+//		dmem[0] = n
+//		Stack depth >= n
 //
 
+LDA $ 0 // A = n
+LOAD # 0
+STOR $ 1 // mem[1] = 0 // here store n^3
+//LOAD # 0
+STOR $ 2 // mem[2] = 0
+STOR $ 3 // mem[3] = 0
+
+// Sub: Find_Cube
+LOAD $ 1 // Sub: Find_Cube starts here
+ADD $ 0 // ACC = ACC+n
+STOR $ 1
+LOAD $ 2
+ADD # 1
+STOR $ 2
+BRA != 5 // branch to 1st instr of Find_Cube
+LOAD # 0
+STOR $ 2
+//outer loop
+LOAD $ 3
+ADD # 1
+BRA = 18 // jump to RTS
+// Branch to Sub: Find_Cube
+BSR 5
+RTS
+// mem[0] should now contain n^3
+
+// continous loop of nops 
+nop
+JMP 19

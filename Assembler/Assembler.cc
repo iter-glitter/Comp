@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 	for(unsigned i=0; i < tokens.size(); ++i){
 		outFile << "memory[" << i << "] = 16'b" << tokens[i].opcode << tokens[i].flag;
 		decTobin(tokens[i].operand, outFile);
-		outFile << ";" << endl;
+		outFile << "; // " << tokens[i].cmdLine << endl;
 	}
 	outFile.close();
 	
@@ -89,10 +89,10 @@ vector<token> scanner(vector<string> lines)
 {
 
 	vector<token> toks;
-
+	
 	for(unsigned i=0; i < lines.size(); ++i){
-
-
+	
+		string theLine = lines[i];
 		OPCODE opcode;
 		FLAG flag;
 		token t;
@@ -106,7 +106,9 @@ vector<token> scanner(vector<string> lines)
 		if( (comFind != string::npos) && (comFind <= 2) ){ // comment
 			continue;
 		}
-		else if(found != string::npos){
+	
+		
+		if(found != string::npos){
 			t.opcode = lines[i].substr(0,found);
 			lines[i] = lines[i].substr(found+1);
 			
@@ -127,7 +129,7 @@ vector<token> scanner(vector<string> lines)
 				const char* tmpCstr = temp.c_str();
 				t.operand = atoi(tmpCstr);
 			}
-			else{ //Flags are NULL
+			else{ //Flags are NULL?
 				const char* tmpCstr = lines[i].c_str();
 				t.operand = atoi(tmpCstr);
 				nullFlag = true;
@@ -231,6 +233,7 @@ vector<token> scanner(vector<string> lines)
 			exit(1);
 		}
 		
+		t.cmdLine = theLine;
 		toks.push_back(t);
 	}
 	

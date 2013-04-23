@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -87,12 +88,14 @@ struct OPCODE
 
 struct token
 {
+	string cmdLine;
 	string opcode;
 	string flag;
 	int operand;
 	token(){
 		opcode = "UNDEF";
 		flag = "UNDEF";
+		cmdLine = "UNDEF";
 		operand = 0;
 	}
 };
