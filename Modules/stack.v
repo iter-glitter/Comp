@@ -22,7 +22,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module stack(en, clr, clk, con, data_in, data_out);
 	parameter width = 8; //the width of the data in bits
-	parameter depth = 2; // amout of data
+	parameter depth = 3; // amout of data
 	input en; 	// enable 
 	input clr; 	// clear all contents
 	input clk;	// the clock
