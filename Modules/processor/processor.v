@@ -9,6 +9,7 @@
 //
 // 
 //////////////////////////////////////////////////////////////////////////////////
+/* DEBUG IO Port Mapping
 module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					input_bus, output_bus, mem0, mem1, mem2, mem3, mem4, mem5, mem6,
 					mem7, mem8, mem9, mem10, mem11, mem12, mem13, mem14, mem15,
@@ -18,7 +19,15 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 					a_reg_out, b_reg_out, mar_out_w, mdr_out_w, num_shift_out, shifter_out, ch_output , 
 					ch_target_rw, ch_target_data, ch_state, ram_data_in, ram_addr_in, ch_miss_loop, 
 					itr_pend, itr_reg, mask_reg, pc_s_out, acc_s_out);
-	
+					*/
+module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
+					input_bus, output_bus, mem0, mem1, mem2, mem3, mem4, mem5, mem6,
+					mem7, mem8, mem9, mem10, mem11, mem12, mem13, mem14, mem15,
+					c_data0, c_data1, c_data2, c_data3, c_addr0, c_addr1, c_addr2,
+					c_addr3, c_hit, c_LRU, cache_hit, C, V, Z,
+					stage0_rdy, stage1_rdy, pc_output, acc_reg_out, alu_out_w,
+					a_reg_out, b_reg_out, mar_out_w, mdr_out_w, itr_pend, itr_reg, mask_reg);
+
 	//Define Inputs
 	input g_clk;					//Global Clock
 	input g_clr;					//Global g_clr
@@ -32,8 +41,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output in_dev_ack;			//INPUT Device Handshake - Data Received by proc
 	output [7:0] output_bus;   //OUTPUT data bus
 	output [7:0] pc_output;			
-	output [71:0] stage1;
-	output [15:0] stage0;
+//	output [71:0] stage1;
+//	output [15:0] stage0;
 	output stage0_rdy, stage1_rdy;
 	output [7:0] acc_reg_out;
 	output [7:0] alu_out_w;
@@ -42,18 +51,18 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output [7:0] mdr_out_w;
 	output [7:0] mar_out_w;
 	output C, V, Z;
-	output [2:0] num_shift_out;
-	output [7:0] shifter_out;
-	output [7:0] ch_output;
-	output [7:0] ch_target_data;
-	output ch_target_rw;
-	output [3:0] ch_state;
-	output [7:0] ram_data_in;
-	output [7:0] ram_addr_in;
-	output [4:0] ch_miss_loop;
+//	output [2:0] num_shift_out;
+//	output [7:0] shifter_out;
+//	output [7:0] ch_output;
+//	output [7:0] ch_target_data;
+//	output ch_target_rw;
+//	output [3:0] ch_state;
+//	output [7:0] ram_data_in;
+//	output [7:0] ram_addr_in;
+//	output [4:0] ch_miss_loop;
 	output itr_pend;
 	output [3:0] mask_reg, itr_reg;
-	output [7:0] pc_s_out, acc_s_out;
+//	output [7:0] pc_s_out, acc_s_out;
 	
 	//Cache Outputs
 	output [7:0] mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7;
@@ -64,10 +73,10 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	output cache_hit;
 	
 	
-	output [7:0] stg0_instr, stg1_instr;
+//	output [7:0] stg0_instr, stg1_instr;			//DEBUG OUTPUT
 	wire [7:0] stg0_instr_w, stg1_instr_w;
-	assign stg0_instr = stg0_instr_w;
-	assign stg1_instr = stg1_instr_w;
+//	assign stg0_instr = stg0_instr_w;				//DEBUG OUTPUT
+//	assign stg1_instr = stg1_instr_w;				//DEBUG OUTPUT
 	
 //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////  Wire Definitions  //////////////////////////////////////
@@ -77,8 +86,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [35:0] ctrl1;
 	wire [71:0] state1_w;
 	wire [15:0] state0_w;
-	assign stage1 = state1_w;
-	assign stage0 = state0_w;
+	//assign stage1 = state1_w;				//DEBUG OUTPUT
+	//assign stage0 = state0_w;				//DEBUG OUTPUT
 	
 	//Controller Wires
 	wire stg1_state, stg0_state, stg1_state2;
@@ -139,8 +148,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign LS = ctrl1[2];
 	assign RS = ctrl1[1];
 	assign sh_set = ctrl1[0];
-	assign num_shift_out = num_shift;
-	assign shifter_out = shft_out;
+	//assign num_shift_out = num_shift;				//DEBUG OUTPUT
+	//assign shifter_out = shft_out;					//DEBUG OUTPUT
 	
 	//Cache Wires
 	wire [7:0] cache_out, ch_addr0, ch_addr1, ch_addr2, ch_addr3;
@@ -153,13 +162,13 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [7:0] ch_target_data_wire, ch_ram_data, ch_ram_addr;
 	wire [3:0] ch_state_w;
 	assign ch_en = ctrl1[23];
-	assign ch_rw = ctrl1[22];
-	assign ch_output = cache_out;
-	assign ch_target_rw = cache_target_rw;
-	assign ch_target_data = ch_target_data_wire;
-	assign ch_state = ch_state_w;
-	assign ram_data_in = ch_ram_data;
-	assign ram_addr_in = ch_ram_addr;
+	assign ch_rw = ctrl1[22];	
+//	assign ch_output = cache_out;							//DEBUG OUTPUT
+//	assign ch_target_rw = cache_target_rw;				//DEBUG OUTPUT
+//	assign ch_target_data = ch_target_data_wire;		//DEBUG OUTPUT
+//	assign ch_state = ch_state_w;							//DEBUG OUTPUT
+//	assign ram_data_in = ch_ram_data;					//DEBUG OUTPUT
+//	assign ram_addr_in = ch_ram_addr;					//DEBUG OUTPUT
 	
 	//Program Counter Wire
 	wire [1:0] pc_ctrl;
@@ -175,8 +184,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	assign PCs_en = ctrl0[5];
 	assign ACCs_ctrl = ctrl0[1:0];
 	assign ACCs_en = ctrl0[2];
-	assign pc_s_out = pc_stack_out;
-	assign acc_s_out = acc_stack_out;
+//	assign pc_s_out = pc_stack_out; 			//DEBUG OUTPUT
+//	assign acc_s_out = acc_stack_out;		//DEBUG OUTPUT
 	
 	//ALU Wires
 	wire [2:0] alu_ctrl;

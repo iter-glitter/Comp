@@ -40,12 +40,8 @@ entity processor is
         C               : out    vl_logic;
         V               : out    vl_logic;
         Z               : out    vl_logic;
-        stage0          : out    vl_logic_vector(15 downto 0);
-        stage1          : out    vl_logic_vector(71 downto 0);
         stage0_rdy      : out    vl_logic;
         stage1_rdy      : out    vl_logic;
-        stg1_instr      : out    vl_logic_vector(7 downto 0);
-        stg0_instr      : out    vl_logic_vector(7 downto 0);
         pc_output       : out    vl_logic_vector(7 downto 0);
         acc_reg_out     : out    vl_logic_vector(7 downto 0);
         alu_out_w       : out    vl_logic_vector(7 downto 0);
@@ -53,19 +49,8 @@ entity processor is
         b_reg_out       : out    vl_logic_vector(7 downto 0);
         mar_out_w       : out    vl_logic_vector(7 downto 0);
         mdr_out_w       : out    vl_logic_vector(7 downto 0);
-        num_shift_out   : out    vl_logic_vector(2 downto 0);
-        shifter_out     : out    vl_logic_vector(7 downto 0);
-        ch_output       : out    vl_logic_vector(7 downto 0);
-        ch_target_rw    : out    vl_logic;
-        ch_target_data  : out    vl_logic_vector(7 downto 0);
-        ch_state        : out    vl_logic_vector(3 downto 0);
-        ram_data_in     : out    vl_logic_vector(7 downto 0);
-        ram_addr_in     : out    vl_logic_vector(7 downto 0);
-        ch_miss_loop    : out    vl_logic_vector(4 downto 0);
         itr_pend        : out    vl_logic;
         itr_reg         : out    vl_logic_vector(3 downto 0);
-        mask_reg        : out    vl_logic_vector(3 downto 0);
-        pc_s_out        : out    vl_logic_vector(7 downto 0);
-        acc_s_out       : out    vl_logic_vector(7 downto 0)
+        mask_reg        : out    vl_logic_vector(3 downto 0)
     );
 end processor;

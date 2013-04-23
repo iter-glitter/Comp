@@ -66,8 +66,8 @@ module processor_test;
 	wire C;
 	wire V;
 	wire Z;
-	wire [15:0] stage0;
-	wire [71:0] stage1;
+//	wire [15:0] stage0;
+//	wire [71:0] stage1;
 	wire stage0_rdy;
 	wire stage1_rdy;
 	wire [7:0] stg0_instr;
@@ -79,20 +79,20 @@ module processor_test;
 	wire [7:0] b_reg_out;
 	wire [7:0] mar_out_w;
 	wire [7:0] mdr_out_w;
-	wire [2:0] num_shift_out;
-	wire [7:0] shifter_out;
-	wire [7:0] ch_output;
-	wire ch_target_rw;
-	wire [7:0] ch_target_data;
-	wire [3:0] ch_state;
-	wire [7:0] ram_data_in;
-	wire [7:0] ram_addr_in;
-	wire [4:0] ch_miss_loop;
+//	wire [2:0] num_shift_out;
+//	wire [7:0] shifter_out;
+//	wire [7:0] ch_output;
+//	wire ch_target_rw;
+//	wire [7:0] ch_target_data;
+//	wire [3:0] ch_state;
+//	wire [7:0] ram_data_in;
+//	wire [7:0] ram_addr_in;
+//	wire [4:0] ch_miss_loop;
 	wire itr_pend;
-	wire [3:0] mask_reg;
-	wire [3:0] itr_reg;
-	wire [7:0] pc_s_out;
-	wire [7:0] acc_s_out;
+//	wire [3:0] mask_reg;
+//	wire [3:0] itr_reg;
+//	wire [7:0] pc_s_out;
+//	wire [7:0] acc_s_out;
 
 	// Instantiate the Unit Under Test (UUT)
 	processor uut (
@@ -134,12 +134,12 @@ module processor_test;
 		.C(C), 
 		.V(V), 
 		.Z(Z), 
-		.stage0(stage0), 
-		.stage1(stage1),
+//		.stage0(stage0), 
+//		.stage1(stage1),
 		.stage0_rdy(stage0_rdy),
 		.stage1_rdy(stage1_rdy),
-		.stg0_instr(stg0_instr),
-		.stg1_instr(stg1_instr),
+//		.stg0_instr(stg0_instr),
+//		.stg1_instr(stg1_instr),
 		.pc_output(pc_output),
 		.acc_reg_out(acc_reg_out),
 		.alu_out_w(alu_out_w),
@@ -147,20 +147,20 @@ module processor_test;
 		.b_reg_out(b_reg_out),
 		.mar_out_w(mar_out_w),
 		.mdr_out_w(mdr_out_w),
-		.num_shift_out(num_shift_out),
-		.shifter_out(shifter_out),
-		.ch_output(ch_output),
-		.ch_target_rw(ch_target_rw),
-		.ch_target_data(ch_target_data),
-		.ch_state(ch_state),
-		.ram_data_in(ram_data_in),
-		.ram_addr_in(ram_addr_in),
-		.ch_miss_loop(ch_miss_loop),
+//		.num_shift_out(num_shift_out),
+//		.shifter_out(shifter_out),
+//		.ch_output(ch_output),
+//		.ch_target_rw(ch_target_rw),
+//		.ch_target_data(ch_target_data),
+//		.ch_state(ch_state),
+//		.ram_data_in(ram_data_in),
+//		.ram_addr_in(ram_addr_in),
+//		.ch_miss_loop(ch_miss_loop),
 		.itr_pend(itr_pend),
 		.itr_reg(itr_reg),
-		.mask_reg(mask_reg),
-		.pc_s_out(pc_s_out),
-		.acc_s_out(acc_s_out)
+		.mask_reg(mask_reg)
+//		.pc_s_out(pc_s_out),
+//		.acc_s_out(acc_s_out)
 	);
 
 	initial begin
