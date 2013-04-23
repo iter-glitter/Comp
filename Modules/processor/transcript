@@ -97,10 +97,10 @@
 # Top level modules:
 # 	ld_st_reg
 # Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
-# -- Compiling module iramITR
+# -- Compiling module iramP1
 # 
 # Top level modules:
-# 	iramITR
+# 	iramP1
 # Model Technology ModelSim SE vlog 10.1b Compiler 2012.04 Apr 26 2012
 # -- Compiling module cache
 # 
@@ -147,7 +147,7 @@
 # Loading work.stack(fast)
 # Loading work.LdStr_shifter(fast)
 # Loading work.ld_st_reg(fast)
-# Loading work.iramITR(fast)
+# Loading work.iramP1(fast)
 # Loading work.mux_3_1(fast)
 # Loading work.mux_5_1(fast)
 # Loading work.mux_ALU(fast)
@@ -429,10 +429,10 @@
 # 
 #           File in use by: Hendren  Hostname: HENDRENDESKTOP  ProcessID: 2348
 # 
-#           Attempting to use alternate WLF file "./wlftxrmhw5".
+#           Attempting to use alternate WLF file "./wlftr641yr".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftxrmhw5
+#           Using alternate file: ./wlftr641yr
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
@@ -456,7 +456,7 @@ restart
 # Loading work.stack(fast)
 # Loading work.LdStr_shifter(fast)
 # Loading work.ld_st_reg(fast)
-# Loading work.iramITR(fast)
+# Loading work.iramP1(fast)
 # Loading work.mux_3_1(fast)
 # Loading work.mux_5_1(fast)
 # Loading work.mux_ALU(fast)

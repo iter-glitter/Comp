@@ -83,7 +83,7 @@ module ram(clk, clr, enab, rw, Addr, data_in, mem0, mem1, mem2, mem3, mem4, mem5
 		memory[2] = 8'b01111111;
 		memory[3] = 8'b11101111;
 		memory[4] = 8'b00011000;
-		memory[5] = 8'b00011000;
+		memory[5] = 8'b00000100;
 		memory[6] = 8'b11011011;
 		memory[7] = 8'b10011001;
 		memory[8] = 8'b00000000;
