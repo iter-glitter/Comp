@@ -15,8 +15,12 @@ STOR $ 2 // mem[2] = 0
 STOR $ 3 // mem[3] = 0
 LDA $ 5 // A = n
 
-//LOAD # 0
+// branch to 1st instr of Find_Cube
+BSR 8
 
+// END of Program: continous loop of nops 
+nop
+JMP 6
 
 // Sub: Find_Cube
 LOAD $ 1 // Sub: Find_Cube starts here
@@ -25,19 +29,16 @@ STOR $ 1
 LOAD $ 2
 ADD # 1
 STOR $ 2
-BRA != 5 // branch to 1st instr of Find_Cube
+BRA != 8 // branch to 1st instr of Find_Cube
 LOAD # 0
 STOR $ 2
 //outer loop
 LOAD $ 3
 ADD # 1
 STOR $ 3
-BRA = 19 // jump to RTS
+BRA = 22 // jump to RTS
 // Branch to Sub: Find_Cube
-BSR 5
+BSR 8
 RTS
-// mem[0] should now contain n^3
 
-// continous loop of nops 
-nop
-JMP 20
+// mem[0] should now contain n^3
