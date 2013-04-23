@@ -9,16 +9,18 @@
 //		Stack depth >= n
 //
 
-LDA $ 0 // A = n
 LOAD # 0
 STOR $ 1 // mem[1] = 0 // here store n^3
-//LOAD # 0
 STOR $ 2 // mem[2] = 0
 STOR $ 3 // mem[3] = 0
+LDA $ 5 // A = n
+
+//LOAD # 0
+
 
 // Sub: Find_Cube
 LOAD $ 1 // Sub: Find_Cube starts here
-ADD $ 0 // ACC = ACC+n
+ADD $ 5 // ACC = ACC+n
 STOR $ 1
 LOAD $ 2
 ADD # 1
@@ -29,7 +31,8 @@ STOR $ 2
 //outer loop
 LOAD $ 3
 ADD # 1
-BRA = 18 // jump to RTS
+STOR $ 3
+BRA = 19 // jump to RTS
 // Branch to Sub: Find_Cube
 BSR 5
 RTS
@@ -37,4 +40,4 @@ RTS
 
 // continous loop of nops 
 nop
-JMP 19
+JMP 20
