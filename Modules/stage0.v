@@ -67,9 +67,9 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, stg1_state,
 	parameter CP10=21'b101101010011111110110;
 	parameter CP11=21'b100101010011100110110;
 	parameter CP12=21'b100101010011100100100;
-	parameter CP13=21'b100101010011100101101;
+	parameter CP13=21'b100101010010100101101;
 	parameter CP14=21'b100101010011100110110;
-	parameter CP15=21'b101101011011100111111;
+	parameter CP15=21'b101101011010100111111;
 	
 	//Define OPcodes that will be executed by this controller
 	parameter BRA  = 5'b00110;
