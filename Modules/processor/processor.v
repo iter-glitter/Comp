@@ -85,6 +85,8 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	wire [7:0] stg0_pc;
 	wire [4:0] ch_miss_loop_wire;
 	assign ch_miss_loop = ch_miss_loop_wire;
+	wire [7:0] output_bus_w;
+	assign output_bus = output_bus_w;
 	
 	//Instruction Memory Wire
 	wire imem_rw, imem_en;
@@ -97,14 +99,14 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	
 	//MHVPIS Wire
 	wire [3:0] itr_in, itr_mask, itr_out, itr_mask_out;
-	wire itr_en, i_pending, itr_clr;
+	wire itr_en, i_pending, itr_clr, invalid_opcode;
 	wire [7:0] itr_pc_addr;
 	wire v_state;
 	assign itr_clr = ctrl0[9];
 	assign itr_en = ctrl0[8];
 	assign itr_in[0] = ccr_Z;
 	assign itr_in[1] = v_state;
-	assign itr_in[2] = 1'b0;
+	assign itr_in[2] = invalid_opcode;
 	assign itr_in[3] = in_dev_hs;
 	assign itr_pend = i_pending;
 	assign itr_reg = itr_out;
@@ -208,15 +210,19 @@ module processor(g_clk, g_clr, in_dev_hs, out_dev_hs, out_dev_ack, in_dev_ack,
 	//Controllers
 	wire [7:0] ctrl0_pc;
 	//stage0(clk, clr, instr, data_in, i_pending, ccr_z, ccr_v, stg1_state, 
-	//				stg0_state, ctrl, pc_out, itr_mask, stage0, stg0_instr, v_state);
+	//				stg0_state, ctrl, pc_out, itr_mask, stage0, stg0_instr, v_state,
+	//				invalid_opcode);
 	stage0 controller0(g_clk,g_clr,ir0_0_out,ir1_0_out,i_pending,ccr_Z,
 							ccr_V, stg1_state, stg0_state, ctrl0, stg0_pc, 
-							itr_mask, state0_w, stg0_instr_w, v_state);
-	//stage1(g_clk, g_clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_recv, 
-				//out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv);
+							itr_mask, state0_w, stg0_instr_w, v_state,
+							invalid_opcode);
+	//stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_recv, 
+	//			out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv, stage1, 
+	//			output_data, stg1_instr, ch_miss_loop);
 	stage1 controller1(g_clk ,g_clr, ir0_1_out, ir1_1_out, mdr_out, stg0_state, 
 							in_dev_hs, out_dev_ack, out_dev_hs, ch_hit, stg1_state, 
-							ctrl1, num_shift, in_dev_ack, state1_w, stg1_instr_w, ch_miss_loop_wire);
+							ctrl1, num_shift, in_dev_ack, state1_w, 
+							output_bus_w, stg1_instr_w, ch_miss_loop_wire);
 	assign stage1_rdy = stg1_state;
 	assign stage0_rdy = stg0_state;
 				

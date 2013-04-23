@@ -12,7 +12,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_recv, 
-				out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv, stage1, stg1_instr, ch_miss_loop);
+				out_dev_rdy, cache_hit, stg1_state, ctrl, num_shift, input_recv, stage1, 
+				output_data, stg1_instr, ch_miss_loop);
 	//Inputs
 	input clk, clr;
 	input [7:0] ir_data;			//Contents of IR1_0 - Data Register
@@ -27,8 +28,9 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 	//Outputs
 	output reg stg1_state;			//Handshake control line - Stage 0 status
 	output reg [35:0] ctrl; 		//21 bit control line - control and sel points
-	output reg [2:0] num_shift;		//Control Shifter - Number to shift by
+	output reg [2:0] num_shift;	//Control Shifter - Number to shift by
 	output reg input_recv;			//Handhsake Control Line - Input Received
+	output reg [7:0] output_data; //Control Output data bus
 	
 	output reg [71:0] stage1; 				//Current Controller state
 	
@@ -633,7 +635,10 @@ module stage1(clk, clr, instr, ir_data, mdr_data, stg0_state, input_rdy, out_rec
 					stg1_state <= 1'b0;
 				  end
 			T47: ctrl <= CP47;
-			T48: ctrl <= CP48;
+			T48: begin
+					ctrl <= CP48;
+					output_data <= mdr_data;
+				  end
 			T49: ctrl <= CP49;
 			T50: begin
 					ctrl <= CP50;

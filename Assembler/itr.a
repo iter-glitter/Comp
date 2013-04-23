@@ -17,12 +17,30 @@ NOP
 NOP
 NOP
 
-LOAD # 200
+LOAD # 200 //Test Overflow detection
 STOR $ 3
 LMSK 2
-LOAD # 158
-ADD $ 3
-ADD $ 3
+LOAD # 158	
+ADD $ 3 //Overflow
+ADD $ 3 //Overflow
 NOP
 NOP
 LOAD # 4
+
+STOR $ 10 // Test INput OUtput
+LMSK 8 
+LOAD # 5 
+LOAD # 4
+LOAD # 3
+LOAD # 2
+LOAD # 1
+LOAD # 0
+
+ADD # 1
+ADD # 1
+ADD # 1
+LMSK 4
+NOP
+NOP
+ADD # 1
+ADD # 1

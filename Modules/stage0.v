@@ -12,7 +12,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module stage0(clk, clr, instr, data_in, i_pending, ccr_z, ccr_v, stg1_state, 
-					stg0_state, ctrl, pc_out, itr_mask, stage0, stg0_instr, v_state);
+					stg0_state, ctrl, pc_out, itr_mask, stage0, stg0_instr, v_state,
+					invalid_opcode);
 	//Inputs
 	input clk, clr;
 	input ccr_z;				//Condition Code Register Z - Zero Flag (For Branch)
@@ -32,6 +33,7 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, ccr_v, stg1_state,
 	output [7:0] stg0_instr;
 	output reg [3:0] itr_mask;	//Output ITR mask
 	output reg v_state;
+	output reg invalid_opcode; //Flag for bad opcode discovered in valid block (T5)
 	
 	wire [7:0] stg0_instr_w;
 	assign stg0_instr_w = instr;
@@ -81,6 +83,24 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, ccr_v, stg1_state,
 	parameter RTI  = 5'b01001;
 	parameter LMSK = 5'b01110;
 	
+	//Define all other opcodes
+	parameter opADD  = 5'b00000; 
+	parameter opSUB  = 5'b00001;
+	parameter opOR	  = 5'b00011;
+	parameter opAND  = 5'b00100;
+	parameter opCOMP = 5'b10000;
+	parameter opMULDIV = 5'b00010;
+	parameter opSHFT = 5'b00101;
+	parameter opLOAD = 5'b01010;
+	parameter opSTOR = 5'b01011;
+	parameter opLDA  = 5'b10001;
+	parameter opSTA  = 5'b10010;
+	parameter opLDB  = 5'b10011;
+	parameter opSTB  = 5'b10100;
+	parameter opINPUT = 5'b01100;
+	parameter opOUTPUT = 5'b01101;
+	parameter opNOP  = 5'b01111;
+	
 	//Define flags
 	parameter BEQ = 3'b000; //BRA - If Equal
 	parameter BNE = 3'b001; //BRA - If Not Equal
@@ -96,6 +116,7 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, ccr_v, stg1_state,
 		itr_state <= 1'b0;
 		itr_pc_loop <= 1'b0;
 		v_state <= 1'b0;
+		invalid_opcode <= 1'b0;
 	end
 	
 	always @ (posedge clk) begin
@@ -120,13 +141,34 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, ccr_v, stg1_state,
 					stage0 <= T3;
 				 end
 			T4: stage0 <= T5;
-			T5: if(instr[7:3]==BRA) begin stage0 <= T8; end
-				 else if(instr[7:3]==JMP) begin stage0 <= T10; end
-				 else if(instr[7:3]==BSR) begin stage0 <= T12; end
-				 else if(instr[7:3]==RTS) begin stage0 <= T13; end
-				 else if(instr[7:3]==RTI) begin stage0 <= T13; end
-				 else if(instr[7:3]==LMSK) begin stage0 <= T14; end
-				 else begin stage0 <= T7; end
+			T5: case(instr[7:3]) //Determine next state
+						BRA: stage0 <= T8;
+						JMP: stage0 <= T10;
+						BSR: stage0 <= T12;
+						RTS: stage0 <= T13;
+						RTI: stage0 <= T13;
+						LMSK: stage0 <= T14;
+						opADD: stage0 <= T7;
+						opSUB: stage0 <= T7;
+						opOR: stage0 <= T7;
+						opAND: stage0 <= T7;
+						opCOMP: stage0 <= T7;
+						opMULDIV: stage0 <= T7;
+						opSHFT: stage0 <= T7;
+						opLOAD: stage0 <= T7;
+						opSTOR: stage0 <= T7;
+						opLDA: stage0 <= T7;
+						opSTA: stage0 <= T7;
+						opLDB: stage0 <= T7;
+						opSTB: stage0 <= T7;
+						opINPUT: stage0 <= T7;
+						opOUTPUT: stage0 <= T7;
+						opNOP: stage0 <= T7;
+						default: begin
+							stage0 <= T6;
+							invalid_opcode <= 1'b1;
+						end
+					endcase
 			T6: stage0 <= T1;
 			T7: begin 
 					 if(stg1_state==1'b1) begin 	//Stage1 Handshake				
@@ -168,6 +210,7 @@ module stage0(clk, clr, instr, data_in, i_pending, ccr_z, ccr_v, stg1_state,
 			T13: if(instr[7:3]==RTI) begin
 					itr_state <= 1'b0;
 					v_state <= 1'b0;
+					invalid_opcode <= 1'b0;
 					stage0 <= T15;
 				  end else begin 
 					stage0 <= T15;

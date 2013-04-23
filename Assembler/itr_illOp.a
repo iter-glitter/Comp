@@ -9,3 +9,4 @@ STOR $ 55
 LMSK 0
 LDA $ 8
 SUB # 3
+RTI
