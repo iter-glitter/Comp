@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-04-21T16:06:58</DateModified>
+  <DateModified>2013-04-24T16:15:52</DateModified>
   <ModuleName>alu_nbit</ModuleName>
   <SummaryTimeStamp>2013-04-21T14:54:12</SummaryTimeStamp>
-  <SavedFilePath>C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate/iseconfig/alu_nbit.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/EE480/Project/Alex/DVHW4/n_bit_alu_generate\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/jahend6/Documents/School/EE480/Alex/DVHW4/n_bit_alu_generate/iseconfig/alu_nbit.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/jahend6/Documents/School/EE480/Alex/DVHW4/n_bit_alu_generate\</ImplementationReportsDirectory>
   <DateInitialized>2013-04-17T17:25:36</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
