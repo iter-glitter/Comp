@@ -1,3 +1,9 @@
+//
+//	Alex Hendren & Sean McFeely
+//	
+//	Test for HVPI
+//
+
 LDA # 3 	// A = 3
 STA $ 5 	// mem[5] = 3
 LOAD # 3 	// ACC = 3
@@ -36,7 +42,7 @@ LOAD # 2
 LOAD # 1
 LOAD # 0
 
-ADD # 1
+ADD # 1 //Test Illegal OPcode
 ADD # 1
 ADD # 1
 LMSK 4
