@@ -16,7 +16,6 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <stdint.h>
 #include "token.h"
 
 using namespace std;
